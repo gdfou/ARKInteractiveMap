@@ -1,0 +1,169 @@
+{
+	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
+	"backgrounds": [
+		{
+			"name": "Topographique", "image": "Fjordur Vanaheim Topographic Map.jpg",
+			"at": [
+				[ -9.15, 62.5 ],
+				[ 33.73, 105.38 ]
+			]
+		},
+		{
+			"name": "Croquis", "image": "Fjordur Map.jpg",
+			"overlays": [
+				{
+					"name": "Frontières du royaume",
+					"at": [
+						[ -9.15, 62.5 ],
+						[ 33.73, 105.38 ]
+					]
+				}
+			]
+		}
+	],
+	"groups": {
+		"obelisk-blue": { "name": "Obélisque bleu", "fillColor": "#00a5ff", "size": 20, "icon": "Obelisk.png" },
+		"obelisk-green": { "name": "Obélisque vert", "fillColor": "#14e800", "size": 20, "icon": "Obelisk.png" },
+		"obelisk-red": { "name": "Obélisque rouge", "fillColor": "#f70102", "size": 20, "icon": "Obelisk.png" },
+		"rune": {
+			"name": "Rune", "icon": "Runes.png", "size": [ 32, 32 ],
+			"isCollectible": true
+		},
+		"cave-entrance": {
+			"name": "Entrée de grotte", "icon": "CaveEntranceIcon.png", "size": [ 34, 34 ]
+		},
+		"PlayerTeleportVanaheim": {
+			"name": "Point de téléportation",
+			"fillColor": "#4e4854", "borderColor": "#fff", "size": 5.5, "icon": "Tek Teleporter.png"
+		}
+	},
+	"markers": {
+		"obelisk-green": [ { "lat": 14.3, "lon": 79.3 } ],
+		"rune": [
+			{ "lat": -3.15, "lon": 102.16, "article": "Runes", "image": "Fjordur Runes (5).jpg" },
+			{
+				"lat": -2.79, "lon": 99.71, "article": "Runes",
+				"description": "Derrière la cascade",
+				"image": "Fjordur Runes (11).jpg"
+			},
+			{ "lat": 10.59, "lon": 97.07, "article": "Runes", "image": "Fjordur Runes (12).jpg" },
+			{ "lat": 18.87, "lon": 100.86, "article": "Runes", "image": "Fjordur Runes (13).jpg" },
+			{ "lat": 29.63, "lon": 89.85, "article": "Runes", "image": "Fjordur Runes (14).jpg" },
+			{ "lat": 31.87, "lon": 83.11, "article": "Runes", "image": "Fjordur Runes (15).jpg" },
+			{ "lat": 30.7, "lon": 75.78, "article": "Runes", "image": "Fjordur Runes (16).jpg" },
+			{ "lat": 27.78, "lon": 63.39, "article": "Runes", "image": "Fjordur Runes (17).jpg" },
+			{ "lat": 19.59, "lon": 74.89, "article": "Runes", "image": "Fjordur Runes (19).jpg" },
+			{ "lat": 12.36, "lon": 64.46, "article": "Runes", "image": "Fjordur Runes (20).jpg" },
+			{
+				"lat": 1.29, "lon": 69.81, "article": "Runes",
+				"description": "Dans la caverne aux wyvernes non nommée",
+				"image": "Fjordur Runes (22).jpg"
+			},
+			{ "lat": -7.55, "lon": 68.86, "article": "Runes", "image": "Fjordur Runes (23).jpg" },
+			{ "lat": 11.2, "lon": 83.12, "article": "Runes", "image": "Fjordur Runes (24).jpg" },
+			{
+				"lat": 9.3, "lon": 84.74, "article": "Runes",
+				"description": "Derrière la cascade de l'[[Étang du chêne (Fjordur)|Étang du chêne]]",
+				"image": "Fjordur Runes (26).jpg"
+			},
+			{
+				"lat": 2.22, "lon": 91.81, "article": "Runes",
+				"description": "Dans la [[Grotte mystérieuse (Fjordur)|Grotte mystérieuse]]",
+				"image": "Fjordur Runes (27).jpg"
+			}
+		],
+		"cave-entrance": [
+			{
+				"lat": -1.86, "lon": 73.3,
+				"name": "Grotte non nommée de Vanaheim", "image": "Entrance VanaheimCave1.jpg"
+			},
+			{
+				"lat": 1.18, "lon": 89.48,
+				"description": "Cachée derrière une cascade",
+				"name": "Grotte mystérieuse", "image": "Entrance VanaheimCave2.jpg"
+			},
+			{
+				"lat": 12.77, "lon": 65.06,
+				"description": "Zone d'apparition des [[|Wyverne de Poison|Wyvernes de Poison]]",
+				"name": "Grotte non nommée de Vanaheim", "image": "Entrance PWyvernCave.jpg"
+			}
+		],
+		"PlayerTeleportVanaheim": [
+			{ "lat": 30.75746, "lon": 72.36418 },
+			{ "lat": 24.65233, "lon": 90.19428 },
+			{ "lat": 24.35295, "lon": 90.05707 },
+			{ "lat": 24.42787, "lon": 90.36268 },
+			{ "lat": 23.86681, "lon": 90.41891 },
+			{ "lat": 32.37533, "lon": 81.89199 },
+			{ "lat": 20.37111, "lon": 96.03886 },
+			{ "lat": 20.34247, "lon": 96.32174 },
+			{ "lat": 19.74294, "lon": 96.20341 },
+			{ "lat": 31.536, "lon": 81.84578 },
+			{ "lat": 19.65429, "lon": 95.40787 },
+			{ "lat": 31.96064, "lon": 82.29268 },
+			{ "lat": 14.61, "lon": 100.6806 },
+			{ "lat": 13.99226, "lon": 99.97251 },
+			{ "lat": 13.88191, "lon": 98.66198 },
+			{ "lat": 15.07694, "lon": 100.0177 },
+			{ "lat": 9.71336, "lon": 101.4251 },
+			{ "lat": 9.317239, "lon": 100.7757 },
+			{ "lat": 10.00202, "lon": 100.8317 },
+			{ "lat": 10.58457, "lon": 102.2327 },
+			{ "lat": 8.175354, "lon": 96.92662 },
+			{ "lat": 8.400841, "lon": 97.58705 },
+			{ "lat": 8.886599, "lon": 97.13961 },
+			{ "lat": 9.358185, "lon": 97.79516 },
+			{ "lat": 1.559039, "lon": 103.4877 },
+			{ "lat": 1.201554, "lon": 103.2345 },
+			{ "lat": 0.9698922, "lon": 103.5731 },
+			{ "lat": 0.7340429, "lon": 103.1147 },
+			{ "lat": -5.496877, "lon": 99.10125 },
+			{ "lat": -5.677524, "lon": 98.32317 },
+			{ "lat": -6.358171, "lon": 98.70482 },
+			{ "lat": -4.903893, "lon": 99.54014 },
+			{ "lat": -4.861378, "lon": 87.5298 },
+			{ "lat": -4.796499, "lon": 88.54115 },
+			{ "lat": -4.559348, "lon": 87.3534 },
+			{ "lat": -4.698978, "lon": 86.0513 },
+			{ "lat": -2.329674, "lon": 81.93169 },
+			{ "lat": -2.069696, "lon": 81.61289 },
+			{ "lat": -2.510881, "lon": 81.35719 },
+			{ "lat": -2.533063, "lon": 80.25113 },
+			{ "lat": -2.535541, "lon": 80.51294 },
+			{ "lat": -3.103389, "lon": 80.40597 },
+			{ "lat": 0.2956449, "lon": 78.39365 },
+			{ "lat": 0.2887131, "lon": 78.12127 },
+			{ "lat": 0.5494609, "lon": 78.63283 },
+			{ "lat": -5.083266, "lon": 76.09304 },
+			{ "lat": -5.336046, "lon": 76.50965 },
+			{ "lat": -4.574135, "lon": 76.45351 },
+			{ "lat": -4.395771, "lon": 75.67966 },
+			{ "lat": 1.695785, "lon": 66.67692 },
+			{ "lat": 2.744112, "lon": 67.14383 },
+			{ "lat": 2.958661, "lon": 65.97184 },
+			{ "lat": 10.14281, "lon": 65.69525 },
+			{ "lat": 10.2285, "lon": 66.35653 },
+			{ "lat": 11.47512, "lon": 65.82217 },
+			{ "lat": 15.4367, "lon": 67.34428 },
+			{ "lat": 15.08731, "lon": 67.4031 },
+			{ "lat": 15.41668, "lon": 67.52235 },
+			{ "lat": 31.33333, "lon": 74.82182 },
+			{ "lat": 17.39539, "lon": 66.33176 },
+			{ "lat": 17.70015, "lon": 65.98982 },
+			{ "lat": 17.21493, "lon": 65.9107 },
+			{ "lat": 22.51662, "lon": 68.70308 },
+			{ "lat": 22.67816, "lon": 69.10308 },
+			{ "lat": 23.02932, "lon": 69.11079 },
+			{ "lat": 29.92402, "lon": 68.13889 },
+			{ "lat": 30.06966, "lon": 68.65773 },
+			{ "lat": 30.5751, "lon": 67.90525 },
+			{ "lat": 12.99478, "lon": 70.70245 },
+			{ "lat": 12.71507, "lon": 71.06484 },
+			{ "lat": 13.12137, "lon": 71.28491 },
+			{ "lat": 31.08825, "lon": 74.98659 },
+			{ "lat": 31.05597, "lon": 74.48031 },
+			{ "lat": 30.15956, "lon": 72.14082 },
+			{ "lat": 30.32557, "lon": 71.85165 }
+		]
+	}
+}

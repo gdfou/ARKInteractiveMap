@@ -1,0 +1,846 @@
+{
+	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
+	"mixins": [
+		"Cartes/Définitions des groupes normés",
+		"Cartes/Icônes des ravitaillements",
+		"Cartes/Obélisques Fjordur",
+		"Cartes/Grottes Fjordur"
+	],
+	"backgrounds": [
+		{ "name": "Croquis", "image": "Fjordur Map.jpg" },
+		{ "name": "Topographique", "image": "Fjordur Topographic Map.jpg" }
+	],
+	"groups": {
+		"playerSpawns-VardilanN": {
+			"name": "Apparition: Vardiland-Nord",
+			"fillColor": "#b8ac30", "borderColor": "#fff", "size": 5.5, "icon": "Simple Bed.png"
+		},
+		"playerSpawns-VardilanS": {
+			"name": "Apparition: Vardiland-Sud",
+			"fillColor": "#ffee42", "borderColor": "#fff", "size": 5.5, "icon": "Simple Bed.png"
+		},
+		"playerSpawns-VannalandN": {
+			"name": "Apparition: Vannaland-Nord",
+			"fillColor": "#2424b5", "borderColor": "#fff", "size": 5.5, "icon": "Simple Bed.png"
+		},
+		"playerSpawns-VannalandE": {
+			"name": "Apparition: Vannaland-Est",
+			"fillColor": "#3232ff", "borderColor": "#fff", "size": 5.5, "icon": "Simple Bed.png"
+		},
+		"playerSpawns-VannalandS": {
+			"name": "Apparition: Vannaland-Sud",
+			"fillColor": "#4485ad", "borderColor": "#fff", "size": 5.5, "icon": "Simple Bed.png"
+		},
+		"playerSpawns-VannalandW": {
+			"name": "Apparition: Vannaland-Ouest",
+			"fillColor": "#4485ad", "borderColor": "#fff", "size": 5.5, "icon": "Simple Bed.png"
+		},
+		"playerSpawns-Balheimr": {
+			"name": "Apparition: Balheimr",
+			"fillColor": "#b51b1b", "borderColor": "#fff", "size": 5.5, "icon": "Simple Bed.png"
+		}
+	},
+	"markers": {
+		"dragon-terminal cave": [
+			{
+				"lat": 83.7, "lon": 8.2,
+				"description": "Dans [[Dvergheim (Fjordur)|Dvergheim]]"
+			}
+		],
+		"broodmother-terminal cave": [
+			{
+				"lat": 54.5, "lon": 65.3,
+				"description": "Dans [[le tombeau envahi (Fjordur)|Le tombeau envahi]]"
+			}
+		],
+		"megapithecus-terminal cave": [
+			{
+				"lat": 49.1, "lon": 82.3,
+				"description": "Dans [[Beiygjaheimr (Fjordur)|Beiygjaheimr]]"
+			}
+		],
+		"artifact cave": [
+			{
+				"lat": 18.86, "lon": 83.78,
+				"name": "Artéfact de Puissance",
+				"description": "Dans la [[Caverne des ours (Fjordur)|Caverne des ours]]",
+				"article": "Artéfact de Puissance", "image": "Artifact of the Strong Fjordur location.png"
+			},
+			{
+				"lat": 18.14, "lon": 65.62,
+				"name": "Artéfact de la Sagesse",
+				"description": "Dans la [[Caverne en fusion (Fjordur)|Caverne en fusion]]",
+				"article": "Artéfact de la Sagesse", "image": "Artifact of the Clever Fjordur location.png"
+			},
+			{
+				"lat": 7.29, "lon": 28,
+				"name": "Artéfact du Seigneur du Ciel",
+				"description": "Dans [[La forteresse gelée (Fjordur)|La forteresse gelée]]",
+				"article": "Artéfact du Seigneur du Ciel", "image": "Artifact of the Skylord Fjordur location.png"
+			},
+			{
+				"lat": 76.51, "lon": 8.49,
+				"name": "Artéfact du Colosse",
+				"description": "Dans les [[Profondeurs de Nidisheim (Fjordur)|Profondeurs de Nidisheim]]",
+				"article": "Artéfact du Colosse", "image": "Artifact of the Massive Fjordur location.png"
+			},
+			{
+				"lat": 73.61, "lon": 72.83,
+				"name": "Artéfact de la Ruse",
+				"description": "Dans [[Les cavernes oubliées (Fjordur)|Les cavernes oubliées]]",
+				"article": "Artéfact de la Ruse", "image": "Artifact of the Cunning Fjordur location.png"
+			},
+			{
+				"lat": 15.532, "lon": 60.84,
+				"name": "Artéfact de la Meute",
+				"description": "Dans la [[Caverne en fusion (Fjordur)|Caverne en fusion]]",
+				"article": "Artéfact de la Meute", "image": "Artifact of the Pack Fjordur location.png"
+			},
+			{
+				"lat": 47.64, "lon": 8.1,
+				"name": "Artéfact de la Bête",
+				"description": "Dans [[La fosse aux serpents (Fjordur)|La fosse aux serpents]]",
+				"article": "Artéfact de la Bête", "image": "Artifact of the Brute Fjordur location.png"
+			},
+			{
+				"lat": 88.79639, "lon": 86.27984,
+				"name": "Artéfact de l'Immunité",
+				"description": "Dans les [[Carvernes de la Montagne du malheur (Fjordur)|Carvernes de la Montagne du malheur]]",
+				"article": "Artéfact de l'Immunité", "image": "Artifact of the Immune Fjordur location.png"
+			},
+			{
+				"lat": 7.354993, "lon": 32.93194,
+				"name": "Artéfact du Chasseur",
+				"description": "Dans [[Drengrheimr (Fjordur)|Drengrheimr]]",
+				"article": "Artéfact du Chasseur", "image": "Artifact of the Hunter Fjordur location.png"
+			},
+			{
+				"lat": 8.794287, "lon": 13.65845,
+				"name": "Artéfact du Dévoreur",
+				"description": "Dans les [[Cavernes de Mariana (Fjordur)|Cavernes de Mariana]]",
+				"article": "Artéfact du Dévoreur", "image": "Artifact of the Devourer Fjordur location.png"
+			}
+		],
+		"rune": [
+			{ "lat": 94.09, "lon": 34.69, "article": "Runes", "image": "Fjordur Runes (2).jpg" },
+			{ "lat": 25.11, "lon": 50.95, "article": "Runes", "image": "Fjordur Runes (8).jpg" },
+			{ "lat": 18.2, "lon": 91.17, "article": "Runes", "image": "Fjordur Runes (10).jpg" },
+			{ "lat": 88.05, "lon": 92.35, "article": "Runes", "image": "Fjordur Runes (31).jpg" },
+			{ "lat": 85.84, "lon": 92.11, "article": "Runes", "image": "Fjordur Runes (34).jpg" },
+			{ "lat": 84.04, "lon": 96.38, "article": "Runes", "image": "Fjordur Runes (35).jpg" },
+			{ "lat": 75.14, "lon": 95.57, "article": "Runes", "image": "Fjordur Runes (36).jpg" },
+			{ "lat": 72.11, "lon": 89.36, "article": "Runes", "image": "Fjordur Runes (38).jpg" },
+			{ "lat": 81.81, "lon": 86.06, "article": "Runes", "image": "Fjordur Runes (39).jpg" },
+			{ "lat": 88.3, "lon": 84.81, "article": "Runes", "image": "Fjordur Runes (40).jpg" },
+			{ "lat": 89.88, "lon": 85.23, "article": "Runes", "image": "Fjordur Runes (42).jpg" },
+			{ "lat": 64.61, "lon": 93.15, "article": "Runes", "image": "Fjordur Runes (43).jpg" },
+			{ "lat": 87.14, "lon": 82.76, "article": "Runes", "image": "Fjordur Runes (44).jpg" },
+			{ "lat": 83.54, "lon": 35.39, "article": "Runes", "image": "Fjordur Runes (45).jpg" },
+			{ "lat": 93.02, "lon": 93.1, "article": "Runes", "image": "Fjordur Runes (46).jpg" },
+			{ "lat": 91.35, "lon": 16.43, "article": "Runes", "image": "Fjordur Runes (47).jpg" },
+			{ "lat": 96.96, "lon": 84.14, "article": "Runes", "image": "Fjordur Runes (48).jpg" },
+			{ "lat": 96.07, "lon": 78.26, "article": "Runes", "image": "Fjordur Runes (49).jpg" },
+			{ "lat": 82.18, "lon": 73.63, "article": "Runes", "image": "Fjordur Runes (50).jpg" },
+			{ "lat": 81.77, "lon": 79.42, "article": "Runes", "image": "Fjordur Runes (51).jpg" },
+			{ "lat": 75.47, "lon": 78.83, "article": "Runes", "image": "Fjordur Runes (52).jpg" },
+			{ "lat": 97.81, "lon": 5.57, "article": "Runes", "image": "Fjordur Runes (61).jpg" },
+			{ "lat": 97.65, "lon": 6.48, "article": "Runes", "image": "Fjordur Runes (62).jpg" },
+			{ "lat": 92.04, "lon": 1.9, "article": "Runes", "image": "Fjordur Runes (63).jpg" },
+			{ "lat": 89.37, "lon": 2.62, "article": "Runes", "image": "Fjordur Runes (64).jpg" },
+			{ "lat": 91.6, "lon": 7.67, "article": "Runes", "image": "Fjordur Runes (66).jpg" },
+			{ "lat": 89.71, "lon": 13.74, "article": "Runes", "image": "Fjordur Runes (67).jpg" },
+			{ "lat": 86.72, "lon": 13.02, "article": "Runes", "image": "Fjordur Runes (68).jpg" },
+			{ "lat": 86.17, "lon": 6.96, "article": "Runes", "image": "Fjordur Runes (69).jpg" },
+			{ "lat": 83.28, "lon": 14.66, "article": "Runes", "image": "Fjordur Runes (70).jpg" },
+			{ "lat": 77.82, "lon": 9.9, "article": "Runes", "image": "Fjordur Runes (71).jpg" },
+			{ "lat": 81.25, "lon": 4.63, "article": "Runes", "image": "Fjordur Runes (72).jpg" },
+			{ "lat": 78.85, "lon": 3.42, "article": "Runes", "image": "Fjordur Runes (73).jpg" },
+			{ "lat": 80.05, "lon": 3.54, "article": "Runes", "image": "Fjordur Runes (75).jpg" },
+			{ "lat": 69.71, "lon": 5.05, "article": "Runes", "image": "Fjordur Runes (76).jpg" },
+			{ "lat": 67.82, "lon": 7.98, "article": "Runes", "image": "Fjordur Runes (77).jpg" },
+			{ "lat": 63.3, "lon": 10.17, "article": "Runes", "image": "Fjordur Runes (78).jpg" },
+			{ "lat": 63.92, "lon": 25.92, "article": "Runes", "image": "Fjordur Runes (79).jpg" },
+			{ "lat": 66.05, "lon": 33.51, "article": "Runes", "image": "Fjordur Runes (80).jpg" },
+			{ "lat": 60.43, "lon": 35.69, "article": "Runes", "image": "Fjordur Runes (81).jpg" },
+			{ "lat": 51.23, "lon": 38.31, "article": "Runes", "image": "Fjordur Runes (82).jpg" },
+			{
+				"lat": 66.64, "lon": 39.1, "article": "Runes",
+				"description": "Dans la [[Fosse aux émeraudes (Fjordur)|Fosse aux émeraudes]]",
+				"image": "Fjordur Runes (83).jpg"
+			},
+			{ "lat": 74.44, "lon": 34, "article": "Runes", "image": "Fjordur Runes (85).jpg" },
+			{
+				"lat": 76.84, "lon": 36.21, "article": "Runes",
+				"description": "Sur un bord de rocher entre deux cascades",
+				"image": "Fjordur Runes (86).jpg"
+			},
+			{ "lat": 87.68, "lon": 45.07, "article": "Runes", "image": "Fjordur Runes (87).jpg" },
+			{ "lat": 79.94, "lon": 28.34, "article": "Runes", "image": "Fjordur Runes (88).jpg" },
+			{ "lat": 73.72, "lon": 19.88, "article": "Runes", "image": "Fjordur Runes (89).jpg" },
+			{ "lat": 45.97, "lon": 11.53, "article": "Runes", "image": "Fjordur Runes (93).jpg" },
+			{ "lat": 40.48, "lon": 5.23, "article": "Runes", "image": "Fjordur Runes (94).jpg" },
+			{ "lat": 42.68, "lon": 4.66, "article": "Runes", "image": "Fjordur Runes (95).jpg" },
+			{ "lat": 44.9, "lon": 15.93, "article": "Runes", "image": "Fjordur Runes (96).jpg" },
+			{ "lat": 11.16, "lon": 5.04, "article": "Runes", "image": "Fjordur Runes (105).jpg" },
+			{ "lat": 2.9, "lon": 14.29, "article": "Runes", "image": "Fjordur Runes (106).jpg" },
+			{
+				"lat": 19.83, "lon": 18.85, "article": "Runes",
+				"description": "Près de l'entrée de la [[Caverne dissimulée (Fjordur)|Caverne dissimulée]] sur un lac gelé",
+				"image": "Fjordur Runes (108).jpg"
+			},
+			{ "lat": 13.1, "lon": 17.29, "article": "Runes", "image": "Fjordur Runes (109).jpg" },
+			{ "lat": 14.77, "lon": 2.44, "article": "Runes", "image": "Fjordur Runes (111).jpg" },
+			{ "lat": 34.49, "lon": 42.69, "article": "Runes", "image": "Fjordur Runes (112).jpg" },
+			{ "lat": 28.71, "lon": 43.59, "article": "Runes", "image": "Fjordur Runes (113).jpg" },
+			{ "lat": 6.31, "lon": 56.51, "article": "Runes", "image": "Fjordur Runes (114).jpg" },
+			{ "lat": 6.42, "lon": 60.77, "article": "Runes", "image": "Fjordur Runes (115).jpg" },
+			{ "lat": 22.48, "lon": 61.61, "article": "Runes", "image": "Fjordur Runes (116).jpg" },
+			{ "lat": 18.5, "lon": 79.51, "article": "Runes", "image": "Fjordur Runes (118).jpg" },
+			{ "lat": 22.77, "lon": 82.32, "article": "Runes", "image": "Fjordur Runes (119).jpg" },
+			{ "lat": 30.07, "lon": 91.34, "article": "Runes", "image": "Fjordur Runes (121).jpg" },
+			{ "lat": 6.53, "lon": 76.01, "article": "Runes", "image": "Fjordur Runes (122).jpg" },
+			{ "lat": 8.45, "lon": 92.61, "article": "Runes", "image": "Fjordur Runes (123).jpg" },
+			{ "lat": 37.49, "lon": 96.9, "article": "Runes", "image": "Fjordur Runes (124).jpg" },
+			{ "lat": 39.31, "lon": 95.55, "article": "Runes", "image": "Fjordur Runes (125).jpg" },
+			{ "lat": 52.58, "lon": 82.43, "article": "Runes", "image": "Fjordur Runes (126).jpg" },
+			{ "lat": 48.34, "lon": 72.74, "article": "Runes", "image": "Fjordur Runes (127).jpg" },
+			{ "lat": 60.56, "lon": 70.75, "article": "Runes", "image": "Fjordur Runes (129).jpg" },
+			{ "lat": 45.59, "lon": 61.17, "article": "Runes", "image": "Fjordur Runes (130).jpg" },
+			{ "lat": 41.79, "lon": 52.83, "article": "Runes", "image": "Fjordur Runes (131).jpg" },
+			{ "lat": 35.51, "lon": 49.68, "article": "Runes", "image": "Fjordur Runes (132).jpg" },
+			{
+				"lat": 27.16, "lon": 49.88, "article": "Runes",
+				"description": "Au-dessus de l'entrée de la grotte de la cascade dans la [[Vallée de Vannaland (Fjordur)|Vallée de Vannaland]]",
+				"image": "Fjordur Runes (133).jpg"
+			},
+			{ "lat": 26.42, "lon": 64.68, "article": "Runes", "image": "Fjordur Runes (134).jpg" },
+			{ "lat": 13.29, "lon": 63.86, "article": "Runes", "image": "Fjordur Runes (135).jpg" },
+			{ "lat": 19.26, "lon": 77.42, "article": "Runes", "image": "Fjordur Runes (136).jpg" },
+			{ "lat": 65.91, "lon": 7.71, "article": "Runes", "image": "Fjordur Runes (137).jpg" },
+			{ "lat": 17.68, "lon": 14.75, "article": "Runes", "image": "Fjordur Runes (138).jpg" },
+			{ "lat": 94.08, "lon": 96.57, "article": "Runes", "image": "Fjordur Runes (172).jpg" },
+			{ "lat": 63.94, "lon": 95.74, "article": "Runes", "image": "Fjordur Runes (176).jpg" },
+			{ "lat": 31.63, "lon": 66.51, "article": "Runes", "image": "Fjordur Runes (178).jpg" },
+			{ "lat": 32.27, "lon": 65.27, "article": "Runes", "image": "Fjordur Runes (179).jpg" },
+			{ "lat": 30.92, "lon": 52.56, "article": "Runes", "image": "Fjordur Runes (180).jpg" },
+			{ "lat": 60.6, "lon": 80.56, "article": "Runes", "image": "Fjordur Runes (181).jpg" },
+			{ "lat": 74.91, "lon": 94.76, "article": "Runes", "image": "Fjordur Runes (185).jpg" },
+			{ "lat": 92.75, "lon": 84.89, "article": "Runes", "image": "Fjordur Runes (187).jpg" },
+			{ "lat": 89.05, "lon": 86.62, "article": "Runes", "image": "Fjordur Runes (191).jpg" },
+			{ "lat": 94.31, "lon": 7.73, "article": "Runes", "image": "Fjordur Runes (193).jpg" },
+			{ "lat": 89.2, "lon": 6.51, "article": "Runes", "image": "Fjordur Runes (196).jpg" },
+			{ "lat": 78.82, "lon": 15.68, "article": "Runes", "image": "Fjordur Runes (197).jpg" },
+			{ "lat": 70.08, "lon": 12.22, "article": "Runes", "image": "Fjordur Runes (200).jpg" },
+			{ "lat": 33.79, "lon": 20.05, "article": "Runes", "image": "Fjordur Runes (110).jpg" },
+			{ "lat": 34.35, "lon": 82.94, "article": "Runes", "image": "Fjordur Runes (120).jpg" },
+			{ "lat": 96.98, "lon": 21.97, "article": "Runes", "image": "Fjordur Runes (182).jpg" }
+		],
+		"rune cave": [
+			{
+				"lat": 88.32, "lon": 85.7, "article": "Runes",
+				"description": "Dans les [[Carvernes de la Montagne du malheur (Fjordur)|Carvernes de la Montagne du malheur]]",
+				"image": "Fjordur Runes (54).jpg"
+			},
+			{
+				"lat": 53.77, "lon": 65.24,
+				"description": "Dans [[Le tombeau envahi (Fjordur)|Le tombeau envahi]]",
+				"article": "Runes", "image": "Fjordur Runes (164).jpg"
+			},
+			{
+				"lat": 85.81, "lon": 6.86, "article": "Runes",
+				"description": "Dans [[Dvergheim (Fjordur)|Dvergheim]]",
+				"image": "Fjordur Runes (65).jpg"
+			},
+			{
+				"lat": 17.84, "lon": 65.74, "article": "Runes",
+				"description": "Dans la [[Caverne en fusion (Fjordur)|Caverne en fusion]]",
+				"image": "Fjordur Runes (159).jpg"
+			},
+			{
+				"lat": 42.78, "lon": 64.42, "article": "Runes",
+				"description": "Dans [[Les cavernes opulentes (Fjordur)|Les cavernes opulentes]]",
+				"image": "Fjordur Runes (162).jpg"
+			},
+			{
+				"lat": 27.64, "lon": 46.11, "article": "Runes",
+				"description": "Dans la [[Caverne de Lindbjorn (Fjordur)|Caverne de Lindbjorn]]",
+				"image": "Fjordur Runes (28).jpg"
+			},
+			{
+				"lat": 51.81, "lon": 84.98, "article": "Runes",
+				"description": "Près de [[Beiygjaheimr (Fjordur)|Beiygjaheimr]]",
+				"image": "Fjordur Runes (30).jpg"
+			},
+			{
+				"lat": 73.86, "lon": 5.31, "article": "Runes",
+				"description": "Dans [[Nidisheim (Fjordur)|Nidisheim]]",
+				"image": "Fjordur Runes (32).jpg"
+			},
+			{
+				"lat": 75.54, "lon": 6.45, "article": "Runes",
+				"description": "Dans [[Nidisheim (Fjordur)|Nidisheim]]",
+				"image": "Fjordur Runes (33).jpg"
+			},
+			{
+				"lat": 90.21, "lon": 79.38, "article": "Runes",
+				"description": "Dans les [[Carvernes de la Montagne du malheur (Fjordur)|Cavernes de la Montagne du malheur]]",
+				"image": "Fjordur Runes (190).jpg"
+			},
+			{
+				"lat": 38.17, "lon": 60.08, "article": "Runes",
+				"description": "Dans [[Les Mondes Cachés|Les Mondes cachés]]",
+				"image": "Fjordur Runes (29).jpg"
+			},
+			{
+				"lat": 6.95, "lon": 45.4, "article": "Runes",
+				"description": "Dans la [[Forêt de Lindbjorn (Fjordur)|Forêt de Lindbjorn]]",
+				"image": "Fjordur Runes (21).jpg"
+			},
+			{
+				"lat": 7.58, "lon": 22.54, "article": "Runes",
+				"description": "Sur le pont de [[La forteresse gelée (Fjordur)|La Forteresse gelée]]",
+				"image": "Fjordur Runes (145).jpg"
+			},
+			{
+				"lat": 6.55, "lon": 23.39, "article": "Runes",
+				"description": "Sur les murailles de [[La forteresse gelée (Fjordur)|La Forteresse gelée]]",
+				"image": "Fjordur Runes (146).jpg"
+			},
+			{
+				"lat": 6.53, "lon": 28.29, "article": "Runes",
+				"description": "Dans la caverne de [[La forteresse gelée (Fjordur)|La Forteresse gelée]]",
+				"image": "Fjordur Runes (147).jpg"
+			},
+			{
+				"lat": 8.17, "lon": 37.78, "article": "Runes",
+				"description": "Dans les tunnels de la [[Montagnes de Snaerheimr (Fjordur)|Montagnes de Snaerheimr]]",
+				"image": "Fjordur Runes (148).jpg"
+			},
+			{
+				"lat": 7.59, "lon": 34.41, "article": "Runes",
+				"description": "Dans [[Drengrheimr (Fjordur)|Drengrheimr]]",
+				"image": "Fjordur Runes (149).jpg"
+			},
+			{
+				"lat": 6.89, "lon": 33.59, "article": "Runes",
+				"description": "Sous l'eau dans [[Drengrheimr (Fjordur)|Drengrheimr]]",
+				"image": "Fjordur Runes (150).jpg"
+			},
+			{
+				"lat": 11.28, "lon": 84.25, "article": "Runes",
+				"description": "Dans les [[Cavernes des ours (Fjordur)|Cavernes des ours]]",
+				"image": "Fjordur Runes (25).jpg"
+			},
+			{
+				"lat": 13.51, "lon": 67.65, "article": "Runes",
+				"description": "Dans [[Les halls chatoyants (Fjordur)|Les halls chatoyants]]",
+				"image": "Fjordur Runes (151).jpg"
+			},
+			{
+				"lat": 13.77, "lon": 85.26, "article": "Runes",
+				"description": "Dans les [[Cavernes des ours (Fjordur)|Cavernes des ours]]",
+				"image": "Fjordur Runes (152).jpg"
+			},
+			{
+				"lat": 18.43, "lon": 82.69, "article": "Runes",
+				"description": "Dans les [[Cavernes des ours (Fjordur)|Cavernes des ours]]",
+				"image": "Fjordur Runes (153).jpg"
+			},
+			{
+				"lat": 16.24, "lon": 61.7, "article": "Runes",
+				"description": "Dans la [[Caverne en fusion (Fjordur)|Caverne en fusion]]",
+				"image": "Fjordur Runes (158).jpg"
+			},
+			{
+				"lat": 89.85, "lon": 83.24, "article": "Runes",
+				"description": "Dans les [[Carvernes de la Montagne du malheur (Fjordur)|Carvernes de la Montagne du malheur]], près de la base du portail",
+				"image": "Fjordur Runes (53).jpg"
+			},
+			{
+				"lat": 19.16, "lon": 11.82, "article": "Runes",
+				"description": "Dans [[La boule à neige (Fjordur)|La boule à neige]]",
+				"image": "Fjordur Runes (154).jpg"
+			},
+			{
+				"lat": 25.8, "lon": 40.66, "article": "Runes",
+				"description": "Dans la [[Grotte de Lindbjorn (Fjordur)|Grotte de Lindbjorn]]",
+				"image": "Fjordur Runes (155).jpg"
+			},
+			{
+				"lat": 19.04, "lon": 59.2, "article": "Runes",
+				"description": "Sur une corniche dans la [[Caverne en fusion (Fjordur)|Caverne en fusion]]",
+				"image": "Fjordur Runes (157).jpg"
+			},
+			{
+				"lat": 55.25, "lon": 67.49, "article": "Runes",
+				"description": "Dans la [[Le tombeau envahi (Fjordur)|Le tombeau envahi]]",
+				"image": "Fjordur Runes (163).jpg"
+			},
+			{
+				"lat": 53.95, "lon": 83.11, "article": "Runes",
+				"description": "Dans [[Beiygjaheimr (Fjordur)|Beiygjaheimr]]",
+				"image": "Fjordur Runes (165).jpg"
+			},
+			{
+				"lat": 50.36, "lon": 81.73, "article": "Runes",
+				"description": "Dans [[Beiygjaheimr (Fjordur)|Beiygjaheimr]]",
+				"image": "Fjordur Runes (166).jpg"
+			},
+			{
+				"lat": 83.62, "lon": 92.58, "article": "Runes",
+				"description": "Dans les [[Cavernes du temps (Fjordur)|Cavernes du temps]]",
+				"image": "Fjordur Runes (37).jpg"
+			},
+			{
+				"lat": 84.76, "lon": 16.01, "article": "Runes",
+				"description": "Dans les [[Montagnes de Skarstind (Fjordur)|Montagnes de Skarstind]] cave",
+				"image": "Fjordur Runes (41).jpg"
+			},
+			{
+				"lat": 85.42, "lon": 71.52, "article": "Runes",
+				"description": "Dans la [[Fosse de Balheimr (Fjordur)|Fosse de Balheimr]]",
+				"image": "Fjordur Runes (55).jpg"
+			},
+			{
+				"lat": 90.6, "lon": 73.76, "article": "Runes",
+				"description": "Dans la [[Fosse de Balheimr (Fjordur)|Fosse de Balheimr]]",
+				"image": "Fjordur Runes (56).jpg"
+			},
+			{
+				"lat": 95.92, "lon": 81.51, "article": "Runes",
+				"description": "Dans [[La gorge de flammes (Fjordur)|La gorge de flammes]], très près de l'entrée",
+				"image": "Fjordur Runes (57).jpg"
+			},
+			{
+				"lat": 96.11, "lon": 84.52, "article": "Runes",
+				"description": "Dans [[La gorge de flammes (Fjordur)|La gorge de flammes]]",
+				"image": "Fjordur Runes (58).jpg"
+			},
+			{
+				"lat": 91, "lon": 91.95, "article": "Runes",
+				"description": "Dans [[La gorge de flammes (Fjordur)|La gorge de flammes]]",
+				"image": "Fjordur Runes (60).jpg"
+			},
+			{
+				"lat": 87.9, "lon": 16.78, "article": "Runes",
+				"description": "Dans [[Dvergheim (Fjordur)|Dvergheim]]",
+				"image": "Fjordur Runes (4).jpg"
+			},
+			{
+				"lat": 47.38, "lon": 7.73, "article": "Runes",
+				"description": "Dans [[La fosse aux serpents (Fjordur)|La fosse aux serpents]]",
+				"image": "Fjordur Runes (6).jpg"
+			},
+			{
+				"lat": 5.11, "lon": 6, "article": "Runes",
+				"description": "Dans une grotte sous-marine sous les [[Îles Kairuku (Fjordur)|Îles Kairuku]]",
+				"image": "Fjordur Runes (18).jpg"
+			},
+			{
+				"lat": 88.24, "lon": 20.19, "article": "Runes",
+				"description": "Près de l'entrée près d'un lac de lavec de [[Dvergheim (Fjordur)|Dvergheim]]",
+				"image": "Fjordur Runes (90).jpg"
+			},
+			{
+				"lat": 87.6, "lon": 11.63, "article": "Runes",
+				"description": "Dans la bouche d'un crâne dans la région des cristaux dans [[Dvergheim (Fjordur)|Dvergheim]]",
+				"image": "Fjordur Runes (91).jpg"
+			},
+			{
+				"lat": 47.66, "lon": 13.96, "article": "Runes",
+				"description": "Dans [[La fosse aux serpents (Fjordur)|La fosse aux serpents]]",
+				"image": "Fjordur Runes (97).jpg"
+			},
+			{
+				"lat": 49.13, "lon": 10.09, "article": "Runes",
+				"description": "Près d'un portail fermé [[La fosse aux serpents (Fjordur)|La fosse aux serpents]]",
+				"image": "Fjordur Runes (98).jpg"
+			},
+			{
+				"lat": 43.1, "lon": 10.45, "article": "Runes",
+				"description": "Dans [[La fosse aux serpents (Fjordur)|La fosse aux serpents]]",
+				"image": "Fjordur Runes (99).jpg"
+			},
+			{
+				"lat": 45.57, "lon": 12.58, "article": "Runes",
+				"description": "Sous l'eau dans [[La fosse aux serpents (Fjordur)|La fosse aux serpents]]",
+				"image": "Fjordur Runes (101).jpg"
+			},
+			{
+				"lat": 6.04, "lon": 10.03, "article": "Runes",
+				"description": "Dans les eaux des [[Cavernes de Mariana (Fjordur)|Cavernes de Mariana]]",
+				"image": "Fjordur Runes (142).jpg"
+			},
+			{
+				"lat": 8.45, "lon": 13.47, "article": "Runes",
+				"description": "Dans les eaux des [[Cavernes de Mariana (Fjordur)|Cavernes de Mariana]], juste à côté de l'{{ItemLink|Artéfact du Dévoreur}}",
+				"image": "Fjordur Runes (144).jpg"
+			},
+			{
+				"lat": 76.43, "lon": 8.31, "article": "Runes",
+				"description": "Dans les [[Profondeurs de Nidisheim (Fjordur)|Profondeurs de Nidisheim]]",
+				"image": "Fjordur Runes (167).jpg"
+			},
+			{
+				"lat": 75.94, "lon": 70.28, "article": "Runes",
+				"description": "Dans [[Les cavernes oubliées (Fjordur)|Les cavernes oubliées]]",
+				"image": "Fjordur Runes (168).jpg"
+			},
+			{
+				"lat": 73.31, "lon": 71.94, "article": "Runes",
+				"description": "Près d'une statue dans [[Les cavernes oubliées (Fjordur)|Les cavernes oubliées]]",
+				"image": "Fjordur Runes (169).jpg"
+			},
+			{
+				"lat": 86.88, "lon": 97.09, "article": "Runes",
+				"description": "Dans les [[Cavernes du temps (Fjordur)|Cavernes du temps]], sur le chemin descendant vers l'entrée",
+				"image": "Fjordur Runes (170).jpg"
+			},
+			{
+				"lat": 83.33, "lon": 94.58, "article": "Runes",
+				"description": "Dans les [[Cavernes du temps (Fjordur)|Cavernes du temps]]",
+				"image": "Fjordur Runes (171).jpg"
+			},
+			{
+				"lat": 84.81, "lon": 15.45, "article": "Runes",
+				"description": "Dans la grotte sous les [[Montagnes de Skarstind (Fjordur)|Montagnes de Skarstind]]",
+				"image": "Fjordur Runes (173).jpg"
+			},
+			{
+				"lat": 82.54, "lon": 16.39, "article": "Runes",
+				"description": "Dans la grotte sous les [[Montagnes de Skarstind (Fjordur)|Montagnes de Skarstind]]",
+				"image": "Fjordur Runes (174).jpg"
+			},
+			{
+				"lat": 81.16, "lon": 13.79, "article": "Runes",
+				"description": "Dans la grotte sous les [[Montagnes de Skarstind (Fjordur)|Montagnes de Skarstind]]",
+				"image": "Fjordur Runes (175).jpg"
+			},
+			{
+				"lat": 90.62, "lon": 39.83, "article": "Runes",
+				"description": "Dans une grotte sous [[Vardiland (Fjordur)|Vardiland]]",
+				"image": "Fjordur Runes (189).jpg"
+			},
+			{
+				"lat": 32.12, "lon": 32.15, "article": "Runes",
+				"description": "Dans la [[Grotte cachée (Fjordur)|Grotte cachée]]",
+				"image": "Fjordur Runes (160).jpg"
+			},
+			{
+				"lat": 34.94, "lon": 33.35, "article": "Runes",
+				"description": "Dans la [[Grotte cachée (Fjordur)|Grotte cachée]]",
+				"image": "Fjordur Runes (161).jpg"
+			}
+		],
+		"deep-sea-loot-crates": [
+			{ "lat": 56.6929, "lon": 49.65915 },
+			{ "lat": 37.67008, "lon": 12.91766 },
+			{ "lat": 37.21146, "lon": 1.850161 },
+			{ "lat": 61.07338, "lon": 53.55693 },
+			{ "lat": 77.206, "lon": 62.80927 },
+			{ "lat": 95.57555, "lon": 45.25193 },
+			{ "lat": 95.83952, "lon": 59.96625 },
+			{ "lat": 57.11161, "lon": 97.17897 },
+			{ "lat": -0.4933483, "lon": 98.00841 },
+			{ "lat": 99.56967, "lon": 75.68884 },
+			{ "lat": 97.87971, "lon": 99.21496 },
+			{ "lat": 78.63269, "lon": 102.1249 },
+			{ "lat": -0.8696261, "lon": 51.32041 },
+			{ "lat": 16.69696, "lon": 102.3438 },
+			{ "lat": 0.5924941, "lon": 25.56687 },
+			{ "lat": 2.717687, "lon": 2.840639 },
+			{ "lat": 13.75004, "lon": -1.42221 },
+			{ "lat": 98.73912, "lon": 1.442375 }
+		],
+		"playerSpawns-VardilanN": [
+			{ "lat": 63.79149, "lon": 2.750315 },
+			{ "lat": 62.14326, "lon": 3.503711 },
+			{ "lat": 53.01148, "lon": 29.94609 },
+			{ "lat": 62.16847, "lon": 4.635205 },
+			{ "lat": 71.46071, "lon": 40.07435 },
+			{ "lat": 61.60342, "lon": 5.918639 },
+			{ "lat": 61.28017, "lon": 7.653354 },
+			{ "lat": 59.77454, "lon": 10.52094 },
+			{ "lat": 60.28708, "lon": 11.95631 },
+			{ "lat": 62.83364, "lon": 24.89847 },
+			{ "lat": 61.44238, "lon": 24.08696 },
+			{ "lat": 62.24339, "lon": 22.6999 },
+			{ "lat": 60.20796, "lon": 21.539 },
+			{ "lat": 59.38944, "lon": 21.87439 },
+			{ "lat": 58.15782, "lon": 21.86739 },
+			{ "lat": 63.26985, "lon": 3.343369 },
+			{ "lat": 66.97663, "lon": 2.431816 },
+			{ "lat": 57.41913, "lon": 23.04369 },
+			{ "lat": 57.38482, "lon": 23.66405 },
+			{ "lat": 57.24759, "lon": 24.38524 },
+			{ "lat": 57.00812, "lon": 25.13794 },
+			{ "lat": 56.70915, "lon": 25.93824 },
+			{ "lat": 56.06848, "lon": 26.70354 },
+			{ "lat": 55.14354, "lon": 27.79513 },
+			{ "lat": 53.58843, "lon": 28.51562 },
+			{ "lat": 59.12337, "lon": 15.7499 },
+			{ "lat": 53.30696, "lon": 30.35639 },
+			{ "lat": 53.74668, "lon": 31.82818 },
+			{ "lat": 66.1413, "lon": 2.554964 },
+			{ "lat": 65.31088, "lon": 2.424731 },
+			{ "lat": 59.81515, "lon": 20.49013 },
+			{ "lat": 64.53578, "lon": 2.917659 }
+		],
+		"playerSpawns-VardilanS": [
+			{ "lat": 98.31116, "lon": 8.752976 },
+			{ "lat": 99.12898, "lon": 8.638846 },
+			{ "lat": 98.71497, "lon": 8.418289 },
+			{ "lat": 85.50063, "lon": 2.736312 },
+			{ "lat": 85.69388, "lon": 3.183028 },
+			{ "lat": 86.23092, "lon": 3.993839 },
+			{ "lat": 86.79317, "lon": 4.627503 },
+			{ "lat": 87.00322, "lon": 37.65229 },
+			{ "lat": 94.66684, "lon": 37.35882 },
+			{ "lat": 91.24773, "lon": 36.5404 },
+			{ "lat": 87.36452, "lon": 37.2987 },
+			{ "lat": 81.83868, "lon": 45.65187 },
+			{ "lat": 82.75172, "lon": 45.15404 },
+			{ "lat": 83.00028, "lon": 44.41535 },
+			{ "lat": 83.90045, "lon": 44.84688 },
+			{ "lat": 84.83126, "lon": 44.12267 },
+			{ "lat": 86.21342, "lon": 43.31536 },
+			{ "lat": 86.142, "lon": 41.56141 },
+			{ "lat": 85.43061, "lon": 39.96709 },
+			{ "lat": 84.85366, "lon": 38.75508 },
+			{ "lat": 84.67232, "lon": 38.17393 },
+			{ "lat": 87.32391, "lon": 36.25543 },
+			{ "lat": 86.29954, "lon": 37.41073 },
+			{ "lat": 88.22574, "lon": 37.44014 },
+			{ "lat": 88.03179, "lon": 35.89833 },
+			{ "lat": 89.52528, "lon": 36.59222 },
+			{ "lat": 91.04397, "lon": 35.63787 },
+			{ "lat": 92.18247, "lon": 36.95351 },
+			{ "lat": 94.89778, "lon": 37.63899 },
+			{ "lat": 93.89722, "lon": 35.65537 },
+			{ "lat": 97.36522, "lon": 6.790366 },
+			{ "lat": 97.34211, "lon": 6.200112 },
+			{ "lat": 97.06274, "lon": 7.407226 },
+			{ "lat": 97.34001, "lon": 8.334967 },
+			{ "lat": 96.85058, "lon": 8.934323 },
+			{ "lat": 96.37306, "lon": 8.393783 }
+		],
+		"playerSpawns-VannalandN": [
+			{ "lat": 3.867806, "lon": 6.886991 },
+			{ "lat": 4.963591, "lon": 6.053074 },
+			{ "lat": 6.130794, "lon": 4.790646 },
+			{ "lat": 7.744714, "lon": 3.858003 },
+			{ "lat": 3.417589, "lon": 10.47052 },
+			{ "lat": 3.381879, "lon": 11.64053 },
+			{ "lat": 4.257107, "lon": 12.84694 },
+			{ "lat": 4.993699, "lon": 12.40233 },
+			{ "lat": 4.901275, "lon": 10.30668 },
+			{ "lat": 3.058395, "lon": 21.97731 },
+			{ "lat": 3.222938, "lon": 23.88601 },
+			{ "lat": 3.88461, "lon": 18.32306 },
+			{ "lat": 4.11427, "lon": 43.89581 },
+			{ "lat": 4.451758, "lon": 44.27671 },
+			{ "lat": 5.215656, "lon": 47.33861 },
+			{ "lat": 3.177426, "lon": 49.9755 },
+			{ "lat": 3.072399, "lon": 51.04257 },
+			{ "lat": 3.892312, "lon": 51.99622 },
+			{ "lat": 2.903655, "lon": 50.90324 },
+			{ "lat": 1.99832, "lon": 59.11637 },
+			{ "lat": 1.595015, "lon": 60.49993 },
+			{ "lat": 1.463381, "lon": 59.81936 },
+			{ "lat": 2.334407, "lon": 61.56701 },
+			{ "lat": 2.900154, "lon": 62.56127 },
+			{ "lat": 3.510013, "lon": 62.58647 },
+			{ "lat": 4.562386, "lon": 63.01709 },
+			{ "lat": 3.792186, "lon": 63.73337 },
+			{ "lat": 5.116931, "lon": 64.16468 },
+			{ "lat": 4.320123, "lon": 64.93979 },
+			{ "lat": 4.428652, "lon": 65.62737 },
+			{ "lat": 5.109929, "lon": 45.22196 },
+			{ "lat": 3.80619, "lon": 65.95085 },
+			{ "lat": 3.447697, "lon": 68.27125 },
+			{ "lat": 3.26915, "lon": 69.29562 },
+			{ "lat": 3.99874, "lon": 69.70032 },
+			{ "lat": 4.418149, "lon": 70.24016 },
+			{ "lat": 3.511413, "lon": 70.96345 },
+			{ "lat": 3.876908, "lon": 71.94371 },
+			{ "lat": 4.219997, "lon": 72.60608 },
+			{ "lat": 4.002941, "lon": 73.47151 },
+			{ "lat": 4.319423, "lon": 74.2179 },
+			{ "lat": 4.588293, "lon": 75.47753 }
+		],
+		"playerSpawns-VannalandE": [
+			{ "lat": 11.86669, "lon": 97.40933 },
+			{ "lat": 6.792466, "lon": 80.34659 },
+			{ "lat": 6.69234, "lon": 83.31747 },
+			{ "lat": 6.424871, "lon": 84.2368 },
+			{ "lat": 6.531298, "lon": 84.96709 },
+			{ "lat": 6.785464, "lon": 85.7408 },
+			{ "lat": 7.303599, "lon": 86.22602 },
+			{ "lat": 6.452878, "lon": 88.04229 },
+			{ "lat": 6.684638, "lon": 88.98894 },
+			{ "lat": 7.522056, "lon": 88.8349 },
+			{ "lat": 6.217617, "lon": 89.84806 },
+			{ "lat": 6.342249, "lon": 91.69934 },
+			{ "lat": 6.573309, "lon": 92.32111 },
+			{ "lat": 7.238482, "lon": 93.94203 },
+			{ "lat": 7.96177, "lon": 94.91598 },
+			{ "lat": 8.658452, "lon": 95.71209 },
+			{ "lat": 9.320124, "lon": 96.71615 },
+			{ "lat": 11.1392, "lon": 97.39883 },
+			{ "lat": 12.72721, "lon": 97.83504 },
+			{ "lat": 13.73337, "lon": 97.73842 },
+			{ "lat": 14.42445, "lon": 98.56603 },
+			{ "lat": 15.25417, "lon": 98.58634 },
+			{ "lat": 16.08528, "lon": 98.73547 },
+			{ "lat": 17.20837, "lon": 98.8153 },
+			{ "lat": 18.36788, "lon": 98.63815 },
+			{ "lat": 19.42585, "lon": 98.71937 },
+			{ "lat": 20.7758, "lon": 98.4456 },
+			{ "lat": 21.5537, "lon": 98.36998 },
+			{ "lat": 22.42053, "lon": 98.25935 },
+			{ "lat": 23.21734, "lon": 98.27896 },
+			{ "lat": 24.94539, "lon": 97.59908 },
+			{ "lat": 25.45792, "lon": 97.36102 },
+			{ "lat": 25.79821, "lon": 96.8982 },
+			{ "lat": 25.83462, "lon": 96.41647 },
+			{ "lat": 25.87173, "lon": 95.3795 },
+			{ "lat": 5.944686, "lon": 79.49926 },
+			{ "lat": 6.217617, "lon": 80.48453 }
+		],
+		"playerSpawns-VannalandS": [
+			{ "lat": 28.98124, "lon": 94.96359 },
+			{ "lat": 29.53228, "lon": 96.38706 },
+			{ "lat": 29.17939, "lon": 97.10615 },
+			{ "lat": 29.56729, "lon": 97.82454 },
+			{ "lat": 40.51814, "lon": 93.0745 },
+			{ "lat": 40.69038, "lon": 93.36368 },
+			{ "lat": 41.08388, "lon": 93.09901 },
+			{ "lat": 41.1595, "lon": 93.54082 },
+			{ "lat": 41.50679, "lon": 93.89862 },
+			{ "lat": 41.72175, "lon": 94.19479 },
+			{ "lat": 41.5509, "lon": 94.36634 },
+			{ "lat": 42.3001, "lon": 97.37572 },
+			{ "lat": 42.72021, "lon": 97.09915 },
+			{ "lat": 43.23694, "lon": 96.63633 },
+			{ "lat": 43.30556, "lon": 97.37222 },
+			{ "lat": 43.80479, "lon": 97.61518 },
+			{ "lat": 44.37404, "lon": 97.57737 },
+			{ "lat": 44.78084, "lon": 98.19003 },
+			{ "lat": 45.28288, "lon": 98.24605 },
+			{ "lat": 45.42501, "lon": 97.89946 },
+			{ "lat": 45.95715, "lon": 98.27545 },
+			{ "lat": 46.1616, "lon": 97.87985 },
+			{ "lat": 46.21622, "lon": 97.52416 },
+			{ "lat": 46.83868, "lon": 97.14676 },
+			{ "lat": 47.07814, "lon": 96.34085 },
+			{ "lat": 47.87285, "lon": 95.79121 },
+			{ "lat": 48.18443, "lon": 95.97116 },
+			{ "lat": 48.93713, "lon": 95.71979 },
+			{ "lat": 49.45596, "lon": 95.28008 },
+			{ "lat": 50.87803, "lon": 94.37754 },
+			{ "lat": 51.18541, "lon": 94.19899 },
+			{ "lat": 51.50399, "lon": 93.71377 },
+			{ "lat": 52.52066, "lon": 92.87425 },
+			{ "lat": 52.83154, "lon": 92.41703 },
+			{ "lat": 54.28302, "lon": 92.22378 },
+			{ "lat": 54.91738, "lon": 91.81487 },
+			{ "lat": 55.06652, "lon": 91.41717 },
+			{ "lat": 55.7562, "lon": 90.96765 },
+			{ "lat": 55.67218, "lon": 90.42221 },
+			{ "lat": 56.38006, "lon": 90.09243 },
+			{ "lat": 56.32825, "lon": 89.6086 },
+			{ "lat": 56.69514, "lon": 89.19759 },
+			{ "lat": 57.07394, "lon": 89.53018 },
+			{ "lat": 57.07604, "lon": 90.17925 },
+			{ "lat": 60.04061, "lon": 87.6873 },
+			{ "lat": 59.9762, "lon": 87.36032 },
+			{ "lat": 60.49713, "lon": 86.9122 },
+			{ "lat": 60.7772, "lon": 84.51688 },
+			{ "lat": 60.28078, "lon": 84.17869 },
+			{ "lat": 61.48019, "lon": 81.87299 },
+			{ "lat": 61.34715, "lon": 81.75396 },
+			{ "lat": 61.24843, "lon": 82.16357 },
+			{ "lat": 62.26789, "lon": 81.06498 },
+			{ "lat": 62.47375, "lon": 81.05938 },
+			{ "lat": 62.23078, "lon": 81.43888 },
+			{ "lat": 62.84764, "lon": 79.78925 },
+			{ "lat": 62.76712, "lon": 80.11553 },
+			{ "lat": 67.43524, "lon": 76.50399 },
+			{ "lat": 67.01443, "lon": 76.70775 },
+			{ "lat": 67.2861, "lon": 77.40933 },
+			{ "lat": 67.52276, "lon": 72.79653 },
+			{ "lat": 67.26579, "lon": 72.23218 },
+			{ "lat": 66.46128, "lon": 72.91696 },
+			{ "lat": 64.36634, "lon": 69.86907 },
+			{ "lat": 63.8419, "lon": 69.58129 },
+			{ "lat": 63.95463, "lon": 69.30262 },
+			{ "lat": 60.69878, "lon": 67.63689 },
+			{ "lat": 60.42991, "lon": 67.64949 },
+			{ "lat": 60.50483, "lon": 67.36452 },
+			{ "lat": 58.70747, "lon": 67.17057 },
+			{ "lat": 58.92522, "lon": 67.40933 },
+			{ "lat": 59.16959, "lon": 67.05364 },
+			{ "lat": 53.8335, "lon": 92.78113 },
+			{ "lat": 54.84946, "lon": 60.29198 },
+			{ "lat": 55.45022, "lon": 60.79331 },
+			{ "lat": 53.10951, "lon": 59.04565 },
+			{ "lat": 51.88909, "lon": 58.80199 },
+			{ "lat": 50.62877, "lon": 58.22644 },
+			{ "lat": 49.82846, "lon": 57.02073 },
+			{ "lat": 50.32979, "lon": 56.99902 },
+			{ "lat": 47.02143, "lon": 54.83266 },
+			{ "lat": 46.62022, "lon": 53.8531 },
+			{ "lat": 46.17351, "lon": 52.21118 },
+			{ "lat": 45.7639, "lon": 51.81557 },
+			{ "lat": 46.22742, "lon": 50.78561 },
+			{ "lat": 45.52024, "lon": 49.89567 }
+		],
+		"playerSpawns-VannalandW": [
+			{ "lat": 32.13486, "lon": 14.01554 },
+			{ "lat": 33.76138, "lon": 15.79891 },
+			{ "lat": 34.44126, "lon": 16.22882 },
+			{ "lat": 34.07366, "lon": 16.51099 },
+			{ "lat": 34.87327, "lon": 17.14396 },
+			{ "lat": 34.45526, "lon": 17.38272 },
+			{ "lat": 35.01611, "lon": 18.80409 },
+			{ "lat": 35.0119, "lon": 19.84666 },
+			{ "lat": 35.91514, "lon": 22.2987 },
+			{ "lat": 36.38496, "lon": 22.98558 },
+			{ "lat": 36.1567, "lon": 23.75438 },
+			{ "lat": 34.29072, "lon": 26.34645 },
+			{ "lat": 34.2102, "lon": 26.88769 },
+			{ "lat": 33.27475, "lon": 27.07884 },
+			{ "lat": 32.61798, "lon": 27.83644 },
+			{ "lat": 33.27965, "lon": 28.67316 },
+			{ "lat": 32.89875, "lon": 15.58745 },
+			{ "lat": 30.74084, "lon": 13.43635 },
+			{ "lat": 30.12673, "lon": 12.674 },
+			{ "lat": 30.28918, "lon": 10.80941 },
+			{ "lat": 30.57485, "lon": 9.639407 },
+			{ "lat": 29.80325, "lon": 9.379639 },
+			{ "lat": 28.93572, "lon": 8.901415 },
+			{ "lat": 28.62694, "lon": 7.103347 },
+			{ "lat": 26.1581, "lon": 6.22882 },
+			{ "lat": 21.10769, "lon": 4.388041 },
+			{ "lat": 33.23904, "lon": 30.04411 },
+			{ "lat": 32.85464, "lon": 31.77006 },
+			{ "lat": 32.87845, "lon": 32.42123 },
+			{ "lat": 23.33077, "lon": 4.553984 }
+		],
+		"playerSpawns-Balheimr": [
+			{ "lat": 71.75816, "lon": 88.29996 },
+			{ "lat": 74.78575, "lon": 85.7618 },
+			{ "lat": 74.94889, "lon": 81.21902 },
+			{ "lat": 75.68898, "lon": 77.76642 },
+			{ "lat": 77.79513, "lon": 78.01219 },
+			{ "lat": 80.3641, "lon": 76.73645 },
+			{ "lat": 82.14956, "lon": 70.3746 },
+			{ "lat": 91.79527, "lon": 69.66321 },
+			{ "lat": 95.95155, "lon": 74.71853 },
+			{ "lat": 96.96822, "lon": 78.57303 },
+			{ "lat": 72.2917, "lon": 96.77496 },
+			{ "lat": 72.42123, "lon": 95.95435 },
+			{ "lat": 70.01401, "lon": 89.88377 }
+		]
+	}
+}

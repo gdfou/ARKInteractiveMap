@@ -1,0 +1,129 @@
+{
+	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
+	"mixins": [ "Cartes/Définitions des groupes normés" ],
+	"backgrounds": [
+		{
+			"name": "Topographique", "image": "Fjordur Jotunheim Topographic Map.jpg",
+			"at": [
+				[ 54.48, 21.35 ],
+				[ 97.36, 64.23 ]
+			]
+		},
+		{
+			"name": "Croquis", "image": "Fjordur Map.jpg",
+			"overlays": [
+				{
+					"name": "Frontières des royaumes",
+					"at": [
+						[ 54.48, 21.35 ],
+						[ 97.36, 64.23 ]
+					]
+				}
+			]
+		}
+	],
+	"groups": {
+		"PlayerTeleportJotunheim": {
+			"name": "Point de téléportation",
+			"fillColor": "#741e94", "borderColor": "#fff", "size": 5.5, "icon": "Tek Teleporter.png"
+		}
+	},
+	"markers": {
+		"obelisk-blue": [ { "lat": 87.6, "lon": 26.3 } ],
+		"rune": [
+			{ "lat": 60.42, "lon": 26.09, "article": "Runes", "image": "Fjordur Runes (1).jpg" },
+			{ "lat": 84.06, "lon": 56.68, "article": "Runes", "image": "Fjordur Runes (3).jpg" },
+			{ "lat": 80.16, "lon": 39.11, "article": "Runes", "image": "Fjordur Runes (7).jpg" },
+			{ "lat": 84.14, "lon": 46.79, "article": "Runes", "image": "Fjordur Runes (9).jpg" },
+			{ "lat": 82.08, "lon": 36.77, "article": "Runes", "image": "Fjordur Runes (59).jpg" },
+			{ "lat": 91.09, "lon": 27.13, "article": "Runes", "image": "Fjordur Runes (74).jpg" },
+			{ "lat": 74.48, "lon": 24.53, "article": "Runes", "image": "Fjordur Runes (84).jpg" },
+			{ "lat": 70.58, "lon": 32.65, "article": "Runes", "image": "Fjordur Runes (92).jpg" },
+			{ "lat": 63.17, "lon": 33.76, "article": "Runes", "image": "Fjordur Runes (102).jpg" },
+			{ "lat": 60.29, "lon": 34.07, "article": "Runes", "image": "Fjordur Runes (103).jpg" },
+			{ "lat": 64.59, "lon": 39.48, "article": "Runes", "image": "Fjordur Runes (156).jpg" },
+			{ "lat": 62.84, "lon": 48.4, "article": "Runes", "image": "Fjordur Runes (188).jpg" },
+			{ "lat": 71.44, "lon": 48.1, "article": "Runes", "image": "Fjordur Runes (192).jpg" },
+			{ "lat": 91.92, "lon": 50.68, "article": "Runes", "image": "Fjordur Runes (195).jpg" },
+			{ "lat": 75.87, "lon": 48.57, "article": "Runes", "image": "Fjordur Runes (199).jpg" }
+		],
+		"cave-entrance": [
+			{
+				"lat": 77.69, "lon": 30.82,
+				"name": "Grotte non nommée de Jotunheim",
+				"description": "Combat du miniboss [[Steinbjörn]] à l'intérieur",
+				"image": "Entrance SteinbjornBossCave.jpg"
+			},
+			{
+				"lat": 63.9, "lon": 32.6,
+				"name": "Grotte des Wyvernes de Glace",
+				"description": "Apparition de [[Wyverne de Glace|Wyvernes de Glace]] à l'intérieur"
+			}
+		],
+		"PlayerTeleportJotunheim": [
+			{ "lat": 73.00955, "lon": 49.59708 },
+			{ "lat": 59.17601, "lon": 37.19404 },
+			{ "lat": 59.3107, "lon": 37.70575 },
+			{ "lat": 57.16045, "lon": 38.46265 },
+			{ "lat": 57.06732, "lon": 38.22739 },
+			{ "lat": 56.76363, "lon": 38.18799 },
+			{ "lat": 56.56356, "lon": 38.98741 },
+			{ "lat": 60.2362, "lon": 46.91039 },
+			{ "lat": 59.68561, "lon": 47.03841 },
+			{ "lat": 60.18411, "lon": 47.14055 },
+			{ "lat": 59.93492, "lon": 47.54046 },
+			{ "lat": 61.78951, "lon": 53.98576 },
+			{ "lat": 61.01264, "lon": 53.92573 },
+			{ "lat": 61.26279, "lon": 54.44438 },
+			{ "lat": 62.83138, "lon": 54.72865 },
+			{ "lat": 62.83208, "lon": 53.60836 },
+			{ "lat": 59.55037, "lon": 37.47234 },
+			{ "lat": 74.50422, "lon": 29.06337 },
+			{ "lat": 75.17839, "lon": 29.70835 },
+			{ "lat": 74.9391, "lon": 28.85074 },
+			{ "lat": 67.91627, "lon": 25.0334 },
+			{ "lat": 68.26389, "lon": 25.57781 },
+			{ "lat": 68.14435, "lon": 24.8057 },
+			{ "lat": 68.60404, "lon": 24.12671 },
+			{ "lat": 88.52795, "lon": 27.03406 },
+			{ "lat": 88.84175, "lon": 27.15253 },
+			{ "lat": 88.88213, "lon": 26.42252 },
+			{ "lat": 89.83732, "lon": 26.82843 },
+			{ "lat": 84.94813, "lon": 32.57762 },
+			{ "lat": 84.47621, "lon": 32.19462 },
+			{ "lat": 83.60698, "lon": 33.24574 },
+			{ "lat": 88.85831, "lon": 43.18884 },
+			{ "lat": 89.03896, "lon": 43.53753 },
+			{ "lat": 88.52293, "lon": 43.65516 },
+			{ "lat": 92.20093, "lon": 43.10813 },
+			{ "lat": 91.66931, "lon": 43.24252 },
+			{ "lat": 92.12333, "lon": 43.66911 },
+			{ "lat": 89.36693, "lon": 49.63377 },
+			{ "lat": 89.73036, "lon": 50.07489 },
+			{ "lat": 90.12424, "lon": 49.22034 },
+			{ "lat": 85.8215, "lon": 39.8898 },
+			{ "lat": 85.62965, "lon": 40.14794 },
+			{ "lat": 86.00356, "lon": 40.16511 },
+			{ "lat": 89.31492, "lon": 38.11925 },
+			{ "lat": 89.11167, "lon": 38.1045 },
+			{ "lat": 89.33986, "lon": 38.49762 },
+			{ "lat": 88.45724, "lon": 38.44011 },
+			{ "lat": 84.10451, "lon": 55.84048 },
+			{ "lat": 83.17516, "lon": 56.21179 },
+			{ "lat": 84.8151, "lon": 57.28066 },
+			{ "lat": 73.42336, "lon": 57.05304 },
+			{ "lat": 74.8887, "lon": 57.0149 },
+			{ "lat": 73.6478, "lon": 55.63307 },
+			{ "lat": 71.22794, "lon": 52.20361 },
+			{ "lat": 70.3552, "lon": 52.59637 },
+			{ "lat": 72.01114, "lon": 52.93806 },
+			{ "lat": 64.56527, "lon": 51.95216 },
+			{ "lat": 64.335, "lon": 51.43 },
+			{ "lat": 64.83137, "lon": 51.03806 },
+			{ "lat": 66.07337, "lon": 51.02774 },
+			{ "lat": 73.40726, "lon": 50.59587 },
+			{ "lat": 72.47881, "lon": 50.74991 },
+			{ "lat": 73.24972, "lon": 51.17142 }
+		]
+	}
+}

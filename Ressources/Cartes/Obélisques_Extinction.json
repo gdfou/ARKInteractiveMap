@@ -1,0 +1,13 @@
+{
+	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
+	"$mixin": true,
+	"markers": {
+		"obelisk-blue": [ { "lat": 21.8, "lon": 78.2 } ],
+		"obelisk-green": [ { "lat": 50.6, "lon": 29.7 } ],
+		"obelisk-red": [ { "lat": 77.6, "lon": 76.9 } ],
+		"king-titan-terminal": [ { "lat": 3.4, "lon": 49.2 } ],
+		"forest-titan-terminal": [ { "lat": 15.9, "lon": 50.5 } ],
+		"ice-titan-terminal": [ { "lat": 6.7, "lon": 85.8 } ],
+		"desert-titan-terminal": [ { "lat": 97.1, "lon": 90.1 } ]
+	}
+}

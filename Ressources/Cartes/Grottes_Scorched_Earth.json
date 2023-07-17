@@ -1,0 +1,26 @@
+{
+	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
+	"$mixin": true,
+	"markers": {
+		"cave-entrance": [
+			{
+				"lat": 28.5, "lon": 29.3,
+				"name": "Cimetière des Tirants",
+				"description": "Contient:\n* {{ItemLink|Artéfact des Profondeurs}}",
+				"image": "Grave of the Tyrants Entrance ScE.jpg"
+			},
+			{
+				"lat": 58.6, "lon": 47.7,
+				"name": "Les tunnels anciens",
+				"description": "Contient:\n* {{ItemLink|Artéfact du Gardien des Portes}}",
+				"image": "The Old Tunnels Entry ScE.jpg"
+			},
+			{
+				"lat": 78.5, "lon": 75.6,
+				"name": "Ruines de Nosti",
+				"description": "Contient:\n* {{ItemLink|Artéfact du Destructeur}}",
+				"image": "Ruins of Nosti Building ScE.jpg"
+			}
+		]
+	}
+}

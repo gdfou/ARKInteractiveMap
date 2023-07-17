@@ -1,0 +1,186 @@
+﻿{
+  "maps": [
+    {
+      "name": "The Island",
+      "folder": "The_Island",
+      "maps": [
+        {
+          "resources": [
+            "The_Island_Ressources.json",
+            "The_Island_Exploration.json"
+          ],
+          "map_border": {
+            "width": 30,
+            "color": "#246be1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "The Center",
+      "folder": "The_Center",
+      "maps": [
+        {
+          "resources": [
+            "The_Center_Ressources.json"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Scorched Earth",
+      "folder": "Scorched_Earth",
+      "maps": [
+        {
+          "resources": [
+            "Scorched_Earth_Ressources.json",
+            "Scorched_Earth_Exploration.json"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ragnarok",
+      "folder": "Ragnarok",
+      "maps": [
+        {
+          "resources": [
+            "Ragnarok_Ressources.json"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Aberration",
+      "folder": "Aberration",
+      "maps": [
+        {
+          "resources": [
+            "Aberration_Exploration.json",
+            "Aberration_Ressources.json"
+          ],
+          "map_border": {
+            "width": 30,
+            "color": "#808080"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Extinction",
+      "folder": "Extinction",
+      "maps": [
+        {
+          "resources": [
+            "Extinction_Ressources.json"
+          ],
+          "map_border": {
+            "width": 200,
+            "color": "#776e65"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Valguero",
+      "folder": "Valguero",
+      "maps": [
+        {
+          "resources": [
+            "Valguero_Ressources.json"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Genesis: Part 1",
+      "folder": "Genesis_Part_1",
+      "maps": [
+        {
+          "resources": [
+            "Genesis_Part_1_Ressources.json"
+          ],
+          "map_border": {
+            "width": 50,
+            "color": "#909090"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Genesis: Part 2",
+      "folder": "Genesis_Part_2",
+      "maps": [
+        {
+          "resources": [
+            "Genesis_Part_2_Ressources.json"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Crystal Isles",
+      "folder": "Crystal_Isles",
+      "maps": [
+        {
+          "resources": [
+            "Crystal_Isles_Ressources.json"
+          ],
+          "map_border": {
+            "width": 100,
+            "color": "#0c7edf"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lost Island",
+      "folder": "Lost_Island",
+      "maps": [
+        {
+          "resources": [
+            "Lost_Island_Ressources.json"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fjordur",
+      "folder": "Fjordur",
+      "maps": [
+        {
+          "name": "Midgard",
+          "resources": [
+            "Fjordur_Midgard_Ressources.json",
+            "Fjordur_Midgard_Exploration.json"
+          ],
+          "map_border": {
+            "width": 100,
+            "color": "#2955dc"
+          }
+        },
+        {
+          "name": "Asgard",
+          "resources": [
+            "Fjordur_Asgard_Ressources.json",
+            "Fjordur_Asgard_Exploration.json"
+          ]
+        },
+        {
+          "name": "Jotunheim",
+          "resources": [
+            "Fjordur_Jotunheim_Ressources.json",
+            "Fjordur_Jotunheim_Exploration.json"
+          ]
+        },
+        {
+          "name": "Vanaheim",
+          "resources": [
+            "Fjordur_Vanaheim_Ressources.json",
+            "Fjordur_Vanaheim_Exploration.json"
+          ]
+        }
+      ]
+    }
+  ]
+}

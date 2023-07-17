@@ -1,0 +1,41 @@
+{
+	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
+	"mixins": [ "Cartes/Définitions des groupes normés" ],
+	"backgrounds": [
+		{ "name": "Croquis", "image": "Scorched Earth Map.jpg" },
+		{
+			"name": "Topographique", "image": "Scorched Earth Topographic Map.jpg",
+			"at": [
+				[ 7.1375, 7.1375 ],
+				[ 92.8625, 92.8625 ]
+			]
+		}
+	],
+	"custom": {
+		"creatureSpawnsPage": "en:Data:Spawn Map/Scorched Earth",
+		"creatureSpawnsCacheId": 10
+	},
+	"markers": {
+		"obelisk-blue": [ { "lat": 17.3, "lon": 33.9 } ],
+		"obelisk-green": [ { "lat": 50, "lon": 73.4 } ],
+		"obelisk-red": [ { "lat": 71.1, "lon": 39.2 } ],
+		"wyvern-nest": [
+			{ "lat": 32.724, "lon": 14.756 },
+			{ "lat": 33.375, "lon": 14.92 },
+			{ "lat": 39.674, "lon": 15.194 },
+			{ "lat": 45.072, "lon": 17.103 },
+			{ "lat": 45.079, "lon": 15.052 },
+			{ "lat": 51.099, "lon": 16.222 },
+			{ "lat": 52.618, "lon": 18.555 },
+			{ "lat": 53.304, "lon": 18.781 },
+			{ "lat": 61.624, "lon": 18.473 },
+			{ "lat": 61.852, "lon": 16.9 },
+			{ "lat": 63.971, "lon": 18.68 },
+			{ "lat": 66.169, "lon": 16.715 },
+			{ "lat": 68.676, "lon": 20.118 },
+			{ "lat": 69.025, "lon": 20.723 },
+			{ "lat": 70.774, "lon": 19.26 },
+			{ "lat": 31.362, "lon": 14.378 }
+		]
+	}
+}

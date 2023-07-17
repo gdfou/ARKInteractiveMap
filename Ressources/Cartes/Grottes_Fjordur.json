@@ -1,0 +1,240 @@
+{
+	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
+	"$mixin": true,
+	"markers": {
+		"cave-entrance": [
+			{
+				"lat": 40.9, "lon": 57.4,
+				"name": "Les Mondes Cachés",
+				"description": "Contient les terminaux pourp se téléporter dans les autres royaumes",
+				"image": "The Hidden Worlds (Fjordur) entrance.jpg"
+			},
+			{
+				"lat": 14.1, "lon": 50.3,
+				"name": "Grotte de la Forêt de Lindbjord non nommée", "image": "Lindbjord Forest cave entrance 14.1 50.3.jpg"
+			},
+			{
+				"lat": 27, "lon": 49.8,
+				"name": "Grotte de la cascade de la Vallée de Vannaland", "image": "Vannaland Valley waterfall cave entrance 27.0 49.8.jpg"
+			},
+			{
+				"lat": 49.41, "lon": 14.35,
+				"name": "La fosse aux serpents",
+				"description": "Contient:\n* {{ItemLink|Artéfact de la Bête}}",
+				"image": "Entrance TheSnakepit.jpg"
+			},
+			{
+				"lat": 86.85, "lon": 12.84,
+				"name": "Grotte de Dvergheim",
+				"description": "Grotte cachée dans Dvergheim",
+				"image": "Entrance Faheimr.jpg"
+			},
+			{
+				"lat": 71.6, "lon": 1.52,
+				"name": "Nidisheim",
+				"description": "Contient:\n* {{ItemLink|Artéfact du Colosse}}",
+				"image": "Entrance Nidisheim.jpg"
+			},
+			{
+				"lat": 3.71, "lon": 4.08,
+				"name": "Cavernes de Mariana",
+				"description": "Contient:\n* {{ItemLink|Artéfact du Dévoreur}}",
+				"image": "Entrance MarianaCaverns.jpg"
+			},
+			{
+				"lat": 8.69, "lon": 24.48,
+				"name": "la forteresse gelée",
+				"description": "Contient:\n* {{ItemLink|Artéfact du Seigneur du Ciel}}",
+				"image": "Entrance FrozenFortress.jpg"
+			},
+			{
+				"lat": 7.69, "lon": 39.11,
+				"name": "Drengrheimr",
+				"description": "Contient:\n* {{ItemLink|Artéfact du Chasseur}}",
+				"image": "Entrance Drengrheimr E1.jpg"
+			},
+			{
+				"lat": 3.41, "lon": 32.79,
+				"name": "Drengrheimr",
+				"description": "Derrière un rocher destructible.<br/>Holds:\n* {{ItemLink|Artéfact du Chasseur}}",
+				"image": "Entrance Drengrheimr E2.jpg"
+			},
+			{
+				"lat": 20.9, "lon": 57.37,
+				"name": "Caverne en fusion",
+				"description": "Contient:\n* {{ItemLink|Artéfact de la Sagesse}}\n* {{ItemLink|Artéfact de la Meute}}\n* {{ItemLink|Runes|quantity=2}}",
+				"image": "Entrance MoltenCaverns.jpg"
+			},
+			{
+				"lat": 76.83, "lon": 65.6,
+				"name": "Les cavernes oubliées",
+				"description": "Contient:\n* {{ItemLink|Artéfact de la Ruse}}",
+				"image": "Entrance ForgottenCaverns.jpg"
+			},
+			{
+				"lat": 10.12, "lon": 84.47,
+				"name": "Cavernes des ours",
+				"description": "Contient:\n* {{ItemLink|Artéfact de Puissance}}",
+				"image": "Entrance BearCaverns.jpg"
+			},
+			{
+				"lat": 90.73, "lon": 78.52,
+				"name": "Carvernes de la Montagne du malheur",
+				"description": "Contient:\n* {{ItemLink|Artéfact de l'Immunisé}}",
+				"image": "Entrance MountDoomCaverns.jpg"
+			},
+			{
+				"lat": 25.02, "lon": 93.08,
+				"name": "Grotte de la Forêt de Runheimr non nommée", "image": "Entrance DungBeetleCave.jpg"
+			},
+			{
+				"lat": 57.31, "lon": 65.77,
+				"name": "le tombeau envahi", "image": "Entrance OvergrownCave.jpg"
+			},
+			{
+				"lat": 56.74, "lon": 84.69,
+				"name": "Beiygjaheimr", "image": "Entrance LunarBiomeCave.jpg"
+			},
+			{
+				"lat": 45.52, "lon": 63.36,
+				"name": "Les cavernes opulentes", "image": "Entrance LootDropCave.jpg"
+			},
+			{
+				"lat": 4.52, "lon": 47.32,
+				"name": "Grotte de la Forêt de Lindbjord non nommée",
+				"description": "Beyla Miniboss fight inside",
+				"image": "Entrance BeylaBossCave.jpg"
+			},
+			{
+				"lat": 39.56, "lon": 31.63,
+				"name": "Caverne dissimulée", "image": "Entrance HiddenGrotto.jpg"
+			},
+			{
+				"lat": 83.22, "lon": 21.26,
+				"name": "Dvergheim", "image": "Entrance Dvergheimr E1.jpg"
+			},
+			{
+				"lat": 86.26, "lon": 5.42,
+				"name": "Dvergheim", "image": "Entrance Dvergheimr E2.jpg"
+			},
+			{
+				"lat": 41.91, "lon": 24.84,
+				"name": "Bulle sous-marine non nommée", "image": "Entrance UnderwaterBubble1.jpg"
+			},
+			{
+				"lat": 46.39, "lon": 35.08,
+				"name": "Bulle sous-marine non nommée", "image": "Entrance UnderwaterBubble2.jpg"
+			},
+			{
+				"lat": 52.87, "lon": 96.93,
+				"name": "Bulle sous-marine non nommée", "image": "Entrance UnderwaterBubble3.jpg"
+			},
+			{
+				"lat": 91.73, "lon": 41.73,
+				"name": "Grotte sous-marine non nommée", "image": "Entrance UnderwaterCave1.jpg"
+			},
+			{
+				"lat": 47.04, "lon": 42.42,
+				"name": "Grotte sous-marine non nommée", "image": "Entrance UnderwaterCave2.jpg"
+			},
+			{
+				"lat": 51.54, "lon": 44.59,
+				"name": "Grotte sous-marine non nommée", "image": "Entrance UnderwaterCave3.jpg"
+			},
+			{
+				"lat": 42.15, "lon": 5.2,
+				"name": "Grotte de Bolbjord non nommée", "image": "Entrance SwampCaveE1.jpg"
+			},
+			{
+				"lat": 40.48, "lon": 6.19,
+				"name": "Grotte de Bolbjord non nommée", "image": "Entrance SwampCaveE1.jpg"
+			},
+			{
+				"lat": 29.9, "lon": 22.62,
+				"name": "Grotte des Montagnes de Snaerheimr non nommée", "image": "Entrance IceCave1.jpg"
+			},
+			{
+				"lat": 28.15, "lon": 34.62,
+				"name": "Grotte des Montagnes de Snaerheimr non nommée", "image": "Entrance IceCave2.jpg"
+			},
+			{
+				"lat": 20, "lon": 19.06,
+				"name": "Caverne neigeuse cachée", "image": "Entrance IceCave3.jpg"
+			},
+			{
+				"lat": 28.67, "lon": 39.91,
+				"name": "Grotte de Lindbjord", "image": "Entrance LindbjornCave.jpg"
+			},
+			{
+				"lat": 20.6, "lon": 8.74,
+				"name": "La boule à neige", "image": "Entrance SnowGlobe.jpg"
+			},
+			{
+				"lat": 29.12, "lon": 50.58,
+				"name": "Grotte de la Vallée de Vannaland non nommée", "image": "Entrance MountainCave3.jpg"
+			},
+			{
+				"lat": 7.88, "lon": 69.93,
+				"name": "Grotte de Vannaland non nommée", "image": "Entrance MountainCave4.jpg"
+			},
+			{
+				"lat": 17.21, "lon": 60.36,
+				"name": "Grotte de Fornland non nommée", "image": "Entrance MountainCave5.jpg"
+			},
+			{
+				"lat": 77.71, "lon": 29.4,
+				"name": "Grotte de Vardiland non nommée", "image": "Entrance MountainCave6.jpg"
+			},
+			{
+				"lat": 76.78, "lon": 36.4,
+				"name": "Grotte de Vardiland non nommée",
+				"description": "Cachée derrière la cascade",
+				"image": "Entrance MountainCave7.jpg"
+			},
+			{
+				"lat": 68.43, "lon": 37.6,
+				"name": "Grotte de la Tranchée d'émeraudes non nommée", "image": "Entrance MountainCave8.jpg"
+			},
+			{
+				"lat": 37.68, "lon": 74.98,
+				"name": "Grotte des Plaines brisées non nommée",
+				"description": "Hidden behind waterfall",
+				"image": "Entrance MountainCave9.jpg"
+			},
+			{
+				"lat": 54.66, "lon": 77.15,
+				"name": "Grotte des Plaines brisées non nommée",
+				"description": "Hidden behind waterfall",
+				"image": "Entrance MountainCave10.jpg"
+			},
+			{
+				"lat": 20.03, "lon": 97.61,
+				"name": "Grotte de la Forêt de Runheimr non nommée",
+				"description": "Hidden behind waterfall",
+				"image": "Entrance MountainCave11.jpg"
+			},
+			{
+				"lat": 17.9, "lon": 92.05,
+				"name": "Grotte des Montagnes de Runheimrnon nommée",
+				"description": "Cachée derrière la cascade",
+				"image": "Entrance MountainCave12.jpg"
+			},
+			{
+				"lat": 11.58, "lon": 75.22,
+				"name": "Grotte de Vannaland non nommée", "image": "Entrance MountainCave13.jpg"
+			},
+			{
+				"lat": 36.02, "lon": 95.6,
+				"name": "Grotte de Vannaland non nommée", "image": "Entrance MountainCave14.jpg"
+			},
+			{
+				"lat": 86.28, "lon": 98.17,
+				"name": "Cavernes du temps", "image": "Entrance CavernsOfTime.jpg"
+			},
+			{
+				"lat": 95.88, "lon": 80.64,
+				"name": "La gorge de flammes", "image": "Entrance MagmasaurCave.jpg"
+			}
+		]
+	}
+}

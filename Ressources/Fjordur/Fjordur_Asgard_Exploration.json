@@ -1,0 +1,137 @@
+{
+	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
+	"backgrounds": [
+		{
+			"name": "Topographique", "image": "Fjordur Asgard Topographic Map.jpg",
+			"at": [
+				[ 17.47, 5.11 ],
+				[ 68.93, 56.57 ]
+			]
+		},
+		{
+			"name": "Croquis", "image": "Fjordur Map.jpg",
+			"overlays": [
+				{
+					"name": "Frontières du royaume",
+					"at": [
+						[ 17.47, 5.11 ],
+						[ 68.93, 56.57 ]
+					]
+				}
+			]
+		}
+	],
+	"groups": {
+		"obelisk-blue": { "name": "Obélisque bleu", "fillColor": "#00a5ff", "size": 20, "icon": "Obelisk.png" },
+		"obelisk-green": { "name": "Obélisque vert", "fillColor": "#14e800", "size": 20, "icon": "Obelisk.png" },
+		"obelisk-red": { "name": "Obélisque rouge", "fillColor": "#f70102", "size": 20, "icon": "Obelisk.png" },
+		"rune": {
+			"name": "Rune", "icon": "Runes.png", "size": [ 32, 32 ],
+			"isCollectible": true
+		},
+		"cave-entrance": {
+			"name": "Entrée de grotte", "icon": "CaveEntranceIcon.png", "size": [ 34, 34 ]
+		},
+		"PlayerTeleportAsgard": {
+			"name": "Point de téléportation",
+			"fillColor": "#4e4854", "borderColor": "#fff", "size": 5.5, "icon": "Tek Teleporter.png"
+		}
+	},
+	"markers": {
+		"obelisk-red": [ { "lat": 26.5, "lon": 27.7 } ],
+		"rune": [
+			{
+				"lat": 39.24, "lon": 50.48, "article": "Runes",
+				"description": "Dans le [[Lagon du drac (Fjordur)|Lagon du drac]]",
+				"image": "Fjordur Runes (100).jpg"
+			},
+			{ "lat": 21.75, "lon": 9.72, "article": "Runes", "image": "Fjordur Runes (104).jpg" },
+			{ "lat": 27.24, "lon": 17.76, "article": "Runes", "image": "Fjordur Runes (107).jpg" },
+			{ "lat": 32.43, "lon": 12.84, "article": "Runes", "image": "Fjordur Runes (117).jpg" },
+			{ "lat": 56.71, "lon": 25.16, "article": "Runes", "image": "Fjordur Runes (128).jpg" },
+			{ "lat": 63.59, "lon": 30.02, "article": "Runes", "image": "Fjordur Runes (139).jpg" },
+			{ "lat": 60.41, "lon": 35.96, "article": "Runes", "image": "Fjordur Runes (140).jpg" },
+			{ "lat": 62.36, "lon": 48.51, "article": "Runes", "image": "Fjordur Runes (141).jpg" },
+			{ "lat": 42.52, "lon": 40.41, "article": "Runes", "image": "Fjordur Runes (143).jpg" },
+			{ "lat": 42.58, "lon": 30.17, "article": "Runes", "image": "Fjordur Runes (177).jpg" },
+			{ "lat": 19.66, "lon": 24.99, "article": "Runes", "image": "Fjordur Runes (183).jpg" },
+			{ "lat": 20.44, "lon": 44.02, "article": "Runes", "image": "Fjordur Runes (184).jpg" },
+			{ "lat": 31.03, "lon": 53.64, "article": "Runes", "image": "Fjordur Runes (186).jpg" },
+			{ "lat": 45.73, "lon": 55.66, "article": "Runes", "image": "Fjordur Runes (194).jpg" },
+			{ "lat": 66.53, "lon": 13.73, "article": "Runes", "image": "Fjordur Runes (198).jpg" }
+		],
+		"cave-entrance": [
+			{
+				"lat": 42.04, "lon": 49.21,
+				"description": "Dans la zone des [[Dragon Rocheux|Dragons Rocheux]]",
+				"name": "Tanière du drac", "image": "Entrance RockDrakeCave.jpg"
+			},
+			{
+				"lat": 29.71, "lon": 8.31,
+				"description": "Dans la zone des [[Wyverne de Foudre|Wyvernes de Foudre]]",
+				"name": "Grotte non nommée d'Asgard", "image": "Entrance LWyvernCave.jpg"
+			}
+		],
+		"PlayerTeleportAsgard": [
+			{ "lat": 40.57892, "lon": 10.52818 },
+			{ "lat": 17.99506, "lon": 29.23039 },
+			{ "lat": 17.98315, "lon": 30.29677 },
+			{ "lat": 18.86048, "lon": 29.06394 },
+			{ "lat": 21.02003, "lon": 31.03015 },
+			{ "lat": 21.19615, "lon": 31.60732 },
+			{ "lat": 21.81899, "lon": 30.34025 },
+			{ "lat": 18.89804, "lon": 22.88504 },
+			{ "lat": 18.56956, "lon": 23.4591 },
+			{ "lat": 20.12227, "lon": 23.05747 },
+			{ "lat": 20.33948, "lon": 12.61329 },
+			{ "lat": 19.47132, "lon": 13.9828 },
+			{ "lat": 20.14892, "lon": 14.44637 },
+			{ "lat": 25.33588, "lon": 21.54422 },
+			{ "lat": 26.44372, "lon": 21.99842 },
+			{ "lat": 25.71475, "lon": 20.81906 },
+			{ "lat": 18.14281, "lon": 40.522 },
+			{ "lat": 19.08694, "lon": 42.38375 },
+			{ "lat": 22.24095, "lon": 41.18074 },
+			{ "lat": 38.74003, "lon": 45.48826 },
+			{ "lat": 37.61785, "lon": 45.51276 },
+			{ "lat": 39.22056, "lon": 46.54903 },
+			{ "lat": 46.77781, "lon": 45.31703 },
+			{ "lat": 47.27171, "lon": 45.65355 },
+			{ "lat": 48.00291, "lon": 46.38116 },
+			{ "lat": 48.42592, "lon": 44.817 },
+			{ "lat": 53.92648, "lon": 47.8594 },
+			{ "lat": 54.49132, "lon": 47.60028 },
+			{ "lat": 54.41326, "lon": 47.96831 },
+			{ "lat": 41.31842, "lon": 9.215684 },
+			{ "lat": 40.40061, "lon": 9.397116 },
+			{ "lat": 45.74035, "lon": 6.321118 },
+			{ "lat": 46.34954, "lon": 6.702983 },
+			{ "lat": 47.18598, "lon": 5.941731 },
+			{ "lat": 56.39275, "lon": 9.024563 },
+			{ "lat": 56.87452, "lon": 8.463409 },
+			{ "lat": 57.23994, "lon": 8.988181 },
+			{ "lat": 55.89321, "lon": 10.34723 },
+			{ "lat": 48.92625, "lon": 15.38957 },
+			{ "lat": 48.54168, "lon": 15.52141 },
+			{ "lat": 48.60088, "lon": 16.00513 },
+			{ "lat": 64.64395, "lon": 15.06281 },
+			{ "lat": 65.57771, "lon": 15.02965 },
+			{ "lat": 64.42, "lon": 13.84649 },
+			{ "lat": 65.09174, "lon": 13.62923 },
+			{ "lat": 64.82676, "lon": 10.62054 },
+			{ "lat": 62.67319, "lon": 32.45082 },
+			{ "lat": 63.37457, "lon": 32.62047 },
+			{ "lat": 63.01937, "lon": 33.34675 },
+			{ "lat": 63.9275, "lon": 34.03292 },
+			{ "lat": 64.32934, "lon": 39.14281 },
+			{ "lat": 64.75403, "lon": 39.19845 },
+			{ "lat": 60.10687, "lon": 38.51751 },
+			{ "lat": 60.07978, "lon": 38.9265 },
+			{ "lat": 58.88511, "lon": 39.20723 },
+			{ "lat": 55.89884, "lon": 36.83621 },
+			{ "lat": 55.99497, "lon": 36.06291 },
+			{ "lat": 56.5109, "lon": 34.74327 },
+			{ "lat": 54.11402, "lon": 47.42332 }
+		]
+	}
+}
