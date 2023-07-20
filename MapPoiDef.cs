@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
-using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,14 +10,19 @@ using System.Windows;
 
 namespace ARKInteractiveMap
 {
+    public enum MapPoiCategory
+    {
+        Wiki,
+        IngamePoi
+    }
+
     public enum MapPoiShape
     {
         None,
         Ellipse,
         Icon,
         Triangle,
-        Pie,
-        Letter,
+        Pie
     }
 
     public class MapPos
@@ -46,6 +50,7 @@ namespace ARKInteractiveMap
     {
         protected string label_;
         protected string uuid_;  // unique id (needed by editable poi)
+        public MapPoiCategory category;
         public string groupName;
         public string fullGroupName;
         public int item_id;
@@ -59,9 +64,7 @@ namespace ARKInteractiveMap
         public bool isCollectible;
         public ArkWikiJsonSize size;
         public ArkWikiJsonSize sizeCollected;
-        public ArkWikiJsonGroup group;
         public MapPoiShape shape;
-        public bool userPoi;
 
         protected static string GenerateUUID()
         {
@@ -166,35 +169,48 @@ namespace ARKInteractiveMap
                 case MapPoiShape.Icon:     return new MapPoiIcon(this, map);
                 case MapPoiShape.Triangle: return new MapPoiTriangle(this, map);
                 case MapPoiShape.Pie:      return new MapPoiPie(this, map);
-                case MapPoiShape.Letter:   return new MapPoiLetter(this, map);
                 default:
                     Console.WriteLine($"ERREUR: pas de forme définie pour '{groupName}:{Label}' !");
                     return null;
             }
         }
 
-        public static FrameworkElement BuildForContents(MapPoi poi, int size)
+        static public FrameworkElement BuildForContents(string groupName, ArkWikiJsonGroup group, MapPoiCategory category, int size)
         {
-            switch (poi.Shape)
+            if (group != null && group.size.width > 0)
             {
-                case MapPoiShape.Ellipse: return new MapPoiEllipse(poi.poiDef, null).BuildForContents(size);
-                case MapPoiShape.Icon: return new MapPoiIcon(poi.poiDef, null).BuildForContents(size);
-                case MapPoiShape.Triangle: return new MapPoiTriangle(poi.poiDef, null).BuildForContents(size);
-                case MapPoiShape.Pie: return new MapPoiPie(poi.poiDef, null).BuildForContents(size);
-                case MapPoiShape.Letter: return new MapPoiLetter(poi.poiDef, null).BuildForContents(size);
-                default:
-                    Console.WriteLine($"BuildForContents Erreur: pas de forme définie pour '{poi.Shape}' !");
-                    return null;
+                if (group.fillColor != null)
+                {
+                    return new MapPoiEllipse(group).BuildForContents(size);
+                }
+                else if (group.iconCollected != null)
+                {
+                    return new MapPoiIcon(group).BuildForContents(size);
+                }
+                else if (groupName.Contains("surface-crate"))
+                {
+                    return new MapPoiPie(group).BuildForContents(size);
+                }
             }
+            else if (category == MapPoiCategory.IngamePoi)
+            {
+                group = new ArkWikiJsonGroup()
+                {
+                    size = new ArkWikiJsonSize(10),
+                    fillColor = "#ff0000"
+                };
+                return new MapPoiTriangle(group).BuildForContents(size);
+            }
+            return null;
         }
 
         public MapPoiDef()
         {
         }
 
-        public MapPoiDef(string groupName, ArkWikiJsonMarker marker, ArkWikiJsonGroup group, Dictionary<string, ArkWikiJsonGroup> groups = null)
+        public MapPoiDef(MapPoiCategory category, string groupName, ArkWikiJsonMarker marker, ArkWikiJsonGroup group, Dictionary<string, ArkWikiJsonGroup> groups = null)
         {
-            this.group = group;
+            this.category = category;
             this.fullGroupName = groupName;
             this.groupName = extractGroupName(groupName);
             if (marker != null)
@@ -348,13 +364,13 @@ namespace ARKInteractiveMap
         public MapPoiDef(string groupName, IngameMarker ingameMarker)
         {
             uuid_ = GenerateUUID();
-            userPoi = true;
+            category = MapPoiCategory.IngamePoi;
             this.groupName = groupName;
             pos = new MapPos(ingameMarker.floatLat, ingameMarker.floatLon);
             Label = ingameMarker.Name;
             fillColor = ingameMarker.Color;
-            shape = groupName == "ingame-map-poi" ? MapPoiShape.Triangle : MapPoiShape.Letter;
-            size = shape == MapPoiShape.Triangle ? new ArkWikiJsonSize(20) : new ArkWikiJsonSize(50);
+            size = new ArkWikiJsonSize(20);
+            shape = MapPoiShape.Triangle;
         }
     }
 }

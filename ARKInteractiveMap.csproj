@@ -98,7 +98,6 @@
     <Compile Include="MainConfig.cs" />
     <Compile Include="MapDef.cs" />
     <Compile Include="MapList.cs" />
-    <Compile Include="MapPoiLetter.cs" />
     <Compile Include="MapPoiPie.cs" />
     <Compile Include="MapPoi.cs" />
     <Compile Include="MapPoiDef.cs" />

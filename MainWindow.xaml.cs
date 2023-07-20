@@ -13,7 +13,6 @@ using ArkFileDecode;
 using System.Globalization;
 using static Microsoft.WindowsAPICodePack.Shell.PropertySystem.SystemProperties.System;
 using System.Windows.Media;
-using System.Text.RegularExpressions;
 
 namespace ARKInteractiveMap
 {
@@ -679,7 +678,7 @@ namespace ARKInteractiveMap
                 mapViewer.mapBorderWidth = currentMapDef.border.width;
                 mapViewer.mapBorderColor = currentMapDef.border.color;
                 var poi_dict = new Dictionary<string, MapPoiDef>();
-                var contentList = new List<string>();
+                var contentList = new List<ResourceItem>();
                 var collectibleList = new List<CollectibleTreeViewItem>();
                 foreach (var res in currentMapDef.resources)
                 {
@@ -687,6 +686,13 @@ namespace ARKInteractiveMap
                 }
                 if (poi_dict != null)
                 {
+                    contentList_.Clear();
+                    foreach (var item in contentList)
+                    {
+                        item.FinalizeInit(mapViewer);
+                        contentList_.Add(item);
+                    }
+
                     collectibleList_.Clear();
                     foreach (var item in collectibleList)
                     {
@@ -700,20 +706,6 @@ namespace ARKInteractiveMap
                     mapViewer.MapImage = $"ARKInteractiveMap.Ressources.{mapDef.folder}.{currentMapDef.mapPicture}";
 
                     mapViewer.LoadPoi(poi_dict);
-
-                    // Update liste and group map icon
-                    contentList_.Clear();
-                    foreach (var group_name in contentList)
-                    {
-                        var poi_def = poi_dict.FirstOrDefault(x => x.Value.groupName == group_name);
-                        if (poi_def.Key != null)
-                        {
-                            var contentItem = new ResourceItem(group_name);
-                            var poi = mapViewer[poi_def.Value.Id];
-                            contentItem.UpdateIcons(mapViewer, poi, 20);
-                            contentList_.Add(contentItem);
-                        }
-                    }
 
                     if (cfg_.map_def == null)
                     {
@@ -729,10 +721,10 @@ namespace ARKInteractiveMap
                     // Map items visibility
                     if (json_map_def.map_poi_visible != null)
                     {
-                        var contentList2 = contentList_.ToList();
+                        contentList = contentList_.ToList();
                         foreach (var item in json_map_def.map_poi_visible)
                         {
-                            var elt = contentList2.FindLast(x => item.Key == x.GroupName);
+                            var elt = contentList.FindLast(x => item.Key == x.GroupName);
                             if (elt != null)
                             {
                                 elt.IsVisible = item.Value;
@@ -978,7 +970,6 @@ namespace ARKInteractiveMap
             else
             {
                 dialog.Title = add_item ? "Ajout d'un repère libre" : "Edition du répère libre";
-                dialog.cmbStyles.Items.Add(new ResourceItem(MapPoiShape.Triangle, 30));
             }
             if (dialog.ShowDialog() == true)
             {

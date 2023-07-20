@@ -189,7 +189,7 @@ namespace ARKInteractiveMap
 
                     poiDict_[poiMapItem.Id] = poiMapItem;
                     // Selection de la layer
-                    if (poiDef.userPoi)
+                    if (poiDef.category == MapPoiCategory.IngamePoi)
                         canvasUser.Children.Add(poiMapItem.BuildForMap(Scale));
                     else if (poiDef.inCave)
                         canvasPoiCave.Children.Add(poiMapItem.BuildForMap(Scale));
@@ -217,7 +217,7 @@ namespace ARKInteractiveMap
             if (item.Key != null)
             {
                 // On ne peux supprimer qu'un poi user
-                if (item.Value.poiDef.userPoi)
+                if (item.Value.poiDef.category == MapPoiCategory.IngamePoi)
                 {
                     poiDict_.Remove(item.Key);
                     canvasUser.BeginInit();
@@ -238,6 +238,11 @@ namespace ARKInteractiveMap
                     canvasUser.EndInit();
                 }
             }
+        }
+
+        public FrameworkElement GetMapIcon(string groupName, ArkWikiJsonGroup group, MapPoiCategory category, int size)
+        {
+            return MapPoiDef.BuildForContents(groupName, group, category, size);
         }
 
         public void ClearFogOfWars()
@@ -281,15 +286,15 @@ namespace ARKInteractiveMap
         {
             foreach (var item in poiDict_.Values) { item.Rescale(scale); }
             mapPopup_.RescalePopup();
-            if (pingEllipse.Tag != null)
+            if (ping.Tag != null)
             {
-                if (pingEllipse.Tag == this && pingLastPoint != null)
+                if (ping.Tag == this && pingLastPoint != null)
                 {
                     RescalePing(20, pingLastPoint);
                 }
                 else
                 {
-                    (pingEllipse.Tag as MapPoi).RescalePing();
+                    (ping.Tag as MapPoi).RescalePing();
                 }
             }
         }
@@ -486,22 +491,22 @@ namespace ARKInteractiveMap
         {
             // Scale 1 => 50
             // Scale 8 => 100
-            pingEllipse.Width = 42.86 + 7.14 * Scale;
-            pingEllipse.Height = pingEllipse.Width;
-            Canvas.SetLeft(pingEllipse, pos.X + width / 2 - pingEllipse.Width / 2);
-            Canvas.SetTop(pingEllipse, pos.Y + width / 2 - pingEllipse.Height / 2);
-            pingEllipse.Tag = tag;
-            pingEllipse.Visibility = Visibility.Visible;
+            ping.Width = 42.86 + 7.14 * Scale;
+            ping.Height = ping.Width;
+            Canvas.SetLeft(ping, pos.X + width / 2 - ping.Width / 2);
+            Canvas.SetTop(ping, pos.Y + width / 2 - ping.Height / 2);
+            ping.Tag = tag;
+            ping.Visibility = Visibility.Visible;
             pingStoryboard.Storyboard.Stop();
             pingStoryboard.Storyboard.Begin();
         }
 
         public void RescalePing(double width, Point pos)
         {
-            pingEllipse.Width = 42.86 + 7.14 * Scale;
-            pingEllipse.Height = pingEllipse.Width;
-            Canvas.SetLeft(pingEllipse, pos.X + width / 2 - pingEllipse.Width / 2);
-            Canvas.SetTop(pingEllipse, pos.Y + width / 2 - pingEllipse.Height / 2);
+            ping.Width = 42.86 + 7.14 * Scale;
+            ping.Height = ping.Width;
+            Canvas.SetLeft(ping, pos.X + width / 2 - ping.Width / 2);
+            Canvas.SetTop(ping, pos.Y + width / 2 - ping.Height / 2);
         }
 
         public void ZoomToMapPos(float lat, float lon)
@@ -673,8 +678,8 @@ namespace ARKInteractiveMap
 
         private void Storyboard_Completed(object sender, EventArgs e)
         {
-            pingEllipse.Visibility = Visibility.Collapsed;
-            pingEllipse.Tag = null;
+            ping.Visibility = Visibility.Collapsed;
+            ping.Tag = null;
         }
 
         // Update collected event

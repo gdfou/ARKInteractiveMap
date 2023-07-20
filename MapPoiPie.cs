@@ -120,7 +120,7 @@ namespace ARKInteractiveMap
             }
         }
 
-        /*override public FrameworkElement BuildForContents(int size)
+        override public FrameworkElement BuildForContents(int size)
         {
             scale_ = 1;
             (var pos, var radius) = ComputePosAndSize();
@@ -130,7 +130,7 @@ namespace ARKInteractiveMap
             }
             DrawPie(new Point(size / 2, size / 2), radius, Brushes.Black);
             return canvas_;
-        }*/
+        }
 
         override public FrameworkElement BuildForMap(double scale)
         {

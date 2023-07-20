@@ -238,7 +238,7 @@ namespace ARKInteractiveMap
         static public void LoadWikiGGJsonRessourceName(MapDefItem mapDef,
                                                        string jsonResName, 
                                                        Dictionary<string, MapPoiDef> poiDict,
-                                                       List<string> contentList,
+                                                       List<ResourceItem> contentList,
                                                        List<CollectibleTreeViewItem> collectibleList,
                                                        Dictionary<string, string> expNoteList)
         {
@@ -320,15 +320,6 @@ namespace ARKInteractiveMap
                             groups.Add(group.Key, group.Value);
                         }
                     }
-                    // layers
-                    if (mainJson.layers != null)
-                    {
-                        foreach (var layer in mainJson.layers)
-                        {
-                            layer.Value.groupName = layer.Key;
-                            groups.Add(layer.Key, layer.Value);
-                        }
-                    }
                     // markers
                     if (mainJson.markers != null)
                     {
@@ -340,9 +331,13 @@ namespace ARKInteractiveMap
                                 Console.WriteLine($"Il manque la définition de {groupName}");
                             }
                             var group = groups[groupName];
-                            if (contentList.FirstOrDefault(x => x == groupName) == null)
+                            if (!contentList.Any(e => e.Label == group.name))
                             {
-                                contentList.Add(groupName);
+                                // Visibility => groupe
+                                if (contentList.FirstOrDefault(x => x.GroupName == groupName) == null)
+                                {
+                                    contentList.Add(new ResourceItem(null, groupName, group, MapPoiCategory.Wiki)); // Need to call FinalizeInit after !
+                                }
                             }
                             // Collectible
                             CollectibleTreeViewItem collectible = null;
@@ -359,7 +354,7 @@ namespace ARKInteractiveMap
                             {
                                 try
                                 {
-                                    var poi = new MapPoiDef(markers.Key, marker, group, groups);
+                                    var poi = new MapPoiDef(MapPoiCategory.Wiki, markers.Key, marker, group, groups);
                                     poiDict[poi.Id] = poi;
                                     // Collectible
                                     if (collectible != null)

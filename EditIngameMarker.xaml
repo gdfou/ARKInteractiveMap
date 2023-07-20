@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ARKInteractiveMap"
         mc:Ignorable="d"
-        Title="Edition du répère Ingame" Height="300" Width="500" ResizeMode="NoResize" ShowInTaskbar="False" 
+        Title="Edition du répère Ingame" Height="270" Width="500" ResizeMode="NoResize" ShowInTaskbar="False" 
         WindowStartupLocation="CenterOwner">
     <Window.Resources>
         <Style TargetType="Label">
@@ -24,7 +24,6 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -53,17 +52,7 @@
         <TextBox Grid.Row="2" Grid.Column="1" Width="100" HorizontalAlignment="Left" Text="{Binding Lat}" PreviewTextInput="textboxCoord_KeypressValidation" GotFocus="TextBox_GotFocus"/>
         <Label Grid.Row="3" Content="Longitude"/>
         <TextBox Grid.Row="3" Grid.Column="1" Width="100" HorizontalAlignment="Left" Text="{Binding Lon}" PreviewTextInput="textboxCoord_KeypressValidation" GotFocus="TextBox_GotFocus"/>
-        <Label Grid.Row="4" Content="Style"/>
-        <ComboBox Name="cmbStyles" Margin="20,6,0,6" Width="150" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left">
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <Canvas Width="20" Height="20">
-                        <ContentPresenter Content="{Binding IconMap}"/>
-                    </Canvas>
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
-        </ComboBox>
-        <StackPanel Orientation="Horizontal" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Stretch">
+        <StackPanel Orientation="Horizontal" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Stretch">
             <Button Content="OK" Margin="0,4,20,4" Width="70" Click="ButtonOk_Click"/>
             <Button Content="Annuler" Margin="20,4,0,4" Width="70" Click="ButtonCancel_Click"/>
         </StackPanel>

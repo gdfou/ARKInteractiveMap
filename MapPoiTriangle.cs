@@ -93,40 +93,9 @@ namespace ARKInteractiveMap
 
         protected void ComputeTriangleSize(Size size)
         {
-            switch (orientation_)
-            {
-                case PoiOrientation.Up:
-                    {
-                        pointCollection_[0] = new Point(size.Width / 2, 0);
-                        pointCollection_[1] = new Point(size.Width, size.Height);
-                        pointCollection_[2] = new Point(0, size.Height);
-                        break;
-                    }
-
-                case PoiOrientation.Down:
-                    {
-                        pointCollection_[0] = new Point(0, 0);
-                        pointCollection_[1] = new Point(size.Width, 0);
-                        pointCollection_[2] = new Point(size.Width / 2, size.Height);
-                        break;
-                    }
-
-                case PoiOrientation.Left:
-                    {
-                        pointCollection_[0] = new Point(size.Width, 0);
-                        pointCollection_[1] = new Point(size.Width, size.Height);
-                        pointCollection_[2] = new Point(0, size.Height / 2);
-                        break;
-                    }
-
-                case PoiOrientation.Right:
-                    {
-                        pointCollection_[0] = new Point(0, 0);
-                        pointCollection_[1] = new Point(size.Width, size.Height / 2);
-                        pointCollection_[2] = new Point(0, size.Height);
-                        break;
-                    }
-            }
+            pointCollection_[0] = new Point(size.Width / 2, 0);
+            pointCollection_[1] = new Point(size.Width, size.Height);
+            pointCollection_[2] = new Point(0, size.Height);
             ComputeTriangleCenter();
         }
 
@@ -202,6 +171,10 @@ namespace ARKInteractiveMap
             // https://wpf-tutorial.com/fr/15/les-controles-de-base/le-controle-textblock-formatage-inline/
             var stackPanel = new StackPanel();
             stackPanel.Orientation = Orientation.Vertical;
+            /*if (GroupName == "ingame-map-poi")
+                stackPanel.Children.Add(new TextBlock() { Text = "Repère Ingame", Foreground = Brushes.Red });
+            else
+                stackPanel.Children.Add(new TextBlock() { Text = "Repère libre", Foreground = Brushes.Blue });*/
             (var gpText, var gpBrush) = GetGroupInfo();
             stackPanel.Children.Add(new TextBlock() { Text = gpText, Foreground = gpBrush });
             stackPanel.Children.Add(new TextBlock() { Text = Label, FontWeight = FontWeights.Bold });

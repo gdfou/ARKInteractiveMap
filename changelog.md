@@ -1,8 +1,11 @@
 ARK Interactive Map
 
-## Version 1.3.1 (2023-07-15)
+## Version 1.5.0 (2023-07-20)
+- Déplacement des controles de poi en menu popup (clic droit).
+
+## Version 1.4.0 (2023-07-15)
 - Ajout affichage du label d'un repère au dessus du triangle.
-- Ajout des repères libres.
+- Ajout des repères libres ('?' + triangle haut).
 
 ## Version 1.3.0 (2023-07-14)
 - Ajout de la carte 'Extinction'

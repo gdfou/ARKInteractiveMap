@@ -33,7 +33,7 @@
                         <Canvas x:Name="canvasUser"/>
                         <Canvas x:Name="canvasInfo">
                             <StackPanel x:Name="popup" Orientation="Vertical" Visibility="Hidden"/>
-                            <Ellipse Name="pingEllipse" Width="50" Height="50" Stroke="Red" StrokeThickness="5" Visibility="Collapsed">
+                            <Ellipse Name="ping" Width="50" Height="50" Stroke="Red" StrokeThickness="5" Visibility="Collapsed">
                                 <Ellipse.Triggers>
                                     <!-- Animates the circle's opacity. -->
                                     <EventTrigger RoutedEvent="Ellipse.Unloaded">

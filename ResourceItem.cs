@@ -13,6 +13,8 @@ namespace ARKInteractiveMap
     {
         public event PropertyChangedEventHandler PropertyChanged;
         protected MapScrollViewer map_;
+        protected MapPoiCategory category_;
+        protected ArkWikiJsonGroup group_;
         public BitmapImage IconRes { get; set; }
         public FrameworkElement IconMap { get; set; }
         public string GroupName { get; set; }
@@ -27,26 +29,22 @@ namespace ARKInteractiveMap
                 if (isVisible_ != value)
                 {
                     isVisible_ = value;
-                    map_?.UpdateVisible(this);
+                    map_.UpdateVisible(this);
                 }
             }
         }
 
-        // For content list
-        public ResourceItem(string groupName)
+        public ResourceItem(MapScrollViewer map, string groupName, ArkWikiJsonGroup group, MapPoiCategory category)
         {
+            category_ = category;
+            group_ = group;
             GroupName = groupName;
+            Label = group?.name;
             isVisible_ = true;
-        }
-
-        public void UpdateIcons(MapScrollViewer map, MapPoi poi, int size)
-        {
-            map_ = map;
-            Label = poi.poiDef.group.name;
             // icon de ressource
             var assembly = Assembly.GetExecutingAssembly();
             var app_res_list = assembly.GetManifestResourceNames();
-            var iconRes = MapPoiDef.getIconResname(poi.poiDef.group?.icon);
+            var iconRes = MapPoiDef.getIconResname(group?.icon);
             if (iconRes != null && app_res_list.Contains(iconRes))
             {
                 BitmapImage src = new BitmapImage();
@@ -55,15 +53,16 @@ namespace ARKInteractiveMap
                 src.EndInit();
                 IconRes = src;
             }
-            else if (poi.poiDef.group != null)
+            else if (group != null)
             {
-                Console.WriteLine($"Ne trouve pas l'icon '{poi.poiDef.group.icon}'");
+                Console.WriteLine($"Ne trouve pas l'icon '{group.icon}'");
             }
-            // Icon sur la map
-            IconMap = MapPoiDef.BuildForContents(poi, size);
+            if (map != null)
+            {
+                FinalizeInit(map);
+            }
         }
 
-        // for layer list
         public ResourceItem(MapScrollViewer map, string groupName, string label)
         {
             map_ = map;
@@ -72,23 +71,11 @@ namespace ARKInteractiveMap
             isVisible_ = true;
         }
 
-        // for ingame or user poi edit
-        public ResourceItem(MapPoiShape shape, int size)
+        public void FinalizeInit(MapScrollViewer map)
         {
-            switch (shape)
-            {
-                //case MapPoiShape.Ellipse: return new MapPoiEllipse(poi.poiDef, null).BuildForContents(size);
-                //case MapPoiShape.Icon: return new MapPoiIcon(poi.poiDef, null).BuildForContents(size);
-                case MapPoiShape.Triangle: 
-                    IconMap = new MapPoiTriangle(new MapPoiDef() { groupName="user-map-poi", fillColor="#ff0000"}, null).BuildForContents(size); 
-                    break;
-                case MapPoiShape.Pie: 
-                    IconMap = new MapPoiPie(null, null).BuildForContents(size);
-                    break;
-                case MapPoiShape.Letter: 
-                    IconMap = new MapPoiLetter(null, null).BuildForContents(size);
-                    break;
-            }
+            map_ = map;
+            // icon de la carte
+            IconMap = map?.GetMapIcon(GroupName, group_, category_, 20);
         }
 
         // Create the OnPropertyChanged method to raise the event
