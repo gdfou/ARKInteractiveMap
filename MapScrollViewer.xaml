@@ -6,6 +6,14 @@
              xmlns:local="clr-namespace:ARKInteractiveMap"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ItemsPanelTemplate x:Key="MenuItemPanelTemplate">
+            <StackPanel Margin="-20,0,0,0" Background="White"/>
+        </ItemsPanelTemplate>
+        <Style x:Key="MenuItemWoIcon" TargetType="MenuItem">
+            <Setter Property="ItemsPanel" Value="{StaticResource MenuItemPanelTemplate}"/>
+        </Style>
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -19,21 +27,52 @@
             <Grid>
                 <Viewbox Grid.Column="0" Grid.Row="0">
                     <Grid>
-                        <Grid x:Name="gridMap">
+                        <Grid x:Name="gridMap" ContextMenuOpening="gridMap_ContextMenuOpening">
                             <Grid.LayoutTransform>
                                 <ScaleTransform x:Name="scaleTransform" ScaleX="0.08" ScaleY="0.08"/>
                             </Grid.LayoutTransform>
-                            <Border BorderThickness="{Binding mapBorderWidth}" BorderBrush="{Binding mapBorderColor}">
+                            <Border BorderThickness="{Binding MapBorderWidth}" BorderBrush="{Binding MapBorderColor}">
                                 <Image x:Name="mapImage"/>
                             </Border>
-                            <Canvas x:Name="canvasFow"/>
+                            <Canvas x:Name="canvasFow" Visibility="Collapsed"/>
+                            <Grid.ContextMenu>
+                                <ContextMenu >
+                                    <MenuItem Header="Ajouter un repère Ingame ici" Tag="IngameMarkerAdd" Click="MenuCommand_Click"/>
+                                    <MenuItem Header="Ajouter un repère libre ici" Tag="IngameMarkerAdd:user" Click="MenuCommand_Click"/>
+                                    <MenuItem Header="Calques">
+                                        <MenuItem x:Name="menuItemSurface" Header="Surface" IsCheckable="True" Tag="UpdateVisible:layers-surface" Click="MenuCommand_Click"/>
+                                        <MenuItem x:Name="menuItemCave" Header="Grottes" IsCheckable="True" Tag="UpdateVisible:layers-cave" Click="MenuCommand_Click"/>
+                                        <MenuItem x:Name="menuItemUser" Header="Répères" IsCheckable="True" Tag="UpdateVisible:layers-user" Click="MenuCommand_Click"/>
+                                        <MenuItem x:Name="menuItemFogOfWar" Header="Brouillard de guerre" IsCheckable="True" Tag="UpdateVisible:layers-fow" Click="MenuCommand_Click"/>
+                                    </MenuItem>
+                                    <MenuItem Header="Contenus" Style="{StaticResource MenuItemWoIcon}">
+                                        <MenuItem Header="Tout montrer" Tag="UpdateVisible:all" Click="MenuCommand_Click"/>
+                                        <MenuItem Header="Tout cacher" Tag="UpdateVisible:none" Click="MenuCommand_Click"/>
+                                        <MenuItem x:Name="menuItemRestoreVisibility" IsEnabled="False" Header="Restorer la visibilité" Tag="UpdateVisible:restore" Click="MenuCommand_Click"/>
+                                        <MenuItem Header="Contenus" x:Name="menuItemContents" Style="{StaticResource MenuItemWoIcon}">
+                                            <MenuItem.ItemTemplate>
+                                                <DataTemplate>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <CheckBox IsChecked="{Binding IsVisible}"/>
+                                                        <Image Source="{Binding IconRes}" Width="20" Height="20"/>
+                                                        <Canvas Width="20" Height="20">
+                                                            <ContentPresenter Content="{Binding IconMap}"/>
+                                                        </Canvas>
+                                                        <TextBlock Text="{Binding Label}"/>
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </MenuItem.ItemTemplate>
+                                        </MenuItem>
+                                    </MenuItem>
+                                </ContextMenu>
+                            </Grid.ContextMenu>
                         </Grid>
                         <Canvas x:Name="canvasPoiCave"/>
                         <Canvas x:Name="canvasPoi"/>
                         <Canvas x:Name="canvasUser"/>
                         <Canvas x:Name="canvasInfo">
                             <StackPanel x:Name="popup" Orientation="Vertical" Visibility="Hidden"/>
-                            <Ellipse Name="ping" Width="50" Height="50" Stroke="Red" StrokeThickness="5" Visibility="Collapsed">
+                            <Ellipse Name="pingEllipse" Width="50" Height="50" Stroke="Red" StrokeThickness="5" Visibility="Collapsed">
                                 <Ellipse.Triggers>
                                     <!-- Animates the circle's opacity. -->
                                     <EventTrigger RoutedEvent="Ellipse.Unloaded">

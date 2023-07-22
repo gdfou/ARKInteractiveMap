@@ -50,40 +50,11 @@
                 <Label Content="Carte:"/>
                 <ComboBox x:Name="comboBoxMap" SelectionChanged="comboBoxMap_SelectionChanged" Margin="4"/>
                 <ComboBox x:Name="comboBoxSubMap" SelectionChanged="comboBoxSubMap_SelectionChanged" Margin="0,4,4,4" Visibility="Collapsed"/>
-                <Label Content="Calques:"/>
-                <ComboBox x:Name="comboBoxLayer" Text="{Binding LayerVisible}" IsEditable="True" IsReadOnly="True" Margin="4">
-                    <ComboBox.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <CheckBox IsChecked="{Binding IsVisible}"/>
-                                <TextBlock Text="{Binding Label}"/>
-                            </StackPanel>
-                        </DataTemplate>
-                    </ComboBox.ItemTemplate>
-                </ComboBox>
-                <Label Content="Contenus:"/>
-                <ComboBox x:Name="comboBoxContent" Text="{Binding ContentVisible}" IsEditable="True" IsReadOnly="True" Margin="4">
-                    <ComboBox.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <CheckBox IsChecked="{Binding IsVisible}"/>
-                                <Image Source="{Binding IconRes}" Width="20" Height="20"/>
-                                <Canvas Width="20" Height="20">
-                                    <ContentPresenter Content="{Binding IconMap}"/>
-                                </Canvas>
-                                <TextBlock Text="{Binding Label}"/>
-                            </StackPanel>
-                        </DataTemplate>
-                    </ComboBox.ItemTemplate>
-                </ComboBox>
-                <Button Content="Tout montrer" Click="ButtonContentAll_Click"/>
-                <Button Content="Tout cacher" Click="ButtonContentNone_Click"/>
                 <Label Content="lat:" Margin="10,0,0,0"/>
                 <TextBox x:Name="textboxLat" Width="40" Margin="0,4,0,4" GotFocus="textbox_GotFocus"/>
                 <Label Content="lon:"/>
                 <TextBox x:Name="textboxLon" Width="40" Margin="0,4,0,4" GotFocus="textbox_GotFocus"/>
                 <Button Content="Aller à" Click="ButtonGotTo_Click" Margin="4,4,10,4" Width="45"/>
-                <CheckBox x:Name="checkboxFow" Content="Brouillard de guerre" VerticalAlignment="Center" FlowDirection="RightToLeft" Click="checkboxFow_Click"/>
             </StackPanel>
             <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" FlowDirection="RightToLeft" Margin="4">
                 <Button Width="45" Height="30" Click="ButtonConfig_Click" Content="Config">
@@ -177,9 +148,9 @@
                         <ListView Name="listviewUserMarkers" MouseDoubleClick="listviewUserMarkers_MouseDoubleClick" ContextMenuOpening="listviewUserMarkers_ContextMenuOpening" >
                             <ListView.ContextMenu>
                                 <ContextMenu>
-                                    <MenuItem x:Name="listviewUserMarkersEdit" Tag="UserMarkerEdit" Header="Editer" Click="ListviewUserMarkersMenuItem_Click"/>
-                                    <MenuItem x:Name="listviewUserMarkersDel" Tag="UserMarkerDel" Header="Supprimer" Click="ListviewUserMarkersMenuItem_Click"/>
-                                    <MenuItem x:Name="listviewUserMarkersAdd" Tag="UserMarkerAdd" Header="Ajouter" Click="ListviewUserMarkersMenuItem_Click"/>
+                                    <MenuItem x:Name="listviewUserMarkersEdit" Tag="IngameMarkerEdit:user" Header="Editer" Click="ListviewUserMarkersMenuItem_Click"/>
+                                    <MenuItem x:Name="listviewUserMarkersDel" Tag="IngameMarkerDel:user" Header="Supprimer" Click="ListviewUserMarkersMenuItem_Click"/>
+                                    <MenuItem x:Name="listviewUserMarkersAdd" Tag="IngameMarkerAdd:user" Header="Ajouter" Click="ListviewUserMarkersMenuItem_Click"/>
                                 </ContextMenu>
                             </ListView.ContextMenu>
                             <ListView.View>
@@ -204,7 +175,7 @@
             <local:MapScrollViewer x:Name="mapViewer" Grid.Column="2"/>
             <StatusBar Grid.Row="1" Grid.ColumnSpan="3">
                 <StatusBarItem>
-                    <TextBlock x:Name="labelInfo" Text="Appuyez sur la touche ALT pour afficher le menu principal. Clic-droit sur la carte pour édition/récolte." FontStyle="Italic"/>
+                    <TextBlock x:Name="labelInfo" Text="Appuyez sur la touche ALT pour afficher le menu principal. Clic-droit sur la carte pour options/édition/récolte." FontStyle="Italic"/>
                 </StatusBarItem>
             </StatusBar>
         </Grid>

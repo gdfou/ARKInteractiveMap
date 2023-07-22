@@ -12,6 +12,7 @@ using System.IO;
 using System.ComponentModel;
 using System.Windows.Media.Effects;
 using System.Windows.Controls.Primitives;
+using static Microsoft.WindowsAPICodePack.Shell.PropertySystem.SystemProperties.System;
 
 namespace ARKInteractiveMap
 {
@@ -25,14 +26,16 @@ namespace ARKInteractiveMap
         Point lastMousePosition_;
         Point? lastDragPoint_;
         Dictionary<string, MapPoi> poiDict_ = new Dictionary<string, MapPoi>();
+        Dictionary<string, ResourceItem> contentDict_ = new Dictionary<string, ResourceItem>();
+        Dictionary<string, bool> visibleDict_ = null;
         Rect viewArea = new Rect();
         double lastScale_;
         int mouseCaptureMove_;
         Point pingLastPoint;
-        ContextMenu menu_;
         int mapBorderWidth_;
         Brush mapBorderColor_;
         MapPopup mapPopup_;
+        Point contextMenuMousePos_;
 
         public MapPopup mapPopup => mapPopup_;
 
@@ -78,7 +81,7 @@ namespace ARKInteractiveMap
             }
         }
 
-        public int mapBorderWidth
+        public int MapBorderWidth
         {
             get => mapBorderWidth_;
             set
@@ -88,13 +91,13 @@ namespace ARKInteractiveMap
                     mapBorderWidth_ = value;
                     mapSize_.pX = mapBorderWidth_;
                     mapSize_.pY = mapBorderWidth_;
-                    NotifyPropertyChanged("mapBorderWidth");
+                    NotifyPropertyChanged("MapBorderWidth");
                     //Console.WriteLine($"Map size = ({mapSize_.pX};{mapSize_.pY})-({mapSize_.pMaxWidth};{mapSize_.pMaxHeight})");
                 }
             }
         }
 
-        public Brush mapBorderColor
+        public Brush MapBorderColor
         {
             get => mapBorderColor_;
             set
@@ -102,7 +105,7 @@ namespace ARKInteractiveMap
                 if (value != mapBorderColor_)
                 {
                     mapBorderColor_ = value;
-                    NotifyPropertyChanged("mapBorderColor");
+                    NotifyPropertyChanged("MapBorderColor");
                 }
             }
         }
@@ -140,26 +143,25 @@ namespace ARKInteractiveMap
             canvasUser.MouseMove += OnMouseMoveCanvas;
             ZoomInFull();
 
-            // Context menu
-            menu_ = new ContextMenu();
-            menu_.Items.Add(new MenuItem()
-            {
-                Header = "Ajouter un repère ici",
-                Tag = "IngameMarkerAdd",
-            });
-            foreach (MenuItem item in menu_.Items)
-            {
-                item.Click += Menu_Click;
-            }
-            gridMap.ContextMenu = menu_;
+            menuItemSurface.IsChecked = true;
+            menuItemCave.IsChecked = true;
+            menuItemUser.IsChecked = true;
+            menuItemFogOfWar.IsChecked = false;
         }
 
-        private void Menu_Click(object sender, RoutedEventArgs e)
+        private void MenuCommand_Click(object sender, RoutedEventArgs e)
         {
             // Récupérer la position courante sur la carte en [lat,lon] => MapPos
-            var mgc = Mouse.GetPosition(gridMap);
-            var mpt = mapSize_.ConvertPixelPointToMap(mgc.X, mgc.Y);
-            Command((sender as MenuItem).Tag as string, null, mpt);
+            // Attention prendre la position de la souris à l'ouverture du menu popup !
+            //var mgc = Mouse.GetPosition(gridMap);
+            var mpt = mapSize_.ConvertPixelPointToMap(contextMenuMousePos_.X, contextMenuMousePos_.Y);
+            var menuItem = (sender as MenuItem);
+            var cmd = menuItem.Tag as string;
+            if (menuItem.IsCheckable)
+            {
+                cmd += $":{menuItem.IsChecked}";
+            }
+            Command(cmd, null, mpt);
         }
 
         public void ClearPoi()
@@ -173,6 +175,32 @@ namespace ARKInteractiveMap
         public void LoadPoi(Dictionary<string, MapPoiDef> dict)
         {
             AddPoi(dict);
+        }
+
+        public void LoadContentList(List<string> list)
+        {
+            menuItemContents.Items.Clear();
+            contentDict_.Clear();
+            foreach (var group_name in list)
+            {
+                var poi_def = poiDict_.FirstOrDefault(x => x.Value.GroupName == group_name);
+                if (poi_def.Key != null)
+                {
+                    var contentItem = new ResourceItem(group_name);
+                    var poi = poiDict_[poi_def.Value.Id];
+                    contentItem.UpdateIcons(this, poi, 20);
+                    menuItemContents.Items.Add(contentItem);
+                    contentDict_[group_name] = contentItem;
+                }
+            }
+        }
+
+        public void LoadLayersVisibility(Dictionary<string, bool> dict)
+        {
+            foreach (var item in dict)
+            {
+                UpdateVisible(item.Key, item.Value, false);
+            }
         }
 
         public void AddPoi(string id, MapPoiDef poiDef)
@@ -189,7 +217,7 @@ namespace ARKInteractiveMap
 
                     poiDict_[poiMapItem.Id] = poiMapItem;
                     // Selection de la layer
-                    if (poiDef.category == MapPoiCategory.IngamePoi)
+                    if (poiDef.userPoi)
                         canvasUser.Children.Add(poiMapItem.BuildForMap(Scale));
                     else if (poiDef.inCave)
                         canvasPoiCave.Children.Add(poiMapItem.BuildForMap(Scale));
@@ -217,7 +245,7 @@ namespace ARKInteractiveMap
             if (item.Key != null)
             {
                 // On ne peux supprimer qu'un poi user
-                if (item.Value.poiDef.category == MapPoiCategory.IngamePoi)
+                if (item.Value.poiDef.userPoi)
                 {
                     poiDict_.Remove(item.Key);
                     canvasUser.BeginInit();
@@ -240,11 +268,6 @@ namespace ARKInteractiveMap
             }
         }
 
-        public FrameworkElement GetMapIcon(string groupName, ArkWikiJsonGroup group, MapPoiCategory category, int size)
-        {
-            return MapPoiDef.BuildForContents(groupName, group, category, size);
-        }
-
         public void ClearFogOfWars()
         {
             canvasFow.BeginInit();
@@ -252,7 +275,7 @@ namespace ARKInteractiveMap
             canvasFow.EndInit();
         }
 
-        public void LoadFogOfWars(List<int> fow, bool visible)
+        public void LoadFogOfWars(List<int> fow)
         {
             // Fow
             canvasFow.BeginInit();
@@ -274,53 +297,91 @@ namespace ARKInteractiveMap
                 }
             }
             canvasFow.EndInit();
-            FogOfWarsVisible(visible);
-        }
-
-        public void FogOfWarsVisible(bool visible)
-        {
-            canvasFow.Visibility = visible ? Visibility.Visible : Visibility.Collapsed;
         }
 
         protected void RescaleCanvas(double scale)
         {
             foreach (var item in poiDict_.Values) { item.Rescale(scale); }
             mapPopup_.RescalePopup();
-            if (ping.Tag != null)
+            if (pingEllipse.Tag != null)
             {
-                if (ping.Tag == this && pingLastPoint != null)
+                if (pingEllipse.Tag == this && pingLastPoint != null)
                 {
                     RescalePing(20, pingLastPoint);
                 }
                 else
                 {
-                    (ping.Tag as MapPoi).RescalePing();
+                    (pingEllipse.Tag as MapPoi).RescalePing();
                 }
             }
         }
 
-        public void UpdateVisible(ResourceItem visibleItem)
+        public void UpdateVisible(string groupName, bool isVisible, bool save = true)
         {
-            if (visibleItem.GroupName.Contains("layers-"))
+            if (groupName.Contains("layers-"))
             {
-                switch (visibleItem.GroupName)
+                switch (groupName)
                 {
-                    case "layers-surface": canvasPoi.Visibility = visibleItem.IsVisible ? Visibility.Visible : Visibility.Collapsed; break;
-                    case "layers-cave": canvasPoiCave.Visibility = visibleItem.IsVisible ? Visibility.Visible : Visibility.Collapsed; break;
-                    case "layers-user": canvasUser.Visibility = visibleItem.IsVisible ? Visibility.Visible : Visibility.Collapsed; break;
+                    case "layers-surface":
+                        canvasPoi.Visibility = isVisible ? Visibility.Visible : Visibility.Collapsed;
+                        menuItemSurface.IsChecked = isVisible;
+                        break;
+                    case "layers-cave":
+                        canvasPoiCave.Visibility = isVisible ? Visibility.Visible : Visibility.Collapsed;
+                        menuItemCave.IsChecked = isVisible;
+                        break;
+                    case "layers-user":
+                        canvasUser.Visibility = isVisible ? Visibility.Visible : Visibility.Collapsed;
+                        menuItemUser.IsChecked = isVisible;
+                        break;
+                    case "layers-fow":
+                        canvasFow.Visibility = isVisible ? Visibility.Visible : Visibility.Collapsed;
+                        menuItemFogOfWar.IsChecked = isVisible;
+                        break;
                 }
             }
             else
             {
+                // Check if there is a menu associted with the group
+                if (contentDict_.ContainsKey(groupName))
+                {
+                    contentDict_[groupName].IsVisible = isVisible;
+                }
                 foreach (var item in poiDict_.Values)
                 {
-                    if (item.GroupName == visibleItem.GroupName)
+                    if (item.GroupName == groupName)
                     {
-                        item.Visible = visibleItem.IsVisible;
+                        item.Visible = isVisible;
                     }
                 }
             }
-            Save();
+            if (save)
+                Save();
+        }
+
+        public Dictionary<string, bool> GetLayersVisibility()
+        {
+            Dictionary<string, bool> dict = new Dictionary<string, bool>();
+            dict["layers-surface"] = menuItemSurface.IsChecked;
+            dict["layers-cave"] = menuItemCave.IsChecked;
+            dict["layers-user"] = menuItemUser.IsChecked;
+            dict["layers-fow"] = menuItemFogOfWar.IsChecked;
+            return dict;
+        }
+
+        public Dictionary<string, bool> GetContentDict()
+        {
+            Dictionary<string, bool> dict = new Dictionary<string, bool>();
+            foreach (var item in contentDict_)
+            {
+                dict[item.Key] = item.Value.IsVisible;
+            }
+            return dict;
+        }
+
+        public void UpdateVisible(ResourceItem visibleItem, bool save=true)
+        {
+            UpdateVisible(visibleItem.GroupName, visibleItem.IsVisible, save);
         }
 
         public void UpdateCollected(string id, bool collected)
@@ -491,22 +552,22 @@ namespace ARKInteractiveMap
         {
             // Scale 1 => 50
             // Scale 8 => 100
-            ping.Width = 42.86 + 7.14 * Scale;
-            ping.Height = ping.Width;
-            Canvas.SetLeft(ping, pos.X + width / 2 - ping.Width / 2);
-            Canvas.SetTop(ping, pos.Y + width / 2 - ping.Height / 2);
-            ping.Tag = tag;
-            ping.Visibility = Visibility.Visible;
+            pingEllipse.Width = 42.86 + 7.14 * Scale;
+            pingEllipse.Height = pingEllipse.Width;
+            Canvas.SetLeft(pingEllipse, pos.X + width / 2 - pingEllipse.Width / 2);
+            Canvas.SetTop(pingEllipse, pos.Y + width / 2 - pingEllipse.Height / 2);
+            pingEllipse.Tag = tag;
+            pingEllipse.Visibility = Visibility.Visible;
             pingStoryboard.Storyboard.Stop();
             pingStoryboard.Storyboard.Begin();
         }
 
         public void RescalePing(double width, Point pos)
         {
-            ping.Width = 42.86 + 7.14 * Scale;
-            ping.Height = ping.Width;
-            Canvas.SetLeft(ping, pos.X + width / 2 - ping.Width / 2);
-            Canvas.SetTop(ping, pos.Y + width / 2 - ping.Height / 2);
+            pingEllipse.Width = 42.86 + 7.14 * Scale;
+            pingEllipse.Height = pingEllipse.Width;
+            Canvas.SetLeft(pingEllipse, pos.X + width / 2 - pingEllipse.Width / 2);
+            Canvas.SetTop(pingEllipse, pos.Y + width / 2 - pingEllipse.Height / 2);
         }
 
         public void ZoomToMapPos(float lat, float lon)
@@ -678,8 +739,8 @@ namespace ARKInteractiveMap
 
         private void Storyboard_Completed(object sender, EventArgs e)
         {
-            ping.Visibility = Visibility.Collapsed;
-            ping.Tag = null;
+            pingEllipse.Visibility = Visibility.Collapsed;
+            pingEllipse.Tag = null;
         }
 
         // Update collected event
@@ -707,12 +768,80 @@ namespace ARKInteractiveMap
         public event CommandEventHandler CommandEvent;
         public void Command(string cmd, string id, object param = null)
         {
-            CommandEvent?.Invoke(this, new CommandEventArgs(cmd, id, param));
+            // Command interne ou commande externe ?
+            // <cmd>:<params>
+            var split = cmd.Split(':');
+            switch (split[0])
+            {
+                case "UpdateVisible":
+                    {
+                        // Cas particulier : UpdateVisible:all, none et restore
+                        if (split[1] == "all")
+                        {
+                            if (visibleDict_ == null)
+                            {
+                                visibleDict_ = new Dictionary<string, bool>();
+                            }
+                            menuItemRestoreVisibility.IsEnabled = true;
+                            foreach (var item in contentDict_)
+                            {
+                                if (visibleDict_ != null)
+                                {
+                                    visibleDict_[item.Key] = item.Value.IsVisible;
+                                }
+                                item.Value.IsVisible = true;
+                            }
+                        }
+                        else if (split[1] == "none")
+                        {
+                            if (visibleDict_ == null)
+                            {
+                                visibleDict_ = new Dictionary<string, bool>();
+                            }
+                            menuItemRestoreVisibility.IsEnabled = true;
+                            foreach (var item in contentDict_)
+                            {
+                                if (visibleDict_ != null)
+                                {
+                                    visibleDict_[item.Key] = item.Value.IsVisible;
+                                }
+                                item.Value.IsVisible = false;
+                            }
+                        }
+                        else if (split[1] == "restore")
+                        {
+                            menuItemRestoreVisibility.IsEnabled = false;
+                            if (visibleDict_ != null)
+                            {
+                                foreach (var item in visibleDict_)
+                                {
+                                    contentDict_[item.Key].IsVisible = item.Value;
+                                }
+                                visibleDict_ = null;
+                            }
+                        }
+                        else
+                        {
+                            // UpdateVisible:layers-xxx
+                            UpdateVisible(split[1], (split.Length >= 2) ? (split[2] == "True") : false);
+                        }
+                        break;
+                    }
+
+                default:
+                    CommandEvent?.Invoke(this, new CommandEventArgs(cmd, id, param));
+                    break;
+            }
         }
 
         public int CaveLayerCount 
         { 
             get { return canvasPoiCave.Children.Count; }
+        }
+
+        private void gridMap_ContextMenuOpening(object sender, ContextMenuEventArgs e)
+        {
+            contextMenuMousePos_ = lastMousePosition_;
         }
     }
 

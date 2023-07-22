@@ -27,7 +27,7 @@ namespace ARKInteractiveMap
             BuildPopup();
         }
 
-        public void BuildPopup()
+        virtual public void BuildPopup()
         {
             // 'popup' est un StackPanel Vertical, Hidden par défaut
             //  _______________
@@ -79,7 +79,7 @@ namespace ARKInteractiveMap
             popup_.Children.Add(polyline);
         }
 
-        public void BuildEditableZone(string label, string info)
+        virtual public void BuildEditableZone(string label, string info)
         {
             popupBorderStack_.Children.Clear();
             var popupLabel = new TextBlock()
@@ -101,7 +101,7 @@ namespace ARKInteractiveMap
             popupBorderStack_.Children.Add(popupInfo);
         }
 
-        public void ViewPopup(MapPoi poi, double x, double y, string label, string info)
+        virtual public void ViewPopup(MapPoi poi, double x, double y, string label, string info)
         {
             ownerPoi_ = poi;
             BuildEditableZone(label, info);
@@ -109,7 +109,7 @@ namespace ARKInteractiveMap
             popup_.Visibility = Visibility.Visible;
             controlPopupVisiblity_ = true;
         }
-        public void ViewPopup(MapPoi poi, double x, double y, List<FrameworkElement> list)
+        virtual public void ViewPopup(MapPoi poi, double x, double y, List<FrameworkElement> list)
         {
             ownerPoi_ = poi;
             popupBorderStack_.Children.Clear();
@@ -122,7 +122,7 @@ namespace ARKInteractiveMap
             controlPopupVisiblity_ = true;
         }
 
-        public void HidePopup(MapPoi poi)
+        virtual public void HidePopup(MapPoi poi)
         {
             if (ownerPoi_ == poi)
             {
@@ -131,14 +131,14 @@ namespace ARKInteractiveMap
             }
         }
 
-        public void RescalePopup(double x, double y)
+        virtual public void RescalePopup(double x, double y)
         {
             popup_.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
             Canvas.SetLeft(popup_, x - popup_.DesiredSize.Width / 2);
             Canvas.SetTop(popup_, y - popup_.DesiredSize.Height);
         }
 
-        public void ControlPopupVisiblity()
+        virtual public void ControlPopupVisiblity()
         {
             if (controlPopupVisiblity_ == false)
             {
@@ -152,7 +152,7 @@ namespace ARKInteractiveMap
             }
         }
 
-        public void RescalePopup()
+        virtual public void RescalePopup()
         {
             if (ownerPoi_ != null)
             {

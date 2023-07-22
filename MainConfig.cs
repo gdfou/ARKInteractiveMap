@@ -19,6 +19,7 @@ namespace ARKInteractiveMap
     {
         public string name { get; set; }
         public string color { get; set; }
+        public string shape { get; set; }
         public float lat { get; set; }
         public float lon { get; set; }
     }
@@ -44,7 +45,6 @@ namespace ARKInteractiveMap
     public class MainConfig
     {
         public JsonRect window { get; set; }
-        public bool fog_of_wars { get; set; }
         public bool auto_import_local_data { get; set; }
         public string ark_save_folder { get; set; }
         public string splitter_pos { get; set; }

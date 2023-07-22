@@ -122,7 +122,9 @@ namespace ARKInteractiveMap
 
         override public FrameworkElement BuildForContents(int size)
         {
+            canvas_.Opacity = 1;
             scale_ = 1;
+            size -= 1;
             (var pos, var radius) = ComputePosAndSize();
             if (radius > size / 2)
             {

@@ -28,8 +28,9 @@ namespace ARKInteractiveMap
         protected Point npos_;
         protected Point center_;
         protected PoiOrientation orientation_;
+        protected bool ingame_;
 
-        public MapPoiTriangle(MapPoiDef poi, MapScrollViewer map) : base(poi, map)
+        public MapPoiTriangle(MapPoiDef poi, MapScrollViewer map, string param=null) : base(poi, map)
         {
             setOrientation(poi.groupName);
         }
@@ -41,6 +42,7 @@ namespace ARKInteractiveMap
 
         protected void setOrientation(string groupName)
         {
+            ingame_ = (groupName == "ingame-map-poi");
             orientation_ = groupName == "ingame-map-poi" ? PoiOrientation.Up : PoiOrientation.Down;
         }
 
@@ -93,9 +95,40 @@ namespace ARKInteractiveMap
 
         protected void ComputeTriangleSize(Size size)
         {
-            pointCollection_[0] = new Point(size.Width / 2, 0);
-            pointCollection_[1] = new Point(size.Width, size.Height);
-            pointCollection_[2] = new Point(0, size.Height);
+            switch (orientation_)
+            {
+                case PoiOrientation.Up:
+                    {
+                        pointCollection_[0] = new Point(size.Width / 2, 0);
+                        pointCollection_[1] = new Point(size.Width, size.Height);
+                        pointCollection_[2] = new Point(0, size.Height);
+                        break;
+                    }
+
+                case PoiOrientation.Down:
+                    {
+                        pointCollection_[0] = new Point(0, 0);
+                        pointCollection_[1] = new Point(size.Width, 0);
+                        pointCollection_[2] = new Point(size.Width / 2, size.Height);
+                        break;
+                    }
+
+                case PoiOrientation.Left:
+                    {
+                        pointCollection_[0] = new Point(size.Width, 0);
+                        pointCollection_[1] = new Point(size.Width, size.Height);
+                        pointCollection_[2] = new Point(0, size.Height / 2);
+                        break;
+                    }
+
+                case PoiOrientation.Right:
+                    {
+                        pointCollection_[0] = new Point(0, 0);
+                        pointCollection_[1] = new Point(size.Width, size.Height / 2);
+                        pointCollection_[2] = new Point(0, size.Height);
+                        break;
+                    }
+            }
             ComputeTriangleCenter();
         }
 
@@ -159,7 +192,7 @@ namespace ARKInteractiveMap
 
         protected (string, Brush) GetGroupInfo()
         {
-            if (GroupName == "ingame-map-poi")
+            if (ingame_)
                 return ("Repère Ingame", Brushes.Red);
             else
                 return ("Repère libre", Brushes.Blue);
@@ -171,10 +204,6 @@ namespace ARKInteractiveMap
             // https://wpf-tutorial.com/fr/15/les-controles-de-base/le-controle-textblock-formatage-inline/
             var stackPanel = new StackPanel();
             stackPanel.Orientation = Orientation.Vertical;
-            /*if (GroupName == "ingame-map-poi")
-                stackPanel.Children.Add(new TextBlock() { Text = "Repère Ingame", Foreground = Brushes.Red });
-            else
-                stackPanel.Children.Add(new TextBlock() { Text = "Repère libre", Foreground = Brushes.Blue });*/
             (var gpText, var gpBrush) = GetGroupInfo();
             stackPanel.Children.Add(new TextBlock() { Text = gpText, Foreground = gpBrush });
             stackPanel.Children.Add(new TextBlock() { Text = Label, FontWeight = FontWeights.Bold });
@@ -184,7 +213,12 @@ namespace ARKInteractiveMap
 
         private void Menu_Click(object sender, RoutedEventArgs e)
         {
-            map.Command((sender as MenuItem).Tag as string, this.Id);
+            string cmd = (sender as MenuItem).Tag as string;
+            if (!ingame_)
+            {
+                cmd += ":user";
+            }
+            map.Command(cmd, this.Id);
         }
 
         override public FrameworkElement GetFrameworkElement() { return triangle_; }
@@ -192,6 +226,8 @@ namespace ARKInteractiveMap
         {
             triangle_.Fill = (SolidColorBrush)new BrushConverter().ConvertFrom(poiDef.fillColor);
             triangle_.Stroke = (SolidColorBrush)new BrushConverter().ConvertFrom(poiDef.fillColor);
+            textBlock_.Foreground = triangle_.Fill;
+            textBlock_.Text = Label;
             Rescale(scale_);
             RescalePopup();
         }

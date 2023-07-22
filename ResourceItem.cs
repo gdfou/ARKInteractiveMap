@@ -6,6 +6,10 @@ using System.Runtime.CompilerServices;
 using System.Windows.Media.Imaging;
 using System.Windows;
 using System.Collections.Generic;
+using System.IO;
+using System.Windows.Media;
+using System.Windows.Controls;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ARKInteractiveMap
 {
@@ -13,12 +17,11 @@ namespace ARKInteractiveMap
     {
         public event PropertyChangedEventHandler PropertyChanged;
         protected MapScrollViewer map_;
-        protected MapPoiCategory category_;
-        protected ArkWikiJsonGroup group_;
         public BitmapImage IconRes { get; set; }
         public FrameworkElement IconMap { get; set; }
         public string GroupName { get; set; }
         public string Label { get; set; }
+        public string Shape { get; set; }
 
         private bool isVisible_;
         public bool IsVisible // Binding
@@ -29,22 +32,27 @@ namespace ARKInteractiveMap
                 if (isVisible_ != value)
                 {
                     isVisible_ = value;
-                    map_.UpdateVisible(this);
+                    map_?.UpdateVisible(this);
+                    OnPropertyChanged("IsVisible");
                 }
             }
         }
 
-        public ResourceItem(MapScrollViewer map, string groupName, ArkWikiJsonGroup group, MapPoiCategory category)
+        // For content list
+        public ResourceItem(string groupName)
         {
-            category_ = category;
-            group_ = group;
             GroupName = groupName;
-            Label = group?.name;
             isVisible_ = true;
+        }
+
+        public void UpdateIcons(MapScrollViewer map, MapPoi poi, int size)
+        {
+            map_ = map;
+            Label = poi.poiDef.group.name;
             // icon de ressource
             var assembly = Assembly.GetExecutingAssembly();
             var app_res_list = assembly.GetManifestResourceNames();
-            var iconRes = MapPoiDef.getIconResname(group?.icon);
+            var iconRes = MapPoiDef.getIconResname(poi.poiDef.group?.icon);
             if (iconRes != null && app_res_list.Contains(iconRes))
             {
                 BitmapImage src = new BitmapImage();
@@ -53,16 +61,15 @@ namespace ARKInteractiveMap
                 src.EndInit();
                 IconRes = src;
             }
-            else if (group != null)
+            else if (poi.poiDef.group != null)
             {
-                Console.WriteLine($"Ne trouve pas l'icon '{group.icon}'");
+                Console.WriteLine($"Ne trouve pas l'icon '{poi.poiDef.group.icon}'");
             }
-            if (map != null)
-            {
-                FinalizeInit(map);
-            }
+            // Icon sur la map
+            IconMap = MapPoiDef.BuildForContents(poi, size);
         }
 
+        // for layer list
         public ResourceItem(MapScrollViewer map, string groupName, string label)
         {
             map_ = map;
@@ -71,11 +78,55 @@ namespace ARKInteractiveMap
             isVisible_ = true;
         }
 
-        public void FinalizeInit(MapScrollViewer map)
+        // Méthode pour dessiner un FrameworkElement sur un BitmapImage
+        public BitmapImage DrawFrameworkElementOnBitmap(FrameworkElement element, int width, int height)
         {
-            map_ = map;
-            // icon de la carte
-            IconMap = map?.GetMapIcon(GroupName, group_, category_, 20);
+            element.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
+            double ox = (width - element.DesiredSize.Width) / 2;
+            double oy = (height - element.DesiredSize.Height) / 2;
+            element.Arrange(new Rect(ox,oy,width,height));
+            element.UpdateLayout();
+
+            RenderTargetBitmap bitmap = new RenderTargetBitmap(width, height, 96, 96, PixelFormats.Pbgra32);
+            bitmap.Render(element);
+
+            BitmapEncoder encoder = new PngBitmapEncoder();
+            encoder.Frames.Add(BitmapFrame.Create(bitmap));
+            /*using (var stream = File.Create(@"D:\Temp\empty.png"))
+            {
+                encoder.Save(stream);
+            }*/
+            BitmapImage bitmapImage = new BitmapImage();
+            using (var stream = new MemoryStream())
+            {
+                encoder.Save(stream);
+                stream.Seek(0, SeekOrigin.Begin);
+
+                bitmapImage.BeginInit();
+                bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
+                bitmapImage.StreamSource = stream;
+                bitmapImage.EndInit();
+                bitmapImage.Freeze(); // Gèle l'image pour améliorer les performances (nécessaire si vous utilisez cette image dans un thread différent de celui de l'interface utilisateur)
+            }
+            return bitmapImage;
+        }
+
+        // for ingame or user poi edit
+        public ResourceItem(MapPoiShape shape, int size, string param=null)
+        {
+            Shape = shape.ToString().ToLower() + (param != null ? $"#{param}" : "");
+            switch (shape)
+            {
+                //case MapPoiShape.Ellipse: return new MapPoiEllipse(poi.poiDef, null).BuildForContents(size);
+                //case MapPoiShape.Icon: return new MapPoiIcon(poi.poiDef, null).BuildForContents(size);
+                case MapPoiShape.Triangle:
+                    IconMap = new MapPoiTriangle(new MapPoiDef() { groupName = "user-map-poi", fillColor = "#ff0000" }, null, param).BuildForContents(size);
+                    break;
+                case MapPoiShape.Letter:
+                    IconMap = new MapPoiLetter(new MapPoiDef() { groupName = "user-map-poi", fillColor = "#ff0000" }, null, param).BuildForContents(size);
+                    break;
+            }
+            IconRes = DrawFrameworkElementOnBitmap(IconMap, size, size);
         }
 
         // Create the OnPropertyChanged method to raise the event

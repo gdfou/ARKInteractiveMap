@@ -41,18 +41,22 @@ namespace ARKInteractiveMap
 
         override public FrameworkElement BuildForContents(int size)
         {
-            scale_ = 1;
-            imagePoi_ = new Image();
-            BitmapImage bitmapPoi = new BitmapImage();
-            bitmapPoi.BeginInit();
-            bitmapPoi.StreamSource = Assembly.GetExecutingAssembly().GetManifestResourceStream(poiDef.iconCollected);
-            bitmapPoi.EndInit();
-            imagePoi_.Source = bitmapPoi;
-            imagePoi_.Width = size;
-            imagePoi_.Height = size;
-            Canvas.SetLeft(imagePoi_, 0);
-            Canvas.SetTop(imagePoi_, 0);
-            return imagePoi_;
+            if (poiDef.iconCollected != null)
+            {
+                scale_ = 1;
+                imagePoi_ = new Image();
+                BitmapImage bitmapPoi = new BitmapImage();
+                bitmapPoi.BeginInit();
+                bitmapPoi.StreamSource = Assembly.GetExecutingAssembly().GetManifestResourceStream(poiDef.iconCollected);
+                bitmapPoi.EndInit();
+                imagePoi_.Source = bitmapPoi;
+                imagePoi_.Width = size;
+                imagePoi_.Height = size;
+                Canvas.SetLeft(imagePoi_, 0);
+                Canvas.SetTop(imagePoi_, 0);
+                return imagePoi_;
+            }
+            return null;
         }
 
         override public FrameworkElement BuildForMap(double scale)

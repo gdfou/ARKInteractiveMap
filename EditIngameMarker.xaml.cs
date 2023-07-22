@@ -29,6 +29,7 @@ namespace ARKInteractiveMap
         }
         protected IngameMarker item_;
         protected IngameMarker edit_;
+        protected bool userMarker_;
 
         public EditIngameMarker(IngameMarker item)
         {
@@ -44,6 +45,11 @@ namespace ARKInteractiveMap
             var color_in_list = FindClosestColor((Color)ColorConverter.ConvertFromString(MarkerColor), clist);
             if (color_in_list != null)
             {
+                // remove transparent color
+                if (color_in_list == Colors.Transparent)
+                {
+                    color_in_list = Colors.Red;
+                }
                 cmbColors.SelectedItem = cplist.FirstOrDefault(cp => (Color)cp.GetValue(cplist) == color_in_list);
             }
         }
@@ -96,6 +102,60 @@ namespace ARKInteractiveMap
                 {
                     edit_.Lon = value;
                     NotifyPropertyChanged("Lon");
+                }
+            }
+        }
+
+        public bool UserMarker 
+        {
+            get => userMarker_;
+            set 
+            {
+                cmbStyles.IsEnabled = true;
+            }
+        }
+
+        public void AddMapIcon(MapPoiShape shape, int size, string param = null)
+        {
+            cmbStyles.Items.Add(new ResourceItem(shape, size, param));
+            cmbStyles.SelectedIndex = 0;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Shape = item_.Shape;
+        }
+
+        public string Shape
+        {
+            get
+            {
+                if (cmbStyles.SelectedItem != null)
+                {
+                    var ctrl = cmbStyles.SelectedItem as ResourceItem;
+                    return ctrl.Shape.ToString();
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            set
+            {
+                if (String.IsNullOrEmpty(item_.Shape))
+                {
+                    cmbStyles.SelectedIndex = 0;
+                }
+                else
+                {
+                    foreach (ResourceItem item in cmbStyles.Items)
+                    {
+                        if (item.Shape == value)
+                        {
+                            cmbStyles.SelectedItem = item;
+                            break;
+                        }
+                    }
                 }
             }
         }

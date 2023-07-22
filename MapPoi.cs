@@ -8,6 +8,7 @@ using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Effects;
 using System.Windows.Controls.Primitives;
+using System.Windows.Shapes;
 
 namespace ARKInteractiveMap
 {
@@ -79,6 +80,16 @@ namespace ARKInteractiveMap
             }
         }
 
+        public string Shape 
+        { 
+            get { return poiDef.shape; } 
+            set
+            {
+                poiDef.shape = value;
+                OnSetShape();
+            }
+        }
+
         public MapPoi()
         {
             scale_ = 1;
@@ -98,7 +109,7 @@ namespace ARKInteractiveMap
         {
             poiDef = poi;
             this.map = map;
-            this.pos = map.MapSize.ConvertMapPointToPixel(poi.pos);
+            this.pos = map?.MapSize.ConvertMapPointToPixel(poi.pos) ?? new Point(0,0);
         }
 
         virtual public FrameworkElement BuildToolTipInfo()
@@ -117,18 +128,9 @@ namespace ARKInteractiveMap
             return stackPanel;
         }
 
-        virtual public FrameworkElement BuildPopup()
-        {
-            /*map.popup.Children.Clear();
-            map.popup.Children.Add(new Border()
-            {
-                Background = Brushes.LightGray,
-                Width = 290,
-                Height = 70,
-                CornerRadius = new CornerRadius(10),
-                Effect = new DropShadowEffect() { ShadowDepth = 6 }
-            });*/
-            return null;
+        virtual public FrameworkElement BuildPopup() 
+        { 
+            return null; 
         }
 
         virtual public void ViewPopup(double x, double y, string label, string info)
@@ -153,6 +155,7 @@ namespace ARKInteractiveMap
         virtual public void SetCollected(bool value) { }
         virtual public bool GetEditable() { return false; }
         virtual public void SetEditable(bool value) { }
+        virtual public void OnSetShape() { }
         virtual public void RescalePopup() { }
         virtual public void Ping() { }
         virtual public void RescalePing() { }

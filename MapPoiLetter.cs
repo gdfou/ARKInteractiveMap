@@ -21,9 +21,11 @@ namespace ARKInteractiveMap
         protected Size size_;
         protected Point npos_;
         protected Point center_;
+        protected string param_;
 
-        public MapPoiLetter(MapPoiDef poi, MapScrollViewer map) : base(poi, map)
+        public MapPoiLetter(MapPoiDef poi, MapScrollViewer map, string param=null) : base(poi, map)
         {
+            param_ = param == null ? "?" : param;
         }
 
         public MapPoiLetter(ArkWikiJsonGroup group) : base(group)
@@ -52,7 +54,7 @@ namespace ARKInteractiveMap
         protected void BuildBase(Size size)
         {
             charDraw_ = new TextBlock();
-            charDraw_.Text = "?";
+            charDraw_.Text = param_;
             charDraw_.FontSize = 40;
             charDraw_.FontWeight = FontWeights.UltraBold;
             charDraw_.Foreground = (SolidColorBrush)new BrushConverter().ConvertFrom(poiDef.fillColor);
@@ -66,10 +68,15 @@ namespace ARKInteractiveMap
         override public FrameworkElement BuildForContents(int new_size)
         {
             scale_ = 1;
-            BuildBase(new Size(new_size - 6, new_size - 6));
-            Canvas.SetLeft(charDraw_, 0);
-            Canvas.SetTop(charDraw_, 0);
-            return charDraw_;
+            BuildBase(new Size(new_size, new_size));
+            Canvas.SetLeft(viewbox_, 0);
+            Canvas.SetTop(viewbox_, 0);
+            return viewbox_;
+        }
+
+        override public void OnSetShape() 
+        {
+            param_ = MapPoiDef.GetShapeParam(poiDef.shape);
         }
 
         override public FrameworkElement BuildForMap(double scale)
@@ -143,13 +150,21 @@ namespace ARKInteractiveMap
 
         private void Menu_Click(object sender, RoutedEventArgs e)
         {
-            map.Command((sender as MenuItem).Tag as string, this.Id);
+            string cmd = (sender as MenuItem).Tag as string;
+            if (GroupName == "user-map-poi")
+            {
+                cmd += ":user";
+            }
+            map.Command(cmd, this.Id);
         }
 
         override public FrameworkElement GetFrameworkElement() { return viewbox_; }
         override public void Update()
         {
             charDraw_.Foreground = (SolidColorBrush)new BrushConverter().ConvertFrom(poiDef.fillColor);
+            charDraw_.Text = param_;
+            textBlock_.Foreground = charDraw_.Foreground;
+            textBlock_.Text = Label;
             Rescale(scale_);
             RescalePopup();
         }

@@ -21,6 +21,7 @@ namespace ARKInteractiveMap
         protected string color_;
         protected string lat_;
         protected string lon_;
+        protected string shape_;
 
         public string Id { get; set; }
 
@@ -100,12 +101,19 @@ namespace ARKInteractiveMap
 
         public MapPos MapPos => new MapPos(floatLat, floatLon);
 
+        public string Shape
+        {
+            get => shape_;
+            set => shape_ = value;
+        }
+
         public IngameMarker()
         {
             Name = "";
             Color = "#ffffffff";
             Lat = "0";
             Lon = "0";
+            shape_ = "triangle";
         }
         
         public IngameMarker(JsonIngamePoi poi, string id)
@@ -115,6 +123,7 @@ namespace ARKInteractiveMap
             floatLat = poi.lat;
             floatLon = poi.lon;
             Color = poi.color;
+            Shape = poi.shape;
         }
     }
 }

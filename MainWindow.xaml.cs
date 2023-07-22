@@ -13,45 +13,33 @@ using ArkFileDecode;
 using System.Globalization;
 using static Microsoft.WindowsAPICodePack.Shell.PropertySystem.SystemProperties.System;
 using System.Windows.Media;
+using System.Text.RegularExpressions;
+using System.Text;
 
 namespace ARKInteractiveMap
 {
     /// <summary>
+    /// Main Windows
     /// </summary>
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
         string lastArkImportFolder_;
         int lockInterface_;
         MainConfig cfg_;
-        ObservableCollection<ResourceItem> contentList_;
         ObservableCollection<MapDef> mapDefList_;
         ObservableCollection<CollectibleTreeViewItem> collectibleList_;
         ObservableCollection<IngameMarker> ingameMarkerList_;
         ObservableCollection<IngameMarker> userMarkerList_;
-        ObservableCollection<ResourceItem> layerList_;
         Dictionary<string, string> expNoteList_;
         int ingameMarkerListChanged_;
-
-        public string ContentVisible
-        {
-            get { return "Contenus"; }
-            set {}
-        }
-        public string LayerVisible
-        {
-            get { return "Calques"; }
-            set { }
-        }
 
         public MainWindow()
         {
             DataContext = this;
-            contentList_ = new ObservableCollection<ResourceItem>();
             mapDefList_ = new ObservableCollection<MapDef>();
             collectibleList_ = new ObservableCollection<CollectibleTreeViewItem>();
             ingameMarkerList_ = new ObservableCollection<IngameMarker>();
             userMarkerList_ = new ObservableCollection<IngameMarker>();
-            layerList_ = new ObservableCollection<ResourceItem>();
             InitializeComponent();
 
 #if !DEBUG
@@ -62,8 +50,7 @@ namespace ARKInteractiveMap
             {
                 cfg_ = new MainConfig()
                 {
-                    window = new JsonRect(),
-                    fog_of_wars = true
+                    window = new JsonRect()
                 };
             }
         }
@@ -101,6 +88,7 @@ namespace ARKInteractiveMap
 
             // Load map def config from user config
             // TODO => ajouter un séparateur => construction manuelle ComboBoxItem/Separator !
+            // TODO => changer l'ordre des cartes
             comboBoxMap.ItemsSource = mapDefList_;
             var currentMapDef = mapDefList_.FirstOrDefault(x => x.IsMainMap(cfg_.map));
             if (currentMapDef == null)
@@ -120,18 +108,12 @@ namespace ARKInteractiveMap
             mapViewer.ZoomInFull();
             mapViewer.MaxScale = 8;
 
-            layerList_.Add(new ResourceItem(mapViewer, "layers-surface", "Surface"));
-            layerList_.Add(new ResourceItem(mapViewer, "layers-cave", "Grottes"));
-            layerList_.Add(new ResourceItem(mapViewer, "layers-user", "Répères"));
             LoadMapDef(currentMapDef);
 
             trvCollectible.ItemsSource = collectibleList_;
             listviewIngameMarkers.ItemsSource = ingameMarkerList_;
             listviewUserMarkers.ItemsSource = userMarkerList_;
 
-            comboBoxContent.ItemsSource = contentList_;
-            comboBoxLayer.ItemsSource = layerList_;
-            checkboxFow.IsChecked = cfg_.fog_of_wars;
             lockInterface_--;
         }
 
@@ -142,29 +124,41 @@ namespace ARKInteractiveMap
 
         public void Command(string cmd, string id=null, object param=null)
         {
-            switch (cmd)
+            // <cmd>:<params>
+            var split = cmd.Split(':');
+            string cmd_arg = (split.Length == 2) ? split[1] : null;
+            switch (split[0])
             {
                 case "IngameMarkerEdit":
                     {
-                        var item = ingameMarkerList_.FirstOrDefault(x => x.Id == id);
+                        bool ingame_marker = string.IsNullOrEmpty(cmd_arg) ? true : (cmd_arg != "user");
+                        ObservableCollection<IngameMarker> list = ingame_marker ? ingameMarkerList_ : userMarkerList_;
+                        var item = list.FirstOrDefault(x => x.Id == id);
                         if (item != null)
                         {
-                            EditIngameMarker(true, item);
+                            EditIngameMarker(ingame_marker, item);
+                        }
+                        else
+                        {
+                            EditIngameMarker(ingame_marker, null, param as MapPos);
                         }
                         break;
                     }
 
                 case "IngameMarkerDel":
                     {
-                        var item = ingameMarkerList_.FirstOrDefault(x => x.Id == id);
+                        bool ingame_marker = string.IsNullOrEmpty(cmd_arg) ? true : (cmd_arg != "user");
+                        ObservableCollection<IngameMarker> list = ingame_marker ? ingameMarkerList_ : userMarkerList_;
+                        var item = list.FirstOrDefault(x => x.Id == id);
                         if (item != null)
                         {
                             if (MessageBox.Show($"Voulez-vous vraiment supprimer le repère '{item.Name}' ?", this.Title, MessageBoxButton.OKCancel) == MessageBoxResult.OK)
                             {
-                                ingameMarkerList_.Remove(item);
+                                list.Remove(item);
                                 mapViewer.RemovePoi(item.Id);
                                 SaveMapDef(null);
-                                ingameMarkerListChanged_++;
+                                if (ingame_marker)
+                                    ingameMarkerListChanged_++;
                             }
                         }
                         break;
@@ -172,38 +166,15 @@ namespace ARKInteractiveMap
 
                 case "IngameMarkerAdd": // + option param => MapPos
                     {
-                        EditIngameMarker(true, null, param as MapPos);
+                        bool ingame_marker = string.IsNullOrEmpty(cmd_arg) ? true : (cmd_arg != "user");
+                        EditIngameMarker(ingame_marker, null, param as MapPos);
                         break;
                     }
 
-                case "UserMarkerEdit":
+                case "UpdateVisible":
                     {
-                        var item = userMarkerList_.FirstOrDefault(x => x.Id == id);
-                        if (item != null)
-                        {
-                            EditIngameMarker(false, item);
-                        }
-                        break;
-                    }
-
-                case "UserMarkerDel":
-                    {
-                        var item = userMarkerList_.FirstOrDefault(x => x.Id == id);
-                        if (item != null)
-                        {
-                            if (MessageBox.Show($"Voulez-vous vraiment supprimer le repère '{item.Name}' ?", this.Title, MessageBoxButton.OKCancel) == MessageBoxResult.OK)
-                            {
-                                userMarkerList_.Remove(item);
-                                mapViewer.RemovePoi(item.Id);
-                                SaveMapDef(null);
-                            }
-                        }
-                        break;
-                    }
-
-                case "UserMarkerAdd": // + option param => MapPos
-                    {
-                        EditIngameMarker(false, null, param as MapPos);
+                        // UpdateVisible:layers-xxx
+                        mapViewer.UpdateVisible(split[1], (split[2] == "True"));
                         break;
                     }
             }
@@ -216,7 +187,7 @@ namespace ARKInteractiveMap
             }
             else
             {
-                if (cmd == "IngameMarkerDel")
+                if (cmd.Contains("IngameMarkerDel"))
                 {
                     List<IngameMarker> list_igm = new List<IngameMarker>();
                     foreach (var id in ids)
@@ -350,8 +321,7 @@ namespace ARKInteractiveMap
                 if (!all_1)
                 {
                     mapViewer.LockSave++;
-                    checkboxFow.IsEnabled = true;
-                    mapViewer.LoadFogOfWars(fow, cfg_.fog_of_wars);
+                    mapViewer.LoadFogOfWars(fow);
                     mapViewer.LockSave--;
                 }
             }
@@ -384,6 +354,7 @@ namespace ARKInteractiveMap
                 poi.color = item.Color;
                 poi.lat = item.floatLat;
                 poi.lon = item.floatLon;
+                poi.shape = item.Shape;
                 list.Add(poi);
             }
             return list;
@@ -647,7 +618,8 @@ namespace ARKInteractiveMap
 
         private void LoadMapDef(MapDef mapDef, bool subMapLoad=false)
         {
-            checkboxFow.IsEnabled = false;
+            // TODO FOW
+            //checkboxFow.IsEnabled = false;
             if (!subMapLoad)
             {
                 if (mapDef.maps.Count > 1)
@@ -675,10 +647,10 @@ namespace ARKInteractiveMap
             try
             {
                 var currentMapDef = mapDef.currentMap;
-                mapViewer.mapBorderWidth = currentMapDef.border.width;
-                mapViewer.mapBorderColor = currentMapDef.border.color;
+                mapViewer.MapBorderWidth = currentMapDef.border.width;
+                mapViewer.MapBorderColor = currentMapDef.border.color;
                 var poi_dict = new Dictionary<string, MapPoiDef>();
-                var contentList = new List<ResourceItem>();
+                var contentList = new List<string>();
                 var collectibleList = new List<CollectibleTreeViewItem>();
                 foreach (var res in currentMapDef.resources)
                 {
@@ -686,13 +658,6 @@ namespace ARKInteractiveMap
                 }
                 if (poi_dict != null)
                 {
-                    contentList_.Clear();
-                    foreach (var item in contentList)
-                    {
-                        item.FinalizeInit(mapViewer);
-                        contentList_.Add(item);
-                    }
-
                     collectibleList_.Clear();
                     foreach (var item in collectibleList)
                     {
@@ -706,6 +671,7 @@ namespace ARKInteractiveMap
                     mapViewer.MapImage = $"ARKInteractiveMap.Ressources.{mapDef.folder}.{currentMapDef.mapPicture}";
 
                     mapViewer.LoadPoi(poi_dict);
+                    mapViewer.LoadContentList(contentList);
 
                     if (cfg_.map_def == null)
                     {
@@ -721,28 +687,13 @@ namespace ARKInteractiveMap
                     // Map items visibility
                     if (json_map_def.map_poi_visible != null)
                     {
-                        contentList = contentList_.ToList();
-                        foreach (var item in json_map_def.map_poi_visible)
-                        {
-                            var elt = contentList.FindLast(x => item.Key == x.GroupName);
-                            if (elt != null)
-                            {
-                                elt.IsVisible = item.Value;
-                            }
-                        }
+                        mapViewer.LoadLayersVisibility(json_map_def.map_poi_visible);
                     }
 
                     // Layers visibility
                     if (json_map_def.layers_visible != null)
                     {
-                        foreach (var item in json_map_def.layers_visible)
-                        {
-                            var elt = layerList_.FirstOrDefault(x => item.Key == x.GroupName);
-                            if (elt != null)
-                            {
-                                elt.IsVisible = item.Value;
-                            }
-                        }
+                        mapViewer.LoadLayersVisibility(json_map_def.layers_visible);
                     }
 
                     // Map items collected list
@@ -805,16 +756,8 @@ namespace ARKInteractiveMap
             json_map_def.origin.y = Convert.ToInt32(mapViewer.Origin.Y);
             json_map_def.scale = mapViewer.Scale;
 
-            foreach (var cbitem in contentList_)
-            {
-                json_map_def.map_poi_visible[cbitem.GroupName] = cbitem.IsVisible;
-            }
-
-            foreach (var cbitem in layerList_)
-            {
-                json_map_def.layers_visible[cbitem.GroupName] = cbitem.IsVisible;
-            }
-
+            json_map_def.layers_visible = SaveLayerList();
+            json_map_def.map_poi_visible = SaveVisibleList();
             json_map_def.map_poi_collected = SaveCollected();
             json_map_def.ingame_map_poi = SaveIngameMapPoi();
             json_map_def.user_map_poi = SaveUserMapPoi();
@@ -855,6 +798,18 @@ namespace ARKInteractiveMap
                 dict[poi.Name] = item_list;
             }
             return dict;
+        }
+
+        // json_map_def.layers_visible
+        public Dictionary<string, bool> SaveLayerList()
+        {
+            return mapViewer.GetLayersVisibility();
+        }
+
+        // json_map_def.map_poi_visible
+        public Dictionary<string, bool> SaveVisibleList()
+        {
+            return mapViewer.GetContentDict();
         }
 
         private void comboBoxMap_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -920,18 +875,18 @@ namespace ARKInteractiveMap
 
         private void ButtonContentAll_Click(object sender, RoutedEventArgs e)
         {
-            foreach (var item in contentList_)
+            /*foreach (var item in contentList_)
             {
                 item.IsVisible = true;
-            }
+            }*/
         }
 
         private void ButtonContentNone_Click(object sender, RoutedEventArgs e)
         {
-            foreach (var item in contentList_)
+            /*foreach (var item in contentList_)
             {
                 item.IsVisible = false;
-            }
+            }*/
         }
 
         private void ButtonGotTo_Click(object sender, RoutedEventArgs e)
@@ -969,7 +924,11 @@ namespace ARKInteractiveMap
             }
             else
             {
+                dialog.UserMarker = true;
                 dialog.Title = add_item ? "Ajout d'un repère libre" : "Edition du répère libre";
+                dialog.AddMapIcon(MapPoiShape.Triangle, 24);
+                dialog.AddMapIcon(MapPoiShape.Letter, 24, "?");
+                dialog.AddMapIcon(MapPoiShape.Letter, 24, "!");
             }
             if (dialog.ShowDialog() == true)
             {
@@ -986,6 +945,24 @@ namespace ARKInteractiveMap
                 var map_poi = mapViewer[item.Id];
                 if (map_poi != null)
                 {
+                    if (map_poi.Shape != dialog.Shape)
+                    {
+                        // Shape ou param ?
+                        item.Shape = dialog.Shape;
+                        if (MapPoiDef.GetShapeName(map_poi.Shape) != MapPoiDef.GetShapeName(dialog.Shape))
+                        {
+                            // new shape
+                            mapViewer.RemovePoi(item.Id);
+                            var poi = new MapPoiDef(ingameMarker ? "ingame-map-poi" : "user-map-poi", item);
+                            item.Id = poi.Id;
+                            mapViewer.AddPoi(poi.Id, poi);
+                        }
+                        else
+                        {
+                            // param
+                            map_poi.Shape = dialog.Shape;
+                        }
+                    }
                     map_poi.Label = item.Name;
                     map_poi.MapPos = item.MapPos;
                     map_poi.FillColor = item.Color;
@@ -1129,13 +1106,6 @@ namespace ARKInteractiveMap
                 cfg_.ark_save_folder = dialog.ArkSaveFolder;
                 SaveMainConfig();
             }
-        }
-
-        private void checkboxFow_Click(object sender, RoutedEventArgs e)
-        {
-            cfg_.fog_of_wars = (bool)checkboxFow.IsChecked;
-            mapViewer.FogOfWarsVisible(cfg_.fog_of_wars);
-            SaveMainConfig();
         }
 
         private Dictionary<string, string> LoadEploratorNotesIconList()
