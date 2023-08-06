@@ -1,0 +1,1501 @@
+{
+  "$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
+  "mixins": [
+    "Cartes/Définitions des groupes normés",
+    "Cartes/Icônes des ravitaillements",
+    "Cartes/Obélisques Extinction",
+    "Cartes/Grottes Extinction",
+    "Cartes/ApparitionJoueur Extinction"
+  ],
+  "backgrounds": [
+    {
+      "name": "Croquis",
+      "image": "Extinction Map.jpg"
+    },
+    {
+      "name": "Topographique",
+      "image": "Extinction Topographic Map.jpg",
+      "at": [
+        [
+          7.2,
+          7.2
+        ],
+        [
+          92.8,
+          92.8
+        ]
+      ]
+    }
+  ],
+  "settings": {
+    "enableSearch": true
+  },
+  "groups": {
+    "osd-crate": {
+      "name": "Capsule / Veine d'élément",
+      "icon": "White Beacon.png",
+      "size": 26
+    }
+  },
+  "markers": {
+    "artifact cg:20 cc:growth": [
+      {
+        "lat": 13.5,
+        "lon": 49.2,
+        "isWikitext": true,
+        "name": "Artéfact de Croissance",
+        "description": "Dans la [[Grotte de la forêt]]",
+        "article": "Artéfact de Croissance"
+      }
+    ],
+    "artifact cg:21 cc:void": [
+      {
+        "lat": 13.5,
+        "lon": 84.0,
+        "isWikitext": true,
+        "name": "Artéfact du Vide",
+        "description": "Dans la [[Grotte de Glace]]",
+        "article": "Artéfact du Vide"
+      }
+    ],
+    "artifact cg:19 cc:chaos": [
+      {
+        "lat": 93.9,
+        "lon": 88.0,
+        "isWikitext": true,
+        "name": "Artéfact du Chaos",
+        "description": "Dans [[Grotte du Désert]]",
+        "article": "Artéfact du Chaos"
+      }
+    ],
+    "cave-crate cave": [
+      {
+        "lat": 6.2,
+        "lon": 46.4
+      },
+      {
+        "lat": 8.5,
+        "lon": 43.3
+      },
+      {
+        "lat": 9.3,
+        "lon": 47.1
+      },
+      {
+        "lat": 9.6,
+        "lon": 49.1
+      },
+      {
+        "lat": 10.9,
+        "lon": 85.0
+      },
+      {
+        "lat": 12.6,
+        "lon": 47.7
+      },
+      {
+        "lat": 12.7,
+        "lon": 46.3
+      },
+      {
+        "lat": 13.5,
+        "lon": 50.0
+      },
+      {
+        "lat": 14.8,
+        "lon": 82.2
+      },
+      {
+        "lat": 15.3,
+        "lon": 91.4
+      },
+      {
+        "lat": 19.2,
+        "lon": 90.6
+      },
+      {
+        "lat": 19.9,
+        "lon": 88.3
+      },
+      {
+        "lat": 21.4,
+        "lon": 79.6
+      },
+      {
+        "lat": 21.8,
+        "lon": 87.8
+      },
+      {
+        "lat": 87.5,
+        "lon": 88.0
+      },
+      {
+        "lat": 90.2,
+        "lon": 87.0
+      },
+      {
+        "lat": 93.0,
+        "lon": 79.8
+      },
+      {
+        "lat": 94.2,
+        "lon": 85.3
+      },
+      {
+        "lat": 94.7,
+        "lon": 81.0
+      },
+      {
+        "lat": 95.1,
+        "lon": 79.3
+      },
+      {
+        "lat": 95.4,
+        "lon": 90.2
+      }
+    ],
+    "city-terminal": [
+      {
+        "lat": 17.2,
+        "lon": 87.8
+      },
+      {
+        "lat": 18.8,
+        "lon": 67.3
+      },
+      {
+        "lat": 31.7,
+        "lon": 80.5
+      },
+      {
+        "lat": 41.7,
+        "lon": 90.7
+      },
+      {
+        "lat": 30.0,
+        "lon": 23.9
+      },
+      {
+        "lat": 62.8,
+        "lon": 16.4
+      },
+      {
+        "lat": 70.8,
+        "lon": 42.2
+      },
+      {
+        "lat": 60.5,
+        "lon": 90.9
+      },
+      {
+        "lat": 68.9,
+        "lon": 84.7
+      },
+      {
+        "lat": 70.9,
+        "lon": 66.1
+      },
+      {
+        "lat": 89.4,
+        "lon": 68.5
+      },
+      {
+        "lat": 81.3,
+        "lon": 90.3
+      },
+      {
+        "lat": 49.9,
+        "lon": 70.7
+      },
+      {
+        "lat": 51.2,
+        "lon": 63.7
+      },
+      {
+        "lat": 47.7,
+        "lon": 58.2
+      },
+      {
+        "lat": 44.5,
+        "lon": 55.2
+      },
+      {
+        "lat": 47.3,
+        "lon": 52.9
+      },
+      {
+        "lat": 47.5,
+        "lon": 49.9
+      },
+      {
+        "lat": 52.2,
+        "lon": 48.1
+      },
+      {
+        "lat": 51.8,
+        "lon": 48.1
+      },
+      {
+        "lat": 46.8,
+        "lon": 46.7
+      },
+      {
+        "lat": 46.1,
+        "lon": 47.15
+      },
+      {
+        "lat": 45.6,
+        "lon": 47.1
+      },
+      {
+        "lat": 48.0,
+        "lon": 42.2
+      },
+      {
+        "lat": 46.8,
+        "lon": 39.5
+      },
+      {
+        "lat": 50.6,
+        "lon": 38.9
+      },
+      {
+        "lat": 58.2,
+        "lon": 36.3
+      },
+      {
+        "lat": 44.4,
+        "lon": 33.5
+      },
+      {
+        "lat": 53.2,
+        "lon": 26.4
+      }
+    ],
+    "osd-crate cg:1 cc:bpry": [
+      {
+        "lat": 17.0,
+        "lon": 13.0
+      },
+      {
+        "lat": 18.0,
+        "lon": 35.0
+      },
+      {
+        "lat": 19.0,
+        "lon": 28.0
+      },
+      {
+        "lat": 22.0,
+        "lon": 55.0
+      },
+      {
+        "lat": 26.0,
+        "lon": 48.0
+      },
+      {
+        "lat": 29.0,
+        "lon": 40.0
+      },
+      {
+        "lat": 29.0,
+        "lon": 58.0
+      },
+      {
+        "lat": 34.0,
+        "lon": 37.0
+      },
+      {
+        "lat": 34.0,
+        "lon": 40.0
+      },
+      {
+        "lat": 35.0,
+        "lon": 14.0
+      },
+      {
+        "lat": 35.0,
+        "lon": 47.0
+      },
+      {
+        "lat": 36.0,
+        "lon": 57.0
+      },
+      {
+        "lat": 39.0,
+        "lon": 32.0
+      },
+      {
+        "lat": 39.0,
+        "lon": 62.0
+      },
+      {
+        "lat": 40.0,
+        "lon": 27.0
+      },
+      {
+        "lat": 43.0,
+        "lon": 10.0
+      },
+      {
+        "lat": 43.0,
+        "lon": 13.0
+      },
+      {
+        "lat": 43.0,
+        "lon": 77.0
+      },
+      {
+        "lat": 46.0,
+        "lon": 85.0
+      },
+      {
+        "lat": 51.0,
+        "lon": 19.0
+      },
+      {
+        "lat": 54.0,
+        "lon": 15.0
+      },
+      {
+        "lat": 54.0,
+        "lon": 84.0
+      },
+      {
+        "lat": 58.0,
+        "lon": 90.0
+      },
+      {
+        "lat": 60.0,
+        "lon": 71.0
+      },
+      {
+        "lat": 62.0,
+        "lon": 69.0
+      },
+      {
+        "lat": 65.0,
+        "lon": 59.0
+      },
+      {
+        "lat": 65.0,
+        "lon": 37.0
+      },
+      {
+        "lat": 66.0,
+        "lon": 49.0
+      },
+      {
+        "lat": 68.0,
+        "lon": 31.0
+      },
+      {
+        "lat": 68.0,
+        "lon": 54.0
+      },
+      {
+        "lat": 70.0,
+        "lon": 18.0
+      },
+      {
+        "lat": 71.0,
+        "lon": 38.0
+      },
+      {
+        "lat": 72.0,
+        "lon": 43.0
+      },
+      {
+        "lat": 78.0,
+        "lon": 57.0
+      },
+      {
+        "lat": 82.0,
+        "lon": 40.0
+      },
+      {
+        "lat": 85.0,
+        "lon": 28.0
+      }
+    ],
+    "dossier": [
+      {
+        "lat": 56.0,
+        "lon": 89.3,
+        "name": "Dossier Dinosaures corrompus",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 25.2,
+        "lon": 14.6,
+        "name": "Dossier Gacha",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 22.1,
+        "lon": 51.2,
+        "name": "Dossier Gasbag",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 11.9,
+        "lon": 78.0,
+        "name": "Dossier Harfang des Neiges",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 22.4,
+        "lon": 74.3,
+        "name": "Dossier Managarm",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 87.8,
+        "lon": 73.6,
+        "name": "Dossier Vélonasaure",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 52.1,
+        "lon": 70.0,
+        "name": "Manuel Exécuteur",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 1.6,
+        "lon": 42.0,
+        "name": "Manuel MegaMek",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 52.9,
+        "lon": 23.4,
+        "name": "Manuel Mek",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 57.1,
+        "lon": 49.1,
+        "name": "Manuel Éclaireur",
+        "image": "Blank.png"
+      }
+    ],
+    "explorer-note": [
+      {
+        "lat": 90.3,
+        "lon": 68.8,
+        "name": "Journal de Diana #1",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 78.1,
+        "lon": 79.9,
+        "name": "Journal de Diana #2",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 66.6,
+        "lon": 80.3,
+        "name": "Journal de Diana #3",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 49.2,
+        "lon": 67.9,
+        "name": "Journal de Diana #4",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 46.4,
+        "lon": 61.4,
+        "name": "Journal de Diana #5",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 45.1,
+        "lon": 53.1,
+        "name": "Journal de Diana #6",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 54.9,
+        "lon": 32.8,
+        "name": "Journal de Diana #7",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 41.4,
+        "lon": 26.8,
+        "name": "Journal de Diana #8",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 28.2,
+        "lon": 20.7,
+        "name": "Journal de Diana #9",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 25.0,
+        "lon": 23.0,
+        "name": "Journal de Diana #10",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 31.2,
+        "lon": 23.6,
+        "name": "Journal de Diana #11",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 30.4,
+        "lon": 37.6,
+        "name": "Journal de Diana #12",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 23.9,
+        "lon": 44.5,
+        "name": "Journal de Diana #13",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 30.8,
+        "lon": 47.3,
+        "name": "Journal de Diana #14",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 35.7,
+        "lon": 62.2,
+        "name": "Journal de Diana #15",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 43.9,
+        "lon": 72.0,
+        "name": "Journal de Diana #16",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 38.4,
+        "lon": 88.9,
+        "name": "Journal de Diana #17",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 33.7,
+        "lon": 82.1,
+        "name": "Journal de Diana #18",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 21.2,
+        "lon": 62.9,
+        "name": "Journal de Diana #19",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 16.3,
+        "lon": 51.6,
+        "name": "Journal de Diana #20",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 22.2,
+        "lon": 38.7,
+        "name": "Journal de Diana #21",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 10.5,
+        "lon": 29.5,
+        "name": "Journal de Diana #22",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 14.1,
+        "lon": 41.0,
+        "name": "Journal de Diana #23",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 7.9,
+        "lon": 41.7,
+        "name": "Journal de Diana #24",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 1.0,
+        "lon": 43.5,
+        "name": "Journal de Diana #25",
+        "image": "Blank.png"
+      },
+      {
+        "lat": -2.4,
+        "lon": 55.8,
+        "name": "Journal de Diana #26",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 5.6,
+        "lon": 57.8,
+        "name": "Journal de Diana #27",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 1.9,
+        "lon": 38.1,
+        "name": "Journal de Diana #28",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 8.4,
+        "lon": 44.6,
+        "name": "Journal de Diana #29",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 3.1,
+        "lon": 48.8,
+        "name": "Journal de Diana #30",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 50.9,
+        "lon": 29.9,
+        "name": "Note d'Helena #1",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 56.9,
+        "lon": 36.4,
+        "name": "Note d'Helena #2",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 58.5,
+        "lon": 48.7,
+        "name": "Note d'Helena #3",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 53.2,
+        "lon": 55.3,
+        "name": "Note d'Helena #4",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 63.1,
+        "lon": 42.3,
+        "name": "Note d'Helena #5",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 66.6,
+        "lon": 55.6,
+        "name": "Note d'Helena #6",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 61.4,
+        "lon": 69.0,
+        "name": "Note d'Helena #7",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 55.0,
+        "lon": 79.3,
+        "name": "Note d'Helena #8",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 47.8,
+        "lon": 75.2,
+        "name": "Note d'Helena #9",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 31.2,
+        "lon": 59.6,
+        "name": "Note d'Helena #10",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 27.2,
+        "lon": 53.7,
+        "name": "Note d'Helena #11",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 19.7,
+        "lon": 60.8,
+        "name": "Note d'Helena #12",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 25.0,
+        "lon": 46.0,
+        "name": "Note d'Helena #13",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 41.4,
+        "lon": 43.7,
+        "name": "Note d'Helena #14",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 43.7,
+        "lon": 33.5,
+        "name": "Note d'Helena #15",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 50.8,
+        "lon": 21.5,
+        "name": "Note d'Helena #16",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 40.9,
+        "lon": 15.6,
+        "name": "Note d'Helena #17",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 32.9,
+        "lon": 24.2,
+        "name": "Note d'Helena #18",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 19.3,
+        "lon": 17.7,
+        "name": "Note d'Helena #19",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 27.8,
+        "lon": 12.6,
+        "name": "Note d'Helena #20",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 11.3,
+        "lon": 8.6,
+        "name": "Note d'Helena #21",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 15.3,
+        "lon": 11.8,
+        "name": "Note d'Helena #22",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 14.8,
+        "lon": 18.2,
+        "name": "Note d'Helena #23",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 16.8,
+        "lon": 23.8,
+        "name": "Note d'Helena #24",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 8.3,
+        "lon": 29.9,
+        "name": "Note d'Helena #25",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 11.9,
+        "lon": 39.1,
+        "name": "Note d'Helena #26",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 8.6,
+        "lon": 43.3,
+        "name": "Note d'Helena #27",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 7.1,
+        "lon": 48.3,
+        "name": "Note d'Helena #28",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 10.5,
+        "lon": 47.6,
+        "name": "Note d'Helena #29",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 12.6,
+        "lon": 44.9,
+        "name": "Note d'Helena #30",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 26.8,
+        "lon": 53.0,
+        "name": "Note de Meiyin #1",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 38.5,
+        "lon": 29.5,
+        "name": "Note de Meiyin #2",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 47.2,
+        "lon": 22.5,
+        "name": "Note de Meiyin #3",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 47.8,
+        "lon": 12.2,
+        "name": "Note de Meiyin #4",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 73.2,
+        "lon": 42.6,
+        "name": "Note de Meiyin #5",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 70.6,
+        "lon": 53.7,
+        "name": "Note de Meiyin #6",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 58.7,
+        "lon": 73.5,
+        "name": "Note de Meiyin #7",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 43.1,
+        "lon": 90.8,
+        "name": "Note de Meiyin #8",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 31.9,
+        "lon": 81.7,
+        "name": "Note de Meiyin #9",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 26.5,
+        "lon": 71.1,
+        "name": "Note de Meiyin #10",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 19.6,
+        "lon": 77.8,
+        "name": "Note de Meiyin #11",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 17.2,
+        "lon": 86.3,
+        "name": "Note de Meiyin #12",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 10.1,
+        "lon": 72.3,
+        "name": "Note de Meiyin #13",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 22.2,
+        "lon": 65.8,
+        "name": "Note de Meiyin #14",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 20.6,
+        "lon": 61.7,
+        "name": "Note de Meiyin #15",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 18.3,
+        "lon": 78.5,
+        "name": "Note de Meiyin #16",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 10.7,
+        "lon": 64.5,
+        "name": "Note de Meiyin #17",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 27.3,
+        "lon": 61.0,
+        "name": "Note de Meiyin #18",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 32.1,
+        "lon": 30.6,
+        "name": "Note de Meiyin #19",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 31.0,
+        "lon": 27.0,
+        "name": "Note de Meiyin #20",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 27.6,
+        "lon": 22.2,
+        "name": "Note de Meiyin #21",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 20.6,
+        "lon": 13.1,
+        "name": "Note de Meiyin #22",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 29.5,
+        "lon": 15.8,
+        "name": "Note de Meiyin #23",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 20.5,
+        "lon": 29.4,
+        "name": "Note de Meiyin #24",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 10.5,
+        "lon": 32.6,
+        "name": "Note de Meiyin #25",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 8.7,
+        "lon": 47.2,
+        "name": "Note de Meiyin #26",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 13.3,
+        "lon": 45.5,
+        "name": "Note de Meiyin #27",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 18.4,
+        "lon": 15.3,
+        "name": "Note de Meiyin #28",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 13.2,
+        "lon": 28.4,
+        "name": "Note de Meiyin #29",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 15.6,
+        "lon": 17.5,
+        "name": "Note de Meiyin #30",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 49.2,
+        "lon": 71.7,
+        "name": "Celle qui attend #1",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 46.7,
+        "lon": 55.3,
+        "name": "Celle qui attend #2",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 56.1,
+        "lon": 56.4,
+        "name": "Celle qui attend #3",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 55.3,
+        "lon": 49.7,
+        "name": "Celle qui attend #4",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 48.7,
+        "lon": 42.6,
+        "name": "Celle qui attend #5",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 46.4,
+        "lon": 35.0,
+        "name": "Celle qui attend #6",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 41.4,
+        "lon": 43.8,
+        "name": "Celle qui attend #7",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 9.7,
+        "lon": 47.0,
+        "name": "Celle qui attend #8",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 12.4,
+        "lon": 48.8,
+        "name": "Celle qui attend #9",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 16.1,
+        "lon": 51.0,
+        "name": "Celle qui attend #10",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 23.5,
+        "lon": 18.7,
+        "name": "Celle qui attend #11",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 21.1,
+        "lon": 86.6,
+        "name": "Celle qui attend #12",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 6.8,
+        "lon": 85.1,
+        "name": "Celle qui attend #13",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 94.1,
+        "lon": 83.8,
+        "name": "Celle qui attend #14",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 97.1,
+        "lon": 89.9,
+        "name": "Celle qui attend #15",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 66.1,
+        "lon": 17.5,
+        "name": "Celle qui attend #16",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 46.6,
+        "lon": 10.6,
+        "name": "Celle qui attend #17",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 38.9,
+        "lon": 13.0,
+        "name": "Celle qui attend #18",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 19.2,
+        "lon": 13.2,
+        "name": "Celle qui attend #19",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 22.9,
+        "lon": 22.5,
+        "name": "Celle qui attend #20",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 17.5,
+        "lon": 79.1,
+        "name": "Celle qui attend #21",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 61.1,
+        "lon": 89.6,
+        "name": "Celle qui attend #22",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 62.8,
+        "lon": 43.8,
+        "name": "Celle qui attend #23",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 46.9,
+        "lon": 62.0,
+        "name": "Celle qui attend #24",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 44.0,
+        "lon": 52.7,
+        "name": "Celle qui attend #25",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 47.4,
+        "lon": 48.7,
+        "name": "Celle qui attend #26",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 45.9,
+        "lon": 35.9,
+        "name": "Celle qui attend #27",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 54.3,
+        "lon": 30.6,
+        "name": "Celle qui attend #28",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 50.6,
+        "lon": 40.6,
+        "name": "Celle qui attend #29",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 49.8,
+        "lon": 65.7,
+        "name": "Celle qui attend #30",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 59.0,
+        "lon": 68.4,
+        "name": "Journal de Santiago #1",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 59.4,
+        "lon": 48.4,
+        "name": "Journal de Santiago #2",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 57.3,
+        "lon": 27.0,
+        "name": "Journal de Santiago #3",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 56.0,
+        "lon": 50.2,
+        "name": "Journal de Santiago #4",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 58.6,
+        "lon": 53.7,
+        "name": "Journal de Santiago #5",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 56.5,
+        "lon": 36.2,
+        "name": "Journal de Santiago #6",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 59.3,
+        "lon": 40.7,
+        "name": "Journal de Santiago #7",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 52.8,
+        "lon": 42.9,
+        "name": "Journal de Santiago #8",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 56.5,
+        "lon": 43.8,
+        "name": "Journal de Santiago #9",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 54.5,
+        "lon": 53.7,
+        "name": "Journal de Santiago #10",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 53.9,
+        "lon": 61.0,
+        "name": "Journal de Santiago #11",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 51.6,
+        "lon": 74.7,
+        "name": "Journal de Santiago #12",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 59.7,
+        "lon": 69.6,
+        "name": "Journal de Santiago #13",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 65.8,
+        "lon": 62.5,
+        "name": "Journal de Santiago #14",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 75.7,
+        "lon": 50.2,
+        "name": "Journal de Santiago #15",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 83.9,
+        "lon": 37.5,
+        "name": "Journal de Santiago #16",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 71.8,
+        "lon": 31.6,
+        "name": "Journal de Santiago #17",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 75.7,
+        "lon": 19.2,
+        "name": "Journal de Santiago #18",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 58.8,
+        "lon": 32.7,
+        "name": "Journal de Santiago #19",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 49.0,
+        "lon": 31.7,
+        "name": "Journal de Santiago #20",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 45.2,
+        "lon": 35.9,
+        "name": "Journal de Santiago #21",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 42.7,
+        "lon": 42.3,
+        "name": "Journal de Santiago #22",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 50.6,
+        "lon": 35.3,
+        "name": "Journal de Santiago #23",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 43.8,
+        "lon": 39.6,
+        "name": "Journal de Santiago #24",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 50.6,
+        "lon": 62.6,
+        "name": "Journal de Santiago #25",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 47.0,
+        "lon": 60.7,
+        "name": "Journal de Santiago #26",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 47.2,
+        "lon": 57.5,
+        "name": "Journal de Santiago #27",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 36.4,
+        "lon": 50.8,
+        "name": "Journal de Santiago #28",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 40.6,
+        "lon": 39.0,
+        "name": "Journal de Santiago #29",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 49.5,
+        "lon": 33.2,
+        "name": "Journal de Santiago #30",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 19.88,
+        "lon": 18.84,
+        "name": "Chroniques de Genesis 2 #17",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 49.46,
+        "lon": 57.55,
+        "name": "Chroniques de Genesis 2 #18",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 80.59,
+        "lon": 90.63,
+        "name": "Chroniques de Genesis 2 #19",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 13.9,
+        "lon": 83.57,
+        "name": "Chroniques de Genesis 2 #20",
+        "image": "Blank.png"
+      }
+    ],
+    "glitch": [
+      {
+        "lat": 46.4,
+        "lon": 14.62,
+        "name": "Chroniques de Genesis 2 #16",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 49.04,
+        "lon": 17.54,
+        "name": "Chroniques de Genesis 2 #16",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 46.76,
+        "lon": 11.35,
+        "name": "Chroniques de Genesis 2 #16",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 27.8,
+        "lon": 16.0,
+        "name": "Découverte d'HLN-A #13",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 13.32,
+        "lon": 57.44,
+        "name": "Découverte d'HLN-A #14",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 84.84,
+        "lon": 16.05,
+        "name": "Découverte d'HLN-A #12",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 53.36,
+        "lon": 76.54,
+        "name": "Découverte d'HLN-A #15",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 48.64,
+        "lon": 14.0,
+        "name": "Chroniques de Genesis 2 #16",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 49.47,
+        "lon": 15.71,
+        "name": "Chroniques de Genesis 2 #16",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 46.54,
+        "lon": 16.48,
+        "name": "Chroniques de Genesis 2 #16",
+        "image": "Blank.png"
+      },
+      {
+        "lat": 47.93,
+        "lon": 17.94,
+        "name": "Chroniques de Genesis 2 #16",
+        "image": "Blank.png"
+      }
+    ],
+    "poi": [
+      {
+        "lat": 56.8,
+        "lon": 48.8,
+        "isWikitext": true,
+        "name": "Camp Omega",
+        "description": ""
+      },
+      {
+        "lat": 54.2,
+        "lon": 33.3,
+        "isWikitext": true,
+        "name": "Tombe de Santiago",
+        "description": ""
+      },
+      {
+        "lat": 13.2,
+        "lon": 45.1,
+        "isWikitext": true,
+        "name": "Tombe de l'Ascension",
+        "description": ""
+      }
+    ]
+  }
+}

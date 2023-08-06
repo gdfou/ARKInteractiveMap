@@ -2,7 +2,8 @@
 	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
 	"mixins": [
 		"Cartes/Définitions des groupes normés",
-		"Cartes/Obélisques Extinction"
+		"Cartes/Obélisques Extinction",
+		"Cartes/Grottes Extinction"
 	],
 	"backgrounds": [
 		{ "name": "Croquis", "image": "Extinction Map.jpg" },

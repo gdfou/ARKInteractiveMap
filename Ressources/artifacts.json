@@ -1,0 +1,129 @@
+{
+    "Artéfact de l'Immunité": 
+    {
+        "isWikitext": true,
+        "tag": "artifact cg:1 cc:immune",
+        "article": "Artéfact de l'Immunité"
+    }
+    ,
+    "Artéfact de la Ruse":
+    {
+        "isWikitext": true,
+        "tag": "artifact cg:2 cc:cunning",
+        "article": "Artéfact de la Ruse"
+    },
+    "Artéfact du Chasseur":
+    {
+        "isWikitext": true,
+        "tag": "artifact cg:3 cc:hunter",
+        "article": "Artéfact du Chasseur"
+    },
+    "Artéfact de la Bête":
+    {
+        "isWikitext": true,
+        "tag": "artifact cg:4 cc:brute",
+        "article": "Artéfact de la Bête"
+    },
+    "Artéfact de la Meute":
+    {
+        "isWikitext": true,
+        "tag": "artifact cg:5 cc:pack",
+        "article": "Artéfact de la Meute"
+    },
+    "Artéfact du Colosse":
+    {
+        "isWikitext": true,
+        "tag": "artifact cg:6 cc:massive",
+        "article": "Artéfact du Colosse"
+    },
+    "Artéfact de la Sagesse":
+    {
+        "isWikitext": true,
+        "tag": "artifact cg:7 cc:clever",
+        "article": "Artéfact de la Sagesse"
+    },
+    "Artéfact du Seigneur du Ciel":
+    {
+        "isWikitext": true,
+        "tag": "artifact cg:8 cc:skylord",
+        "article": "Artéfact du Seigneur du Ciel"
+    },
+    "Artéfact du Dévoreur":
+    {
+        "isWikitext": true,
+        "tag": "artifact cg:9 cc:devourer",
+        "article": "Artéfact du Dévoreur"
+    },
+    "Artéfact de Puissance":
+    {
+        "isWikitext": true,
+        "tag": "artifact cg:10 cc:strong",
+        "article": "Artéfact de Puissance"
+    },
+    "Artéfact du Sournois":
+    {
+        "isWikitext": true,
+        "tag": "artifact cg:11 cc:devious",
+        "article": "Artéfact du Sournois"
+    },
+    "Artéfact des Ténèbres":
+    {
+        "isWikitext": true,
+        "tag": "artifact cg:12 cc:shadows",
+        "article": "Artéfact des Ténèbres"
+    },
+    "Artéfact du Rôdeur":
+    {
+        "isWikitext": true,
+        "tag": "artifact cg:13 cc:stalker",
+        "article": "Artéfact du Rôdeur"
+    },
+    "Artéfact du Destructeur":
+    {
+        "isWikitext": true,
+        "tag": "artifact cg:14 cc:destroyer",
+        "article": "Artéfact du Destructeur"
+    },
+    "Artéfact du Gardien des Portes":
+    {
+        "isWikitext": true,
+        "tag": "artifact cg:15 cc:gatekeeper",
+        "article": "Artéfact du Gardien des Portes"
+    },
+    "Artéfact des Profondeurs (Scorched Earth)":
+    {
+        "isWikitext": true,
+        "tag": "artifact cg:16 cc:crag",
+        "article": "Artéfact des Profondeurs (Scorched Earth)"
+    },
+    "Artéfact des Égarés":
+    {
+        "isWikitext": true,
+        "tag": "artifact cg:17 cc:lost",
+        "article": "Artéfact des Égarés"
+    },
+    "Artéfact des Profondeurs (Aberration)":
+    {
+        "isWikitext": true,
+        "tag": "artifact cg:18 cc:depths",
+        "article": "Artéfact des Profondeurs (Aberration)"
+    },
+    "Artéfact du Chaos":
+    {
+        "isWikitext": true,
+        "tag": "artifact cg:19 cc:chaos",
+        "article": "Artéfact du Chaos"
+    },
+    "Artéfact de Croissance":
+    {
+        "isWikitext": true,
+        "tag": "artifact cg:20 cc:growth",
+        "article": "Artéfact de Croissance"
+    },
+    "Artéfact du Vide":
+    {
+        "isWikitext": true,
+        "tag": "artifact cg:21 cc:void",
+        "article": "Artéfact du Vide"
+    }
+}

@@ -7,1015 +7,1306 @@
 		"Cartes/Grottes The Island"
 	],
 	"backgrounds": [
-		{ "name": "Croquis", "image": "The Island Map.jpg" },
 		{
-			"name": "Topographique", "image": "The Island Topographic Map.jpg",
+			"name": "Croquis",
+			"image": "The Island Map.jpg"
+		},
+		{
+			"name": "Topographique",
+			"image": "The Island Topographic Map.jpg",
 			"at": [
 				[ 7.2, 7.2 ],
 				[ 92.8, 92.8 ]
 			]
 		}
 	],
+	"groups": {
+		"playerSpawns-South1": {
+			"name": "Lieux d'apparition: Zone Sud 1",
+			"fillColor": "#de00bd", "borderColor": "#fff", "size": 5.5, "icon": "Simple Bed.png"
+		},
+		"playerSpawns-South2": {
+			"name": "Lieux d'apparition: Zone Sud 2",
+			"fillColor": "#ae00de", "borderColor": "#fff", "size": 5.5, "icon": "Simple Bed.png"
+		},
+		"playerSpawns-South3": {
+			"name": "Lieux d'apparition: Zone Sud 3",
+			"fillColor": "#ae99de", "borderColor": "#fff", "size": 5.5, "icon": "Simple Bed.png"
+		},
+		"playerSpawns-West1": {
+			"name": "Lieux d'apparition: Zone Ouest 1",
+			"fillColor": "#5900de", "borderColor": "#fff", "size": 5.5, "icon": "Simple Bed.png"
+		},
+		"playerSpawns-West2": {
+			"name": "Lieux d'apparition: Zone Ouest 2",
+			"fillColor": "#00dbd4", "borderColor": "#fff", "size": 5.5, "icon": "Simple Bed.png"
+		},
+		"playerSpawns-West3": {
+			"name": "Lieux d'apparition: Zone Ouest 3",
+			"fillColor": "#00d994", "borderColor": "#fff", "size": 5.5, "icon": "Simple Bed.png"
+		},
+		"playerSpawns-East1": {
+			"name": "Lieux d'apparition: Zone Est 1",
+			"fillColor": "#00de4a", "borderColor": "#fff", "size": 5.5, "icon": "Simple Bed.png"
+		},
+		"playerSpawns-East2": {
+			"name": "Lieux d'apparition: Zone Est 2",
+			"fillColor": "#99ff33", "borderColor": "#fff", "size": 5.5, "icon": "Simple Bed.png"
+		},
+		"playerSpawns-East3": {
+			"name": "Lieux d'apparition: Zone Est 3",
+			"fillColor": "#ffff00", "borderColor": "#fff", "size": 5.5, "icon": "Simple Bed.png"
+		},
+		"playerSpawns-North1": {
+			"name": "Lieux d'apparition: Zone Nord 1",
+			"fillColor": "#db8f00", "borderColor": "#fff", "size": 5.5, "icon": "Simple Bed.png"
+		},
+		"playerSpawns-North2": {
+			"name": "Lieux d'apparition: Zone Nord 2",
+			"fillColor": "#d90b00", "borderColor": "#fff", "size": 5.5, "icon": "Simple Bed.png"
+		},
+		"playerSpawns-North3": {
+			"name": "Lieux d'apparition: Zone Nord 3",
+			"fillColor": "#ffd700", "borderColor": "#fff", "size": 5.5, "icon": "Simple Bed.png"
+		}
+	},
 	"markers": {
 		"dossier": [
 			{
 				"lat": 26.63, "lon": 23.58,
-				"name": "Dossier Gigantopithèque <span class=\"datamap-explorer-note-id\">(ID: 15)</span>", "image": "Blank.png"
+				"name": "Dossier Gigantopithèque <span class=\"datamap-explorer-note-id\">(ID: 15)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 42.47, "lon": 20.83,
-				"name": "Dossier Loup Sinistre <span class=\"datamap-explorer-note-id\">(ID: 26)</span>", "image": "Blank.png"
+				"name": "Dossier Loup Sinistre <span class=\"datamap-explorer-note-id\">(ID: 26)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 46.97, "lon": 27.51,
-				"name": "Dossier Doedicurus <span class=\"datamap-explorer-note-id\">(ID: 28)</span>", "image": "Blank.png"
+				"name": "Dossier Doedicurus <span class=\"datamap-explorer-note-id\">(ID: 28)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 54.3, "lon": 41.43,
-				"name": "Dossier Meganeura <span class=\"datamap-explorer-note-id\">(ID: 29)</span>", "image": "Blank.png"
+				"name": "Dossier Meganeura <span class=\"datamap-explorer-note-id\">(ID: 29)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 45.62, "lon": 62.34,
-				"name": " Dossier Gallimimus <span class=\"datamap-explorer-note-id\">(ID: 32)</span>", "image": "Blank.png"
+				"name": " Dossier Gallimimus <span class=\"datamap-explorer-note-id\">(ID: 32)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 43.97, "lon": 66.39,
-				"name": " Dossier Giganotosaure <span class=\"datamap-explorer-note-id\">(ID: 33)</span>", "image": "Blank.png"
+				"name": " Dossier Giganotosaure <span class=\"datamap-explorer-note-id\">(ID: 33)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 52.94, "lon": 79.77,
-				"name": " Dossier Ichthyosaure <span class=\"datamap-explorer-note-id\">(ID: 34)</span>", "image": "Blank.png"
+				"name": " Dossier Ichthyosaure <span class=\"datamap-explorer-note-id\">(ID: 34)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 82.94, "lon": 51.92,
-				"name": " Dossier Kaprosuchus <span class=\"datamap-explorer-note-id\">(ID: 36)</span>", "image": "Blank.png"
+				"name": " Dossier Kaprosuchus <span class=\"datamap-explorer-note-id\">(ID: 36)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 85.34, "lon": 53.41,
-				"name": " Dossier Sangsue <span class=\"datamap-explorer-note-id\">(ID: 37)</span>", "image": "Blank.png"
+				"name": " Dossier Sangsue <span class=\"datamap-explorer-note-id\">(ID: 37)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 68.65, "lon": 59.3,
-				"name": " Dossier Lystrosaure <span class=\"datamap-explorer-note-id\">(ID: 38)</span>", "image": "Blank.png"
+				"name": " Dossier Lystrosaure <span class=\"datamap-explorer-note-id\">(ID: 38)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 71.33, "lon": 59.83,
-				"name": " Dossier Mammouth <span class=\"datamap-explorer-note-id\">(ID: 39)</span>", "image": "Blank.png"
+				"name": " Dossier Mammouth <span class=\"datamap-explorer-note-id\">(ID: 39)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 68.94, "lon": 86.17,
-				"name": " Dossier Manta <span class=\"datamap-explorer-note-id\">(ID: 40)</span>", "image": "Blank.png"
+				"name": " Dossier Manta <span class=\"datamap-explorer-note-id\">(ID: 40)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 67.49, "lon": 85.57,
-				"name": " Dossier Mégalocéros <span class=\"datamap-explorer-note-id\">(ID: 41)</span>", "image": "Blank.png"
+				"name": " Dossier Mégalocéros <span class=\"datamap-explorer-note-id\">(ID: 41)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 39.62, "lon": 45.82,
-				"name": " Dossier Aranaéo <span class=\"datamap-explorer-note-id\">(ID: 64)</span>", "image": "Blank.png"
+				"name": " Dossier Aranaéo <span class=\"datamap-explorer-note-id\">(ID: 64)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 31.62, "lon": 17.12,
-				"name": " Dossier Brontosaure <span class=\"datamap-explorer-note-id\">(ID: 16)</span>", "image": "Blank.png"
+				"name": " Dossier Brontosaure <span class=\"datamap-explorer-note-id\">(ID: 16)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 40.98, "lon": 47.34,
-				"name": " Dossier Mégalodon <span class=\"datamap-explorer-note-id\">(ID: 42)</span>", "image": "Blank.png"
+				"name": " Dossier Mégalodon <span class=\"datamap-explorer-note-id\">(ID: 42)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 16.61, "lon": 84.1,
-				"name": " Dossier Magalosaure <span class=\"datamap-explorer-note-id\">(ID: 43)</span>", "image": "Blank.png"
+				"name": " Dossier Magalosaure <span class=\"datamap-explorer-note-id\">(ID: 43)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 16.05, "lon": 84.44,
-				"name": " Dossier Mésopithèque <span class=\"datamap-explorer-note-id\">(ID: 44)</span>", "image": "Blank.png"
+				"name": " Dossier Mésopithèque <span class=\"datamap-explorer-note-id\">(ID: 44)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 16.4, "lon": 84.5,
-				"name": " Dossier Mosasaure <span class=\"datamap-explorer-note-id\">(ID: 45)</span>", "image": "Blank.png"
+				"name": " Dossier Mosasaure <span class=\"datamap-explorer-note-id\">(ID: 45)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 66.37, "lon": 19.66,
-				"name": " Dossier Onyc <span class=\"datamap-explorer-note-id\">(ID: 46)</span>", "image": "Blank.png"
+				"name": " Dossier Onyc <span class=\"datamap-explorer-note-id\">(ID: 46)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 58.9, "lon": 23.06,
-				"name": " Dossier Oviraptor <span class=\"datamap-explorer-note-id\">(ID: 47)</span>", "image": "Blank.png"
+				"name": " Dossier Oviraptor <span class=\"datamap-explorer-note-id\">(ID: 47)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 87.42, "lon": 23.29,
-				"name": " Dossier Quetzal <span class=\"datamap-explorer-note-id\">(ID: 57)</span>", "image": "Blank.png"
+				"name": " Dossier Quetzal <span class=\"datamap-explorer-note-id\">(ID: 57)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 33.32, "lon": 41,
-				"name": " Dossier Carnotaure <span class=\"datamap-explorer-note-id\">(ID: 17)</span>", "image": "Blank.png"
+				"name": " Dossier Carnotaure <span class=\"datamap-explorer-note-id\">(ID: 17)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 86.75, "lon": 24.97,
-				"name": " Dossier Raptor <span class=\"datamap-explorer-note-id\">(ID: 58)</span>", "image": "Blank.png"
+				"name": " Dossier Raptor <span class=\"datamap-explorer-note-id\">(ID: 58)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 79.21, "lon": 32.26,
-				"name": " Dossier Rhinocéros laineux <span class=\"datamap-explorer-note-id\">(ID: 59)</span>", "image": "Blank.png"
+				"name": " Dossier Rhinocéros laineux <span class=\"datamap-explorer-note-id\">(ID: 59)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 77.14, "lon": 26.08,
-				"name": " Dossier Smilodons <span class=\"datamap-explorer-note-id\">(ID: 60)</span>", "image": "Blank.png"
+				"name": " Dossier Smilodons <span class=\"datamap-explorer-note-id\">(ID: 60)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 87.49, "lon": 52.49,
-				"name": " Dossier Saumon <span class=\"datamap-explorer-note-id\">(ID: 61)</span>", "image": "Blank.png"
+				"name": " Dossier Saumon <span class=\"datamap-explorer-note-id\">(ID: 61)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 77.86, "lon": 42.92,
-				"name": " Dossier Sarcosuchus <span class=\"datamap-explorer-note-id\">(ID: 62)</span>", "image": "Blank.png"
+				"name": " Dossier Sarcosuchus <span class=\"datamap-explorer-note-id\">(ID: 62)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 80.65, "lon": 61.91,
-				"name": " Dossier Pulmonoscorpius <span class=\"datamap-explorer-note-id\">(ID: 63)</span>", "image": "Blank.png"
+				"name": " Dossier Pulmonoscorpius <span class=\"datamap-explorer-note-id\">(ID: 63)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 31.28, "lon": 28.9,
-				"name": " Dossier Chalicotherium <span class=\"datamap-explorer-note-id\">(ID: 18)</span>", "image": "Blank.png"
+				"name": " Dossier Chalicotherium <span class=\"datamap-explorer-note-id\">(ID: 18)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 75.71, "lon": 79.8,
-				"name": " Dossier Spinosaure <span class=\"datamap-explorer-note-id\">(ID: 65)</span>", "image": "Blank.png"
+				"name": " Dossier Spinosaure <span class=\"datamap-explorer-note-id\">(ID: 65)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 78.31, "lon": 79.06,
-				"name": " Dossier Stégosaure <span class=\"datamap-explorer-note-id\">(ID: 66)</span>", "image": "Blank.png"
+				"name": " Dossier Stégosaure <span class=\"datamap-explorer-note-id\">(ID: 66)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 59.95, "lon": 21.32,
-				"name": " Dossier Tusoteuthis <span class=\"datamap-explorer-note-id\">(ID: 162)</span>", "image": "Blank.png"
+				"name": " Dossier Tusoteuthis <span class=\"datamap-explorer-note-id\">(ID: 162)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 62.28, "lon": 40.25,
-				"name": " Dossier Tapejara <span class=\"datamap-explorer-note-id\">(ID: 67)</span>", "image": "Blank.png"
+				"name": " Dossier Tapejara <span class=\"datamap-explorer-note-id\">(ID: 67)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 62.16, "lon": 40.89,
-				"name": " Dossier Oiseau-Terreur <span class=\"datamap-explorer-note-id\">(ID: 68)</span>", "image": "Blank.png"
+				"name": " Dossier Oiseau-Terreur <span class=\"datamap-explorer-note-id\">(ID: 68)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 61.77, "lon": 40.75,
-				"name": " Dossier Titanosaure <span class=\"datamap-explorer-note-id\">(ID: 69)</span>", "image": "Blank.png"
+				"name": " Dossier Titanosaure <span class=\"datamap-explorer-note-id\">(ID: 69)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 36.07, "lon": 92.02,
-				"name": " Dossier Titanoboa <span class=\"datamap-explorer-note-id\">(ID: 70)</span>", "image": "Blank.png"
+				"name": " Dossier Titanoboa <span class=\"datamap-explorer-note-id\">(ID: 70)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 53.11, "lon": 92.5,
-				"name": " Dossier T-Rex <span class=\"datamap-explorer-note-id\">(ID: 71)</span>", "image": "Blank.png"
+				"name": " Dossier T-Rex <span class=\"datamap-explorer-note-id\">(ID: 71)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 87.42, "lon": 91.04,
-				"name": " Dossier Tricératops <span class=\"datamap-explorer-note-id\">(ID: 72)</span>", "image": "Blank.png"
+				"name": " Dossier Tricératops <span class=\"datamap-explorer-note-id\">(ID: 72)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 10.99, "lon": 22.07,
-				"name": " Dossier Trilobite <span class=\"datamap-explorer-note-id\">(ID: 73)</span>", "image": "Blank.png"
+				"name": " Dossier Trilobite <span class=\"datamap-explorer-note-id\">(ID: 73)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 10.9, "lon": 40.42,
-				"name": " Dossier Carbonemys <span class=\"datamap-explorer-note-id\">(ID: 74)</span>", "image": "Blank.png"
+				"name": " Dossier Carbonemys <span class=\"datamap-explorer-note-id\">(ID: 74)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 36.96, "lon": 49.87,
-				"name": " Dossier Coelacanthe <span class=\"datamap-explorer-note-id\">(ID: 19)</span>", "image": "Blank.png"
+				"name": " Dossier Coelacanthe <span class=\"datamap-explorer-note-id\">(ID: 19)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 84.33, "lon": 10.24,
-				"name": " Dossier Dilophosaure <span class=\"datamap-explorer-note-id\">(ID: 0)</span>", "image": "Blank.png"
+				"name": " Dossier Dilophosaure <span class=\"datamap-explorer-note-id\">(ID: 0)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 49.28, "lon": 11.09,
-				"name": " Dossier  Dossier Titanomyrma <span class=\"datamap-explorer-note-id\">(ID: 1)</span>", "image": "Blank.png"
+				"name": " Dossier  Dossier Titanomyrma <span class=\"datamap-explorer-note-id\">(ID: 1)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 16.42, "lon": 10.91,
-				"name": " Dossier Allosaure <span class=\"datamap-explorer-note-id\">(ID: 6)</span>", "image": "Blank.png"
+				"name": " Dossier Allosaure <span class=\"datamap-explorer-note-id\">(ID: 6)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 28.46, "lon": 74.21,
-				"name": " Dossier Dimétrodon <span class=\"datamap-explorer-note-id\">(ID: 21)</span>", "image": "Blank.png"
+				"name": " Dossier Dimétrodon <span class=\"datamap-explorer-note-id\">(ID: 21)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 24.56, "lon": 40.08,
-				"name": " Dossier Baudroie abyssale <span class=\"datamap-explorer-note-id\">(ID: 7)</span>", "image": "Blank.png"
+				"name": " Dossier Baudroie abyssale <span class=\"datamap-explorer-note-id\">(ID: 7)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 26.62, "lon": 70.57,
-				"name": " Dossier Dimorphodon <span class=\"datamap-explorer-note-id\">(ID: 22)</span>", "image": "Blank.png"
+				"name": " Dossier Dimorphodon <span class=\"datamap-explorer-note-id\">(ID: 22)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 27.59, "lon": 82.57,
-				"name": " Dossier Diplocaulus <span class=\"datamap-explorer-note-id\">(ID: 24)</span>", "image": "Blank.png"
+				"name": " Dossier Diplocaulus <span class=\"datamap-explorer-note-id\">(ID: 24)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 73.94, "lon": 23.55,
-				"name": " Dossier Yutyrannus <span class=\"datamap-explorer-note-id\">(ID: 300)</span>", "image": "Blank.png"
+				"name": " Dossier Yutyrannus <span class=\"datamap-explorer-note-id\">(ID: 300)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 43.97, "lon": 55.24,
-				"name": " Dossier Dunkleosteus <span class=\"datamap-explorer-note-id\">(ID: 30)</span>", "image": "Blank.png"
+				"name": " Dossier Dunkleosteus <span class=\"datamap-explorer-note-id\">(ID: 30)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 44.14, "lon": 49.02,
-				"name": " Dossier Eurypétride <span class=\"datamap-explorer-note-id\">(ID: 31)</span>", "image": "Blank.png"
+				"name": " Dossier Eurypétride <span class=\"datamap-explorer-note-id\">(ID: 31)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 42.54, "lon": 79.64,
-				"name": " Dossier Kairuku <span class=\"datamap-explorer-note-id\">(ID: 35)</span>", "image": "Blank.png"
+				"name": " Dossier Kairuku <span class=\"datamap-explorer-note-id\">(ID: 35)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 14.21, "lon": 69.13,
-				"name": " Dossier Arthropleura <span class=\"datamap-explorer-note-id\">(ID: 11)</span>", "image": "Blank.png"
+				"name": " Dossier Arthropleura <span class=\"datamap-explorer-note-id\">(ID: 11)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 65.49, "lon": 40.78,
-				"name": " Dossier Pachycéphalosaure <span class=\"datamap-explorer-note-id\">(ID: 48)</span>", "image": "Blank.png"
+				"name": " Dossier Pachycéphalosaure <span class=\"datamap-explorer-note-id\">(ID: 48)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 65.08, "lon": 31.44,
-				"name": " Dossier Paraceratherium <span class=\"datamap-explorer-note-id\">(ID: 49)</span>", "image": "Blank.png"
+				"name": " Dossier Paraceratherium <span class=\"datamap-explorer-note-id\">(ID: 49)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 71.48, "lon": 32.14,
-				"name": " Dossier Parasaure <span class=\"datamap-explorer-note-id\">(ID: 50)</span>", "image": "Blank.png"
+				"name": " Dossier Parasaure <span class=\"datamap-explorer-note-id\">(ID: 50)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 71.27, "lon": 47.21,
-				"name": " Dossier Pelagornis <span class=\"datamap-explorer-note-id\">(ID: 51)</span>", "image": "Blank.png"
+				"name": " Dossier Pelagornis <span class=\"datamap-explorer-note-id\">(ID: 51)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 72.48, "lon": 53.83,
-				"name": " Dossier Phiomia <span class=\"datamap-explorer-note-id\">(ID: 52)</span>", "image": "Blank.png"
+				"name": " Dossier Phiomia <span class=\"datamap-explorer-note-id\">(ID: 52)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 64.26, "lon": 17.38,
-				"name": " Dossier Moschops <span class=\"datamap-explorer-note-id\">(ID: 142)</span>", "image": "Blank.png"
+				"name": " Dossier Moschops <span class=\"datamap-explorer-note-id\">(ID: 142)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 49.81, "lon": 81.69,
-				"name": " Dossier Cnidaria <span class=\"datamap-explorer-note-id\">(ID: 160)</span>", "image": "Blank.png"
+				"name": " Dossier Cnidaria <span class=\"datamap-explorer-note-id\">(ID: 160)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 74.98, "lon": 78.82,
-				"name": " Dossier Troodon <span class=\"datamap-explorer-note-id\">(ID: 161)</span>", "image": "Blank.png"
+				"name": " Dossier Troodon <span class=\"datamap-explorer-note-id\">(ID: 161)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 82.21, "lon": 62.92,
-				"name": " Dossier Pegomastax <span class=\"datamap-explorer-note-id\">(ID: 163)</span>", "image": "Blank.png"
+				"name": " Dossier Pegomastax <span class=\"datamap-explorer-note-id\">(ID: 163)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 67.56, "lon": 48.52,
-				"name": " Dossier Thérizinosaure <span class=\"datamap-explorer-note-id\">(ID: 164)</span>", "image": "Blank.png"
+				"name": " Dossier Thérizinosaure <span class=\"datamap-explorer-note-id\">(ID: 164)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 73.31, "lon": 74.11,
-				"name": " Dossier Ovis <span class=\"datamap-explorer-note-id\">(ID: 173)</span>", "image": "Blank.png"
+				"name": " Dossier Ovis <span class=\"datamap-explorer-note-id\">(ID: 173)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 36.59, "lon": 34.89,
-				"name": " Dossier Purlovia <span class=\"datamap-explorer-note-id\">(ID: 176)</span>", "image": "Blank.png"
+				"name": " Dossier Purlovia <span class=\"datamap-explorer-note-id\">(ID: 176)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 30.01, "lon": 78.09,
-				"name": " Dossier Baryonyx <span class=\"datamap-explorer-note-id\">(ID: 174)</span>", "image": "Blank.png"
+				"name": " Dossier Baryonyx <span class=\"datamap-explorer-note-id\">(ID: 174)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 52.48, "lon": 17.73,
-				"name": " Dossier Basilosaure <span class=\"datamap-explorer-note-id\">(ID: 175)</span>", "image": "Blank.png"
+				"name": " Dossier Basilosaure <span class=\"datamap-explorer-note-id\">(ID: 175)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 87.51, "lon": 51.46,
-				"name": " Dossier Ammonite <span class=\"datamap-explorer-note-id\">(ID: 233)</span>", "image": "Blank.png"
+				"name": " Dossier Ammonite <span class=\"datamap-explorer-note-id\">(ID: 233)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 48.52, "lon": 21.6,
-				"name": " Dossier Microraptor <span class=\"datamap-explorer-note-id\">(ID: 235)</span>", "image": "Blank.png"
+				"name": " Dossier Microraptor <span class=\"datamap-explorer-note-id\">(ID: 235)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 36.44, "lon": 81.41,
-				"name": " Dossier Electrophorus <span class=\"datamap-explorer-note-id\">(ID: 234)</span>", "image": "Blank.png"
+				"name": " Dossier Electrophorus <span class=\"datamap-explorer-note-id\">(ID: 234)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 32.41, "lon": 66.2,
-				"name": " Dossier Thylacoleo <span class=\"datamap-explorer-note-id\">(ID: 236)</span>", "image": "Blank.png"
+				"name": " Dossier Thylacoleo <span class=\"datamap-explorer-note-id\">(ID: 236)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 62.38, "lon": 24.68,
-				"name": " Dossier Iguanodon <span class=\"datamap-explorer-note-id\">(ID: 240)</span>", "image": "Blank.png"
+				"name": " Dossier Iguanodon <span class=\"datamap-explorer-note-id\">(ID: 240)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 77.64, "lon": 20.65,
-				"name": " Dossier Pachyrhinosaure <span class=\"datamap-explorer-note-id\">(ID: 143)</span>", "image": "Blank.png"
+				"name": " Dossier Pachyrhinosaure <span class=\"datamap-explorer-note-id\">(ID: 143)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 68.13, "lon": 67.6,
-				"name": " Dossier Piranha <span class=\"datamap-explorer-note-id\">(ID: 53)</span>", "image": "Blank.png"
+				"name": " Dossier Piranha <span class=\"datamap-explorer-note-id\">(ID: 53)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 72.78, "lon": 64.46,
-				"name": " Dossier Ichthyornis <span class=\"datamap-explorer-note-id\">(ID: 239)</span>", "image": "Blank.png"
+				"name": " Dossier Ichthyornis <span class=\"datamap-explorer-note-id\">(ID: 239)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 83.14, "lon": 23.45,
-				"name": " Dossier Leedsichthys <span class=\"datamap-explorer-note-id\">(ID: 238)</span>", "image": "Blank.png"
+				"name": " Dossier Leedsichthys <span class=\"datamap-explorer-note-id\">(ID: 238)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 70.68, "lon": 61.12,
-				"name": " Dossier Abeille <span class=\"datamap-explorer-note-id\">(ID: 281)</span>", "image": "Blank.png"
+				"name": " Dossier Abeille <span class=\"datamap-explorer-note-id\">(ID: 281)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 78.18, "lon": 24.37,
-				"name": " Dossier Liopleurodon <span class=\"datamap-explorer-note-id\">(ID: 284)</span>", "image": "Blank.png"
+				"name": " Dossier Liopleurodon <span class=\"datamap-explorer-note-id\">(ID: 284)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 78.29, "lon": 23.56,
-				"name": " Dossier Kentrosaure <span class=\"datamap-explorer-note-id\">(ID: 283)</span>", "image": "Blank.png"
+				"name": " Dossier Kentrosaure <span class=\"datamap-explorer-note-id\">(ID: 283)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 88.08, "lon": 53.02,
-				"name": " Dossier Daeodon <span class=\"datamap-explorer-note-id\">(ID: 282)</span>", "image": "Blank.png"
+				"name": " Dossier Daeodon <span class=\"datamap-explorer-note-id\">(ID: 282)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 63.58, "lon": 33.39,
-				"name": " Dossier Equus <span class=\"datamap-explorer-note-id\">(ID: 237)</span>", "image": "Blank.png"
+				"name": " Dossier Equus <span class=\"datamap-explorer-note-id\">(ID: 237)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 68.41, "lon": 59.53,
-				"name": " Dossier Plésiosaure <span class=\"datamap-explorer-note-id\">(ID: 54)</span>", "image": "Blank.png"
+				"name": " Dossier Plésiosaure <span class=\"datamap-explorer-note-id\">(ID: 54)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 72.32, "lon": 78.16,
-				"name": " Dossier Procoptodon <span class=\"datamap-explorer-note-id\">(ID: 55)</span>", "image": "Blank.png"
+				"name": " Dossier Procoptodon <span class=\"datamap-explorer-note-id\">(ID: 55)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 66.93, "lon": 76.77,
-				"name": " Dossier Ptéranodon <span class=\"datamap-explorer-note-id\">(ID: 56)</span>", "image": "Blank.png"
+				"name": " Dossier Ptéranodon <span class=\"datamap-explorer-note-id\">(ID: 56)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 25.07, "lon": 13.5,
-				"name": " Dossier Diplodocus <span class=\"datamap-explorer-note-id\">(ID: 23)</span>", "image": "Blank.png"
+				"name": " Dossier Diplodocus <span class=\"datamap-explorer-note-id\">(ID: 23)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 15.78, "lon": 26.69,
-				"name": " Dossier Ankylosaure <span class=\"datamap-explorer-note-id\">(ID: 8)</span>", "image": "Blank.png"
+				"name": " Dossier Ankylosaure <span class=\"datamap-explorer-note-id\">(ID: 8)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 16.52, "lon": 84.96,
-				"name": " Dossier Bousier <span class=\"datamap-explorer-note-id\">(ID: 13)</span>", "image": "Blank.png"
+				"name": " Dossier Bousier <span class=\"datamap-explorer-note-id\">(ID: 13)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 18.66, "lon": 42.75,
-				"name": " Dossier Archaeopteryx <span class=\"datamap-explorer-note-id\">(ID: 9)</span>", "image": "Blank.png"
+				"name": " Dossier Archaeopteryx <span class=\"datamap-explorer-note-id\">(ID: 9)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 21.61, "lon": 53.87,
-				"name": " Dossier Argentavis <span class=\"datamap-explorer-note-id\">(ID: 10)</span>", "image": "Blank.png"
+				"name": " Dossier Argentavis <span class=\"datamap-explorer-note-id\">(ID: 10)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 25.09, "lon": 71.84,
-				"name": " Dossier Castoroides <span class=\"datamap-explorer-note-id\">(ID: 12)</span>", "image": "Blank.png"
+				"name": " Dossier Castoroides <span class=\"datamap-explorer-note-id\">(ID: 12)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 14.81, "lon": 81.44,
-				"name": " Dossier Beelzebufo <span class=\"datamap-explorer-note-id\">(ID: 14)</span>", "image": "Blank.png"
+				"name": " Dossier Beelzebufo <span class=\"datamap-explorer-note-id\">(ID: 14)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 81.68, "lon": 84.13,
-				"name": " Dossier Hesperornis <span class=\"datamap-explorer-note-id\">(ID: 302)</span>", "image": "Blank.png"
+				"name": " Dossier Hesperornis <span class=\"datamap-explorer-note-id\">(ID: 302)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 84.44, "lon": 84.13,
-				"name": " Dossier Megalania <span class=\"datamap-explorer-note-id\">(ID: 299)</span>", "image": "Blank.png"
+				"name": " Dossier Megalania <span class=\"datamap-explorer-note-id\">(ID: 299)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 75.01, "lon": 21.36,
-				"name": " Dossier Megatherium <span class=\"datamap-explorer-note-id\">(ID: 301)</span>", "image": "Blank.png"
+				"name": " Dossier Megatherium <span class=\"datamap-explorer-note-id\">(ID: 301)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 41.19, "lon": 49.22,
-				"name": " Dossier Compsognathus <span class=\"datamap-explorer-note-id\">(ID: 20)</span>", "image": "Blank.png"
+				"name": " Dossier Compsognathus <span class=\"datamap-explorer-note-id\">(ID: 20)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 35.71, "lon": 59.13,
-				"name": " Dossier Loutre <span class=\"datamap-explorer-note-id\">(ID: 355)</span>", "image": "Blank.png"
+				"name": " Dossier Loutre <span class=\"datamap-explorer-note-id\">(ID: 355)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 75.79, "lon": 78.19,
-				"name": " Dossier Achatina <span class=\"datamap-explorer-note-id\">(ID: 141)</span>", "image": "Blank.png"
+				"name": " Dossier Achatina <span class=\"datamap-explorer-note-id\">(ID: 141)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 40.35, "lon": 83.83,
-				"name": " Dossier Ours Sinistre <span class=\"datamap-explorer-note-id\">(ID: 25)</span>", "image": "Blank.png"
+				"name": " Dossier Ours Sinistre <span class=\"datamap-explorer-note-id\">(ID: 25)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 80.93, "lon": 81.88,
-				"name": " Dossier Hyène <span class=\"datamap-explorer-note-id\">(ID: 298)</span>", "image": "Blank.png"
+				"name": " Dossier Hyène <span class=\"datamap-explorer-note-id\">(ID: 298)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 56.72, "lon": 21.42,
-				"name": " Dossier Dodo <span class=\"datamap-explorer-note-id\">(ID: 27)</span>", "image": "Blank.png"
+				"name": " Dossier Dodo <span class=\"datamap-explorer-note-id\">(ID: 27)</span>",
+				"image": "Blank.png"
 			}
 		],
 		"explorer-note": [
 			{
 				"lat": 26, "lon": 25.63,
-				"name": "Note d'Helena #27 <span class=\"datamap-explorer-note-id\">(ID: 285)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #27 <span class=\"datamap-explorer-note-id\">(ID: 285)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 8.46, "lon": 90.89,
-				"name": "Note d'Helena #1 <span class=\"datamap-explorer-note-id\">(ID: 75)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #1 <span class=\"datamap-explorer-note-id\">(ID: 75)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 91.83, "lon": 71.28,
-				"name": "Note d'Helena #2 <span class=\"datamap-explorer-note-id\">(ID: 76)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #2 <span class=\"datamap-explorer-note-id\">(ID: 76)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 91, "lon": 36.18,
-				"name": "Note d'Helena #3 <span class=\"datamap-explorer-note-id\">(ID: 77)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #3 <span class=\"datamap-explorer-note-id\">(ID: 77)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 90.64, "lon": 13.09,
-				"name": "Note d'Helena #4 <span class=\"datamap-explorer-note-id\">(ID: 78)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #4 <span class=\"datamap-explorer-note-id\">(ID: 78)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 81.55, "lon": 44.69,
-				"name": "Note d'Helena #5 <span class=\"datamap-explorer-note-id\">(ID: 123)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #5 <span class=\"datamap-explorer-note-id\">(ID: 123)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 19.21, "lon": 77.14,
-				"name": "Note d'Helena #30 <span class=\"datamap-explorer-note-id\">(ID: 352)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #30 <span class=\"datamap-explorer-note-id\">(ID: 352)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 77.25, "lon": 76.42,
-				"name": "Note d'Helena #6 <span class=\"datamap-explorer-note-id\">(ID: 127)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #6 <span class=\"datamap-explorer-note-id\">(ID: 127)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 49.36, "lon": 79.23,
-				"name": "Note d'Helena #9 <span class=\"datamap-explorer-note-id\">(ID: 153)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #9 <span class=\"datamap-explorer-note-id\">(ID: 153)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 52.41, "lon": 58.97,
-				"name": "Note d'Helena #10 <span class=\"datamap-explorer-note-id\">(ID: 166)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #10 <span class=\"datamap-explorer-note-id\">(ID: 166)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 61.18, "lon": 81.49,
-				"name": "Note d'Helena #8 <span class=\"datamap-explorer-note-id\">(ID: 145)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #8 <span class=\"datamap-explorer-note-id\">(ID: 145)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 69.76, "lon": 61.35,
-				"name": "Note d'Helena #11 <span class=\"datamap-explorer-note-id\">(ID: 185)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #11 <span class=\"datamap-explorer-note-id\">(ID: 185)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 84.05, "lon": 52.12,
-				"name": "Note d'Helena #12 <span class=\"datamap-explorer-note-id\">(ID: 186)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #12 <span class=\"datamap-explorer-note-id\">(ID: 186)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 55.17, "lon": 27.69,
-				"name": "Note d'Helena #13 <span class=\"datamap-explorer-note-id\">(ID: 187)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #13 <span class=\"datamap-explorer-note-id\">(ID: 187)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 26.33, "lon": 62.87,
-				"name": "Note d'Helena #14 <span class=\"datamap-explorer-note-id\">(ID: 188)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #14 <span class=\"datamap-explorer-note-id\">(ID: 188)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 34.05, "lon": 56.09,
-				"name": "Note d'Helena #15 <span class=\"datamap-explorer-note-id\">(ID: 189)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #15 <span class=\"datamap-explorer-note-id\">(ID: 189)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 40.7, "lon": 26.07,
-				"name": "Note d'Helena #16 <span class=\"datamap-explorer-note-id\">(ID: 190)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #16 <span class=\"datamap-explorer-note-id\">(ID: 190)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 76.81, "lon": 77.31,
-				"name": "Note d'Helena #17 <span class=\"datamap-explorer-note-id\">(ID: 191)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #17 <span class=\"datamap-explorer-note-id\">(ID: 191)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 76.65, "lon": 70.67,
-				"name": "Note d'Helena #18 <span class=\"datamap-explorer-note-id\">(ID: 192)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #18 <span class=\"datamap-explorer-note-id\">(ID: 192)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 25.14, "lon": 44.64,
-				"name": "Note d'Helena #19 <span class=\"datamap-explorer-note-id\">(ID: 249)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #19 <span class=\"datamap-explorer-note-id\">(ID: 249)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 19.16, "lon": 49.9,
-				"name": "Note d'Helena #20 <span class=\"datamap-explorer-note-id\">(ID: 250)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #20 <span class=\"datamap-explorer-note-id\">(ID: 250)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 12.64, "lon": 49.31,
-				"name": "Note d'Helena #21 <span class=\"datamap-explorer-note-id\">(ID: 251)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #21 <span class=\"datamap-explorer-note-id\">(ID: 251)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 24.88, "lon": 60.89,
-				"name": "Note d'Helena #22 <span class=\"datamap-explorer-note-id\">(ID: 252)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #22 <span class=\"datamap-explorer-note-id\">(ID: 252)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 23.89, "lon": 65.34,
-				"name": "Note d'Helena #23 <span class=\"datamap-explorer-note-id\">(ID: 253)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #23 <span class=\"datamap-explorer-note-id\">(ID: 253)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 28.9, "lon": 23.19,
-				"name": "Note d'Helena #24 <span class=\"datamap-explorer-note-id\">(ID: 254)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #24 <span class=\"datamap-explorer-note-id\">(ID: 254)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 36.23, "lon": 22.42,
-				"name": "Note d'Helena #25 <span class=\"datamap-explorer-note-id\">(ID: 255)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #25 <span class=\"datamap-explorer-note-id\">(ID: 255)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 27.65, "lon": 56.42,
-				"name": "Note d'Helena #26 <span class=\"datamap-explorer-note-id\">(ID: 256)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #26 <span class=\"datamap-explorer-note-id\">(ID: 256)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 16.29, "lon": 81.2,
-				"name": "Note d'Helena #29 <span class=\"datamap-explorer-note-id\">(ID: 287)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #29 <span class=\"datamap-explorer-note-id\">(ID: 287)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 78.75, "lon": 27.71,
-				"name": "Note d'Helena #7 <span class=\"datamap-explorer-note-id\">(ID: 128)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #7 <span class=\"datamap-explorer-note-id\">(ID: 128)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 22.29, "lon": 23.39,
-				"name": "Note d'Helena #28 <span class=\"datamap-explorer-note-id\">(ID: 286)</span>", "image": "Blank.png"
+				"name": "Note d'Helena #28 <span class=\"datamap-explorer-note-id\">(ID: 286)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 27.85, "lon": 27.68,
-				"name": "Découverte d'HLN-A #3 <span class=\"datamap-explorer-note-id\">(ID: 690)</span>", "image": "Blank.png"
+				"name": "Découverte d'HLN-A #3 <span class=\"datamap-explorer-note-id\">(ID: 690)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 27.91, "lon": 27.39,
-				"name": "Découverte d'HLN-A #3 <span class=\"datamap-explorer-note-id\">(ID: 690)</span>", "image": "Blank.png"
+				"name": "Découverte d'HLN-A #3 <span class=\"datamap-explorer-note-id\">(ID: 690)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 28.02, "lon": 27.47,
-				"name": "Découverte d'HLN-A #3 <span class=\"datamap-explorer-note-id\">(ID: 690)</span>", "image": "Blank.png"
+				"name": "Découverte d'HLN-A #3 <span class=\"datamap-explorer-note-id\">(ID: 690)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 27.98, "lon": 27.67,
-				"name": "Découverte d'HLN-A #3 <span class=\"datamap-explorer-note-id\">(ID: 690)</span>", "image": "Blank.png"
+				"name": "Découverte d'HLN-A #3 <span class=\"datamap-explorer-note-id\">(ID: 690)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 70.39, "lon": 59.27,
-				"name": "Découverte d'HLN-A #2 <span class=\"datamap-explorer-note-id\">(ID: 689)</span>", "image": "Blank.png"
+				"name": "Découverte d'HLN-A #2 <span class=\"datamap-explorer-note-id\">(ID: 689)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 68.73, "lon": 85.91,
-				"name": "Découverte d'HLN-A #1 <span class=\"datamap-explorer-note-id\">(ID: 688)</span>", "image": "Blank.png"
+				"name": "Découverte d'HLN-A #1 <span class=\"datamap-explorer-note-id\">(ID: 688)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 22.41, "lon": 68.45,
-				"name": "Note de Nerva #1 <span class=\"datamap-explorer-note-id\">(ID: 5)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #1 <span class=\"datamap-explorer-note-id\">(ID: 5)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 57.86, "lon": 32.2,
-				"name": "Note de Nerva #18 <span class=\"datamap-explorer-note-id\">(ID: 208)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #18 <span class=\"datamap-explorer-note-id\">(ID: 208)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 50.59, "lon": 38.53,
-				"name": "Note de Nerva #20 <span class=\"datamap-explorer-note-id\">(ID: 266)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #20 <span class=\"datamap-explorer-note-id\">(ID: 266)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 54.77, "lon": 70.76,
-				"name": "Note de Nerva #21 <span class=\"datamap-explorer-note-id\">(ID: 267)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #21 <span class=\"datamap-explorer-note-id\">(ID: 267)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 43.61, "lon": 61.04,
-				"name": "Note de Nerva #22 <span class=\"datamap-explorer-note-id\">(ID: 268)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #22 <span class=\"datamap-explorer-note-id\">(ID: 268)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 45.35, "lon": 68.39,
-				"name": "Note de Nerva #23 <span class=\"datamap-explorer-note-id\">(ID: 269)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #23 <span class=\"datamap-explorer-note-id\">(ID: 269)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 43.01, "lon": 39.21,
-				"name": "Note de Nerva #30 <span class=\"datamap-explorer-note-id\">(ID: 295)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #30 <span class=\"datamap-explorer-note-id\">(ID: 295)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 44.08, "lon": 77.02,
-				"name": "Note de Nerva #24 <span class=\"datamap-explorer-note-id\">(ID: 270)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #24 <span class=\"datamap-explorer-note-id\">(ID: 270)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 55.2, "lon": 75.88,
-				"name": "Note de Nerva #25 <span class=\"datamap-explorer-note-id\">(ID: 271)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #25 <span class=\"datamap-explorer-note-id\">(ID: 271)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 73.82, "lon": 17.62,
-				"name": "Note de Nerva #26 <span class=\"datamap-explorer-note-id\">(ID: 272)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #26 <span class=\"datamap-explorer-note-id\">(ID: 272)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 47.93, "lon": 47.53,
-				"name": "Note de Nerva #28 <span class=\"datamap-explorer-note-id\">(ID: 293)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #28 <span class=\"datamap-explorer-note-id\">(ID: 293)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 35.67, "lon": 78.09,
-				"name": "Note de Nerva #2 <span class=\"datamap-explorer-note-id\">(ID: 84)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #2 <span class=\"datamap-explorer-note-id\">(ID: 84)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 43.44, "lon": 30.96,
-				"name": "Note de Nerva #19 <span class=\"datamap-explorer-note-id\">(ID: 265)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #19 <span class=\"datamap-explorer-note-id\">(ID: 265)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 45.35, "lon": 31.47,
-				"name": "Note de Nerva #5 <span class=\"datamap-explorer-note-id\">(ID: 121)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #5 <span class=\"datamap-explorer-note-id\">(ID: 121)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 71.2, "lon": 57.97,
-				"name": "Note de Nerva #29 <span class=\"datamap-explorer-note-id\">(ID: 294)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #29 <span class=\"datamap-explorer-note-id\">(ID: 294)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 39.5, "lon": 24.48,
-				"name": "Note de Nerva #3 <span class=\"datamap-explorer-note-id\">(ID: 85)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #3 <span class=\"datamap-explorer-note-id\">(ID: 85)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 49.37, "lon": 79.01,
-				"name": "Note de Nerva #6 <span class=\"datamap-explorer-note-id\">(ID: 131)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #6 <span class=\"datamap-explorer-note-id\">(ID: 131)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 47.81, "lon": 60.88,
-				"name": "Note de Nerva #7 <span class=\"datamap-explorer-note-id\">(ID: 132)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #7 <span class=\"datamap-explorer-note-id\">(ID: 132)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 51.37, "lon": 54.62,
-				"name": "Note de Nerva #10 <span class=\"datamap-explorer-note-id\">(ID: 167)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #10 <span class=\"datamap-explorer-note-id\">(ID: 167)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 41.15, "lon": 68.01,
-				"name": "Note de Nerva #4 <span class=\"datamap-explorer-note-id\">(ID: 86)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #4 <span class=\"datamap-explorer-note-id\">(ID: 86)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 56.23, "lon": 51.09,
-				"name": "Note de Nerva #27 <span class=\"datamap-explorer-note-id\">(ID: 292)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #27 <span class=\"datamap-explorer-note-id\">(ID: 292)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 58.21, "lon": 19.76,
-				"name": "Note de Nerva #9 <span class=\"datamap-explorer-note-id\">(ID: 154)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #9 <span class=\"datamap-explorer-note-id\">(ID: 154)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 52.46, "lon": 49.08,
-				"name": "Note de Nerva #8 <span class=\"datamap-explorer-note-id\">(ID: 146)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #8 <span class=\"datamap-explorer-note-id\">(ID: 146)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 82.68, "lon": 27.06,
-				"name": "Note de Nerva #11 <span class=\"datamap-explorer-note-id\">(ID: 201)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #11 <span class=\"datamap-explorer-note-id\">(ID: 201)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 77.42, "lon": 16.36,
-				"name": "Note de Nerva #12 <span class=\"datamap-explorer-note-id\">(ID: 202)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #12 <span class=\"datamap-explorer-note-id\">(ID: 202)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 69.61, "lon": 84.57,
-				"name": "Note de Nerva #13 <span class=\"datamap-explorer-note-id\">(ID: 203)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #13 <span class=\"datamap-explorer-note-id\">(ID: 203)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 72.35, "lon": 59.21,
-				"name": "Note de Nerva #14 <span class=\"datamap-explorer-note-id\">(ID: 204)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #14 <span class=\"datamap-explorer-note-id\">(ID: 204)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 62.12, "lon": 20.38,
-				"name": "Note de Nerva #15 <span class=\"datamap-explorer-note-id\">(ID: 205)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #15 <span class=\"datamap-explorer-note-id\">(ID: 205)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 53.72, "lon": 77.8,
-				"name": "Note de Nerva #16 <span class=\"datamap-explorer-note-id\">(ID: 206)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #16 <span class=\"datamap-explorer-note-id\">(ID: 206)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 43.35, "lon": 69.28,
-				"name": "Note de Nerva #17 <span class=\"datamap-explorer-note-id\">(ID: 207)</span>", "image": "Blank.png"
+				"name": "Note de Nerva #17 <span class=\"datamap-explorer-note-id\">(ID: 207)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 26.55, "lon": 51.65,
-				"name": "Note de Mei-Yin #18 <span class=\"datamap-explorer-note-id\">(ID: 200)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #18 <span class=\"datamap-explorer-note-id\">(ID: 200)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 38.96, "lon": 44.09,
-				"name": "Note de Mei-Yin #19 <span class=\"datamap-explorer-note-id\">(ID: 257)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #19 <span class=\"datamap-explorer-note-id\">(ID: 257)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 39.1, "lon": 71.12,
-				"name": "Note de Mei-Yin #20 <span class=\"datamap-explorer-note-id\">(ID: 258)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #20 <span class=\"datamap-explorer-note-id\">(ID: 258)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 32.36, "lon": 73.34,
-				"name": "Note de Mei-Yin #21 <span class=\"datamap-explorer-note-id\">(ID: 259)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #21 <span class=\"datamap-explorer-note-id\">(ID: 259)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 39.93, "lon": 40.59,
-				"name": "Note de Mei-Yin #30 <span class=\"datamap-explorer-note-id\">(ID: 291)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #30 <span class=\"datamap-explorer-note-id\">(ID: 291)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 50.45, "lon": 23.28,
-				"name": "Note de Mei-Yin #24 <span class=\"datamap-explorer-note-id\">(ID: 262)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #24 <span class=\"datamap-explorer-note-id\">(ID: 262)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 42.56, "lon": 23,
-				"name": "Note de Mei-Yin #25 <span class=\"datamap-explorer-note-id\">(ID: 263)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #25 <span class=\"datamap-explorer-note-id\">(ID: 263)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 52.42, "lon": 17.37,
-				"name": "Note de Mei-Yin #26 <span class=\"datamap-explorer-note-id\">(ID: 264)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #26 <span class=\"datamap-explorer-note-id\">(ID: 264)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 19.81, "lon": 30.06,
-				"name": "Note de Mei-Yin #4 <span class=\"datamap-explorer-note-id\">(ID: 83)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #4 <span class=\"datamap-explorer-note-id\">(ID: 83)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 15.31, "lon": 53.18,
-				"name": "Note de Mei-Yin #14 <span class=\"datamap-explorer-note-id\">(ID: 196)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #14 <span class=\"datamap-explorer-note-id\">(ID: 196)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 15.75, "lon": 52.5,
-				"name": "Note de Mei-Yin #3 <span class=\"datamap-explorer-note-id\">(ID: 82)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #3 <span class=\"datamap-explorer-note-id\">(ID: 82)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 26.63, "lon": 16.39,
-				"name": "Note de Mei-Yin #5 <span class=\"datamap-explorer-note-id\">(ID: 124)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #5 <span class=\"datamap-explorer-note-id\">(ID: 124)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 30.14, "lon": 82.35,
-				"name": "Note de Mei-Yin #22 <span class=\"datamap-explorer-note-id\">(ID: 260)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #22 <span class=\"datamap-explorer-note-id\">(ID: 260)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 40.22, "lon": 78.77,
-				"name": "Note de Mei-Yin #23 <span class=\"datamap-explorer-note-id\">(ID: 261)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #23 <span class=\"datamap-explorer-note-id\">(ID: 261)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 18.2, "lon": 37.96,
-				"name": "Note de Mei-Yin #29 <span class=\"datamap-explorer-note-id\">(ID: 290)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #29 <span class=\"datamap-explorer-note-id\">(ID: 290)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 23.46, "lon": 37.78,
-				"name": "Note de Mei-Yin #28 <span class=\"datamap-explorer-note-id\">(ID: 289)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #28 <span class=\"datamap-explorer-note-id\">(ID: 289)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 16.84, "lon": 29.03,
-				"name": "Note de Mei-Yin #6 <span class=\"datamap-explorer-note-id\">(ID: 125)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #6 <span class=\"datamap-explorer-note-id\">(ID: 125)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 22.08, "lon": 9.69,
-				"name": "Note de Mei-Yin #27 <span class=\"datamap-explorer-note-id\">(ID: 288)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #27 <span class=\"datamap-explorer-note-id\">(ID: 288)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 21.3, "lon": 29.97,
-				"name": "Note de Mei-Yin #7 <span class=\"datamap-explorer-note-id\">(ID: 126)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #7 <span class=\"datamap-explorer-note-id\">(ID: 126)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 15.19, "lon": 20.74,
-				"name": "Note de Mei-Yin #2 <span class=\"datamap-explorer-note-id\">(ID: 4)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #2 <span class=\"datamap-explorer-note-id\">(ID: 4)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 25, "lon": 18.87,
-				"name": "Note de Mei-Yin #1 <span class=\"datamap-explorer-note-id\">(ID: 3)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #1 <span class=\"datamap-explorer-note-id\">(ID: 3)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 20.46, "lon": 40.77,
-				"name": "Note de Mei-Yin #11 <span class=\"datamap-explorer-note-id\">(ID: 193)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #11 <span class=\"datamap-explorer-note-id\">(ID: 193)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 13.3, "lon": 73.85,
-				"name": "Note de Mei-Yin #31 <span class=\"datamap-explorer-note-id\">(ID: 354)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #31 <span class=\"datamap-explorer-note-id\">(ID: 354)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 47.25, "lon": 81.57,
-				"name": "Note de Mei-Yin #9 <span class=\"datamap-explorer-note-id\">(ID: 152)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #9 <span class=\"datamap-explorer-note-id\">(ID: 152)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 27.28, "lon": 43.92,
-				"name": "Note de Mei-Yin #10 <span class=\"datamap-explorer-note-id\">(ID: 165)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #10 <span class=\"datamap-explorer-note-id\">(ID: 165)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 32.49, "lon": 16.11,
-				"name": "Note de Mei-Yin #8 <span class=\"datamap-explorer-note-id\">(ID: 144)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #8 <span class=\"datamap-explorer-note-id\">(ID: 144)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 12.77, "lon": 54.54,
-				"name": "Note de Mei-Yin #12 <span class=\"datamap-explorer-note-id\">(ID: 194)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #12 <span class=\"datamap-explorer-note-id\">(ID: 194)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 21.33, "lon": 40.93,
-				"name": "Note de Mei-Yin #13 <span class=\"datamap-explorer-note-id\">(ID: 195)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #13 <span class=\"datamap-explorer-note-id\">(ID: 195)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 26.81, "lon": 39.69,
-				"name": "Note de Mei-Yin #15 <span class=\"datamap-explorer-note-id\">(ID: 197)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #15 <span class=\"datamap-explorer-note-id\">(ID: 197)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 34.39, "lon": 29.37,
-				"name": "Note de Mei-Yin #16 <span class=\"datamap-explorer-note-id\">(ID: 198)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #16 <span class=\"datamap-explorer-note-id\">(ID: 198)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 28.04, "lon": 33.93,
-				"name": "Note de Mei-Yin #17 <span class=\"datamap-explorer-note-id\">(ID: 199)</span>", "image": "Blank.png"
+				"name": "Note de Mei-Yin #17 <span class=\"datamap-explorer-note-id\">(ID: 199)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 68.68, "lon": 86.08,
-				"name": "Enregistrement de Rockwell #18 <span class=\"datamap-explorer-note-id\">(ID: 184)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #18 <span class=\"datamap-explorer-note-id\">(ID: 184)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 83.82, "lon": 27.75,
-				"name": "Enregistrement de Rockwell #19 <span class=\"datamap-explorer-note-id\">(ID: 241)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #19 <span class=\"datamap-explorer-note-id\">(ID: 241)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 86.45, "lon": 26.72,
-				"name": "Enregistrement de Rockwell #20 <span class=\"datamap-explorer-note-id\">(ID: 242)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #20 <span class=\"datamap-explorer-note-id\">(ID: 242)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 77.12, "lon": 31.62,
-				"name": "Enregistrement de Rockwell #21 <span class=\"datamap-explorer-note-id\">(ID: 243)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #21 <span class=\"datamap-explorer-note-id\">(ID: 243)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 75.97, "lon": 46.66,
-				"name": "Enregistrement de Rockwell #22 <span class=\"datamap-explorer-note-id\">(ID: 244)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #22 <span class=\"datamap-explorer-note-id\">(ID: 244)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 75.47, "lon": 74.01,
-				"name": "Enregistrement de Rockwell #23 <span class=\"datamap-explorer-note-id\">(ID: 245)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #23 <span class=\"datamap-explorer-note-id\">(ID: 245)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 76.46, "lon": 68.11,
-				"name": "Enregistrement de Rockwell #24 <span class=\"datamap-explorer-note-id\">(ID: 246)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #24 <span class=\"datamap-explorer-note-id\">(ID: 246)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 74.96, "lon": 65.6,
-				"name": "Enregistrement de Rockwell #25 <span class=\"datamap-explorer-note-id\">(ID: 247)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #25 <span class=\"datamap-explorer-note-id\">(ID: 247)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 14.15, "lon": 75.63,
-				"name": "Enregistrement de Rockwell #29 <span class=\"datamap-explorer-note-id\">(ID: 351)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #29 <span class=\"datamap-explorer-note-id\">(ID: 351)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 70.15, "lon": 31.96,
-				"name": "Enregistrement de Rockwell #15 <span class=\"datamap-explorer-note-id\">(ID: 181)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #15 <span class=\"datamap-explorer-note-id\">(ID: 181)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 40.83, "lon": 47.69,
-				"name": "Enregistrement de Rockwell #17 <span class=\"datamap-explorer-note-id\">(ID: 183)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #17 <span class=\"datamap-explorer-note-id\">(ID: 183)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 25.3, "lon": 73.13,
-				"name": "Enregistrement de Rockwell #1 <span class=\"datamap-explorer-note-id\">(ID: 2)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #1 <span class=\"datamap-explorer-note-id\">(ID: 2)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 21.27, "lon": 69.18,
-				"name": "Enregistrement de Rockwell #5 <span class=\"datamap-explorer-note-id\">(ID: 118)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #5 <span class=\"datamap-explorer-note-id\">(ID: 118)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 83.23, "lon": 24.75,
-				"name": "Enregistrement de Rockwell #2 <span class=\"datamap-explorer-note-id\">(ID: 79)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #2 <span class=\"datamap-explorer-note-id\">(ID: 79)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 75.76, "lon": 75.51,
-				"name": "Enregistrement de Rockwell #26 <span class=\"datamap-explorer-note-id\">(ID: 248)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #26 <span class=\"datamap-explorer-note-id\">(ID: 248)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 20.07, "lon": 85.86,
-				"name": "Enregistrement de Rockwell #27 <span class=\"datamap-explorer-note-id\">(ID: 296)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #27 <span class=\"datamap-explorer-note-id\">(ID: 296)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 14.09, "lon": 85.92,
-				"name": "Enregistrement de Rockwell #4 <span class=\"datamap-explorer-note-id\">(ID: 81)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #4 <span class=\"datamap-explorer-note-id\">(ID: 81)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 78.31, "lon": 47.25,
-				"name": "Enregistrement de Rockwell #28 <span class=\"datamap-explorer-note-id\">(ID: 297)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #28 <span class=\"datamap-explorer-note-id\">(ID: 297)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 75.66, "lon": 71.49,
-				"name": "Enregistrement de Rockwell #10 <span class=\"datamap-explorer-note-id\">(ID: 168)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #10 <span class=\"datamap-explorer-note-id\">(ID: 168)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 44.11, "lon": 81.36,
-				"name": "Enregistrement de Rockwell #7 <span class=\"datamap-explorer-note-id\">(ID: 138)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #7 <span class=\"datamap-explorer-note-id\">(ID: 138)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 46.42, "lon": 83.74,
-				"name": "Enregistrement de Rockwell #6 <span class=\"datamap-explorer-note-id\">(ID: 137)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #6 <span class=\"datamap-explorer-note-id\">(ID: 137)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 54.83, "lon": 13.79,
-				"name": "Enregistrement de Rockwell #3 <span class=\"datamap-explorer-note-id\">(ID: 80)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #3 <span class=\"datamap-explorer-note-id\">(ID: 80)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 61.65, "lon": 16.09,
-				"name": "Enregistrement de Rockwell #9 <span class=\"datamap-explorer-note-id\">(ID: 155)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #9 <span class=\"datamap-explorer-note-id\">(ID: 155)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 64.48, "lon": 34.12,
-				"name": "Enregistrement de Rockwell #8 <span class=\"datamap-explorer-note-id\">(ID: 147)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #8 <span class=\"datamap-explorer-note-id\">(ID: 147)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 80, "lon": 67.11,
-				"name": "Enregistrement de Rockwell #11 <span class=\"datamap-explorer-note-id\">(ID: 177)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #11 <span class=\"datamap-explorer-note-id\">(ID: 177)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 82.6, "lon": 51.32,
-				"name": "Enregistrement de Rockwell #12 <span class=\"datamap-explorer-note-id\">(ID: 178)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #12 <span class=\"datamap-explorer-note-id\">(ID: 178)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 64.12, "lon": 61.57,
-				"name": "Enregistrement de Rockwell #13 <span class=\"datamap-explorer-note-id\">(ID: 179)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #13 <span class=\"datamap-explorer-note-id\">(ID: 179)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 58.57, "lon": 48.98,
-				"name": "Enregistrement de Rockwell #14 <span class=\"datamap-explorer-note-id\">(ID: 180)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #14 <span class=\"datamap-explorer-note-id\">(ID: 180)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 69.47, "lon": 24.8,
-				"name": "Enregistrement de Rockwell #16 <span class=\"datamap-explorer-note-id\">(ID: 182)</span>", "image": "Blank.png"
+				"name": "Enregistrement de Rockwell #16 <span class=\"datamap-explorer-note-id\">(ID: 182)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 89.22, "lon": 24.42,
-				"name": "??? #13 <span class=\"datamap-explorer-note-id\">(ID: 520)</span>", "image": "Blank.png"
+				"name": "??? #13 <span class=\"datamap-explorer-note-id\">(ID: 520)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 36.2, "lon": 79.03,
-				"name": "??? #4 <span class=\"datamap-explorer-note-id\">(ID: 511)</span>", "image": "Blank.png"
+				"name": "??? #4 <span class=\"datamap-explorer-note-id\">(ID: 511)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 75.63, "lon": 60.47,
-				"name": "??? #7 <span class=\"datamap-explorer-note-id\">(ID: 514)</span>", "image": "Blank.png"
+				"name": "??? #7 <span class=\"datamap-explorer-note-id\">(ID: 514)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 44.36, "lon": 23.65,
-				"name": "??? #10 <span class=\"datamap-explorer-note-id\">(ID: 517)</span>", "image": "Blank.png"
+				"name": "??? #10 <span class=\"datamap-explorer-note-id\">(ID: 517)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 23.66, "lon": 78.25,
-				"name": "??? #1 <span class=\"datamap-explorer-note-id\">(ID: 508)</span>", "image": "Blank.png"
+				"name": "??? #1 <span class=\"datamap-explorer-note-id\">(ID: 508)</span>",
+				"image": "Blank.png"
 			}
 		],
 		"glitch": [
 			{
 				"lat": 61.22, "lon": 21.34,
-				"name": "Chroniques de Genesis 2 #5 <span class=\"datamap-explorer-note-id\">(ID: 857)</span>", "image": "Blank.png"
+				"name": "Chroniques de Genesis 2 #5 <span class=\"datamap-explorer-note-id\">(ID: 857)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 48.31, "lon": 80.26,
-				"name": "Chroniques de Genesis 2 #2 <span class=\"datamap-explorer-note-id\">(ID: 854)</span>", "image": "Blank.png"
+				"name": "Chroniques de Genesis 2 #2 <span class=\"datamap-explorer-note-id\">(ID: 854)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 83.1, "lon": 53.75,
-				"name": "Chroniques de Genesis 2 #3 <span class=\"datamap-explorer-note-id\">(ID: 855)</span>", "image": "Blank.png"
+				"name": "Chroniques de Genesis 2 #3 <span class=\"datamap-explorer-note-id\">(ID: 855)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 15.44, "lon": 85.07,
-				"name": "Chroniques de Genesis 2 #4 <span class=\"datamap-explorer-note-id\">(ID: 856)</span>", "image": "Blank.png"
+				"name": "Chroniques de Genesis 2 #4 <span class=\"datamap-explorer-note-id\">(ID: 856)</span>",
+				"image": "Blank.png"
 			},
 			{
 				"lat": 19.68, "lon": 19.03,
-				"name": "Chroniques de Genesis 2 #1 <span class=\"datamap-explorer-note-id\">(ID: 853)</span>", "image": "Blank.png"
+				"name": "Chroniques de Genesis 2 #1 <span class=\"datamap-explorer-note-id\">(ID: 853)</span>",
+				"image": "Blank.png"
 			}
 		],
 		"cave-crate cave cg:0 Ccc:g": [
 			{
 				"lat": 83.926, "lon": 51.262,
 				"isWikitext": true,
-				"description": "Apparait 11.11% du temps environ toutes les 60 min à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Cave, Tier 1, nvx 10)"
+				"description": "Apparait 11.11% du temps environ toutes les 60 min à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Grotte, Classe 1, nvx 10)"
 			},
 			{
 				"lat": 83.472, "lon": 54.153,
 				"isWikitext": true,
-				"description": "Apparait 11.11% du temps environ toutes les 60 min à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Cave, Tier 1, nvx 10)"
+				"description": "Apparait 11.11% du temps environ toutes les 60 min à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Grotte, Classe 1, nvx 10)"
 			},
 			{
 				"lat": 85.249, "lon": 53.403,
 				"isWikitext": true,
-				"description": "Apparait 11.11% du temps environ toutes les 60 min à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Cave, Tier 1, nvx 10)"
+				"description": "Apparait 11.11% du temps environ toutes les 60 min à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Grotte, Classe 1, nvx 10)"
 			},
 			{
 				"lat": 84.188, "lon": 52.147,
 				"isWikitext": true,
-				"description": "Apparait 11.11% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Cave, Tier 1, nvx 10)"
+				"description": "Apparait 11.11% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Grotte, Classe 1, nvx 10)"
 			},
 			{
 				"lat": 82.763, "lon": 51.92,
 				"isWikitext": true,
-				"description": "Apparait 11.11% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Cave, Tier 1, nvx 10)"
+				"description": "Apparait 11.11% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Grotte, Classe 1, nvx 10)"
 			},
 			{
 				"lat": 84.148, "lon": 51.723,
 				"isWikitext": true,
-				"description": "Apparait 11.11% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Cave, Tier 1, nvx 10)"
+				"description": "Apparait 11.11% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Grotte, Classe 1, nvx 10)"
 			},
 			{
 				"lat": 84.002, "lon": 52.699,
 				"isWikitext": true,
-				"description": "Apparait 11.11% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Cave, Tier 1, nvx 10)"
+				"description": "Apparait 11.11% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Grotte, Classe 1, nvx 10)"
 			},
 			{
 				"lat": 84.832, "lon": 53.695,
 				"isWikitext": true,
-				"description": "Apparait 11.11% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Cave, Tier 1, nvx 10)"
+				"description": "Apparait 11.11% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Grotte, Classe 1, nvx 10)"
 			},
 			{
 				"lat": 84.959, "lon": 54.722,
 				"isWikitext": true,
-				"description": "Apparait 11.11% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Cave, Tier 1, nvx 10)"
+				"description": "Apparait 11.11% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Grotte, Classe 1, nvx 10)"
 			}
 		],
 		"artifact cg:1 cc:immune": [
@@ -1023,7 +1314,8 @@
 				"lat": 62.174, "lon": 39.571,
 				"isWikitext": true,
 				"name": "Artéfact de l'Immunité",
-				"description": "Apparait environ toutes les 10min (15 min en réglages Partie Solo)."
+				"description": "Dans la [[Caverne du Marais]]",
+				"article": "Artéfact de l'Immunité"
 			}
 		],
 		"artifact cg:2 cc:cunning": [
@@ -1031,7 +1323,8 @@
 				"lat": 46.429, "lon": 83.403,
 				"isWikitext": true,
 				"name": "Artéfact de la Ruse",
-				"description": "Apparait environ toutes les 10min (15 min en réglages Partie Solo)."
+				"description": "Dans [[Les cavernes de l'espoir perdu]]",
+				"article": "Artéfact de la Ruse"
 			}
 		],
 		"artifact cg:3 cc:hunter": [
@@ -1039,7 +1332,8 @@
 				"lat": 83.494, "lon": 56.042,
 				"isWikitext": true,
 				"name": "Artéfact du Chasseur",
-				"description": "Apparait environ toutes les 10min (15 min en réglages Partie Solo)."
+				"description": "Dans la [[Caverne du Sud inférieure]]",
+				"article": "Artéfact du Chasseur"
 			}
 		],
 		"artifact cg:4 cc:brute": [
@@ -1047,7 +1341,8 @@
 				"lat": 60.872, "lon": 22.024,
 				"isWikitext": true,
 				"name": "Artéfact de la Bête",
-				"description": "Apparait environ toutes les 10min (15 min en réglages Partie Solo)."
+				"description": "Dans [[Les cavernes de la foi perdue]]",
+				"article": "Artéfact de la Bête"
 			}
 		],
 		"artifact cg:5 cc:pack": [
@@ -1055,7 +1350,8 @@
 				"lat": 72.984, "lon": 61.02,
 				"isWikitext": true,
 				"name": "Artéfact de la Meute",
-				"description": "Apparait environ toutes les 10min (15 min en réglages Partie Solo)."
+				"description": "Dans la [[Caverne du Sud supérieure]]",
+				"article": "Artéfact de la Meute"
 			}
 		],
 		"artifact cg:6 cc:massive": [
@@ -1063,7 +1359,8 @@
 				"lat": 67.091, "lon": 85.996,
 				"isWikitext": true,
 				"name": "Artéfact du Colosse",
-				"description": "Apparait environ toutes les 10min (15 min en réglages Partie Solo)."
+				"description": "Dans la [[Grotte Volcanique]]",
+				"article": "Artéfact du Colosse"
 			}
 		],
 		"artifact cg:7 cc:clever": [
@@ -1071,7 +1368,8 @@
 				"lat": 39.564, "lon": 45.931,
 				"isWikitext": true,
 				"name": "Artéfact de la Sagesse",
-				"description": "Apparait environ toutes les 10min (15 min en réglages Partie Solo)."
+				"description": "Dans la [[Caverne Centrale]]",
+				"article": "Artéfact de la Sagesse"
 			}
 		],
 		"artifact cg:8 cc:skylord": [
@@ -1079,7 +1377,8 @@
 				"lat": 19.557, "lon": 18.379,
 				"isWikitext": true,
 				"name": "Artéfact du Seigneur du Ciel",
-				"description": "Apparait environ toutes les 10min (15 min en réglages Partie Solo)."
+				"description": "Dans la [[Caverne du Nord-Ouest]]",
+				"article": "Artéfact du Seigneur du Ciel"
 			}
 		],
 		"artifact cg:9 cc:devourer": [
@@ -1087,7 +1386,8 @@
 				"lat": 16.142, "lon": 84.6,
 				"isWikitext": true,
 				"name": "Artéfact du Dévoreur",
-				"description": "Apparait environ toutes les 10min (15 min en réglages Partie Solo)."
+				"description": "Dans la [[Caverne du Nord-Est]]",
+				"article": "Artéfact du Dévoreur"
 			}
 		],
 		"artifact cg:10 cc:strong": [
@@ -1095,412 +1395,413 @@
 				"lat": 29.879, "lon": 26.518,
 				"isWikitext": true,
 				"name": "Artéfact de Puissance",
-				"description": "Apparait environ toutes les 10min (15 min en réglages Partie Solo)."
+				"description": "Dans la [[Caverne de Neige]]",
+				"article": "Artéfact de Puissance"
 			}
 		],
 		"cave-crate cave cg:11 Ccc:br": [
 			{
 				"lat": 16.424, "lon": 83.674,
 				"isWikitext": true,
-				"description": "Apparait 16.67% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)\n* <span style=\"color:#a24e5a\">Rouge</span> (Cave, Tier 4, nvx 55)"
+				"description": "Apparait 16.67% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)\n* <span style=\"color:#a24e5a\">Rouge</span> (Grotte, Classe 4, nvx 55)"
 			},
 			{
 				"lat": 16.5, "lon": 84.547,
 				"isWikitext": true,
-				"description": "Apparait 16.67% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)\n* <span style=\"color:#a24e5a\">Rouge</span> (Cave, Tier 4, nvx 55)"
+				"description": "Apparait 16.67% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)\n* <span style=\"color:#a24e5a\">Rouge</span> (Grotte, Classe 4, nvx 55)"
 			},
 			{
 				"lat": 16.201, "lon": 83.795,
 				"isWikitext": true,
-				"description": "Apparait 16.67% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)\n* <span style=\"color:#a24e5a\">Rouge</span> (Cave, Tier 4, nvx 55)"
+				"description": "Apparait 16.67% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)\n* <span style=\"color:#a24e5a\">Rouge</span> (Grotte, Classe 4, nvx 55)"
 			},
 			{
 				"lat": 15.972, "lon": 84.663,
 				"isWikitext": true,
-				"description": "Apparait 16.67% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)\n* <span style=\"color:#a24e5a\">Rouge</span> (Cave, Tier 4, nvx 55)"
+				"description": "Apparait 16.67% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)\n* <span style=\"color:#a24e5a\">Rouge</span> (Grotte, Classe 4, nvx 55)"
 			},
 			{
 				"lat": 15.98, "lon": 84.143,
 				"isWikitext": true,
-				"description": "Apparait 16.67% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)\n* <span style=\"color:#a24e5a\">Rouge</span> (Cave, Tier 4, nvx 55)"
+				"description": "Apparait 16.67% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)\n* <span style=\"color:#a24e5a\">Rouge</span> (Grotte, Classe 4, nvx 55)"
 			},
 			{
 				"lat": 17.149, "lon": 83.99,
 				"isWikitext": true,
-				"description": "Apparait 16.67% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)\n* <span style=\"color:#a24e5a\">Rouge</span> (Cave, Tier 4, nvx 55)"
+				"description": "Apparait 16.67% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)\n* <span style=\"color:#a24e5a\">Rouge</span> (Grotte, Classe 4, nvx 55)"
 			}
 		],
 		"cave-crate cave cg:12 Ccc:b": [
 			{
 				"lat": 72.63, "lon": 59.515,
 				"isWikitext": true,
-				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 73.683, "lon": 62.603,
 				"isWikitext": true,
-				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 74.608, "lon": 60.931,
 				"isWikitext": true,
-				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 71.239, "lon": 60.859,
 				"isWikitext": true,
-				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 71.619, "lon": 59.082,
 				"isWikitext": true,
-				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 71.163, "lon": 59.519,
 				"isWikitext": true,
-				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 69.456, "lon": 60.873,
 				"isWikitext": true,
-				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 69.012, "lon": 60.889,
 				"isWikitext": true,
-				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 68.604, "lon": 60.849,
 				"isWikitext": true,
-				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 71.503, "lon": 60.848,
 				"isWikitext": true,
-				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 72.281, "lon": 62.563,
 				"isWikitext": true,
-				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 72.49, "lon": 62.824,
 				"isWikitext": true,
-				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			}
 		],
 		"cave-crate cave cg:13 Ccc:b": [
 			{
 				"lat": 69.078, "lon": 84.697,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 70.849, "lon": 84.372,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 70.95, "lon": 84.522,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 68.722, "lon": 83.531,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 68.529, "lon": 83.377,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 67.39, "lon": 85.581,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 66.709, "lon": 85.466,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 68.674, "lon": 87.027,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 68.726, "lon": 86.185,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 67.599, "lon": 86.996,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 67.966, "lon": 83.68,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 68.176, "lon": 87.282,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			}
 		],
 		"cave-crate cave cg:14 Ccc:bg": [
 			{
 				"lat": 39.422, "lon": 46.466,
 				"isWikitext": true,
-				"description": "Apparait 12.5% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Cave, Tier 1, nvx 10)\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 12.5% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Grotte, Classe 1, nvx 10)\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 40.09, "lon": 46.397,
 				"isWikitext": true,
-				"description": "Apparait 12.5% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Cave, Tier 1, nvx 10)\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 12.5% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Grotte, Classe 1, nvx 10)\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 40.868, "lon": 47.781,
 				"isWikitext": true,
-				"description": "Apparait 12.5% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Cave, Tier 1, nvx 10)\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 12.5% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Grotte, Classe 1, nvx 10)\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 40.536, "lon": 47.421,
 				"isWikitext": true,
-				"description": "Apparait 12.5% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Cave, Tier 1, nvx 10)\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 12.5% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Grotte, Classe 1, nvx 10)\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 39.232, "lon": 45.98,
 				"isWikitext": true,
-				"description": "Apparait 12.5% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Cave, Tier 1, nvx 10)\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 12.5% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Grotte, Classe 1, nvx 10)\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 39.609, "lon": 46.738,
 				"isWikitext": true,
-				"description": "Apparait 12.5% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Cave, Tier 1, nvx 10)\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 12.5% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Grotte, Classe 1, nvx 10)\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 39.685, "lon": 46.489,
 				"isWikitext": true,
-				"description": "Apparait 12.5% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Cave, Tier 1, nvx 10)\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 12.5% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Grotte, Classe 1, nvx 10)\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			},
 			{
 				"lat": 39.874, "lon": 46.49,
 				"isWikitext": true,
-				"description": "Apparait 12.5% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Cave, Tier 1, nvx 10)\n* <span style=\"color:#5362a9\">Bleu</span> (Cave, Tier 2, nvx 25)"
+				"description": "Apparait 12.5% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#42653a\">Vert</span> (Grotte, Classe 1, nvx 10)\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte, Classe 2, nvx 25)"
 			}
 		],
 		"cave-crate cave cg:15 Ccc:ry": [
 			{
 				"lat": 19.947, "lon": 18.769,
 				"isWikitext": true,
-				"description": "Apparait 33.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#889159\">Jaune</span> (Cave, Tier 3, nvx 40)\n* <span style=\"color:#a24e5a\">Rouge</span> (Cave, Tier 4, nvx 55)"
+				"description": "Apparait 33.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#889159\">Jaune</span> (Grotte, Classe 3, nvx 40)\n* <span style=\"color:#a24e5a\">Rouge</span> (Grotte, Classe 4, nvx 55)"
 			},
 			{
 				"lat": 20.042, "lon": 18.821,
 				"isWikitext": true,
-				"description": "Apparait 33.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#889159\">Jaune</span> (Cave, Tier 3, nvx 40)\n* <span style=\"color:#a24e5a\">Rouge</span> (Cave, Tier 4, nvx 55)"
+				"description": "Apparait 33.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#889159\">Jaune</span> (Grotte, Classe 3, nvx 40)\n* <span style=\"color:#a24e5a\">Rouge</span> (Grotte, Classe 4, nvx 55)"
 			},
 			{
 				"lat": 19.798, "lon": 19.037,
 				"isWikitext": true,
-				"description": "Apparait 33.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#889159\">Jaune</span> (Cave, Tier 3, nvx 40)\n* <span style=\"color:#a24e5a\">Rouge</span> (Cave, Tier 4, nvx 55)"
+				"description": "Apparait 33.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#889159\">Jaune</span> (Grotte, Classe 3, nvx 40)\n* <span style=\"color:#a24e5a\">Rouge</span> (Grotte, Classe 4, nvx 55)"
 			}
 		],
 		"cave-crate cave cg:16 Ccc:bry": [
 			{
 				"lat": 46.931, "lon": 82.117,
 				"isWikitext": true,
-				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			},
 			{
 				"lat": 45.999, "lon": 82.086,
 				"isWikitext": true,
-				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			},
 			{
 				"lat": 46.319, "lon": 82.439,
 				"isWikitext": true,
-				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			},
 			{
 				"lat": 48.058, "lon": 81.915,
 				"isWikitext": true,
-				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			},
 			{
 				"lat": 49.999, "lon": 84.449,
 				"isWikitext": true,
-				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			},
 			{
 				"lat": 48.085, "lon": 82.762,
 				"isWikitext": true,
-				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			},
 			{
 				"lat": 45.926, "lon": 80.732,
 				"isWikitext": true,
-				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			},
 			{
 				"lat": 49.005, "lon": 81.407,
 				"isWikitext": true,
-				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			},
 			{
 				"lat": 46.9, "lon": 79.426,
 				"isWikitext": true,
-				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			},
 			{
 				"lat": 47.656, "lon": 79.231,
 				"isWikitext": true,
-				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			},
 			{
 				"lat": 48.893, "lon": 80.735,
 				"isWikitext": true,
-				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			},
 			{
 				"lat": 47.838, "lon": 83.692,
 				"isWikitext": true,
-				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 8.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			}
 		],
 		"cave-crate cave cg:17 Ccc:bry": [
 			{
 				"lat": 58.322, "lon": 12.411,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			},
 			{
 				"lat": 59.556, "lon": 14.697,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			},
 			{
 				"lat": 61.675, "lon": 15.99,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			},
 			{
 				"lat": 58.995, "lon": 20.651,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			},
 			{
 				"lat": 59.021, "lon": 21.47,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			},
 			{
 				"lat": 59.835, "lon": 21.44,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			},
 			{
 				"lat": 61.191, "lon": 21.347,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			},
 			{
 				"lat": 61.327, "lon": 21.969,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			},
 			{
 				"lat": 60.677, "lon": 22.482,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			},
 			{
 				"lat": 60.39, "lon": 21.69,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			},
 			{
 				"lat": 59.992, "lon": 18.042,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			},
 			{
 				"lat": 59.966, "lon": 16.977,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			},
 			{
 				"lat": 60.499, "lon": 16.248,
 				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Underwater, Cave, Tier 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Underwater, Cave, Tier 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Underwater, Cave, Tier 3, nvx 70)"
+				"description": "Apparait 7.69% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Sous-marin, Grotte, Classe 1, nvx 50)\n* <span style=\"color:#889159\">Jaune</span> (Sous-marin, Grotte, Classe 2, nvx 60)\n* <span style=\"color:#a24e5a\">Rouge</span> (Sous-marin, Grotte, Classe 3, nvx 70)"
 			}
 		],
 		"cave-crate cave cg:18 Ccc:r": [
 			{
 				"lat": 27.879, "lon": 24.567,
 				"isWikitext": true,
-				"description": "Apparait 33.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Ice, Cave, Tier 3, nvx 55)"
+				"description": "Apparait 33.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Glace, Grotte, Classe 3, nvx 55)"
 			},
 			{
 				"lat": 29.834, "lon": 24.332,
 				"isWikitext": true,
-				"description": "Apparait 33.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Ice, Cave, Tier 3, nvx 55)"
+				"description": "Apparait 33.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Glace, Grotte, Classe 3, nvx 55)"
 			},
 			{
 				"lat": 30.106, "lon": 25.395,
 				"isWikitext": true,
-				"description": "Apparait 33.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Ice, Cave, Tier 3, nvx 55)"
+				"description": "Apparait 33.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Glace, Grotte, Classe 3, nvx 55)"
 			}
 		],
 		"cave-crate cave cg:19 Ccc:y": [
 			{
 				"lat": 27.4, "lon": 28.524,
 				"isWikitext": true,
-				"description": "Apparait 20.0% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#889159\">Jaune</span> (Ice, Cave, Tier 2, nvx 40)"
+				"description": "Apparait 20.0% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#889159\">Jaune</span> (Glace, Grotte, Classe 2, nvx 40)"
 			},
 			{
 				"lat": 27.339, "lon": 27.357,
 				"isWikitext": true,
-				"description": "Apparait 20.0% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#889159\">Jaune</span> (Ice, Cave, Tier 2, nvx 40)"
+				"description": "Apparait 20.0% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#889159\">Jaune</span> (Glace, Grotte, Classe 2, nvx 40)"
 			},
 			{
 				"lat": 28.726, "lon": 28.053,
 				"isWikitext": true,
-				"description": "Apparait 20.0% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#889159\">Jaune</span> (Ice, Cave, Tier 2, nvx 40)"
+				"description": "Apparait 20.0% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#889159\">Jaune</span> (Glace, Grotte, Classe 2, nvx 40)"
 			},
 			{
 				"lat": 29.341, "lon": 26.777,
 				"isWikitext": true,
-				"description": "Apparait 20.0% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#889159\">Jaune</span> (Ice, Cave, Tier 2, nvx 40)"
+				"description": "Apparait 20.0% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#889159\">Jaune</span> (Glace, Grotte, Classe 2, nvx 40)"
 			},
 			{
 				"lat": 27.399, "lon": 28.525,
 				"isWikitext": true,
-				"description": "Apparait 20.0% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#889159\">Jaune</span> (Ice, Cave, Tier 2, nvx 40)"
+				"description": "Apparait 20.0% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#889159\">Jaune</span> (Glace, Grotte, Classe 2, nvx 40)"
 			}
 		],
 		"cave-crate cave cg:20 Ccc:b": [
 			{
 				"lat": 27.549, "lon": 30.66,
 				"isWikitext": true,
-				"description": "Apparait 33.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Ice, Cave, Tier 1, nvx 25)"
+				"description": "Apparait 33.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Glace, Grotte, Classe 1, nvx 25)"
 			},
 			{
 				"lat": 27.3, "lon": 29.929,
 				"isWikitext": true,
-				"description": "Apparait 33.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Ice, Cave, Tier 1, nvx 25)"
+				"description": "Apparait 33.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Glace, Grotte, Classe 1, nvx 25)"
 			},
 			{
 				"lat": 26.825, "lon": 31.081,
 				"isWikitext": true,
-				"description": "Apparait 33.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Ice, Cave, Tier 1, nvx 25)"
+				"description": "Apparait 33.33% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Glace, Grotte, Classe 1, nvx 25)"
 			}
 		],
 		"surface-crate cg:21 cc:bgw": [
@@ -1529,92 +1830,92 @@
 			{
 				"lat": 91.434, "lon": 34.866,
 				"isWikitext": true,
-				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Ocean, nvx 80)"
+				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Océan, nvx 80)"
 			},
 			{
 				"lat": 90.896, "lon": 11.447,
 				"isWikitext": true,
-				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Ocean, nvx 80)"
+				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Océan, nvx 80)"
 			},
 			{
 				"lat": 86.556, "lon": 9.143,
 				"isWikitext": true,
-				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Ocean, nvx 80)"
+				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Océan, nvx 80)"
 			},
 			{
 				"lat": 59.183, "lon": 7.583,
 				"isWikitext": true,
-				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Ocean, nvx 80)"
+				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Océan, nvx 80)"
 			},
 			{
 				"lat": 51.341, "lon": 11.247,
 				"isWikitext": true,
-				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Ocean, nvx 80)"
+				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Océan, nvx 80)"
 			},
 			{
 				"lat": 34.836, "lon": 8.197,
 				"isWikitext": true,
-				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Ocean, nvx 80)"
+				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Océan, nvx 80)"
 			},
 			{
 				"lat": 10.077, "lon": 9.408,
 				"isWikitext": true,
-				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Ocean, nvx 80)"
+				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Océan, nvx 80)"
 			},
 			{
 				"lat": 10.661, "lon": 29.889,
 				"isWikitext": true,
-				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Ocean, nvx 80)"
+				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Océan, nvx 80)"
 			},
 			{
 				"lat": 10.858, "lon": 40.356,
 				"isWikitext": true,
-				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Ocean, nvx 80)"
+				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Océan, nvx 80)"
 			},
 			{
 				"lat": 9.64, "lon": 61.779,
 				"isWikitext": true,
-				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Ocean, nvx 80)"
+				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Océan, nvx 80)"
 			},
 			{
 				"lat": 7.932, "lon": 80.282,
 				"isWikitext": true,
-				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Ocean, nvx 80)"
+				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Océan, nvx 80)"
 			},
 			{
 				"lat": 8.246, "lon": 91.191,
 				"isWikitext": true,
-				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Ocean, nvx 80)"
+				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Océan, nvx 80)"
 			},
 			{
 				"lat": 21.828, "lon": 78.617,
 				"isWikitext": true,
-				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Ocean, nvx 80)"
+				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Océan, nvx 80)"
 			},
 			{
 				"lat": 23.757, "lon": 86.292,
 				"isWikitext": true,
-				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Ocean, nvx 80)"
+				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Océan, nvx 80)"
 			},
 			{
 				"lat": 44, "lon": 93.941,
 				"isWikitext": true,
-				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Ocean, nvx 80)"
+				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Océan, nvx 80)"
 			},
 			{
 				"lat": 58.416, "lon": 93.532,
 				"isWikitext": true,
-				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Ocean, nvx 80)"
+				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Océan, nvx 80)"
 			},
 			{
 				"lat": 91.82, "lon": 69.876,
 				"isWikitext": true,
-				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Ocean, nvx 80)"
+				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Océan, nvx 80)"
 			},
 			{
 				"lat": 89.774, "lon": 90.608,
 				"isWikitext": true,
-				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Ocean, nvx 80)"
+				"description": "Apparait 5.56% du temps environ toutes les 60 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Océan, nvx 80)"
 			}
 		],
 		"surface-crate cg:23 cc:bpry": [
@@ -2920,6 +3221,246 @@
 				"isWikitext": true,
 				"description": "Apparait 50.0% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#a24e5a\">Rouge</span> (Marais, Grotte, Classe 3, nvx 70)"
 			}
+		],
+		"playerSpawns-South1": [
+			{ "lat": 75.2, "lon": 41.6 },
+			{ "lat": 84.3, "lon": 43.9 },
+			{ "lat": 84.2, "lon": 45.5 },
+			{ "lat": 83.9, "lon": 46.3 },
+			{ "lat": 83.1, "lon": 47 },
+			{ "lat": 82.2, "lon": 47.2 },
+			{ "lat": 81.7, "lon": 47.8 },
+			{ "lat": 82.3, "lon": 48.7 },
+			{ "lat": 77.2, "lon": 39 },
+			{ "lat": 82.9, "lon": 48.3 },
+			{ "lat": 76.2, "lon": 41.3 },
+			{ "lat": 76.8, "lon": 41.3 },
+			{ "lat": 77.9, "lon": 41.3 },
+			{ "lat": 79.2, "lon": 41.3 },
+			{ "lat": 80.6, "lon": 41.4 },
+			{ "lat": 79.4, "lon": 35.8 },
+			{ "lat": 76.7, "lon": 39.4 },
+			{ "lat": 76.2, "lon": 39.9 },
+			{ "lat": 75.5, "lon": 39.9 },
+			{ "lat": 78, "lon": 38.6 },
+			{ "lat": 78.3, "lon": 37.9 },
+			{ "lat": 82, "lon": 41.4 },
+			{ "lat": 78.6, "lon": 37.4 },
+			{ "lat": 79, "lon": 37 },
+			{ "lat": 79.4, "lon": 36.5 },
+			{ "lat": 79.3, "lon": 35.9 },
+			{ "lat": 79, "lon": 36.2 },
+			{ "lat": 78.7, "lon": 36.7 },
+			{ "lat": 78.2, "lon": 36.9 },
+			{ "lat": 77.8, "lon": 37 },
+			{ "lat": 77.4, "lon": 37 },
+			{ "lat": 77, "lon": 37.2 },
+			{ "lat": 82.8, "lon": 41.9 },
+			{ "lat": 76.6, "lon": 37.6 },
+			{ "lat": 76.2, "lon": 37.9 },
+			{ "lat": 75.7, "lon": 38.2 },
+			{ "lat": 83.7, "lon": 42.8 }
+		],
+		"playerSpawns-South2": [
+			{ "lat": 83.9, "lon": 47.9 },
+			{ "lat": 84.8, "lon": 48.3 },
+			{ "lat": 85.3, "lon": 49.3 },
+			{ "lat": 86.1, "lon": 49.7 },
+			{ "lat": 87.4, "lon": 50.4 },
+			{ "lat": 87.8, "lon": 51.6 },
+			{ "lat": 88.5, "lon": 53.4 },
+			{ "lat": 88.3, "lon": 54.6 },
+			{ "lat": 88, "lon": 55.7 },
+			{ "lat": 88.1, "lon": 56.9 },
+			{ "lat": 88.2, "lon": 57.7 },
+			{ "lat": 87.8, "lon": 58.4 },
+			{ "lat": 87.2, "lon": 58.7 },
+			{ "lat": 86.4, "lon": 59 },
+			{ "lat": 85.9, "lon": 58.9 },
+			{ "lat": 85.4, "lon": 58.3 },
+			{ "lat": 85.5, "lon": 57.5 },
+			{ "lat": 84.4, "lon": 57 },
+			{ "lat": 83.9, "lon": 56 },
+			{ "lat": 83.5, "lon": 55.1 },
+			{ "lat": 83.5, "lon": 57.8 },
+			{ "lat": 82.6, "lon": 58 },
+			{ "lat": 81.8, "lon": 58.1 },
+			{ "lat": 81, "lon": 58.4 },
+			{ "lat": 80.6, "lon": 58.4 },
+			{ "lat": 81.3, "lon": 59.1 },
+			{ "lat": 82, "lon": 59.9 },
+			{ "lat": 82.5, "lon": 60.7 },
+			{ "lat": 83.3, "lon": 61.5 },
+			{ "lat": 83.9, "lon": 62.3 },
+			{ "lat": 84.4, "lon": 63.3 },
+			{ "lat": 84.8, "lon": 64.4 }
+		],
+		"playerSpawns-South3": [
+			{ "lat": 84.2, "lon": 65.3 },
+			{ "lat": 83.8, "lon": 66.8 },
+			{ "lat": 83.5, "lon": 68.1 },
+			{ "lat": 82.8, "lon": 68.9 },
+			{ "lat": 81.8, "lon": 69.4 },
+			{ "lat": 81.1, "lon": 69.8 },
+			{ "lat": 80, "lon": 70.1 },
+			{ "lat": 79.1, "lon": 69.6 },
+			{ "lat": 78.3, "lon": 69.8 },
+			{ "lat": 77.6, "lon": 70.4 },
+			{ "lat": 77.3, "lon": 71.3 },
+			{ "lat": 76.5, "lon": 71.6 },
+			{ "lat": 76.4, "lon": 72.7 },
+			{ "lat": 77.5, "lon": 73.6 },
+			{ "lat": 78.6, "lon": 74.6 },
+			{ "lat": 79.1, "lon": 76.3 },
+			{ "lat": 79, "lon": 78.5 },
+			{ "lat": 78.3, "lon": 79.8 },
+			{ "lat": 77.4, "lon": 80.9 },
+			{ "lat": 76.3, "lon": 81.5 },
+			{ "lat": 75.4, "lon": 81.7 },
+			{ "lat": 74.3, "lon": 81.2 },
+			{ "lat": 73.4, "lon": 84.5 }
+		],
+		"playerSpawns-West1": [
+			{ "lat": 74.7, "lon": 37.5 },
+			{ "lat": 76.2, "lon": 37.2 },
+			{ "lat": 76.8, "lon": 36.3 },
+			{ "lat": 77.6, "lon": 35.7 },
+			{ "lat": 78.8, "lon": 34.8 },
+			{ "lat": 79.8, "lon": 34 },
+			{ "lat": 80.8, "lon": 33.4 },
+			{ "lat": 81.4, "lon": 32 },
+			{ "lat": 80.6, "lon": 31.3 },
+			{ "lat": 79.6, "lon": 31 },
+			{ "lat": 79.4, "lon": 30.2 },
+			{ "lat": 79.7, "lon": 29.4 }
+		],
+		"playerSpawns-West2": [
+			{ "lat": 81.5, "lon": 28.1 },
+			{ "lat": 84.8, "lon": 29 },
+			{ "lat": 87, "lon": 27.8 },
+			{ "lat": 88.4, "lon": 26.2 },
+			{ "lat": 88.8, "lon": 21.3 },
+			{ "lat": 87.1, "lon": 19 },
+			{ "lat": 85.2, "lon": 17.4 }
+		],
+		"playerSpawns-West3": [
+			{ "lat": 82.5, "lon": 16.7 },
+			{ "lat": 79.1, "lon": 13 },
+			{ "lat": 77, "lon": 13.4 },
+			{ "lat": 74.7, "lon": 13.9 },
+			{ "lat": 72.6, "lon": 14 },
+			{ "lat": 70.1, "lon": 14.1 },
+			{ "lat": 67.5, "lon": 14.9 },
+			{ "lat": 65.8, "lon": 15.3 },
+			{ "lat": 63.8, "lon": 16.3 },
+			{ "lat": 61.9, "lon": 17.3 },
+			{ "lat": 58.9, "lon": 16.8 },
+			{ "lat": 57.8, "lon": 15 },
+			{ "lat": 60, "lon": 15.2 },
+			{ "lat": 62.4, "lon": 13.8 },
+			{ "lat": 65.6, "lon": 12.7 },
+			{ "lat": 68.3, "lon": 12.7 },
+			{ "lat": 71.2, "lon": 12.7 },
+			{ "lat": 58.8, "lon": 12.5 },
+			{ "lat": 55.7, "lon": 13.1 },
+			{ "lat": 53.8, "lon": 15.2 },
+			{ "lat": 51.6, "lon": 16.2 },
+			{ "lat": 48.9, "lon": 16.2 },
+			{ "lat": 44.6, "lon": 19 },
+			{ "lat": 43.6, "lon": 17 },
+			{ "lat": 41.4, "lon": 15.1 },
+			{ "lat": 38.7, "lon": 14.6 },
+			{ "lat": 38.9, "lon": 18.5 },
+			{ "lat": 36.5, "lon": 18.7 },
+			{ "lat": 35.7, "lon": 16.7 },
+			{ "lat": 33.3, "lon": 16.7 },
+			{ "lat": 32.3, "lon": 15.6 }
+		],
+		"playerSpawns-East1": [
+			{ "lat": 66.3, "lon": 86.7 },
+			{ "lat": 65.4, "lon": 86 },
+			{ "lat": 64.1, "lon": 85.4 },
+			{ "lat": 62.7, "lon": 85.6 },
+			{ "lat": 61.4, "lon": 86 },
+			{ "lat": 59.8, "lon": 86 },
+			{ "lat": 58.5, "lon": 85.5 },
+			{ "lat": 57.4, "lon": 84.5 },
+			{ "lat": 56, "lon": 83.8 },
+			{ "lat": 74.5, "lon": 85.3 },
+			{ "lat": 75.4, "lon": 85.7 },
+			{ "lat": 74.5, "lon": 87.2 },
+			{ "lat": 73.3, "lon": 87.5 },
+			{ "lat": 72.2, "lon": 87.6 },
+			{ "lat": 71, "lon": 87.6 },
+			{ "lat": 70.1, "lon": 87.6 },
+			{ "lat": 69, "lon": 87.3 },
+			{ "lat": 67.5, "lon": 87.1 }
+		],
+		"playerSpawns-East2": [
+			{ "lat": 54.9, "lon": 84.2 },
+			{ "lat": 53.6, "lon": 83.2 },
+			{ "lat": 52.4, "lon": 81.7 },
+			{ "lat": 50.9, "lon": 82.2 },
+			{ "lat": 49.9, "lon": 83.2 },
+			{ "lat": 48.7, "lon": 84.7 },
+			{ "lat": 48, "lon": 86.1 },
+			{ "lat": 49.6, "lon": 86.1 },
+			{ "lat": 51.1, "lon": 86 },
+			{ "lat": 52.4, "lon": 85.1 }
+		],
+		"playerSpawns-East3": [
+			{ "lat": 52.9, "lon": 86.9 },
+			{ "lat": 51.2, "lon": 87.4 },
+			{ "lat": 49.6, "lon": 87.6 },
+			{ "lat": 47.9, "lon": 87.5 },
+			{ "lat": 46.4, "lon": 87.3 },
+			{ "lat": 44.6, "lon": 87.2 },
+			{ "lat": 43.1, "lon": 86.3 },
+			{ "lat": 41.9, "lon": 85.9 },
+			{ "lat": 40.6, "lon": 87.2 },
+			{ "lat": 39.3, "lon": 87.2 },
+			{ "lat": 37.6, "lon": 86.8 },
+			{ "lat": 36.2, "lon": 86.5 },
+			{ "lat": 34.5, "lon": 86.7 },
+			{ "lat": 32.6, "lon": 86.9 }
+		],
+		"playerSpawns-North1": [
+			{ "lat": 30.9, "lon": 87.2 },
+			{ "lat": 29.6, "lon": 86.9 },
+			{ "lat": 28.3, "lon": 86.4 },
+			{ "lat": 27, "lon": 85.4 },
+			{ "lat": 26.2, "lon": 84.1 },
+			{ "lat": 25.2, "lon": 82.1 },
+			{ "lat": 25.5, "lon": 80 },
+			{ "lat": 26.2, "lon": 77.6 },
+			{ "lat": 26.3, "lon": 75.1 }
+		],
+		"playerSpawns-North2": [
+			{ "lat": 25.3, "lon": 73 },
+			{ "lat": 22.8, "lon": 74.6 },
+			{ "lat": 20.7, "lon": 74.8 },
+			{ "lat": 18.9, "lon": 74.2 },
+			{ "lat": 17.3, "lon": 73.7 },
+			{ "lat": 15.7, "lon": 71.7 },
+			{ "lat": 14, "lon": 70.9 },
+			{ "lat": 13.6, "lon": 68.9 }
+		],
+		"playerSpawns-North3": [
+			{ "lat": 15.7, "lon": 68.4 },
+			{ "lat": 17.7, "lon": 67.5 },
+			{ "lat": 18.1, "lon": 65.2 },
+			{ "lat": 19.2, "lon": 62.6 },
+			{ "lat": 18.1, "lon": 61.4 },
+			{ "lat": 15.4, "lon": 61.1 },
+			{ "lat": 14.3, "lon": 57.8 },
+			{ "lat": 12.4, "lon": 52.9 },
+			{ "lat": 12.7, "lon": 50.3 },
+			{ "lat": 12.8, "lon": 46 },
+			{ "lat": 15, "lon": 43.8 },
+			{ "lat": 16, "lon": 41.3 },
+			{ "lat": 16.1, "lon": 38.5 },
+			{ "lat": 15.2, "lon": 36.4 },
+			{ "lat": 15.6, "lon": 34 }
 		]
 	}
 }

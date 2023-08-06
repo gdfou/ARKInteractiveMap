@@ -1,6 +1,10 @@
 {
 	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
-	"mixins": [ "Cartes/Définitions des groupes normés" ],
+	"mixins": [ 
+		"Cartes/Définitions des groupes normés",
+		"Cartes/Obélisques Valguero",
+		"Cartes/Grottes Valguero"
+	],
 	"backgrounds": [
 		{ "name": "Croquis", "image": "Valguero Map.jpg" },
 		{
@@ -576,7 +580,6 @@
 			{ "lat": 45.87, "lon": 71.92 },
 			{ "lat": 25.81, "lon": 85.84 },
 			{ "lat": 29.6, "lon": 85.2 },
-			{ "lat": 29.54, "lon": 81.38 },
 			{ "lat": 44.79, "lon": 64.78 },
 			{ "lat": 28.35, "lon": 64.21 },
 			{ "lat": 24.5, "lon": 83.75 },
@@ -597,7 +600,6 @@
 			{ "lat": 44.34, "lon": 64.31 },
 			{ "lat": 28.88, "lon": 60.67 },
 			{ "lat": 28.17, "lon": 60.76 },
-			{ "lat": 31.69, "lon": 81.01 },
 			{ "lat": 27.89, "lon": 64.05 },
 			{ "lat": 47.1, "lon": 69.39 },
 			{ "lat": 46.27, "lon": 64.88 },

@@ -1,0 +1,73 @@
+{
+	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
+	"$mixin": true,
+	"markers": {
+		"cave-entrance": [
+			{
+				"lat": 19.5,
+				"lon": 27.2,
+				"name": "en Surface région Obélisque bleu"
+			},
+			{
+				"lat": 17.2,
+				"lon": 23.5,
+				"name": "depuis la Surface région Obélisque bleu"
+			},
+			{
+				"lat": 24.9,
+				"lon": 65.1,
+				"name": "en Surface région Obélisque vert"
+			},
+			{
+				"lat": 26.8,
+				"lon": 63.2,
+				"name": "depuis la Surface région Obélisque vert"
+			},
+			{
+				"lat": 37.1,
+				"lon": 80.3,
+				"name": "en Surface région Obélisque vert"
+			},
+			{
+				"lat": 34.6,
+				"lon": 82.1,
+				"name": "depuis la Surface région Obélisque vert"
+			},
+			{
+				"lat": 52.3,
+				"lon": 23.3,
+				"name": "en Surface région Obélisque rouge"
+			},
+			{
+				"lat": 56.1,
+				"lon": 23.7,
+				"name": "depuis la Surface région Obélisque rouge"
+			},
+			{
+				"lat": 79.2,
+				"lon": 27.8,
+				"name": "en Surface région Obélisque rouge"
+			},
+			{
+				"lat": 79.8,
+				"lon": 24.5,
+				"name": "depuis la Surface région Obélisque rouge"
+			},
+			{
+				"lat": 48.3,
+				"lon": 27.2,
+				"name": "dans la grotte de l'Artéfact des Profondeurs"
+			},
+			{
+				"lat": 55.2,
+				"lon": 65.9,
+				"name": "dans la grotte de l'Artéfact des Ténèbres (entrée sous-marine)"
+			},
+			{
+				"lat": 81,
+				"lon": 47,
+				"name": "dans la grotte de l'Artéfact du Rôdeur"
+			}
+		]
+	}
+}

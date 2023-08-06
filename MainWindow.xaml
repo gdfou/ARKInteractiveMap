@@ -53,7 +53,7 @@
                 <Label Content="lat:" Margin="10,0,0,0"/>
                 <TextBox x:Name="textboxLat" Width="40" Margin="0,4,0,4" GotFocus="textbox_GotFocus"/>
                 <Label Content="lon:"/>
-                <TextBox x:Name="textboxLon" Width="40" Margin="0,4,0,4" GotFocus="textbox_GotFocus"/>
+                <TextBox x:Name="textboxLon" Width="40" Margin="0,4,0,4" GotFocus="textbox_GotFocus" PreviewKeyDown="textboxLon_PreviewKeyDown" />
                 <Button Content="Aller à" Click="ButtonGotTo_Click" Margin="4,4,10,4" Width="45"/>
             </StackPanel>
             <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" FlowDirection="RightToLeft" Margin="4">
@@ -106,7 +106,24 @@
                                     <CheckBox IsChecked="{Binding IsCollected}" IsHitTestVisible="{Binding IsHitTestVisible}"
                                               Background="LightSkyBlue" Foreground="White" BorderBrush="#3366cc"/>
                                     <Image Source="{Binding IconRes}" Width="20" Height="20"/>
-                                    <TextBlock Text="{Binding Label}" Margin="10,0,4,0" VerticalAlignment="Center" MouseDown="TextBlock_MouseDown"/>
+                                    <TextBlock Text="{Binding Label}" Margin="10,0,4,0" VerticalAlignment="Center" MouseDown="Collectible_MouseDown"/>
+                                </StackPanel>
+                            </HierarchicalDataTemplate>
+                        </TreeView.ItemTemplate>
+                        <TreeView.ItemContainerStyle>
+                            <Style TargetType="{x:Type TreeViewItem}">
+                                <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+                            </Style>
+                        </TreeView.ItemContainerStyle>
+                    </TreeView>
+                </TabItem>
+                <TabItem Header="Point d'intérêt">
+                    <TreeView x:Name="trvPointOfInterest" Grid.Column="0">
+                        <TreeView.ItemTemplate>
+                            <HierarchicalDataTemplate ItemsSource="{Binding Childrens}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="{Binding IconRes}" Width="20" Height="20"/>
+                                    <TextBlock Text="{Binding Label}" Margin="10,0,4,0" VerticalAlignment="Center" MouseDown="PointOfInterest_MouseDown"/>
                                 </StackPanel>
                             </HierarchicalDataTemplate>
                         </TreeView.ItemTemplate>

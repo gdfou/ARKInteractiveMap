@@ -221,15 +221,16 @@ namespace ARKInteractiveMap
             Canvas.SetTop(textBlock_, npos_.Y - textBlock_.DesiredSize.Height);
         }
 
+        override public (Point, double) GetCurrentPosAndSize()
+        {
+            return (npos_, size_.Width);
+        }
+
         override public void RescalePopup()
         {
             RescalePopup(npos_.X + size_.Width / 2, npos_.Y);
         }
 
-        override public bool GetVisible()
-        {
-            return canvas_.IsVisible;
-        }
         override public void SetVisible(bool value)
         {
             canvas_.Visibility = value ? Visibility.Visible : Visibility.Collapsed;
@@ -237,16 +238,6 @@ namespace ARKInteractiveMap
             {
                 HidePopup();
             }
-        }
-
-        override public void Ping()
-        {
-            map.Ping(size_.Width, npos_, this);
-        }
-
-        override public void RescalePing()
-        {
-            map.RescalePing(size_.Width, npos_);
         }
     }
 }

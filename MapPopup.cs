@@ -99,6 +99,11 @@ namespace ARKInteractiveMap
                 Text = info
             };
             popupBorderStack_.Children.Add(popupInfo);
+            popupBorderStack_.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
+            if (popupBorderStack_.DesiredSize.Width > popupBorder_.Width)
+            {
+                popupBorder_.Width = popupBorderStack_.DesiredSize.Width + 20;
+            }
         }
 
         virtual public void ViewPopup(MapPoi poi, double x, double y, string label, string info)

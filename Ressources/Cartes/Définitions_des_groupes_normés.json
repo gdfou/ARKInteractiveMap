@@ -3,15 +3,18 @@
 	"$mixin": true,
 	"groups": {
 		"obelisk-blue": {
-			"name": "Obélisque bleu", "fillColor": "#00a5ff", "size": 20, "icon": "Obelisk.png",
+			"name": "Obélisque bleu",
+			"fillColor": "#00a5ff", "size": 20, "icon": "Obelisk.png",
 			"borderColor": "#fff"
 		},
 		"obelisk-green": {
-			"name": "Obélisque vert", "fillColor": "#14e800", "size": 20, "icon": "Obelisk.png",
+			"name": "Obélisque vert",
+			"fillColor": "#14e800", "size": 20, "icon": "Obelisk.png",
 			"borderColor": "#fff"
 		},
 		"obelisk-red": {
-			"name": "Obélisque rouge", "fillColor": "#f70102", "size": 20, "icon": "Obelisk.png",
+			"name": "Obélisque rouge",
+			"fillColor": "#f70102", "size": 20, "icon": "Obelisk.png",
 			"borderColor": "#fff"
 		},
 		"dragon-terminal": {
@@ -50,41 +53,110 @@
 			"icon": "King Titan Trophy.png"
 		},
 		"marker-c031525": {
-			"name": "Ravitaillement c031525", "icon": "PieWGB.svg", "size": [ 30, 30 ]
+			"name": "Ravitaillement c031525",
+			"icon": "PieWGB.svg", "size": [ 30, 30 ]
 		},
 		"marker-c031530": {
-			"name": "Ravitailllement c031530", "icon": "PieWGB.svg", "size": [ 30, 30 ]
+			"name": "Ravitailllement c031530",
+			"icon": "PieWGB.svg", "size": [ 30, 30 ]
 		},
 		"marker-c03153045": {
-			"name": "Ravitaillement c03153045", "icon": "PieWGBP.svg", "size": [ 30, 30 ]
+			"name": "Ravitaillement c03153045",
+			"icon": "PieWGBP.svg", "size": [ 30, 30 ]
 		},
 		"marker-c0315304555": {
-			"name": "Ravitaillement c0315304555", "icon": "PieWGBPY.svg", "size": [ 30, 30 ]
+			"name": "Ravitaillement c0315304555",
+			"icon": "PieWGBPY.svg", "size": [ 30, 30 ]
 		},
 		"marker-c15253545": {
-			"name": "Ravitaillement c15253545", "icon": "PieGBPY.svg", "size": [ 30, 30 ]
+			"name": "Ravitaillement c15253545",
+			"icon": "PieGBPY.svg", "size": [ 30, 30 ]
 		},
 		"marker-c25354560": {
-			"name": "Ravitaillement c25354560", "icon": "PieBPYR.svg", "size": [ 30, 30 ]
+			"name": "Ravitaillement c25354560",
+			"icon": "PieBPYR.svg", "size": [ 30, 30 ]
 		},
 		"marker-c304555": {
-			"name": "Ravitaillement c304555", "icon": "PieBPY.svg", "size": [ 30, 30 ]
+			"name": "Ravitaillement c304555",
+			"icon": "PieBPY.svg", "size": [ 30, 30 ]
 		},
 		"marker-c30455570": {
-			"name": "Ravitaillement c30455570", "icon": "PieBPYR.svg", "size": [ 30, 30 ]
+			"name": "Ravitaillement c30455570",
+			"icon": "PieBPYR.svg", "size": [ 30, 30 ]
 		},
-		"ambergris": { "name": "Ambre gris", "size": 5.5, "icon": "Ambergris.png", "fillColor": "#fcba03", "borderColor": "#fff" },
-		"black-pearl": { "name": "Perle noire", "size": 5.5, "icon": "Black Pearl.png", "fillColor": "#223459", "borderColor": "#fff" },
-		"cactus": { "name": "Extrait de cactus", "size": 5.5, "icon": "Cactus Sap.png", "fillColor": "#35824e", "borderColor": "#fff" },
-		"citronal": { "name": "Citron", "size": 5.5, "icon": "Citronal.png", "fillColor": "#cacf3e", "borderColor": "#fff" },
-		"crystal": { "name": "Cristal", "size": 5.5, "icon": "Crystal.png", "fillColor": "#80d1cc", "borderColor": "#fff" },
-		"crystal-rich": { "name": "Cristal (dépôt riche)", "size": 5.5, "icon": "Crystal.png", "fillColor": "#399691", "borderColor": "#fff" },
-		"element-ore": { "name": "Minerai d'élément", "size": 5.5, "icon": "Element Ore.png", "fillColor": "#9d4bb8", "borderColor": "#fff" },
-		"element-shard": { "name": "Fragment d'élément", "size": 5.5, "icon": "Element Shard.png", "fillColor": "#4485ad", "borderColor": "#fff" },
-		"element-dust": { "name": "Poussière d'élément", "size": 5.5, "icon": "Element Dust.png", "fillColor": "#96d8eb", "borderColor": "#fff" },
-		"clay": { "name": "Argile", "size": 5.5, "icon": "Clay.png", "fillColor": "#a88f32", "borderColor": "#fff" },
+		"marker-c456070": {
+			"name": "Ravitaillement c456070", "icon": "PiePR.svg", "size": [ 30, 30 ]
+		},
+		"marker-c031525354560": {
+			"name": "Ravitaillement c031525354560", "icon": "PieWGBPYR.svg", "size": [ 30, 30 ]
+		},
+		"marker-c03152535456070": {
+			"name": "Ravitaillement c03152535456070", "icon": "PieWGBPYR.svg", "size": [ 30, 30 ]
+		},
+		"ambergris": {
+			"name": "Ambre gris",
+			"size": 5.5, "icon": "Ambergris.png",
+			"fillColor": "#fcba03",
+			"borderColor": "#fff"
+		},
+		"black-pearl": {
+			"name": "Perle noire",
+			"size": 5.5, "icon": "Black Pearl.png",
+			"fillColor": "#223459",
+			"borderColor": "#fff"
+		},
+		"cactus": {
+			"name": "Extrait de cactus",
+			"size": 5.5, "icon": "Cactus Sap.png",
+			"fillColor": "#35824e",
+			"borderColor": "#fff"
+		},
+		"citronal": {
+			"name": "Citron",
+			"size": 5.5, "icon": "Citronal.png",
+			"fillColor": "#cacf3e",
+			"borderColor": "#fff"
+		},
+		"crystal": {
+			"name": "Cristal",
+			"size": 5.5, "icon": "Crystal.png",
+			"fillColor": "#80d1cc",
+			"borderColor": "#fff"
+		},
+		"crystal-rich": {
+			"name": "Cristal (dépôt riche)",
+			"size": 5.5, "icon": "Crystal.png",
+			"fillColor": "#399691",
+			"borderColor": "#fff"
+		},
+		"element-ore": {
+			"name": "Minerai d'élément",
+			"size": 5.5, "icon": "Element Ore.png",
+			"fillColor": "#9d4bb8",
+			"borderColor": "#fff"
+		},
+		"element-shard": {
+			"name": "Fragment d'élément",
+			"size": 5.5, "icon": "Element Shard.png",
+			"fillColor": "#4485ad",
+			"borderColor": "#fff"
+		},
+		"element-dust": {
+			"name": "Poussière d'élément",
+			"size": 5.5, "icon": "Element Dust.png",
+			"fillColor": "#96d8eb",
+			"borderColor": "#fff"
+		},
+		"clay": {
+			"name": "Argile",
+			"size": 5.5, "icon": "Clay.png",
+			"fillColor": "#a88f32",
+			"borderColor": "#fff"
+		},
 		"gas": {
-			"name": "Rocher de Gaz congelé", "size": 5.5, "icon": "Congealed Gas Ball.png", "fillColor": "#bf32a3",
+			"name": "Rocher de Gaz congelé",
+			"size": 5.5, "icon": "Congealed Gas Ball.png",
+			"fillColor": "#bf32a3",
 			"extraMinZoomSize": 0.1,
 			"borderColor": "#fff"
 		},
@@ -93,79 +165,231 @@
 			"size": [ 28, 28 ],
 			"icon": "Gas Vein.png"
 		},
-		"gem-blue": { "name": "Gemme Bleue", "size": 5.5, "icon": "Blue Gem.png", "fillColor": "#2424b5", "borderColor": "#fff" },
-		"gem-green": { "name": "Gemme Verte", "size": 5.5, "icon": "Green Gem.png", "fillColor": "#29994b", "borderColor": "#fff" },
-		"gem-red": { "name": "Gemme Rouge", "size": 5.5, "icon": "Red Gem.png", "fillColor": "#b51b1b", "borderColor": "#fff" },
-		"keratin": { "name": "Os à Kératine", "size": 5.5, "icon": "Keratin.png", "fillColor": "#ebdfc5", "borderColor": "#fff" },
-		"honey": { "name": "Amas de Miel", "size": 5.5, "icon": "Giant Bee Honey.png", "fillColor": "#b58733", "borderColor": "#fff" },
-		"longrass": { "name": "Maïs", "size": 5.5, "icon": "Longrass.png", "fillColor": "#9cab3e", "borderColor": "#fff" },
-		"metal-rich": { "name": "Métal (dépôt riche)", "size": 5.5, "icon": "Metal.png", "fillColor": "#b8ac30", "borderColor": "#fff" },
-		"metal": { "name": "Métal", "size": 5.5, "icon": "Metal.png", "fillColor": "#6e7a7d", "borderColor": "#fff" },
-		"mutagel": { "name": "Mutagel", "size": 5.5, "icon": "Mutagel.png", "fillColor": "#a832a0", "borderColor": "#fff" },
-		"mutagen": { "name": "Bulbes à Mutagène", "size": 28, "icon": "Mutagen.png" },
-		"nameless-venom": { "name": "Venin de Nameless", "size": 5.5, "icon": "Nameless Venom.png", "fillColor": "#2ac225", "borderColor": "#fff" },
-		"obsidian": { "name": "Obsidienne", "size": 5.5, "icon": "Obsidian.png", "fillColor": "#741e94", "borderColor": "#fff" },
-		"oil-rock": { "name": "Pétrole", "size": 5.5, "icon": "Oil.png", "fillColor": "#4e4854", "borderColor": "#fff" },
+		"gem-blue": {
+			"name": "Gemme Bleue",
+			"size": 5.5, "icon": "Blue Gem.png",
+			"fillColor": "#2424b5",
+			"borderColor": "#fff"
+		},
+		"gem-green": {
+			"name": "Gemme Verte",
+			"size": 5.5, "icon": "Green Gem.png",
+			"fillColor": "#29994b",
+			"borderColor": "#fff"
+		},
+		"gem-red": {
+			"name": "Gemme Rouge",
+			"size": 5.5, "icon": "Red Gem.png",
+			"fillColor": "#b51b1b",
+			"borderColor": "#fff"
+		},
+		"keratin": {
+			"name": "Os à Kératine",
+			"size": 5.5, "icon": "Keratin.png",
+			"fillColor": "#ebdfc5",
+			"borderColor": "#fff"
+		},
+		"honey": {
+			"name": "Amas de Miel",
+			"size": 5.5, "icon": "Giant Bee Honey.png",
+			"fillColor": "#b58733",
+			"borderColor": "#fff"
+		},
+		"longrass": {
+			"name": "Maïs",
+			"size": 5.5, "icon": "Longrass.png",
+			"fillColor": "#9cab3e",
+			"borderColor": "#fff"
+		},
+		"metal-rich": {
+			"name": "Métal (dépôt riche)",
+			"size": 5.5, "icon": "Metal.png",
+			"fillColor": "#b8ac30",
+			"borderColor": "#fff"
+		},
+		"metal": {
+			"name": "Métal",
+			"size": 5.5, "icon": "Metal.png",
+			"fillColor": "#6e7a7d",
+			"borderColor": "#fff"
+		},
+		"mutagel": {
+			"name": "Mutagel",
+			"size": 5.5, "icon": "Mutagel.png",
+			"fillColor": "#a832a0",
+			"borderColor": "#fff"
+		},
+		"mutagen": {
+			"name": "Bulbes à Mutagène",
+			"size": 28, "icon": "Mutagen.png"
+		},
+		"nameless-venom": {
+			"name": "Venin de Nameless",
+			"size": 5.5, "icon": "Nameless Venom.png",
+			"fillColor": "#2ac225",
+			"borderColor": "#fff"
+		},
+		"obsidian": {
+			"name": "Obsidienne",
+			"size": 5.5, "icon": "Obsidian.png",
+			"fillColor": "#741e94",
+			"borderColor": "#fff"
+		},
+		"oil-rock": {
+			"name": "Pétrole",
+			"size": 5.5, "icon": "Oil.png",
+			"fillColor": "#4e4854",
+			"borderColor": "#fff"
+		},
 		"oil-vein": {
 			"name": "Gisement de Pétrole",
 			"size": [ 28, 28 ],
 			"icon": "Oil Vein.png"
 		},
-		"organic-polymer": { "name": "Polymère organique", "size": 5.5, "icon": "Organic Polymer.png", "fillColor": "#76a38f", "borderColor": "#fff" },
-		"rare-flower": { "name": "Fleur rare", "size": 5.5, "icon": "Rare Flower.png", "fillColor": "#72dadb", "borderColor": "#fff" },
-		"rockarrot": { "name": "Carotte", "size": 5.5, "icon": "Rockarrot.png", "fillColor": "#b07721", "borderColor": "#fff" },
-		"salt": { "name": "Sel brut", "size": 5.5, "icon": "Salt.png", "fillColor": "#cfc8be", "borderColor": "#fff" },
-		"savoroot": { "name": "Pomme de Terre", "size": 5.5, "icon": "Savoroot.png", "fillColor": "#b0a97f", "borderColor": "#fff" },
-		"silica": { "name": "Perles de Silice", "size": 5.5, "icon": "Silica Pearls.png", "fillColor": "#c5c9c9", "borderColor": "#fff" },
-		"silk": { "name": "Soie", "size": 5.5, "icon": "Silk.png", "fillColor": "#d7c7d9", "borderColor": "#fff" },
-		"sulfur": { "name": "Soufre", "size": 5.5, "icon": "Sulfur.png", "fillColor": "#dba47f", "borderColor": "#fff" },
-		"water-vein": { "name": "Source d'eau", "size": 34, "icon": "Water Vein.png" },
-		"charge-node": { "name": "Noeud de Charge", "size": 36, "icon": "Charge Battery.png" },
+		"organic-polymer": {
+			"name": "Polymère organique",
+			"size": 5.5, "icon": "Organic Polymer.png",
+			"fillColor": "#76a38f",
+			"borderColor": "#fff"
+		},
+		"rare-flower": {
+			"name": "Fleur rare",
+			"size": 5.5, "icon": "Rare Flower.png",
+			"fillColor": "#72dadb",
+			"borderColor": "#fff"
+		},
+		"rockarrot": {
+			"name": "Carotte",
+			"size": 5.5, "icon": "Rockarrot.png",
+			"fillColor": "#b07721",
+			"borderColor": "#fff"
+		},
+		"salt": {
+			"name": "Sel brut",
+			"size": 5.5, "icon": "Salt.png",
+			"fillColor": "#cfc8be",
+			"borderColor": "#fff"
+		},
+		"savoroot": {
+			"name": "Pomme de Terre",
+			"size": 5.5, "icon": "Savoroot.png",
+			"fillColor": "#b0a97f",
+			"borderColor": "#fff"
+		},
+		"silica": {
+			"name": "Perles de Silice",
+			"size": 5.5, "icon": "Silica Pearls.png",
+			"fillColor": "#c5c9c9",
+			"borderColor": "#fff"
+		},
+		"silk": {
+			"name": "Soie",
+			"size": 5.5, "icon": "Silk.png",
+			"fillColor": "#d7c7d9",
+			"borderColor": "#fff"
+		},
+		"sulfur": {
+			"name": "Soufre",
+			"size": 5.5, "icon": "Sulfur.png",
+			"fillColor": "#dba47f",
+			"borderColor": "#fff"
+		},
+		"water-vein": {
+			"name": "Source d'eau",
+			"size": 34, "icon": "Water Vein.png"
+		},
+		"charge-node": {
+			"name": "Noeud de Charge",
+			"size": 36, "icon": "Charge Battery.png"
+		},
 		"rune": {
-			"name": "Rune", "icon": "Runes.png", "size": 30,
+			"name": "Rune",
+			"icon": "Runes.png", "size": 30,
 			"isCollectible": true
 		},
 		"dossier": {
-			"name": "Dossier", "icon": "NoteHelena.png", "size": 30,
+			"name": "Dossier",
+			"icon": "NoteHelena.png", "size": 30,
 			"isCollectible": true
 		},
 		"explorer-note": {
-			"name": "Note d'explorateur", "icon": "NoteDahkeya.png", "size": 30,
+			"name": "Note d'explorateur",
+			"icon": "NoteDahkeya.png", "size": 30,
 			"isCollectible": true
 		},
 		"glitch": {
-			"name": "Glitch", "icon": "NoteHLN-A.png", "size": 30,
+			"name": "Glitch",
+			"icon": "NoteHLN-A.png", "size": 30,
 			"isCollectible": true
 		},
-		"cave-entrance": { "name": "Entrée de grotte", "icon": "CaveEntranceIcon.png", "size": 34 },
+		"cave-entrance": {
+			"name": "Entrée de grotte",
+			"icon": "CaveEntranceIcon.png", "size": 34
+		},
 		"artifact": {
-			"name": "Artéfact", "icon": "Artifact.png", "size": 36,
+			"name": "Artéfact",
+			"icon": "Artifact.png", "size": 36,
 			"isCollectible": true
 		},
-		"deep-sea-loot-crates": { "name": "Relique des profondeurs", "icon": "Red Crate.png", "size": 36 },
+		"deep-sea-loot-crates": {
+			"name": "Relique des profondeurs",
+			"icon": "Red Crate.png", "size": 36
+		},
 		"deinonychus-nest": {
-			"name": "Nid de Deinonychus", "fillColor": "#4e695e", "size": 7, "icon": "Deinonychus.png",
+			"name": "Nid de Deinonychus",
+			"fillColor": "#4e695e", "size": 7, "icon": "Deinonychus.png",
 			"borderColor": "#a832a2"
 		},
 		"wyvern-nest": {
-			"name": "Nid de Wyverne", "fillColor": "#b8a146", "size": 7, "icon": "Wyvern.png",
+			"name": "Nid de Wyverne",
+			"fillColor": "#b8a146", "size": 7, "icon": "Wyvern.png",
 			"borderColor": "#a832a2"
 		},
 		"ice-wyvern-nest": {
-			"name": "Nid de Wyverne de Glace", "fillColor": "#6bc2d1", "size": 7, "icon": "Ice Wyvern.png",
+			"name": "Nid de Wyverne de Glace",
+			"fillColor": "#6bc2d1", "size": 7, "icon": "Ice Wyvern.png",
 			"borderColor": "#a832a2"
 		},
 		"rock-drake-nest": {
-			"name": "Nid de Dragon Rocheux", "fillColor": "#5f3287", "size": 7, "icon": "Rock Drake.png",
+			"name": "Nid de Dragon Rocheux",
+			"fillColor": "#5f3287", "size": 7, "icon": "Rock Drake.png",
 			"borderColor": "#a832a2"
 		},
 		"magmasaur-nest": {
-			"name": "Nid de Magmasaure", "fillColor": "#c93214", "size": 7, "icon": "Magmasaur.png",
+			"name": "Nid de Magmasaure",
+			"fillColor": "#c93214", "size": 7, "icon": "Magmasaur.png",
 			"borderColor": "#a832a2"
 		},
 		"Shipwrecks": {
-			"name": "Épave", "fillColor": "fd4a30", "size": 7, "icon": "Wooden_Raft.png",
+			"name": "Épave",
+			"fillColor": "fd4a30", "size": 7, "icon": "Wooden_Raft.png",
 			"borderColor": "#a832a2"
+		},
+		"poi": {
+			"name": "Point d'intérêt", "size": 10, "fillColor": "#dda0dd", "icon": "Blank.png",
+			"borderColor": "#fff"
+		},
+		"poison-tree": {
+			"name": "Arbre à toxine", "size": 7, "fillColor": "#c9eb34", "icon": "Blank.png",
+			"borderColor": "#fff"
+		},
+		"mission-terminal": {
+			"name": "Répartiteur de quêtes", "size": 7, "fillColor": "#B477FF", "icon": "Blank.png", 
+			"borderColor": "#266dbf"
+		},
+		"city-terminal": {
+			"name": "Terminal urbain", "size": 7, "fillColor": "#c0c0c0", "icon": "City_Terminal.png",
+			"borderColor": "#fff"
+		},
+		"rockwell-prime-terminal": {
+			"name": "Terminal de Prime Rockwell", "size": 20, "fillColor": "#bd2fb3", "icon": "Blank.png",
+			"borderColor": "#fff"
+		},
+		"plant-z": {
+			"name": "Plante Z",
+			"size": 5.5, "icon": "Plant Species Z.png",
+			"fillColor": "#7d5fda",
+			"borderColor": "#fff"
 		}
 	},
 	"layers": {

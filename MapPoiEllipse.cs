@@ -115,10 +115,11 @@ namespace ARKInteractiveMap
             ellipse_.RadiusY = radius;
         }
 
-        override public bool GetVisible()
+        override public (Point, double) GetCurrentPosAndSize()
         {
-            return geometryPoi_.IsVisible;
+            return (ComputeCirclePos(), 0);
         }
+
         override public void SetVisible(bool value)
         {
             geometryPoi_.Visibility = value ? Visibility.Visible : Visibility.Collapsed;

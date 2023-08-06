@@ -1,6 +1,9 @@
 {
 	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
-	"mixins": [ "Cartes/Définitions des groupes normés" ],
+	"mixins": [
+		"Cartes/Définitions des groupes normés",
+		"Cartes/Grottes Genesis Part 1"
+	],
 	"backgrounds": [
 		{ "name": "Croquis", "image": "Genesis Part 1 Map.jpg" },
 		{
@@ -396,7 +399,6 @@
 			{ "lat": 36.32, "lon": 23.47 },
 			{ "lat": 29.78, "lon": 13.55 },
 			{ "lat": 21.67, "lon": 14.37 },
-			{ "lat": 54.89, "lon": 17.16 },
 			{ "lat": 54.38, "lon": 15.18 },
 			{ "lat": 43.72, "lon": 24.8 },
 			{ "lat": 39.11, "lon": 14.91 },
@@ -3154,7 +3156,6 @@
 			{ "lat": 36.32, "lon": 23.47 },
 			{ "lat": 29.78, "lon": 13.55 },
 			{ "lat": 21.67, "lon": 14.37 },
-			{ "lat": 54.89, "lon": 17.16 },
 			{ "lat": 54.38, "lon": 15.18 },
 			{ "lat": 43.72, "lon": 24.8 },
 			{ "lat": 39.11, "lon": 14.91 },

@@ -1,4 +1,535 @@
 {
 	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
-	"$mixin": true
+	"$mixin": true,
+	"markers": {
+		"cave-entrance": [
+			{
+				"lat": 10.5,
+				"lon": 24.0,
+				"name": "Repaire du Masque",
+				"image": "Lair of The Mask (Ragnarok).jpg"
+			},
+			{
+				"lat": 20.4,
+				"lon": 24.0,
+				"name": "Grotte des pirates",
+				"description": "Entrée terrestres",
+				"image": "Pirate Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 19.1,
+				"lon": 23.0,
+				"name": "Grotte des pirates",
+				"description": "Entrée sous-marine",
+				"image": "Pirate Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 21.5,
+				"lon": 24.6,
+				"name": "Grotte des pirates",
+				"description": "Entrée en volant",
+				"image": "Pirate Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 20.0,
+				"lon": 27.5,
+				"name": "Caverne de la Jungle de Oluf",
+				"image": "Oluf Jungle Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 20.5,
+				"lon": 27.5,
+				"name": "Caverne de la Jungle de Oluf",
+				"image": "Oluf Jungle Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 24.1,
+				"lon": 27.7,
+				"name": "Grotte de Kuri",
+				"image": "Kuri Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 23.3,
+				"lon": 27.7,
+				"name": "Grotte de Kuri",
+				"image": "Kuri Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 24.5,
+				"lon": 28.5,
+				"name": "Grotte de Kuri",
+				"image": "Kuri Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 18.2,
+				"lon": 28.4,
+				"name": "Donjon de la Jungle",
+				"description": "Entrée par le lac.<br/>Contient:\n* {{ItemLink|Artéfact du Chasseur}}",
+				"image": "Ragnarok_Jungle_Dungeon.jpg"
+			},
+			{
+				"lat": 18.7,
+				"lon": 27.8,
+				"name": "Donjon de la Jungle",
+				"description": "Entrée terrestre.<br/>Contient:\n* {{ItemLink|Artéfact du Chasseur}}",
+				"image": "Ragnarok_Jungle_Dungeon.jpg"
+			},
+			{
+				"lat": 21.5,
+				"lon": 26.9,
+				"name": "Arène du Golem de Lave",
+				"description": "À l’intérieur du Donjon de la Jungle.",
+				"image": "Lava Elemental Image.png"
+			},
+			{
+				"lat": 20.5,
+				"lon": 29.1,
+				"name": "Caverne du Canyon de Skellet",
+				"image": "Skellet Canyon Cave (Ragnaork).jpg"
+			},
+			{
+				"lat": 22.7,
+				"lon": 30.4,
+				"name": "Grotte de Kamaka",
+				"image": "Kamaka Cave Outside.png"
+			},
+			{
+				"lat": 26.2,
+				"lon": 27.0,
+				"name": "La Grotte Interdite",
+				"image": "The Forbidden Grotto (Ragnarok).jpg"
+			},
+			{
+				"lat": 26.4,
+				"lon": 27.0,
+				"name": "La Grotte Interdite",
+				"image": "The Forbidden Grotto (Ragnarok).jpg"
+			},
+			{
+				"lat": 26.9,
+				"lon": 27.4,
+				"name": "La Grotte Interdite",
+				"image": "The Forbidden Grotto (Ragnarok).jpg"
+			},
+			{
+				"lat": 24.6,
+				"lon": 25.0,
+				"name": "L'Énigme des Singes",
+				"description": "Contient:\n* {{ItemLink|Artéfact de Puissance}}",
+				"image": "The Monkey's Puzzle (Ragnarok).jpg"
+			},
+			{
+				"lat": 35.4,
+				"lon": 24.1,
+				"name": "Grotte de métal",
+				"description": "Derrière un rocher récoltable",
+				"image": "Metal Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 30.1,
+				"lon": 34.9,
+				"name": "Hall de glace",
+				"image": "Glacier Cave (Ragnarok).png"
+			},
+			{
+				"lat": 30.1,
+				"lon": 33.9,
+				"name": "Hall de glace",
+				"image": "Glacier Cave (Ragnarok).png"
+			},
+			{
+				"lat": 30.4,
+				"lon": 32.8,
+				"name": "Hall de glace",
+				"image": "Glacier Cave (Ragnarok).png"
+			},
+			{
+				"lat": 31.5,
+				"lon": 32.9,
+				"name": "Hall de glace",
+				"image": "Glacier Cave (Ragnarok).png"
+			},
+			{
+				"lat": 33.1,
+				"lon": 33.7,
+				"name": "Hall de glace",
+				"image": "Glacier Cave (Ragnarok).png"
+			},
+			{
+				"lat": 31.1,
+				"lon": 35.6,
+				"name": "Hall de glace",
+				"image": "Glacier Cave (Ragnarok).png"
+			},
+			{
+				"lat": 31.3,
+				"lon": 33.7,
+				"name": "Donjon gelé",
+				"description": "Entrée par la cascade dans la Hall de glace.<br/>Contient:\n* {{ItemLink|Artéfact de la Meute}}",
+				"image": "Ragnarok Frozen Dungeon.jpg"
+			},
+			{
+				"lat": 30.9,
+				"lon": 37.8,
+				"name": "Donjon gelé",
+				"description": "Entrée en volant.<br/>Contient:\n* {{ItemLink|Artéfact de la Meute}}",
+				"image": "Ragnarok Frozen Dungeon.jpg"
+			},
+			{
+				"lat": 33.6,
+				"lon": 40.5,
+				"name": "Labyrinthe de la Reine de Glace",
+				"description": "Dans le Donjon gelé.",
+				"image": "Iceworm Image.png"
+			},
+			{
+				"lat": 17.7,
+				"lon": 42.4,
+				"name": "Cavernes des Carnivores",
+				"description": "Entrée à flanc de colline.<br/>Contient:\n* {{ItemLink|Artéfact de la Ruse}}\n* {{ItemLink|Artéfact de l'Immunité}}",
+				"image": "Carnivorous Caverns (Ragnarok).jpg"
+			},
+			{
+				"lat": 21.1,
+				"lon": 40.4,
+				"name": "Cavernes des Carnivores",
+				"description": "Passage aquatique par le Château des Marais.<br/>Contient:\n* {{ItemLink|Artéfact de la Ruse}}\n* {{ItemLink|Artéfact de l'Immunité}}",
+				"image": "Carnivorous Caverns (Ragnarok).jpg"
+			},
+			{
+				"lat": 21.8,
+				"lon": 42.2,
+				"name": "Cavernes carnivores",
+				"description": "Entrée par King's Gulch.<br/>Contient:\n* {{ItemLink|Artéfact de la Ruse}}\n* {{ItemLink|Artéfact de l'Immunité}}",
+				"image": "Carnivorous Caverns (Ragnarok).jpg"
+			},
+			{
+				"lat": 20.4,
+				"lon": 33.1,
+				"name": "Grotte d'Opale",
+				"image": "Opal Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 21.8,
+				"lon": 33.3,
+				"name": "Les tunnels d'eau de la Baie Viking 1",
+				"description": "Tunnels d'eau sous-marins menant aux Cavernes carnivores.",
+				"image": "Viking_Bay_(Ragnarok).jpg"
+			},
+			{
+				"lat": 21.9,
+				"lon": 40.7,
+				"name": "Les tunnels d'eau de la Baie Viking 2",
+				"description": "Tunnels d'eau terrestres, grande entrée des Cavernes carnivores.",
+				"image": "Viking_Bay_(Ragnarok).jpg"
+			},
+			{
+				"lat": 20.3,
+				"lon": 45.0,
+				"name": "Les tunnels d'eau entrée de caverne sombre étroite",
+				"description": "Tunnels d'eau terrestres, étroit passage des Cavernes carnivores.",
+				"image": "Viking_Bay_(Ragnarok).jpg"
+			},
+			{
+				"lat": 27.3,
+				"lon": 47.7,
+				"name": "Grotte des Chutes des colombes",
+				"image": "WhiteDove Falls Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 27.9,
+				"lon": 47.9,
+				"name": "Grotte des Chutes des colombes",
+				"image": "WhiteDove Falls Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 32.3,
+				"lon": 44.0,
+				"name": "Caverne du Castor 1",
+				"image": "Beaver Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 32.4,
+				"lon": 44.2,
+				"name": "Caverne du Castor 2",
+				"image": "Beaver Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 51.6,
+				"lon": 77.5,
+				"name": "Labyrinthe de la vie",
+				"description": "Contient:\n* {{ItemLink|Artéfact du Seigneur du Ciel}}\n* {{ItemLink|Artéfact du Sournois}}\n* {{ItemLink|Artéfact du Colosse}}\n* {{ItemLink|Artéfact de la Sagesse}}",
+				"image": "Life's Labyrinth (Ragnarok).jpg"
+			},
+			{
+				"lat": 35.9,
+				"lon": 49.5,
+				"name": "Grotte du canyon central 1",
+				"image": "Central Canyon Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 37.4,
+				"lon": 39.4,
+				"name": "Grotte du canyon central 2",
+				"image": "Central Canyon Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 41.5,
+				"lon": 42.3,
+				"name": "Grotte du canyon central 3",
+				"image": "Central Canyon Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 36.0,
+				"lon": 36.8,
+				"name": "Grotte du canyon central 4",
+				"image": "Central Canyon Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 46.3,
+				"lon": 34.4,
+				"name": "Caverne de Hidana",
+				"image": "Hidana Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 45.1,
+				"lon": 32.4,
+				"name": "Caverne de Hidana",
+				"image": "Hidana Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 22.9,
+				"lon": 86.7,
+				"name": "Caverne dissimulée",
+				"image": "Hidden Cavern (Ragnarok).jpg"
+			},
+			{
+				"lat": 19.8,
+				"lon": 78.2,
+				"name": "Caverne de Cristal d'Écosse",
+				"image": "Scotland Crystal Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 18.2,
+				"lon": 78.8,
+				"name": "Caverne des Cascades d'Écosse",
+				"image": "Scotland Waterfall Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 21.4,
+				"lon": 77.2,
+				"name": "Grotte des Flèches de Nataziel",
+				"image": "Nataziel Spires Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 34.2,
+				"lon": 78.9,
+				"name": "Grotte du séquoia tombé",
+				"description": "Contient:\n* {{ItemLink|Artéfact de la Bête}}",
+				"image": "Fallen Redwood Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 34.6,
+				"lon": 77.8,
+				"name": "Grotte du séquoia tombé",
+				"description": "Contient:\n* {{ItemLink|Artéfact de la Bête}}",
+				"image": "Fallen Redwood Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 35.9,
+				"lon": 77.0,
+				"name": "Grotte du séquoia tombé",
+				"description": "Contient:\n* {{ItemLink|Artéfact de la Bête}}",
+				"image": "Fallen Redwood Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 40.0,
+				"lon": 62.7,
+				"name": "Caverne de Bái Láng",
+				"image": "Snow Crystal Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 37.7,
+				"lon": 58.8,
+				"name": "Caverne de Bái Láng",
+				"image": "Snow Crystal Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 42.2,
+				"lon": 56.5,
+				"name": "Grotte de neige",
+				"image": "Snow Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 24.9,
+				"lon": 57.9,
+				"name": "Tunnel du volcan",
+				"image": "Volcano Tunnel (Ragnarok).jpg"
+			},
+			{
+				"lat": 25.0,
+				"lon": 59.8,
+				"name": "Tunnel du volcan",
+				"image": "Volcano Tunnel (Ragnarok).jpg"
+			},
+			{
+				"lat": 19.6,
+				"lon": 65.3,
+				"name": "Grotte du Souffle du Dragon",
+				"image": "Dragon Breath Grotto (Ragnarok).jpg"
+			},
+			{
+				"lat": 17.8,
+				"lon": 67.2,
+				"name": "Fosse de Dragonmalte 1",
+				"image": "Dragonmalte Trench (Ragnarok).jpg"
+			},
+			{
+				"lat": 20.9,
+				"lon": 67.8,
+				"name": "Fosse de Dragonmalte 2",
+				"image": "Dragonmalte Trench (Ragnarok).jpg"
+			},
+			{
+				"lat": 24.0,
+				"lon": 70.6,
+				"name": "Fosse de Dragonmalte 3",
+				"image": "Dragonmalte Trench (Ragnarok).jpg"
+			},
+			{
+				"lat": 21.5,
+				"lon": 68.8,
+				"name": "Fosse de Dragonmalte 4",
+				"image": "Dragonmalte Trench (Ragnarok).jpg"
+			},
+			{
+				"lat": 26.4,
+				"lon": 67.1,
+				"name": "Caverne de Fafnir",
+				"image": "Fafnirs Cavern (Ragnarok).jpg"
+			},
+			{
+				"lat": 25.9,
+				"lon": 68.7,
+				"name": "Caverne de Fafnir",
+				"image": "Fafnirs Cavern (Ragnarok).jpg"
+			},
+			{
+				"lat": 25.6,
+				"lon": 69.1,
+				"name": "Caverne de Fafnir",
+				"image": "Fafnirs Cavern (Ragnarok).jpg"
+			},
+			{
+				"lat": 57.5,
+				"lon": 19.3,
+				"name": "Puits de mine",
+				"image": "Mine Shaft (Ragnarok).jpg"
+			},
+			{
+				"lat": 57.4,
+				"lon": 18.7,
+				"name": "Puits de mine",
+				"image": "Mine Shaft (Ragnarok).jpg"
+			},
+			{
+				"lat": 86.4,
+				"lon": 38.9,
+				"name": "Grotte de l'île du Sud",
+				"image": "South Island Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 68.7,
+				"lon": 42.0,
+				"name": "Grotte des Wyvernes",
+				"image": "Wyvern_Cave_(Ragnarok).jpg"
+			},
+			{
+				"lat": 72.7,
+				"lon": 40.3,
+				"name": "Grotte de Cristal de l'Arche",
+				"image": "Arch Crystal Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 72.9,
+				"lon": 41.8,
+				"name": "Grotte de Cristal de l'Arche",
+				"image": "Arch Crystal Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 69.0,
+				"lon": 42.5,
+				"name": "Grotte de l'Arche",
+				"image": "Arch Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 69.9,
+				"lon": 43.8,
+				"name": "Grotte de l'Arche",
+				"image": "Arch Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 69.9,
+				"lon": 44.65,
+				"name": "Grotte de l'Arche",
+				"image": "Arch Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 68.6,
+				"lon": 45.4,
+				"name": "Grotte de l'Arche",
+				"image": "Arch Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 68.1,
+				"lon": 45.0,
+				"name": "Grotte de l'Arche",
+				"image": "Arch Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 84.6,
+				"lon": 54.1,
+				"name": "Grotte des Plateaux du fifre",
+				"description": "Entrée principale",
+				"image": "Fifer Plateaus Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 83.9,
+				"lon": 50.4,
+				"name": "Grotte des Plateaux du fifre",
+				"description": "Entrée secrète",
+				"image": "Fifer Plateaus Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 80.2,
+				"lon": 61.8,
+				"name": "Grotte de Jatheish",
+				"image": "Jatheish Grotto (Ragnarok).jpg"
+			},
+			{
+				"lat": 79.8,
+				"lon": 63.2,
+				"name": "Grotte de Jatheish",
+				"image": "Jatheish Grotto (Ragnarok).jpg"
+			},
+			{
+				"lat": 68.5,
+				"lon": 61.2,
+				"name": "Grotte des Sources dissimulées",
+				"image": "Hidden Springs Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 66.4,
+				"lon": 60.8,
+				"name": "Grotte des Sources dissimulées",
+				"image": "Hidden Springs Cave (Ragnarok).jpg"
+			},
+			{
+				"lat": 67.4,
+				"lon": 61.3,
+				"name": "Grotte des Sources dissimulées",
+				"image": "Hidden Springs Cave (Ragnarok).jpg"
+			}
+		]
+   	}
 }

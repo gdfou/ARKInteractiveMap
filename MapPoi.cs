@@ -26,44 +26,67 @@ namespace ARKInteractiveMap
         public MapPoiDef poiDef;
         public Point pos;   // pos en pixel
         protected double scale_;
+        protected bool contentVisible_;
+        protected bool layerVisible_;
 
         public string GroupName
         {
-            get { return poiDef.groupName; }
+            get => poiDef.groupName;
         }
 
         public string Label
         {
-            get { return poiDef.Label; }
-            set { poiDef.Label = value; }
+            get => poiDef.Label;
+            set => poiDef.Label = value;
         }
 
         public string Id
         {
-            get { return poiDef.Id; }
+            get => poiDef.Id;
         }
 
-        public bool Visible
+        public bool Visible => GetVisible();
+
+        public bool ContentVisible // from Content
         {
-            get { return GetVisible(); }
-            set { SetVisible(value); }
+            get => contentVisible_;
+            set 
+            {
+                contentVisible_ = value;
+                SetVisible(GetVisible()); 
+            }
+        }
+
+        public bool LayerVisible // from Layer
+        {
+            get => layerVisible_;
+            set
+            {
+                layerVisible_ = value;
+                SetVisible(GetVisible());
+            }
+        }
+
+        protected bool GetVisible()
+        {
+            return contentVisible_ && layerVisible_;
         }
 
         public bool Collected
         {
-            get { return GetCollected(); }
-            set { SetCollected(value); }
+            get => GetCollected();
+            set => SetCollected(value);
         }
 
         public bool Editable
         {
-            get { return GetEditable(); }
-            set { SetEditable(value); }
+            get => GetEditable();
+            set => SetEditable(value);
         }
 
         public MapPos MapPos
         {
-            get { return poiDef.pos; }
+            get => poiDef.pos;
             set
             {
                 poiDef.pos = value;
@@ -73,16 +96,13 @@ namespace ARKInteractiveMap
 
         public string FillColor
         {
-            get { return poiDef.fillColor; }
-            set
-            {
-                poiDef.fillColor = value;
-            }
+            get => poiDef.fillColor;
+            set => poiDef.fillColor = value;
         }
 
         public string Shape 
         { 
-            get { return poiDef.shape; } 
+            get => poiDef.shape;
             set
             {
                 poiDef.shape = value;
@@ -90,9 +110,16 @@ namespace ARKInteractiveMap
             }
         }
 
+        public (Point, double) CurrentPosAndSize
+        {
+            get => GetCurrentPosAndSize();
+        }
+
         public MapPoi()
         {
             scale_ = 1;
+            layerVisible_ = true;
+            contentVisible_ = true;
         }
 
         public MapPoi(ArkWikiJsonGroup group) : this()
@@ -149,16 +176,14 @@ namespace ARKInteractiveMap
         abstract public FrameworkElement BuildForMap(double scale);
         abstract public FrameworkElement GetFrameworkElement();
         abstract public void Rescale(double scale);
-        abstract public bool GetVisible();
         abstract public void SetVisible(bool value);
+        abstract public (Point, double) GetCurrentPosAndSize();
         virtual public bool GetCollected() { return false; }
         virtual public void SetCollected(bool value) { }
         virtual public bool GetEditable() { return false; }
         virtual public void SetEditable(bool value) { }
         virtual public void OnSetShape() { }
         virtual public void RescalePopup() { }
-        virtual public void Ping() { }
-        virtual public void RescalePing() { }
         virtual public FrameworkElement BuildForContents(int size) { return null; }
         virtual public void Update() { }
     }

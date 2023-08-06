@@ -1,6 +1,10 @@
 {
 	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
-	"mixins": [ "Cartes/Définitions des groupes normés" ],
+	"mixins": [
+		"Cartes/Définitions des groupes normés",
+		"Cartes/Obélisques The Island",
+		"Cartes/Grottes The Island"
+	],
 	"backgrounds": [
 		{ "name": "Croquis", "image": "The Island Map.jpg" },
 		{

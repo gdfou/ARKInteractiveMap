@@ -1,4 +1,162 @@
 {
-	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
-	"$mixin": true
+  "$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
+  "$mixin": true,
+  "markers": {
+    "cave-entrance": [
+      {
+        "name": "Caverne de l'Oasis de Lave",
+        "lat": 15.8,
+        "lon": 50.5,
+        "description": "Contient:\n* {{ItemLink|Artéfact du Chasseur}}",
+        "image": "West Lava Cave (The Center).jpg"
+      },
+      {
+        "name": "Grotte de glace sud",
+        "lat": 60.0,
+        "lon": 22.5,
+        "description": "Contient:\n* {{ItemLink|Artéfact du Seigneur du Ciel}}",
+        "image": "South Ice Cave TC.jpg"
+      },
+      {
+        "name": "Grotte de lave",
+        "lat": 11.2,
+        "lon": 67.4,
+        "description": "Contient:\n* {{ItemLink|Artéfact du Colosse, Artéfact de Puissance}}",
+        "image": "LavaCave (The Center).jpg"
+      },
+      {
+        "name": "Grotte de glace nord",
+        "lat": 18.7,
+        "lon": 29.7,
+        "description": "Contient:\n* {{ItemLink|Artéfact de la Sagesse, Artéfact du Dévoreur}}",
+        "image": "North Ice Cave Room2a.jpg"
+      },
+      {
+        "name": "Tranchée est",
+        "lat": 69.1,
+        "lon": 92.2,
+        "description": "Contient:\n* {{ItemLink|Artéfact de la Bête}}",
+        "image": "SE Trench TC.jpg"
+      },
+      {
+        "name": "Grotte de la jungle",
+        "lat": 54.2,
+        "lon": 62.7,
+        "description": "Entrée Terrestre<br/>Contient:\n* {{ItemLink|Artéfact de l'Immunité}}",
+        "image": "South East Cave (The Center).jpg"
+      },
+      {
+        "name": "Grotte de la jungle",
+        "lat": 46.3,
+        "lon": 63.1,
+        "description": "Entrée Ruines<br/>Contient:\n* {{ItemLink|Artéfact de l'Immunité}}",
+        "image": "South East Cave (The Center).jpg"
+      },
+      {
+        "name": "Grotte de la jungle",
+        "lat": 52.5,
+        "lon": 67.7,
+        "description": "Entrée Accessible aux volants<br/>Contient:\n* {{ItemLink|Artéfact de l'Immunité}}",
+        "image": "South East Cave (The Center).jpg"
+      },
+      {
+        "name": "Grotte de la jungle",
+        "lat": 45.0,
+        "lon": 64.0,
+        "description": "Entrée Rivière sous-marine<br/>Contient:\n* {{ItemLink|Artéfact de l'Immunité}}",
+        "image": "South East Cave (The Center).jpg"
+      },
+      {
+        "name": "Grotte de la jungle",
+        "lat": 50.8,
+        "lon": 71.3,
+        "description": "Entrée Océan<br/>Contient:\n* {{ItemLink|Artéfact de l'Immunité}}",
+        "image": "South East Cave (The Center).jpg"
+      },
+      {
+        "name": "La grotte du centre",
+        "lat": 35.9,
+        "lon": 34.4,
+        "description": "Entrée Supérieure<br/>Contient:\n* {{ItemLink|Artéfact du Sournois}}",
+        "image": "The Center Cave Inside.jpg"
+      },
+      {
+        "name": "La grotte du centre",
+        "lat": 40.3,
+        "lon": 31.1,
+        "description": "Entrée Inférieure 1<br/>Contient:\n* {{ItemLink|Artéfact du Sournois}}",
+        "image": "The Center Cave Inside.jpg"
+      },
+      {
+        "name": "La grotte du centre",
+        "lat": 36.4,
+        "lon": 35.0,
+        "description": "Entrée Inférieure 2<br/>Contient:\n* {{ItemLink|Artéfact du Sournois}}",
+        "image": "The Center Cave Inside.jpg"
+      },
+      {
+        "name": "Caverne de la falaise",
+        "lat": 36.0,
+        "lon": 2.0,
+        "description": "Entrée Volant<br/>Contient:\n* {{ItemLink|Artéfact de la Ruse}}",
+        "image": "Cliffside Cavern (The Center).jpg"
+      },
+      {
+        "name": "Caverne de la falaise",
+        "lat": 58.1,
+        "lon": 12.8,
+        "description": "Entrée Terrestre 1<br/>Contient:\n* {{ItemLink|Artéfact de la Ruse}}",
+        "image": "Cliffside Cavern (The Center).jpg"
+      },
+      {
+        "name": "Caverne de la falaise",
+        "lat": 21.0,
+        "lon": 13.5,
+        "description": "Entrée Terrestre 2<br/>Contient:\n* {{ItemLink|Artéfact de la Ruse}}",
+        "image": "Cliffside Cavern (The Center).jpg"
+      },
+      {
+        "name": "Monde souterrain",
+        "lat": 34.9,
+        "lon": 65.8,
+        "description": "Entrée Accessible aux volants<br/>Contient:\n* {{ItemLink|Artéfact de la Meute}}",
+        "image": "UW TC.jpg"
+      },
+      {
+        "name": "Monde souterrain",
+        "lat": 34.3,
+        "lon": 53.3,
+        "description": "Entrée Ruines 1<br/>Contient:\n* {{ItemLink|Artéfact de la Meute}}",
+        "image": "UW TC.jpg"
+      },
+      {
+        "name": "Monde souterrain",
+        "lat": 53.5,
+        "lon": 53.8,
+        "description": "Entrée Ruines 2<br/>Contient:\n* {{ItemLink|Artéfact de la Meute}}",
+        "image": "UW TC.jpg"
+      },
+      {
+        "name": "Monde souterrain",
+        "lat": 32.7,
+        "lon": 64.1,
+        "description": "Entrée Rivière sous-marine 1<br/>Contient:\n* {{ItemLink|Artéfact de la Meute}}",
+        "image": "UW TC.jpg"
+      },
+      {
+        "name": "Monde souterrain",
+        "lat": 44.2,
+        "lon": 58.0,
+        "description": "Entrée Rivière sous-marine 2<br/>Contient:\n* {{ItemLink|Artéfact de la Meute}}",
+        "image": "UW TC.jpg"
+      },
+      {
+        "name": "Monde souterrain",
+        "lat": 66.1,
+        "lon": 51.7,
+        "description": "Entrée Océan sous-marin<br/>Contient:\n* {{ItemLink|Artéfact de la Meute}}",
+        "image": "UW TC.jpg"
+      }
+    ]
+  }
 }

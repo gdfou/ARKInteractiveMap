@@ -109,6 +109,7 @@
     <Compile Include="MapScrollViewer.xaml.cs">
       <DependentUpon>MapScrollViewer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PoiTreeViewItem.cs" />
     <Compile Include="ResourceItem.cs" />
     <Page Include="ConfigDialog.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -169,14 +170,30 @@
     <EmbeddedResource Include="Ressources\Eplorator-notes-icon.json" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Ressources\Cartes\ApparitionJoueur_Aberration.json" />
+    <EmbeddedResource Include="Ressources\Cartes\ApparitionJoueur_Crystal_Isles.json" />
+    <EmbeddedResource Include="Ressources\Cartes\ApparitionJoueur_Extinction.json" />
+    <EmbeddedResource Include="Ressources\Cartes\ApparitionJoueur_Genesis_Part_1.json" />
+    <EmbeddedResource Include="Ressources\Cartes\ApparitionJoueur_Genesis_Part_2.json" />
+    <EmbeddedResource Include="Ressources\Cartes\ApparitionJoueur_Ragnarok.json" />
+    <EmbeddedResource Include="Ressources\Cartes\ApparitionJoueur_Scorched_Earth.json" />
+    <EmbeddedResource Include="Ressources\Cartes\ApparitionJoueur_The_Center.json" />
+    <EmbeddedResource Include="Ressources\Cartes\ApparitionJoueur_Valguero.json" />
     <EmbeddedResource Include="Ressources\Cartes\Définitions_des_groupes_normés_Patch.json" />
     <EmbeddedResource Include="Ressources\Cartes\Définitions_des_groupes_normés.json" />
+    <EmbeddedResource Include="Ressources\Cartes\Grottes_Aberration.json" />
+    <EmbeddedResource Include="Ressources\Cartes\Grottes_Crystal_Isles.json" />
+    <EmbeddedResource Include="Ressources\Cartes\Grottes_Extinction.json" />
     <EmbeddedResource Include="Ressources\Cartes\Grottes_Fjordur.json" />
+    <EmbeddedResource Include="Ressources\Cartes\Grottes_Genesis_Part_1.json" />
+    <EmbeddedResource Include="Ressources\Cartes\Grottes_Lost_Island.json" />
     <EmbeddedResource Include="Ressources\Cartes\Grottes_Ragnarok.json" />
     <EmbeddedResource Include="Ressources\Cartes\Grottes_Scorched_Earth.json" />
     <EmbeddedResource Include="Ressources\Cartes\Grottes_The_Center.json" />
     <EmbeddedResource Include="Ressources\Cartes\Grottes_The_Island.json" />
+    <EmbeddedResource Include="Ressources\Cartes\Grottes_Valguero.json" />
     <EmbeddedResource Include="Ressources\Cartes\Icônes_des_ravitaillements.json" />
+    <EmbeddedResource Include="Ressources\Cartes\Obélisques_Aberration.json" />
     <EmbeddedResource Include="Ressources\Cartes\Obélisques_Crystal_Isles.json" />
     <EmbeddedResource Include="Ressources\Cartes\Obélisques_Extinction.json" />
     <EmbeddedResource Include="Ressources\Cartes\Obélisques_Fjordur.json" />
@@ -185,6 +202,7 @@
     <EmbeddedResource Include="Ressources\Cartes\Obélisques_Scorched_Earth.json" />
     <EmbeddedResource Include="Ressources\Cartes\Obélisques_The_Island.json" />
     <EmbeddedResource Include="Ressources\Cartes\Obélisques_The_Center.json" />
+    <EmbeddedResource Include="Ressources\Cartes\Obélisques_Valguero.json" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Ressources\Aberration\Aberration_Exploration.json" />
@@ -193,26 +211,32 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Ressources\Crystal_Isles\Crystal_Isles_Ressources.json" />
+    <EmbeddedResource Include="Ressources\Crystal_Isles\Crystal_Isles_Exploration.json" />
     <EmbeddedResource Include="Ressources\Crystal_Isles\Crystal_Isles_Topographic_Map.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Ressources\Extinction\Extinction_Exploration.json" />
     <EmbeddedResource Include="Ressources\Extinction\Extinction_Ressources.json" />
     <EmbeddedResource Include="Ressources\Extinction\Extinction_Topographic_Map.jpg" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Ressources\Genesis_Part_1\Genesis_Part_1_Ressources.json" />
+    <EmbeddedResource Include="Ressources\Genesis_Part_1\Genesis_Part_1_Exploration.json" />
     <EmbeddedResource Include="Ressources\Genesis_Part_1\Genesis_Part_1_Topographic_Map.jpg" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Ressources\Genesis_Part_2\Genesis_Part_2_Ressources.json" />
+    <EmbeddedResource Include="Ressources\Genesis_Part_2\Genesis_Part_2_Exploration.json" />
     <EmbeddedResource Include="Ressources\Genesis_Part_2\Genesis_Part_2_Map.jpg" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Ressources\Lost_Island\Lost_Island_Ressources.json" />
+    <EmbeddedResource Include="Ressources\Lost_Island\Lost_Island_Exploration.json" />
     <EmbeddedResource Include="Ressources\Lost_Island\Lost_Island_Map.jpg" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Ressources\Ragnarok\Ragnarok_Ressources.json" />
+    <EmbeddedResource Include="Ressources\Ragnarok\Ragnarok_Exploration.json" />
     <EmbeddedResource Include="Ressources\Ragnarok\Ragnarok_Ocean_Topographic_Map.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -222,6 +246,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Ressources\The_Center\The_Center_Ressources.json" />
+    <EmbeddedResource Include="Ressources\The_Center\The_Center_Exploration.json" />
     <EmbeddedResource Include="Ressources\The_Center\The_Center_Topographic_Map.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -231,6 +256,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Ressources\Valguero\Valguero_Ressources.json" />
+    <EmbeddedResource Include="Ressources\Valguero\Valguero_Exploration.json" />
     <EmbeddedResource Include="Ressources\Valguero\Valguero_Topographic_Map.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -250,12 +276,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Ressources\Icons\Ambergris.png" />
     <EmbeddedResource Include="Ressources\Icons\Artifact.png" />
+    <EmbeddedResource Include="Ressources\Icons\Artifact_of_Chaos.png" />
+    <EmbeddedResource Include="Ressources\Icons\Artifact_of_Growth.png" />
     <EmbeddedResource Include="Ressources\Icons\Artifact_of_the_Brute.png" />
     <EmbeddedResource Include="Ressources\Icons\Artifact_of_the_Clever.png" />
     <EmbeddedResource Include="Ressources\Icons\Artifact_of_the_Crag.png" />
     <EmbeddedResource Include="Ressources\Icons\Artifact_of_the_Cunning.png" />
     <EmbeddedResource Include="Ressources\Icons\Artifact_of_the_Depths.png" />
     <EmbeddedResource Include="Ressources\Icons\Artifact_of_the_Destroyer.png" />
+    <EmbeddedResource Include="Ressources\Icons\Artifact_of_the_Devious.png" />
     <EmbeddedResource Include="Ressources\Icons\Artifact_of_the_Devourer.png" />
     <EmbeddedResource Include="Ressources\Icons\Artifact_of_the_Gatekeeper.png" />
     <EmbeddedResource Include="Ressources\Icons\Artifact_of_the_Hunter.png" />
@@ -267,17 +296,21 @@
     <EmbeddedResource Include="Ressources\Icons\Artifact_of_the_Skylord.png" />
     <EmbeddedResource Include="Ressources\Icons\Artifact_of_the_Stalker.png" />
     <EmbeddedResource Include="Ressources\Icons\Artifact_of_the_Strong.png" />
+    <EmbeddedResource Include="Ressources\Icons\Artifact_of_the_Void.png" />
     <EmbeddedResource Include="Ressources\Icons\Black_Pearl.png" />
+    <EmbeddedResource Include="Ressources\Icons\Blank.png" />
     <EmbeddedResource Include="Ressources\Icons\Blue_Gem.png" />
     <EmbeddedResource Include="Ressources\Icons\Broodmother_Portal.png" />
     <EmbeddedResource Include="Ressources\Icons\Cactus_Sap.png" />
     <EmbeddedResource Include="Ressources\Icons\CaveEntranceIcon.png" />
     <EmbeddedResource Include="Ressources\Icons\Charge_Battery.png" />
     <EmbeddedResource Include="Ressources\Icons\Citronal.png" />
+    <EmbeddedResource Include="Ressources\Icons\City_Terminal.png" />
     <EmbeddedResource Include="Ressources\Icons\Clay.png" />
     <EmbeddedResource Include="Ressources\Icons\Congealed_Gas_Ball.png" />
     <EmbeddedResource Include="Ressources\Icons\Crystal.png" />
     <EmbeddedResource Include="Ressources\Icons\Deep_Sea_Loot_Crate.png" />
+    <EmbeddedResource Include="Ressources\Icons\Deinonychus.png" />
     <EmbeddedResource Include="Ressources\Icons\Desert_Titan_Trophy.png" />
     <EmbeddedResource Include="Ressources\Icons\Dragon_Portal.png" />
     <EmbeddedResource Include="Ressources\Icons\Element_Dust.png" />
@@ -285,12 +318,15 @@
     <EmbeddedResource Include="Ressources\Icons\Element_Shard.png" />
     <EmbeddedResource Include="Ressources\Icons\Forest_Titan_Trophy.png" />
     <EmbeddedResource Include="Ressources\Icons\Gas_Vein.png" />
+    <EmbeddedResource Include="Ressources\Icons\Giant_Beaver_Dam.png" />
     <EmbeddedResource Include="Ressources\Icons\Giant_Bee_Honey.png" />
     <EmbeddedResource Include="Ressources\Icons\Green_Gem.png" />
     <EmbeddedResource Include="Ressources\Icons\Ice_Titan_Trophy.png" />
+    <EmbeddedResource Include="Ressources\Icons\Ice_Wyvern.png" />
     <EmbeddedResource Include="Ressources\Icons\Keratin.png" />
     <EmbeddedResource Include="Ressources\Icons\King_Titan_Trophy.png" />
     <EmbeddedResource Include="Ressources\Icons\Longrass.png" />
+    <EmbeddedResource Include="Ressources\Icons\Magmasaur.png" />
     <EmbeddedResource Include="Ressources\Icons\Megapithecus_Portal.png" />
     <EmbeddedResource Include="Ressources\Icons\Metal.png" />
     <EmbeddedResource Include="Ressources\Icons\Mutagel.png" />
@@ -316,6 +352,7 @@
     <EmbeddedResource Include="Ressources\Icons\Oil_Pump.png" />
     <EmbeddedResource Include="Ressources\Icons\Oil_Vein.png" />
     <EmbeddedResource Include="Ressources\Icons\Organic_Polymer.png" />
+    <EmbeddedResource Include="Ressources\Icons\Plant_Species_Z.png" />
     <EmbeddedResource Include="Ressources\Icons\Rare_Flower.png" />
     <EmbeddedResource Include="Ressources\Icons\Raw_Salt.png" />
     <EmbeddedResource Include="Ressources\Icons\Red_Crate.png" />
@@ -333,6 +370,7 @@
     <EmbeddedResource Include="Ressources\Icons\Water_Vein.png" />
     <EmbeddedResource Include="Ressources\Icons\Water_Well.png" />
     <EmbeddedResource Include="Ressources\Icons\White_Beacon.png" />
+    <EmbeddedResource Include="Ressources\Icons\Wyvern.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,5 +1,27 @@
 ARK Interactive Map
 
+## Version 1.7.0 (2023-08-06)
+- Mise à jour carte Genesis Part 1 et 2.
+- Mise à jour carte The Center.
+- Mise à jour carte Valguero.
+- Mise à jour carte Crystal Isle.
+- Mise à jour carte Lost Island.
+
+## Version 1.6.0 (2023-08-02)
+- Modification de la liste des cartes (Extensions puis DLC avec un séparateur).
+- Correction d'un bug dans le chargement des mixins.
+- Ajout du groupe 'desert-crate' pour 'Scorched Earth'.
+- Correction de la largeur de la popup.
+- Ajout des cartes Genesis Part 1 et 2.
+- Ajout de la liste des points d'intérets de la carte d'exploration courante dans l'interface.
+- Suppression des doublons de poi.
+- Mises à jour des cartes (suppression des doublons, ajout grottes, ajout infos apparition joueur).
+- Correction de divers bugs mineurs.
+- Ajout support de la trouche Enter pour le ping.
+- Ajout de la layer common pour les poi en commun.
+- Mise à jour carte Ragnarok.
+- Mise à jour carte Extinction.
+
 ## Version 1.5.1 (2023-07-21)
 - Correction de divers bug dans l'édition d'un marker perso.
 

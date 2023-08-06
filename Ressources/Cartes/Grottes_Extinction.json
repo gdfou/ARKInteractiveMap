@@ -1,0 +1,41 @@
+{
+	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
+	"$mixin": true,
+	"markers": {
+		"cave-entrance": [
+			{
+				"lat": 11.8,
+				"lon": 39.3,
+				"name": "Grotte de la Forêt",
+				"description": "Entrée par [[La forêt souterraine]].<br/>Contient:\n* {{ItemLink|Artéfact de la Croissance}} et permet d'accéder à l'[[Arène du Titan des Forêts]].",
+				"image": "Extinction Forest Cave middle section.jpg"
+			},
+			{
+				"lat": 30.8,
+				"lon": 24.6,
+				"name": "La forêt souterraine",
+				"image": "The UnderForest (Extinction).jpg"
+			},
+			{
+				"lat": 20.8,
+				"lon": 20.3,
+				"name": "La forêt souterraine",
+				"image": "The UnderForest (Extinction).jpg"
+			},
+			{
+				"lat": 20.3,
+				"lon": 62.2,
+				"name": "Grotte de Glace",
+				"description": "Contient:\n* {{ItemLink|Artéfact du Vide}} et permet d'accéder à l'[[Arène du Titan de Glace]].",
+				"image": "Ice Cave (Extinction).jpg"
+			},
+			{
+				"lat": 87.4,
+				"lon": 70.4,
+				"name": "Grotte du Désert",
+				"description": "Contient:\n* {{ItemLink|Artéfact du Chaos}} et permet d'accéder à l'[[Arène du Titan du Désert]].",
+				"image": "Desert Cave (Extinction).jpg"
+			}
+		]
+	}
+}

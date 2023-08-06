@@ -2,7 +2,10 @@
 	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
 	"mixins": [
 		"Cartes/Définitions des groupes normés",
-		"Cartes/Icônes des ravitaillements"
+		"Cartes/Icônes des ravitaillements",
+		"Cartes/Obélisques Aberration",
+		"Cartes/Grottes Aberration",
+		"Cartes/ApparitionJoueur Aberration"
 	],
 	"backgrounds": [
 		{ "name": "Croquis", "image": "Aberration Map.jpg" },
@@ -16,63 +19,6 @@
 	],
 	"settings": { "enableSearch": true },
 	"markers": {
-		"obelisk-blue": [ { "lat": 18.9, "lon": 16.1 } ],
-		"obelisk-green": [ { "lat": 22.5, "lon": 77.7 } ],
-		"obelisk-red": [ { "lat": 80.8, "lon": 20.3 } ],
-		"cave-entrance": [
-			{
-				"lat": 19.5, "lon": 27.2,
-				"name": "en Surface région Obélisque bleu"
-			},
-			{
-				"lat": 17.2, "lon": 23.5,
-				"name": "depuis la Surface région Obélisque bleu"
-			},
-			{
-				"lat": 24.9, "lon": 65.1,
-				"name": "en Surface région Obélisque vert"
-			},
-			{
-				"lat": 26.8, "lon": 63.2,
-				"name": "depuis la Surface région Obélisque vert"
-			},
-			{
-				"lat": 37.1, "lon": 80.3,
-				"name": "en Surface région Obélisque vert"
-			},
-			{
-				"lat": 34.6, "lon": 82.1,
-				"name": "depuis la Surface région Obélisque vert"
-			},
-			{
-				"lat": 52.3, "lon": 23.3,
-				"name": "en Surface région Obélisque rouge"
-			},
-			{
-				"lat": 56.1, "lon": 23.7,
-				"name": "depuis la Surface région Obélisque rouge"
-			},
-			{
-				"lat": 79.2, "lon": 27.8,
-				"name": "en Surface région Obélisque rouge"
-			},
-			{
-				"lat": 79.8, "lon": 24.5,
-				"name": "depuis la Surface région Obélisque rouge"
-			},
-			{
-				"lat": 48.3, "lon": 27.2,
-				"name": "dans la grotte de l'Artéfact des Profondeurs"
-			},
-			{
-				"lat": 55.2, "lon": 65.9,
-				"name": "dans la grotte de l'Artéfact des Ténèbres (entrée sous-marine)"
-			},
-			{
-				"lat": 81, "lon": 47,
-				"name": "dans la grotte de l'Artéfact du Rôdeur"
-			}
-		],
 		"explorer-note": [
 			{
 				"lat": 55.74, "lon": 52.38,
@@ -794,7 +740,7 @@
 				"description": "Apparait 11.11% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#52438d\">Violet</span> (Grotte nvx 50, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Grotte nvx 65, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Grotte nvx 80, Table Aberration)"
 			}
 		],
-		"artifact cg:1 cc:shadows": [
+		"artifact cg:12 cc:shadows": [
 			{
 				"lat": 50.55, "lon": 72.646,
 				"isWikitext": true,
@@ -802,7 +748,7 @@
 				"description": "Apparait environ toutes les 10 min (30 min en réglages Partie Solo)."
 			}
 		],
-		"artifact cg:2 cc:stalker": [
+		"artifact cg:13 cc:stalker": [
 			{
 				"lat": 91.696, "lon": 51.383,
 				"isWikitext": true,
@@ -810,7 +756,7 @@
 				"description": "Apparait environ toutes les 10 min (30 min en réglages Partie Solo)."
 			}
 		],
-		"artifact cg:3 cc:lost": [
+		"artifact cg:17 cc:lost": [
 			{
 				"lat": 28.59, "lon": 29.951,
 				"isWikitext": true,
@@ -900,11 +846,6 @@
 			},
 			{
 				"lat": 49.45, "lon": 25.196,
-				"isWikitext": true,
-				"description": "Apparait 10.0% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte nvx 35, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Grotte nvx 50, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Grotte nvx 65, Table Aberration)"
-			},
-			{
-				"lat": 49.589, "lon": 24.835,
 				"isWikitext": true,
 				"description": "Apparait 10.0% du temps environ toutes les 60 à 120 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Grotte nvx 35, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Grotte nvx 50, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Grotte nvx 65, Table Aberration)"
 			},
@@ -1162,73 +1103,6 @@
 				"lat": 27.627, "lon": 76.065,
 				"isWikitext": true,
 				"description": "Apparait 10.0% du temps environ toutes les 30 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, Table Aberration)\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, annelé, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, annelé, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, annelé, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, annelé, Table Aberration)"
-			}
-		],
-		"surface-crate cg:12 cc:bpry": [
-			{
-				"lat": 67.797, "lon": 12.565,
-				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 30 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, Table Aberration)\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, annelé, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, annelé, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, annelé, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, annelé, Table Aberration)"
-			},
-			{
-				"lat": 62.313, "lon": 18.985,
-				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 30 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, Table Aberration)\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, annelé, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, annelé, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, annelé, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, annelé, Table Aberration)"
-			},
-			{
-				"lat": 71.631, "lon": 18.409,
-				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 30 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, Table Aberration)\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, annelé, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, annelé, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, annelé, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, annelé, Table Aberration)"
-			},
-			{
-				"lat": 74.887, "lon": 11.799,
-				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 30 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, Table Aberration)\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, annelé, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, annelé, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, annelé, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, annelé, Table Aberration)"
-			},
-			{
-				"lat": 60.942, "lon": 16.165,
-				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 30 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, Table Aberration)\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, annelé, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, annelé, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, annelé, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, annelé, Table Aberration)"
-			},
-			{
-				"lat": 59.558, "lon": 21.795,
-				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 30 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, Table Aberration)\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, annelé, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, annelé, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, annelé, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, annelé, Table Aberration)"
-			},
-			{
-				"lat": 62.624, "lon": 21.61,
-				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 30 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, Table Aberration)\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, annelé, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, annelé, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, annelé, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, annelé, Table Aberration)"
-			},
-			{
-				"lat": 65.788, "lon": 20.979,
-				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 30 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, Table Aberration)\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, annelé, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, annelé, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, annelé, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, annelé, Table Aberration)"
-			},
-			{
-				"lat": 69.258, "lon": 18.616,
-				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 30 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, Table Aberration)\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, annelé, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, annelé, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, annelé, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, annelé, Table Aberration)"
-			},
-			{
-				"lat": 76.28, "lon": 16.055,
-				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 30 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, Table Aberration)\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, annelé, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, annelé, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, annelé, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, annelé, Table Aberration)"
-			},
-			{
-				"lat": 77.209, "lon": 18.745,
-				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 30 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, Table Aberration)\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, annelé, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, annelé, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, annelé, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, annelé, Table Aberration)"
-			},
-			{
-				"lat": 76.727, "lon": 17.94,
-				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 30 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, Table Aberration)\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, annelé, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, annelé, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, annelé, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, annelé, Table Aberration)"
-			},
-			{
-				"lat": 75.154, "lon": 20.864,
-				"isWikitext": true,
-				"description": "Apparait 7.69% du temps environ toutes les 30 min.\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, Table Aberration)\n* <span style=\"color:#5362a9\">Bleu</span> (Surface, nvx 35, annelé, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (Surface, nvx 50, annelé, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (Surface, nvx 65, annelé, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, Table Aberration)\n* <span style=\"color:#a24e5a\">Rouge</span> (Surface, nvx 80, annelé, Table Aberration)"
 			}
 		],
 		"surface-crate cg:13 cc:bpry": [
@@ -2052,13 +1926,6 @@
 				"lat": 54.978, "lon": 52.136,
 				"isWikitext": true,
 				"description": "Apparait 14.29% du temps environ toutes les 30 min.\n* <span style=\"color:#5362a9\">Bleu</span> (nvx 35, Table Aberration)\n* <span style=\"color:#5362a9\">Bleu</span> (nvx 35, double, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (nvx 50, Table Aberration)\n* <span style=\"color:#52438d\">Violet</span> (nvx 50, double, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (nvx 65, Table Aberration)\n* <span style=\"color:#889159\">Jaune</span> (nvx 65, double, Table Aberration)"
-			}
-		],
-		"surface-crate cg:29 cc:p": [
-			{
-				"lat": 50.449, "lon": 24.595,
-				"isWikitext": true,
-				"description": "Apparait 100.0% du temps environ toutes les 180 à 360 min.\n* <span style=\"color:#52438d\">Violet</span> (Grotte nvx 50, Table Aberration)"
 			}
 		],
 		"cave-crate cave cg:30 Ccc:bpy": [

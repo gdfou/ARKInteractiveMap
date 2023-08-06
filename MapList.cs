@@ -14,7 +14,8 @@ namespace ARKInteractiveMap
     public class MapListJsonMap
     {
         public string name { get; set; }
-        public List<string> resources { get; set; }
+        public string resource { get; set; }
+        public string exploration { get; set; }
         public MapListJsonMapBorder map_border { get; set; }
     }
 
@@ -27,13 +28,14 @@ namespace ARKInteractiveMap
 
     public class MapListJson
     {
+        public List<string> list { get; set; }
         public List<MapListJsonItem> maps { get; set; }
 
         static public MapListJson LoadFromResource(string jsonResName)
         {
             using Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(jsonResName);
             using StreamReader reader = new StreamReader(stream);
-            return JsonSerializer.Deserialize<MapListJson>(reader.ReadToEnd());
+            return JsonSerializer.Deserialize<MapListJson>(reader.ReadToEnd(), new JsonSerializerOptions {ReadCommentHandling=JsonCommentHandling.Skip});
         }
     }
 }

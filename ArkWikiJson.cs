@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using System.Text.Json;
@@ -9,6 +9,7 @@ using System.Windows;
 using System.Diagnostics;
 using System.Text;
 using ARKInteractiveMap.Properties;
+using System.Globalization;
 
 namespace ARKInteractiveMap
 {
@@ -67,6 +68,8 @@ namespace ARKInteractiveMap
         public string description { get; set; }
         public string icon { get; set; }
         public bool isWikitext { get; set; }
+        
+        internal string Layer { get; set; }
 
         public void Merge(ArkWikiJsonMarker src)
         {
@@ -93,20 +96,28 @@ namespace ARKInteractiveMap
         public string iconCollected { get; set; }
         public string subtleText { get; set; }
         public string overrideIcon { get; set; }
-        public bool isCollectible { get; set; }
+        public bool? isCollectible { get; set; }
         public ArkWikiJsonSize size { get; set; }
         public ArkWikiJsonSize sizeCollected { get; set; }
 
-        public void Merge(ArkWikiJsonGroup src)
+        public void Merge(ArkWikiJsonGroup src, bool force = false)
         {
             // Copie générique des propriétess
             foreach (PropertyInfo property in src.GetType().GetProperties())
             {
-                var value = property.GetValue(src);
-                if (value != null)
+                var value_src = property.GetValue(src);
+                if (value_src != null)
                 {
-                    var dst = GetType().GetProperties().FirstOrDefault(p => p.Name == property.Name);
-                    dst.SetValue(this, value);
+                    var property_dst = GetType().GetProperties().FirstOrDefault(p => p.Name == property.Name);
+                    var value_dst = property_dst.GetValue(this);
+                    if (value_dst == null || force)
+                    {
+                        property_dst.SetValue(this, value_src);
+                    }
+                    else
+                    {
+                        Console.WriteLine($"valeur non modifié: {this.name}");
+                    }
                 }
             }
         }
@@ -131,7 +142,7 @@ namespace ARKInteractiveMap
         public Dictionary<string, List<ArkWikiJsonMarker>> markers { get; set; }
         public List<ArkWikiJsonBackground> backgrounds { get; set; }
 
-        public void Merge(ArkWikiJson src)
+        public void Merge(ArkWikiJson src, bool force=false)
         {
             // Copie générique des propriétess
             foreach (PropertyInfo property in src.GetType().GetProperties())
@@ -153,7 +164,7 @@ namespace ARKInteractiveMap
                                 var dst_item = dst_var.FirstOrDefault(x => x.Key == src_item.Key);
                                 if (dst_item.Value != null)
                                 {
-                                    dst_item.Value.Merge(src_item.Value);
+                                    dst_item.Value.Merge(src_item.Value, force);
                                 }
                                 else
                                 {
@@ -170,7 +181,10 @@ namespace ARKInteractiveMap
                                 var dst_item = dst_var.FirstOrDefault(x => x.Key == src_item.Key);
                                 if (dst_item.Value != null)
                                 {
-                                    Console.WriteLine($"les markers {src_item.Key} exitsent déjà !");
+                                    foreach (var x in src_item.Value)
+                                    {
+                                        dst_item.Value.Add(x);
+                                    }
                                 }
                                 else
                                 {
@@ -237,10 +251,12 @@ namespace ARKInteractiveMap
 
         static public void LoadWikiGGJsonRessourceName(MapDefItem mapDef,
                                                        string jsonResName, 
-                                                       Dictionary<string, MapPoiDef> poiDict,
+                                                       Dictionary<string, MapPoiDef> markerDict,
                                                        List<string> contentList,
                                                        List<CollectibleTreeViewItem> collectibleList,
-                                                       Dictionary<string, string> expNoteList)
+                                                       List<MapPoiDef> poiList,
+                                                       Dictionary<string, string> expNoteList,
+                                                       string dstLayer=null)
         {
             try
             {
@@ -266,39 +282,61 @@ namespace ARKInteractiveMap
                             var jsonMixin = LoadWikiGGJsonMixins("ARKInteractiveMap.Ressources." + mixin.Replace('/', '.').Replace(' ', '_') + ".json");
                             if (jsonMixin != null && jsonMixin.mixin)
                             {
-                                mainJson.Merge(jsonMixin);
-
                                 // Patch ?
                                 string newResName = mixin + "_Patch";
-                                jsonMixin = LoadWikiGGJsonMixins("ARKInteractiveMap.Ressources." + newResName.Replace('/', '.').Replace(' ', '_') + ".json", true);
-                                if (jsonMixin != null)
+                                var jsonMixinPatch = LoadWikiGGJsonMixins("ARKInteractiveMap.Ressources." + newResName.Replace('/', '.').Replace(' ', '_') + ".json", true);
+                                if (jsonMixinPatch != null)
                                 {
-                                    mainJson.Merge(jsonMixin);
+                                    jsonMixin.Merge(jsonMixinPatch, true);
                                 }
+                                // si jsonMixin contient des markets existant alors marquer la layer comme 'externals'
+                                if (jsonMixin.markers != null)
+                                {
+                                    foreach (var list in jsonMixin.markers.Values)
+                                    {
+                                        foreach (var mk in list)
+                                        {
+                                            mk.Layer = "externals";
+                                        }
+                                    }
+                                }
+                                mainJson.Merge(jsonMixin);
                             }
                         }
                     }
                     // backgrounds
-                    if (mainJson.backgrounds != null)
+                    var background = mainJson.backgrounds.ToList().FindLast(x => x.name == "Topographique");
+                    if (background == null)
                     {
-                        if (mapDef.mapPicture == null)
-                        {
-                            var background = mainJson.backgrounds.ToList().FindLast(x => x.name == "Topographique");
-                            if (background != null)
-                            {
-                                mapDef.mapPicture = background.image.Replace(' ', '_');
-                            }
-                            else // pas de carte topo -> on prend celle là
-                            {
-                                background = mainJson.backgrounds[0];
-                                mapDef.mapPicture = background.image.Replace(' ', '_');
-                            }
-                            // background.at must be [[x1][y1],[x2][y2]]
-                            if ((background.at != null) && (background.at.Count == 2) && (background.at[0].Count == 2) && (background.at[1].Count == 2))
-                            {
-                                mapDef.mapSize = new MapSize(background.at[0][1], background.at[0][0], background.at[1][1], background.at[1][0]);
-                            }
-                        }
+                        background = mainJson.backgrounds[0];
+                        mapDef.mapPicture = background.image.Replace(' ', '_');
+                    }
+                    var background_map_name = background.image.Replace(' ', '_');
+                    if (mapDef.mapPicture == null)
+                    {
+                        mapDef.mapPicture = background_map_name;
+                    }
+                    else if (mapDef.mapPicture != background_map_name)
+                    {
+                        Console.WriteLine($"[{mapDef.name}]: Cartes topographiques différentes : {mapDef.mapPicture} / {background_map_name} !");
+                    }
+                    // background.at must be [[x1][y1],[x2][y2]]
+                    MapSize background_map_size = null;
+                    if ((background.at != null) && (background.at.Count == 2) && (background.at[0].Count == 2) && (background.at[1].Count == 2))
+                    {
+                        background_map_size = new MapSize(background.at[0][1], background.at[0][0], background.at[1][1], background.at[1][0]);
+                    }
+                    else
+                    {
+                        background_map_size = new MapSize();
+                    }
+                    if (mapDef.mapSize == null)
+                    {
+                        mapDef.mapSize = background_map_size;
+                    }
+                    else if (!mapDef.mapSize.Equals(background_map_size))
+                    {
+                        Console.WriteLine($"[{mapDef.name}]: Info de carte 'at' différentes : {mapDef.mapSize.ToString()} / {background_map_size.ToString()} !");
                     }
                     var groups = new Dictionary<string, ArkWikiJsonGroup>();
                     // Add expNoteList to groups
@@ -346,7 +384,7 @@ namespace ARKInteractiveMap
                             }
                             // Collectible
                             CollectibleTreeViewItem collectible = null;
-                            if (group.isCollectible)
+                            if (group.isCollectible == true)
                             {
                                 collectible = collectibleList.FirstOrDefault(x => x.Name == groupName);
                                 if (collectible == null)
@@ -360,7 +398,33 @@ namespace ARKInteractiveMap
                                 try
                                 {
                                     var poi = new MapPoiDef(markers.Key, marker, group, groups);
-                                    poiDict[poi.Id] = poi;
+                                    if (markerDict.TryGetValue(poi.Id, out var expoi))
+                                    {
+                                        if (marker.Layer == "externals")
+                                        {
+                                            expoi.Layer = null;
+                                        }
+                                        else
+                                        {
+                                            var fLat = expoi.pos.lat.ToString(CultureInfo.InvariantCulture);
+                                            var fLon = expoi.pos.lon.ToString(CultureInfo.InvariantCulture);
+                                            Console.WriteLine($"doublon : {expoi.fullGroupName} \"lat\": {fLat}, \"lon\": {fLon}");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        markerDict[poi.Id] = poi;
+                                        // Layer
+                                        if (dstLayer != null)
+                                        {
+                                            poi.Layer = dstLayer;
+                                        }
+                                    }
+                                    // poiList
+                                    if (poiList != null && !poi.isCollectible)
+                                    {
+                                        poiList.Add(poi);
+                                    }
                                     // Collectible
                                     if (collectible != null)
                                     {

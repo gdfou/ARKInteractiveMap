@@ -167,10 +167,12 @@ namespace ARKInteractiveMap
             DrawPie(pos, radius);
         }
 
-        override public bool GetVisible()
+        override public (Point, double) GetCurrentPosAndSize()
         {
-            return canvas_.IsVisible;
+            (var pos, var radius) = ComputePosAndSize();
+            return (pos, 0);
         }
+
         override public void SetVisible(bool value)
         {
             canvas_.Visibility = value ? Visibility.Visible : Visibility.Collapsed;

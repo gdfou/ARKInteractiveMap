@@ -16,7 +16,8 @@ namespace ARKInteractiveMap
     {
         public string name;   // 'Midgard' sur 'Fjordur' sinon copie 
         public string folder; // copie
-        public List<string> resources;
+        public string resource;
+        public string exploration;
         public MapDefBorder border;
         public string mapPicture;    // 'Scorched_Earth_Topographic_Map.jpg'
         public MapSize mapSize; // [ 7.2, 7.2 ],[ 92.8, 92.8 ], 1024 x 1024
@@ -60,7 +61,8 @@ namespace ARKInteractiveMap
                 {
                     name = map_def_item.name ?? mapDef.name,
                     folder = mapDef.folder,
-                    resources = map_def_item.resources
+                    resource = map_def_item.resource,
+                    exploration = map_def_item.exploration
                 };
                 if (map_def_item.map_border != null)
                 {

@@ -1,0 +1,1434 @@
+{
+  "$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
+  "mixins": [
+    "Cartes/Définitions des groupes normés",
+    "Cartes/Icônes des ravitaillements",
+    "Cartes/Obélisques The Center",
+    "Cartes/Grottes The Center",
+    "Cartes/ApparitionJoueur The Center"
+  ],
+  "backgrounds": [
+    {
+      "name": "Croquis",
+      "image": "The Center Map.jpg"
+    },
+    {
+      "name": "Topographique",
+      "image": "The Center Topographic Map.jpg",
+      "at": [
+        [
+          -2.5,
+          1
+        ],
+        [
+          101,
+          104.5
+        ]
+      ]
+    }
+  ],
+  "settings": {
+    "enableSearch": true
+  },
+  "groups": {
+    "underwater-dome": {
+      "name": "Dôme sous-marin",
+      "size": 20,
+      "fillColor": "#00dbd4",
+      "icon": "Blank.png",
+      "borderColor": "#fff"
+    }
+  },
+  "markers": {
+    "artifact cg:1 cc:immune": [
+      {
+        "lat": 49.3,
+        "lon": 65.5,
+        "name": "Artéfact de l'Immunité",
+        "description": "",
+        "isWikitext": true,
+        "article": "Artéfact de l'Immunité"
+      }
+    ],
+    "artifact cg:10 cc:strong": [
+      {
+        "lat": 15.3,
+        "lon": 57.5,
+        "name": "Artéfact de Puissance",
+        "description": "",
+        "isWikitext": true,
+        "article": "Artéfact de Puissance"
+      }
+    ],
+    "artifact cg:11 cc:devious": [
+      {
+        "lat": 41.1,
+        "lon": 33.7,
+        "name": "Artéfact du Sournois",
+        "description": "",
+        "isWikitext": true,
+        "article": "Artéfact du Sournois"
+      }
+    ],
+    "artifact cg:2 cc:cunning": [
+      {
+        "lat": 35.2,
+        "lon": 18.1,
+        "name": "Artéfact de la Ruse",
+        "description": "",
+        "isWikitext": true,
+        "article": "Artéfact de la Ruse"
+      }
+    ],
+    "artifact cg:3 cc:hunter": [
+      {
+        "lat": 16.8,
+        "lon": 54.3,
+        "name": "Artéfact du Chasseur",
+        "description": "",
+        "isWikitext": true,
+        "article": "Artéfact du Chasseur"
+      }
+    ],
+    "artifact cg:4 cc:brute": [
+      {
+        "lat": 71.6,
+        "lon": 87.3,
+        "name": "Artéfact de la Bête",
+        "description": "",
+        "isWikitext": true,
+        "article": "Artéfact de la Bête"
+      }
+    ],
+    "artifact cg:5 cc:pack": [
+      {
+        "lat": 60.7,
+        "lon": 53.8,
+        "name": "Artéfact de la Meute",
+        "description": "",
+        "isWikitext": true,
+        "article": "Artéfact de la Meute"
+      }
+    ],
+    "artifact cg:6 cc:massive": [
+      {
+        "lat": 10.3,
+        "lon": 52.9,
+        "name": "Artéfact du Colosse",
+        "description": "",
+        "isWikitext": true,
+        "article": "Artéfact du Colosse"
+      }
+    ],
+    "artifact cg:7 cc:clever": [
+      {
+        "lat": 19.3,
+        "lon": 24.2,
+        "name": "Artéfact de la Sagesse",
+        "description": "",
+        "isWikitext": true,
+        "article": "Artéfact de la Sagesse"
+      }
+    ],
+    "artifact cg:8 cc:skylord": [
+      {
+        "lat": 54.1,
+        "lon": 20.9,
+        "name": "Artéfact du Seigneur du Ciel",
+        "description": "",
+        "isWikitext": true,
+        "article": "Artéfact du Seigneur du Ciel"
+      }
+    ],
+    "artifact cg:9 cc:devourer": [
+      {
+        "lat": 24.1,
+        "lon": 26.2,
+        "name": "Artéfact du Dévoreur",
+        "description": "",
+        "isWikitext": true,
+        "article": "Artéfact du Dévoreur"
+      }
+    ],
+    "cave-crate cave": [
+      {
+        "lat": 50.5,
+        "lon": 65.8
+      },
+      {
+        "lat": 49.6,
+        "lon": 65.8
+      },
+      {
+        "lat": 48.1,
+        "lon": 64.1
+      },
+      {
+        "lat": 52.8,
+        "lon": 65.1
+      },
+      {
+        "lat": 52.8,
+        "lon": 66.4
+      },
+      {
+        "lat": 54.4,
+        "lon": 64.9
+      },
+      {
+        "lat": 51.8,
+        "lon": 69.3
+      },
+      {
+        "lat": 9.6,
+        "lon": 55.5
+      },
+      {
+        "lat": 9.7,
+        "lon": 52.0
+      },
+      {
+        "lat": 10.1,
+        "lon": 51.9
+      },
+      {
+        "lat": 11.5,
+        "lon": 56.4
+      },
+      {
+        "lat": 14.0,
+        "lon": 55.9
+      },
+      {
+        "lat": 17.0,
+        "lon": 60.4
+      },
+      {
+        "lat": 10.7,
+        "lon": 60.7
+      },
+      {
+        "lat": 24.4,
+        "lon": 25.1
+      },
+      {
+        "lat": 22.5,
+        "lon": 27.0
+      },
+      {
+        "lat": 21.7,
+        "lon": 25.4
+      },
+      {
+        "lat": 22.6,
+        "lon": 30.6
+      },
+      {
+        "lat": 21.4,
+        "lon": 31.1
+      },
+      {
+        "lat": 19.1,
+        "lon": 27.2
+      },
+      {
+        "lat": 19.3,
+        "lon": 23.1
+      },
+      {
+        "lat": 17.5,
+        "lon": 53.8
+      },
+      {
+        "lat": 14.1,
+        "lon": 54.5
+      },
+      {
+        "lat": 15.4,
+        "lon": 52.0
+      },
+      {
+        "lat": 16.2,
+        "lon": 54.3
+      },
+      {
+        "lat": 15.2,
+        "lon": 54.2
+      },
+      {
+        "lat": 14.8,
+        "lon": 54.2
+      },
+      {
+        "lat": 14.2,
+        "lon": 54.1
+      },
+      {
+        "lat": 57.0,
+        "lon": 21.7
+      },
+      {
+        "lat": 55.0,
+        "lon": 24.6
+      },
+      {
+        "lat": 56.6,
+        "lon": 25.0
+      },
+      {
+        "lat": 56.6,
+        "lon": 21.0
+      },
+      {
+        "lat": 53.3,
+        "lon": 23.6
+      },
+      {
+        "lat": 55.1,
+        "lon": 22.1
+      },
+      {
+        "lat": 52.6,
+        "lon": 21.9
+      },
+      {
+        "lat": 58.3,
+        "lon": 52.1
+      },
+      {
+        "lat": 59.6,
+        "lon": 51.6
+      },
+      {
+        "lat": 60.3,
+        "lon": 53.5
+      },
+      {
+        "lat": 56.4,
+        "lon": 56.5
+      },
+      {
+        "lat": 52.2,
+        "lon": 53.0
+      },
+      {
+        "lat": 54.2,
+        "lon": 62.0
+      },
+      {
+        "lat": 55.3,
+        "lon": 58.4
+      }
+    ],
+    "sea-crate": [
+      {
+        "lat": 72.7,
+        "lon": 83.1
+      },
+      {
+        "lat": 44.8,
+        "lon": 92.0
+      },
+      {
+        "lat": 51.7,
+        "lon": 83.8
+      },
+      {
+        "lat": 42.6,
+        "lon": 78.2
+      },
+      {
+        "lat": 35.9,
+        "lon": 93.7
+      },
+      {
+        "lat": 2.6,
+        "lon": 89.7
+      },
+      {
+        "lat": 51.6,
+        "lon": 95.8
+      },
+      {
+        "lat": 70.1,
+        "lon": 95.7
+      },
+      {
+        "lat": 16.7,
+        "lon": 91.6
+      },
+      {
+        "lat": 22.9,
+        "lon": 87.8
+      },
+      {
+        "lat": 43.3,
+        "lon": 86.1
+      },
+      {
+        "lat": 56.1,
+        "lon": 86.1
+      },
+      {
+        "lat": 13.9,
+        "lon": 56.5
+      },
+      {
+        "lat": 19.6,
+        "lon": 46.3
+      },
+      {
+        "lat": 68.0,
+        "lon": 46.8
+      },
+      {
+        "lat": 74.0,
+        "lon": 55.4
+      },
+      {
+        "lat": 71.4,
+        "lon": 75.4
+      },
+      {
+        "lat": 65.5,
+        "lon": 85.3
+      },
+      {
+        "lat": 54.5,
+        "lon": 91.2
+      },
+      {
+        "lat": 46.3,
+        "lon": 94.1
+      },
+      {
+        "lat": 37.5,
+        "lon": 92.1
+      },
+      {
+        "lat": 21.3,
+        "lon": 82.3
+      },
+      {
+        "lat": 23.6,
+        "lon": 75.0
+      },
+      {
+        "lat": 21.4,
+        "lon": 67.8
+      },
+      {
+        "lat": 21.9,
+        "lon": 58.6
+      },
+      {
+        "lat": 11.1,
+        "lon": 65.9
+      },
+      {
+        "lat": 30.6,
+        "lon": 91.8
+      },
+      {
+        "lat": 71.0,
+        "lon": 50.4
+      },
+      {
+        "lat": 65.4,
+        "lon": 87.7
+      },
+      {
+        "lat": 67.7,
+        "lon": 88.3
+      },
+      {
+        "lat": 74.4,
+        "lon": 84.6
+      }
+    ],
+    "surface-crate c031525 cc:bgw": [
+      {
+        "lat": 55.5,
+        "lon": 32.1
+      },
+      {
+        "lat": 11.3,
+        "lon": 61.5
+      },
+      {
+        "lat": 54.2,
+        "lon": 23.2
+      },
+      {
+        "lat": 49.1,
+        "lon": 20.9
+      },
+      {
+        "lat": 53.9,
+        "lon": 24.1
+      },
+      {
+        "lat": 50.8,
+        "lon": 21.2
+      },
+      {
+        "lat": 58.9,
+        "lon": 25.7
+      },
+      {
+        "lat": 54.4,
+        "lon": 39.6
+      },
+      {
+        "lat": 62.0,
+        "lon": 39.8
+      },
+      {
+        "lat": 54.9,
+        "lon": 36.7
+      },
+      {
+        "lat": 58.5,
+        "lon": 36.2
+      },
+      {
+        "lat": 63.6,
+        "lon": 27.1
+      },
+      {
+        "lat": 14.7,
+        "lon": 31.2
+      },
+      {
+        "lat": 22.7,
+        "lon": 31.0
+      },
+      {
+        "lat": 21.0,
+        "lon": 32.2
+      },
+      {
+        "lat": 20.2,
+        "lon": 29.7
+      },
+      {
+        "lat": 22.0,
+        "lon": 24.9
+      },
+      {
+        "lat": 21.7,
+        "lon": 28.5
+      },
+      {
+        "lat": 14.2,
+        "lon": 26.4
+      },
+      {
+        "lat": 12.7,
+        "lon": 36.9
+      },
+      {
+        "lat": 64.5,
+        "lon": 23.0
+      },
+      {
+        "lat": 27.6,
+        "lon": 26.5
+      },
+      {
+        "lat": 31.4,
+        "lon": 25.7
+      },
+      {
+        "lat": 28.9,
+        "lon": 26.9
+      },
+      {
+        "lat": 30.0,
+        "lon": 29.4
+      },
+      {
+        "lat": 29.3,
+        "lon": 32.0
+      },
+      {
+        "lat": 48.6,
+        "lon": 26.8
+      },
+      {
+        "lat": 40.5,
+        "lon": 20.4
+      },
+      {
+        "lat": 35.1,
+        "lon": 31.2
+      },
+      {
+        "lat": 25.7,
+        "lon": 83.6
+      },
+      {
+        "lat": 24.1,
+        "lon": 77.4
+      },
+      {
+        "lat": 27.7,
+        "lon": 81.0
+      },
+      {
+        "lat": 27.6,
+        "lon": 78.4
+      },
+      {
+        "lat": 29.4,
+        "lon": 79.0
+      },
+      {
+        "lat": 27.9,
+        "lon": 84.4
+      },
+      {
+        "lat": 31.8,
+        "lon": 79.6
+      },
+      {
+        "lat": 31.2,
+        "lon": 82.4
+      },
+      {
+        "lat": 35.3,
+        "lon": 78.0
+      },
+      {
+        "lat": 33.4,
+        "lon": 85.7
+      },
+      {
+        "lat": 36.9,
+        "lon": 80.6
+      },
+      {
+        "lat": 41.9,
+        "lon": 77.7
+      },
+      {
+        "lat": 42.6,
+        "lon": 85.4
+      },
+      {
+        "lat": 42.3,
+        "lon": 82.4
+      },
+      {
+        "lat": 44.0,
+        "lon": 81.3
+      },
+      {
+        "lat": 45.3,
+        "lon": 84.2
+      },
+      {
+        "lat": 50.1,
+        "lon": 84.7
+      },
+      {
+        "lat": 45.8,
+        "lon": 78.7
+      },
+      {
+        "lat": 49.3,
+        "lon": 77.6
+      },
+      {
+        "lat": 47.3,
+        "lon": 87.8
+      },
+      {
+        "lat": 55.6,
+        "lon": 83.0
+      },
+      {
+        "lat": 48.8,
+        "lon": 80.3
+      },
+      {
+        "lat": 92.8,
+        "lon": 44.0
+      },
+      {
+        "lat": 88.9,
+        "lon": 38.5
+      },
+      {
+        "lat": 80.3,
+        "lon": 40.8
+      },
+      {
+        "lat": 91.4,
+        "lon": 35.7
+      },
+      {
+        "lat": 81.1,
+        "lon": 56.8
+      },
+      {
+        "lat": 87.5,
+        "lon": 61.4
+      },
+      {
+        "lat": 94.3,
+        "lon": 61.9
+      },
+      {
+        "lat": 88.7,
+        "lon": 49.8
+      },
+      {
+        "lat": 12.5,
+        "lon": 55.4
+      },
+      {
+        "lat": 44.5,
+        "lon": 29.4
+      },
+      {
+        "lat": 13.1,
+        "lon": 58.0
+      },
+      {
+        "lat": 55.5,
+        "lon": 26.1
+      },
+      {
+        "lat": 45.8,
+        "lon": 42.1
+      },
+      {
+        "lat": 36.8,
+        "lon": 31.8
+      },
+      {
+        "lat": 59.3,
+        "lon": 30.8
+      },
+      {
+        "lat": 60.1,
+        "lon": 29.4
+      },
+      {
+        "lat": 61.8,
+        "lon": 30.2
+      },
+      {
+        "lat": 60.6,
+        "lon": 35.9
+      },
+      {
+        "lat": 15.7,
+        "lon": 54.9
+      },
+      {
+        "lat": 76.8,
+        "lon": 71.5
+      },
+      {
+        "lat": 81.7,
+        "lon": 75.0
+      },
+      {
+        "lat": 87.7,
+        "lon": 72.6
+      },
+      {
+        "lat": 92.6,
+        "lon": 70.0
+      },
+      {
+        "lat": 84.6,
+        "lon": 85.3
+      },
+      {
+        "lat": 86.1,
+        "lon": 81.1
+      },
+      {
+        "lat": 92.1,
+        "lon": 80.6
+      },
+      {
+        "lat": 82.2,
+        "lon": 77.0
+      },
+      {
+        "lat": 59.3,
+        "lon": 55.3
+      },
+      {
+        "lat": 62.6,
+        "lon": 48.5
+      },
+      {
+        "lat": 56.6,
+        "lon": 58.5
+      },
+      {
+        "lat": 53.1,
+        "lon": 59.5
+      },
+      {
+        "lat": 52.8,
+        "lon": 53.1
+      },
+      {
+        "lat": 58.3,
+        "lon": 56.0
+      },
+      {
+        "lat": 56.1,
+        "lon": 56.6
+      },
+      {
+        "lat": 59.1,
+        "lon": 49.9
+      },
+      {
+        "lat": 54.6,
+        "lon": 52.5
+      },
+      {
+        "lat": 61.2,
+        "lon": 54.6
+      },
+      {
+        "lat": 52.5,
+        "lon": 65.5
+      },
+      {
+        "lat": 55.3,
+        "lon": 74.8
+      },
+      {
+        "lat": 57.6,
+        "lon": 65.7
+      },
+      {
+        "lat": 57.7,
+        "lon": 64.5
+      },
+      {
+        "lat": 55.5,
+        "lon": 69.0
+      },
+      {
+        "lat": 56.4,
+        "lon": 71.1
+      },
+      {
+        "lat": 60.0,
+        "lon": 70.7
+      },
+      {
+        "lat": 55.9,
+        "lon": 76.8
+      },
+      {
+        "lat": 47.7,
+        "lon": 72.8
+      },
+      {
+        "lat": 53.7,
+        "lon": 78.5
+      },
+      {
+        "lat": 53.1,
+        "lon": 80.7
+      },
+      {
+        "lat": 84.5,
+        "lon": 30.5
+      },
+      {
+        "lat": 88.6,
+        "lon": 19.7
+      },
+      {
+        "lat": 85.3,
+        "lon": 29.3
+      },
+      {
+        "lat": 82.9,
+        "lon": 24.1
+      },
+      {
+        "lat": 67.9,
+        "lon": 22.1
+      },
+      {
+        "lat": 78.6,
+        "lon": 21.7
+      }
+    ],
+    "surface-crate c15253545 cc:bgpy": [
+      {
+        "lat": 24.2,
+        "lon": 37.0
+      },
+      {
+        "lat": 26.1,
+        "lon": 39.3
+      },
+      {
+        "lat": 25.1,
+        "lon": 43.1
+      },
+      {
+        "lat": 24.9,
+        "lon": 43.9
+      },
+      {
+        "lat": 24.5,
+        "lon": 47.3
+      },
+      {
+        "lat": 28.2,
+        "lon": 45.2
+      },
+      {
+        "lat": 32.7,
+        "lon": 46.0
+      },
+      {
+        "lat": 28.6,
+        "lon": 37.7
+      },
+      {
+        "lat": 40.7,
+        "lon": 29.7
+      },
+      {
+        "lat": 32.7,
+        "lon": 41.7
+      },
+      {
+        "lat": 51.3,
+        "lon": 32.8
+      },
+      {
+        "lat": 64.9,
+        "lon": 42.5
+      },
+      {
+        "lat": 34.5,
+        "lon": 32.5
+      },
+      {
+        "lat": 39.0,
+        "lon": 34.5
+      },
+      {
+        "lat": 39.4,
+        "lon": 37.1
+      },
+      {
+        "lat": 42.6,
+        "lon": 34.8
+      },
+      {
+        "lat": 47.2,
+        "lon": 46.7
+      },
+      {
+        "lat": 51.5,
+        "lon": 44.3
+      },
+      {
+        "lat": 54.2,
+        "lon": 43.7
+      },
+      {
+        "lat": 25.1,
+        "lon": 58.7
+      },
+      {
+        "lat": 26.5,
+        "lon": 49.3
+      },
+      {
+        "lat": 27.1,
+        "lon": 53.2
+      },
+      {
+        "lat": 28.5,
+        "lon": 57.2
+      },
+      {
+        "lat": 29.0,
+        "lon": 60.2
+      },
+      {
+        "lat": 33.2,
+        "lon": 50.9
+      },
+      {
+        "lat": 29.9,
+        "lon": 58.0
+      },
+      {
+        "lat": 35.0,
+        "lon": 61.0
+      },
+      {
+        "lat": 36.7,
+        "lon": 50.2
+      },
+      {
+        "lat": 34.9,
+        "lon": 54.5
+      },
+      {
+        "lat": 36.8,
+        "lon": 54.3
+      },
+      {
+        "lat": 57.4,
+        "lon": 30.0
+      },
+      {
+        "lat": 39.9,
+        "lon": 56.6
+      },
+      {
+        "lat": 40.8,
+        "lon": 54.6
+      },
+      {
+        "lat": 42.3,
+        "lon": 49.8
+      },
+      {
+        "lat": 42.8,
+        "lon": 53.7
+      },
+      {
+        "lat": 45.1,
+        "lon": 50.9
+      },
+      {
+        "lat": 42.0,
+        "lon": 59.1
+      },
+      {
+        "lat": 44.9,
+        "lon": 55.3
+      },
+      {
+        "lat": 44.4,
+        "lon": 58.3
+      },
+      {
+        "lat": 47.5,
+        "lon": 60.7
+      },
+      {
+        "lat": 49.3,
+        "lon": 54.9
+      },
+      {
+        "lat": 50.7,
+        "lon": 58.2
+      },
+      {
+        "lat": 49.5,
+        "lon": 61.1
+      },
+      {
+        "lat": 51.0,
+        "lon": 61.4
+      },
+      {
+        "lat": 9.4,
+        "lon": 68.6
+      },
+      {
+        "lat": 10.2,
+        "lon": 68.4
+      },
+      {
+        "lat": 11.0,
+        "lon": 68.1
+      },
+      {
+        "lat": 17.8,
+        "lon": 70.6
+      },
+      {
+        "lat": 16.8,
+        "lon": 73.4
+      },
+      {
+        "lat": 23.9,
+        "lon": 68.5
+      },
+      {
+        "lat": 22.3,
+        "lon": 75.8
+      },
+      {
+        "lat": 19.4,
+        "lon": 71.8
+      },
+      {
+        "lat": 19.8,
+        "lon": 72.4
+      },
+      {
+        "lat": 20.2,
+        "lon": 73.0
+      },
+      {
+        "lat": 25.3,
+        "lon": 68.5
+      },
+      {
+        "lat": 25.8,
+        "lon": 74.7
+      },
+      {
+        "lat": 26.9,
+        "lon": 71.6
+      },
+      {
+        "lat": 27.3,
+        "lon": 67.9
+      },
+      {
+        "lat": 30.4,
+        "lon": 55.3
+      },
+      {
+        "lat": 28.2,
+        "lon": 63.6
+      },
+      {
+        "lat": 29.4,
+        "lon": 65.4
+      },
+      {
+        "lat": 27.5,
+        "lon": 75.7
+      },
+      {
+        "lat": 36.8,
+        "lon": 73.5
+      },
+      {
+        "lat": 36.7,
+        "lon": 66.2
+      },
+      {
+        "lat": 36.8,
+        "lon": 63.2
+      },
+      {
+        "lat": 38.3,
+        "lon": 63.0
+      },
+      {
+        "lat": 44.8,
+        "lon": 63.9
+      },
+      {
+        "lat": 44.5,
+        "lon": 75.8
+      },
+      {
+        "lat": 41.2,
+        "lon": 65.8
+      },
+      {
+        "lat": 39.5,
+        "lon": 70.2
+      },
+      {
+        "lat": 47.4,
+        "lon": 67.6
+      },
+      {
+        "lat": 44.4,
+        "lon": 68.1
+      },
+      {
+        "lat": 42.2,
+        "lon": 70.7
+      },
+      {
+        "lat": 54.5,
+        "lon": 65.2
+      },
+      {
+        "lat": 51.3,
+        "lon": 63.8
+      },
+      {
+        "lat": 50.9,
+        "lon": 66.6
+      },
+      {
+        "lat": 50.9,
+        "lon": 71.7
+      },
+      {
+        "lat": 49.2,
+        "lon": 75.0
+      },
+      {
+        "lat": 11.7,
+        "lon": 83.0
+      },
+      {
+        "lat": 14.0,
+        "lon": 85.0
+      },
+      {
+        "lat": 19.8,
+        "lon": 81.1
+      },
+      {
+        "lat": 17.8,
+        "lon": 81.5
+      },
+      {
+        "lat": 15.8,
+        "lon": 80.9
+      },
+      {
+        "lat": 14.5,
+        "lon": 79.5
+      },
+      {
+        "lat": 17.4,
+        "lon": 80.0
+      },
+      {
+        "lat": 15.7,
+        "lon": 77.3
+      },
+      {
+        "lat": 18.5,
+        "lon": 78.5
+      }
+    ],
+    "surface-crate c25354560 cc:bpry": [
+      {
+        "lat": 7.0,
+        "lon": 40.0
+      },
+      {
+        "lat": 3.3,
+        "lon": 44.1
+      },
+      {
+        "lat": 4.0,
+        "lon": 41.9
+      },
+      {
+        "lat": 2.5,
+        "lon": 34.9
+      },
+      {
+        "lat": 4.9,
+        "lon": 39.4
+      },
+      {
+        "lat": 8.3,
+        "lon": 39.6
+      },
+      {
+        "lat": 6.6,
+        "lon": 40.8
+      },
+      {
+        "lat": 7.6,
+        "lon": 43.6
+      },
+      {
+        "lat": 8.1,
+        "lon": 45.6
+      },
+      {
+        "lat": 5.1,
+        "lon": 53.1
+      },
+      {
+        "lat": 5.0,
+        "lon": 53.8
+      },
+      {
+        "lat": 5.6,
+        "lon": 53.8
+      },
+      {
+        "lat": 2.3,
+        "lon": 58.0
+      },
+      {
+        "lat": 7.0,
+        "lon": 49.3
+      },
+      {
+        "lat": 4.3,
+        "lon": 53.0
+      },
+      {
+        "lat": 3.6,
+        "lon": 56.4
+      },
+      {
+        "lat": 4.1,
+        "lon": 59.4
+      },
+      {
+        "lat": 6.1,
+        "lon": 57.2
+      },
+      {
+        "lat": 6.1,
+        "lon": 59.1
+      },
+      {
+        "lat": 5.8,
+        "lon": 71.7
+      },
+      {
+        "lat": 4.1,
+        "lon": 75.4
+      },
+      {
+        "lat": 5.6,
+        "lon": 67.7
+      },
+      {
+        "lat": 3.7,
+        "lon": 62.9
+      },
+      {
+        "lat": 7.0,
+        "lon": 74.4
+      },
+      {
+        "lat": 5.9,
+        "lon": 70.0
+      },
+      {
+        "lat": 9.1,
+        "lon": 69.1
+      },
+      {
+        "lat": 8.6,
+        "lon": 73.2
+      },
+      {
+        "lat": 7.3,
+        "lon": 78.0
+      },
+      {
+        "lat": 5.6,
+        "lon": 79.1
+      },
+      {
+        "lat": 5.6,
+        "lon": 83.4
+      },
+      {
+        "lat": 4.0,
+        "lon": 81.2
+      },
+      {
+        "lat": 10.3,
+        "lon": 39.1
+      },
+      {
+        "lat": 15.9,
+        "lon": 40.3
+      },
+      {
+        "lat": 12.0,
+        "lon": 42.7
+      },
+      {
+        "lat": 13.9,
+        "lon": 47.9
+      },
+      {
+        "lat": 13.8,
+        "lon": 36.8
+      },
+      {
+        "lat": 15.8,
+        "lon": 45.8
+      },
+      {
+        "lat": 17.3,
+        "lon": 38.1
+      },
+      {
+        "lat": 18.6,
+        "lon": 41.2
+      },
+      {
+        "lat": 19.5,
+        "lon": 37.1
+      },
+      {
+        "lat": 21.8,
+        "lon": 43.0
+      },
+      {
+        "lat": 22.8,
+        "lon": 34.8
+      },
+      {
+        "lat": 10.5,
+        "lon": 52.6
+      },
+      {
+        "lat": 12.0,
+        "lon": 52.7
+      },
+      {
+        "lat": 15.8,
+        "lon": 51.3
+      },
+      {
+        "lat": 18.8,
+        "lon": 52.5
+      },
+      {
+        "lat": 20.1,
+        "lon": 49.9
+      },
+      {
+        "lat": 20.9,
+        "lon": 54.2
+      },
+      {
+        "lat": 20.0,
+        "lon": 59.4
+      },
+      {
+        "lat": 20.2,
+        "lon": 57.5
+      }
+    ],
+    "underwater-dome": [
+      {
+        "lat": 23.0,
+        "lon": 88.0
+      },
+      {
+        "lat": 67.0,
+        "lon": 64.5
+      }
+    ]
+  }
+}

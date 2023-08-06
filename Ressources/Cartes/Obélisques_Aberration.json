@@ -1,0 +1,9 @@
+{
+	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
+	"$mixin": true,
+	"markers": {
+		"obelisk-blue": [ { "lat": 18.9, "lon": 16.1 } ],
+		"obelisk-green": [ { "lat": 22.5, "lon": 77.7 } ],
+		"obelisk-red": [ { "lat": 80.8, "lon": 20.3 } ]
+	}
+}

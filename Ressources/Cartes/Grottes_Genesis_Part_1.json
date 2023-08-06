@@ -1,0 +1,125 @@
+{
+	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
+	"$mixin": true,
+	"markers": {
+		"cave-entrance": [
+			{
+				"lat": 52.4,
+				"lon": 13.2,
+				"name": "Grotte Familiale",
+				"description": "Entrée 1",
+				"image": "Family Cave (Genesis Part 1).jpg"
+			},
+			{
+				"lat": 26.4,
+				"lon": 36.2,
+				"name": "Mine abandonnée",
+				"image": "Derelict Mine (Genesis Part 1).jpg"
+			},
+			{
+				"lat": 65.4,
+				"lon": 75.7,
+				"name": "Tunnel Boisombre",
+				"description": "Entrée Nord",
+				"image": "Entrance Darkwood Tunnel Genesis Part 1 North.png"
+			},
+			{
+				"lat": 66.8,
+				"lon": 75.5,
+				"name": "Tunnel Boisombre",
+				"description": "Entrée Sud-est",
+				"image": "Entrance Darkwood Tunnel Genesis Part 1 Southern East.png"
+			},
+			{
+				"lat": 74.15,
+				"lon": 74.85,
+				"name": "Tunnel des Termite",
+				"description": "Entrée Ouest",
+				"image": "Entrance Dampwood Tunnel Genesis Part 1 West.jpg"
+			},
+			{
+				"lat": 75.75,
+				"lon": 75.40,
+				"name": "Tunnel des Termite",
+				"description": "Entrée Sud",
+				"image": "Entrance Dampwood Tunnel Genesis Part 1 South Right side.jpg"
+			},
+			{
+				"lat": 74.35,
+				"lon": 76.50,
+				"name": "Tunnel des Termite",
+				"description": "Entrée Est",
+				"image": "Entrance Dampwood Tunnel Genesis Part 1 East.jpg"
+			},
+			{
+				"lat": 70.9,
+				"lon": 26.27,
+				"name": "L'Oasis",
+				"image": "Entrance The Oasis Genesis Part 1.png"
+			},
+			{
+				"lat": 35.82,
+				"lon": 24.00,
+				"name": "L'Armurerie",
+				"description": "Entrée Nord",
+				"image": "Entrance The Armory Genesis Part 1 North.png"
+			},
+			{
+				"lat": 40.00,
+				"lon": 25.95,
+				"name": "L'Armurerie",
+				"description": "Entrée Sud",
+				"image": "Entrance The Armory Genesis Part 1 South.png"
+			},
+			{
+				"lat": 26.00,
+				"lon": 58.36,
+				"name": "Jardin zen",
+				"description": "Entrée Ouest, la plus grande, en deux volets",
+				"image": "Entrance Zen Garden Genesis Part 1 West.png"
+			},
+			{
+				"lat": 28.40,
+				"lon": 59.28,
+				"name": "Jardin zen",
+				"description": "Entrée Sud-ouest",
+				"image": "Entrance Zen Garden Genesis Part 1 Southern West.png"
+			},
+			{
+				"lat": 28.96,
+				"lon": 60.23,
+				"name": "Jardin zen",
+				"description": "Entrée Sud",
+				"image": "Entrance Zen Garden Genesis Part 1 South.png"
+			},
+			{
+				"lat": 20.40,
+				"lon": 78.30,
+				"name": "Caverne volcanique",
+				"description": "Entrée Nord, au sud de la [[Coulée de lave (Genesis: Part 1)|Coulée de lave]]",
+				"image": "Entrance Volcanic Cave Genesis Part 1 North.png"
+			},
+			{
+				"lat": 32.3,
+				"lon": 85.5,
+				"name": "Caverne volcanique",
+				"description": "Entrée Sud-est, dans la [[Source Magmatique (Genesis: Part 1)|Source Magmatique]]",
+				"image": "Entrance Volcanic Cave Genesis Part 1 Southern East.png"
+			},
+			{
+				"lat": 33.2,
+				"lon": 82.56,
+				"name": "Caverne volcanique",
+				"description": "Entrée Sud, dans les [[Artères Brûlantes (Genesis: Part 1)|Artères Brûlantes]]",
+				"image": "Entrance Volcanic Cave Genesis Part 1 South.png"
+			},
+			{
+				"lat": 29.4,
+				"lon": 78.4,
+				"name": "Caverne volcanique",
+				"description": "Entrée Sud-ouest, dans les [[Artères Brûlantes (Genesis: Part 1)|Artères Brûlantes]]",
+				"image": "Entrance Volcanic Cave Genesis Part 1 Southern West.png"
+			}
+		]
+	}
+}

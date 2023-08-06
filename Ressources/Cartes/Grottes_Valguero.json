@@ -1,0 +1,50 @@
+{
+  "$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
+  "$mixin": true,
+  "markers": {
+    "cave-entrance": [
+      {
+        "name": "La grande tranchée",
+        "lat": 8.7,
+        "lon": 79.2,
+        "description": "Entrée Ouest<br/>Contient:\n* {{ItemLink|Artéfact du Seigneur du Ciel}}",
+        "image": "Valguero 7.jpg"
+      },
+      {
+        "name": "La grande tranchée",
+        "lat": 9.2,
+        "lon": 70.9,
+        "description": "Entrée Est<br/>Contient:\n* {{ItemLink|Artéfact du Seigneur du Ciel}}",
+        "image": "Valguero 7.jpg"
+      },
+      {
+        "name": "Le repaire",
+        "lat": 73.1,
+        "lon": 40.6,
+        "description": "Contient:\n* {{ItemLink|Artéfact de Puissance}}\n* {{ItemLink|Artéfact de l'Immunité}}\n* Artéfact de la Meute",
+        "image": "The Lair (Valguero).jpg"
+      },
+      {
+        "name": "Le temple perdu",
+        "lat": 46.9,
+        "lon": 87.5,
+        "description": "Contient:\n* {{ItemLink|Artéfact de la Bête}}\n* {{ItemLink|Artéfact du Dévoreur}}",
+        "image": "The Lost Temple (Valguero).jpg"
+      },
+      {
+        "name": "L'inconnu",
+        "lat": 36.6,
+        "lon": 65.7,
+        "description": "Entrée Nord<br/>Contient:\n* {{ItemLink|Artéfact du Gardien des Portes}}",
+        "image": "The Unknown (Valguero).jpg"
+      },
+      {
+        "name": "L'inconnu",
+        "lat": 49.3,
+        "lon": 61.1,
+        "description": "Entrée Sud<br/>Contient:\n* {{ItemLink|Artéfact du Gardien des Portes}}",
+        "image": "The Unknown (Valguero).jpg"
+      }
+    ]
+  }
+}

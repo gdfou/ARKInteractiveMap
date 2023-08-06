@@ -147,6 +147,10 @@ namespace ARKInteractiveMap
             menuItemCave.IsChecked = true;
             menuItemUser.IsChecked = true;
             menuItemFogOfWar.IsChecked = false;
+            menuItemRessources.IsChecked = true;
+            menuItemRessources.IsEnabled = false;
+            menuItemExploration.IsChecked = true;
+            menuItemExploration.IsEnabled = false;
         }
 
         private void MenuCommand_Click(object sender, RoutedEventArgs e)
@@ -169,6 +173,7 @@ namespace ARKInteractiveMap
             canvasUser.Children.Clear();
             canvasPoi.Children.Clear();
             canvasPoiCave.Children.Clear();
+            canvasCommon.Children.Clear();
             poiDict_.Clear();
         }
 
@@ -217,10 +222,13 @@ namespace ARKInteractiveMap
 
                     poiDict_[poiMapItem.Id] = poiMapItem;
                     // Selection de la layer
+                    //Console.WriteLine($"{poiMapItem.Id} => {poiDef.Layer}");
                     if (poiDef.userPoi)
                         canvasUser.Children.Add(poiMapItem.BuildForMap(Scale));
                     else if (poiDef.inCave)
                         canvasPoiCave.Children.Add(poiMapItem.BuildForMap(Scale));
+                    else if (poiDef.Layer == null)
+                        canvasCommon.Children.Add(poiMapItem.BuildForMap(Scale));
                     else
                         canvasPoi.Children.Add(poiMapItem.BuildForMap(Scale));
                 }
@@ -311,7 +319,8 @@ namespace ARKInteractiveMap
                 }
                 else
                 {
-                    (pingEllipse.Tag as MapPoi).RescalePing();
+                    (var pos, var size) = (pingEllipse.Tag as MapPoi).CurrentPosAndSize;
+                    RescalePing(size, pos);
                 }
             }
         }
@@ -338,11 +347,25 @@ namespace ARKInteractiveMap
                         canvasFow.Visibility = isVisible ? Visibility.Visible : Visibility.Collapsed;
                         menuItemFogOfWar.IsChecked = isVisible;
                         break;
+                    case "layers-resources":
+                    case "layers-exploration":
+                        if (groupName == "layers-resources")
+                            menuItemRessources.IsChecked = isVisible;
+                        else
+                            menuItemExploration.IsChecked = isVisible;
+                        foreach (var item in poiDict_.Values)
+                        {
+                            if (item.poiDef.Layer == groupName)
+                            {
+                                item.LayerVisible = isVisible;
+                            }
+                        }
+                        break;
                 }
             }
             else
             {
-                // Check if there is a menu associted with the group
+                // Check if there is a menu associated with the group
                 if (contentDict_.ContainsKey(groupName))
                 {
                     contentDict_[groupName].IsVisible = isVisible;
@@ -351,12 +374,40 @@ namespace ARKInteractiveMap
                 {
                     if (item.GroupName == groupName)
                     {
-                        item.Visible = isVisible;
+                        item.ContentVisible = isVisible;
                     }
                 }
             }
             if (save)
                 Save();
+        }
+
+        public void EnabledLayer(string layer, bool enabled)
+        {
+            if (layer.Contains("layers-"))
+            {
+                switch (layer)
+                {
+                    case "layers-surface":
+                        menuItemSurface.IsEnabled = enabled;
+                        break;
+                    case "layers-cave":
+                        menuItemCave.IsEnabled = enabled;
+                        break;
+                    case "layers-user":
+                        menuItemUser.IsEnabled = enabled;
+                        break;
+                    case "layers-fow":
+                        menuItemFogOfWar.IsEnabled = enabled;
+                        break;
+                    case "layers-resources":
+                        menuItemRessources.IsEnabled = enabled;
+                        break;
+                    case "layers-exploration":
+                        menuItemExploration.IsEnabled = enabled;
+                        break;
+                }
+            }
         }
 
         public Dictionary<string, bool> GetLayersVisibility()
@@ -366,6 +417,14 @@ namespace ARKInteractiveMap
             dict["layers-cave"] = menuItemCave.IsChecked;
             dict["layers-user"] = menuItemUser.IsChecked;
             dict["layers-fow"] = menuItemFogOfWar.IsChecked;
+            if (menuItemRessources.IsEnabled)
+            {
+                dict["layers-resources"] = menuItemRessources.IsChecked;
+            }
+            if (menuItemExploration.IsEnabled)
+            {
+                dict["layers-exploration"] = menuItemExploration.IsChecked;
+            }
             return dict;
         }
 
@@ -533,18 +592,25 @@ namespace ARKInteractiveMap
 
         public void ZoomTo(double left, double top)
         {
-            scrollViewer.ScrollToHorizontalOffset(left - (scrollViewer.ActualWidth / 2));
-            scrollViewer.ScrollToVerticalOffset(top - (scrollViewer.ActualHeight / 2));
+            if (left != double.NaN && top != double.NaN)
+            {
+                scrollViewer.ScrollToHorizontalOffset(left - (scrollViewer.ActualWidth / 2));
+                scrollViewer.ScrollToVerticalOffset(top - (scrollViewer.ActualHeight / 2));
+            }
         }
 
         public void ZoomTo(string id)
         {
+            pingStoryboard.Storyboard.Stop();
             var poi = poiDict_[id];
-            var poi_framework_item = poi?.GetFrameworkElement();
-            if (poi_framework_item != null)
+            if (poi != null)
             {
-                ZoomTo(Canvas.GetLeft(poi_framework_item), Canvas.GetTop(poi_framework_item));
-                poi.Ping();
+                (var pos, var size) = poi.CurrentPosAndSize;
+                if (pos.X != double.NaN)
+                {
+                    ZoomTo(pos.X, pos.Y);
+                    Ping(size, pos, poi);
+                }
             }
         }
 
@@ -958,6 +1024,20 @@ namespace ARKInteractiveMap
                 return new MapPos(o_lat, o_lon);
             }
             return new MapPos(0, 0);
+        }
+
+        public new bool Equals(object obj)
+        {
+            if (obj == null || !(obj is MapSize))
+                return false;
+
+            var objet2 = (MapSize)obj;
+            return this.cLon == objet2.cLon && this.cLat == objet2.cLat && this.cWidth == objet2.cWidth && this.cHeight == objet2.cHeight;
+        }
+
+        public override string ToString()
+        {
+            return $"({cLon:F2};{cLat:F2};{cWidth:F2};{cHeight:F2})";
         }
     }
 }

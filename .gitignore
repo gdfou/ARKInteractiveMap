@@ -260,3 +260,5 @@ paket-files/
 __pycache__/
 *.pyc
 Icons/*_old.png
+
+*.bak

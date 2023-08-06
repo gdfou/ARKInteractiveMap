@@ -1,9 +1,19 @@
 {
 	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
-	"mixins": [ "Cartes/Définitions des groupes normés" ],
+	"mixins": [
+		"Cartes/Définitions des groupes normés",
+		"Cartes/Obélisques Aberration",
+		"Cartes/Grottes Aberration"
+	],
 	"backgrounds": [
 		{ "name": "Croquis", "image": "Aberration Map.jpg" },
-		{ "name": "Topographique", "image": "Aberration Topographic Map.jpg" }
+		{
+			"name": "Topographique", "image": "Aberration Topographic Map.jpg",
+			"at": [
+				[ 7.2, 7.2 ],
+				[ 92.8, 92.8 ]
+			]
+		}
 	],
 	"groups": {
 		"black-pearl": { "size": 4 },
@@ -21,9 +31,6 @@
 		"silica": { "size": 4 }
 	},
 	"markers": {
-		"obelisk-blue": [ { "lat": 18.9, "lon": 16.1 } ],
-		"obelisk-green": [ { "lat": 22.5, "lon": 77.7 } ],
-		"obelisk-red": [ { "lat": 80.8, "lon": 20.3 } ],
 		"black-pearl": [
 			{ "lat": 60.34, "lon": 49.78 },
 			{ "lat": 67.12, "lon": 50.15 },
@@ -1127,7 +1134,6 @@
 			{ "lat": 25.19, "lon": 51.35 },
 			{ "lat": 23.58, "lon": 41.34 },
 			{ "lat": 24.13, "lon": 34.74 },
-			{ "lat": 10.55, "lon": 43.8 },
 			{ "lat": 37.29, "lon": 37.79 },
 			{ "lat": 19.98, "lon": 31.36 },
 			{ "lat": 45.83, "lon": 24.93 },
@@ -1138,11 +1144,8 @@
 			{ "lat": 31.07, "lon": 56.93 },
 			{ "lat": 39.33, "lon": 47.21 },
 			{ "lat": 32.27, "lon": 58.83 },
-			{ "lat": 14.81, "lon": 36.39 },
 			{ "lat": 46.46, "lon": 23.75 },
 			{ "lat": 33.4, "lon": 58.33 },
-			{ "lat": 23.97, "lon": 37.95 },
-			{ "lat": 15.9, "lon": 50.93 },
 			{ "lat": 11.74, "lon": 51.82 },
 			{ "lat": 43.57, "lon": 33.52 },
 			{ "lat": 42.26, "lon": 11.58 },
@@ -1172,8 +1175,6 @@
 			{ "lat": 34.29, "lon": 48.07 },
 			{ "lat": 34.05, "lon": 28.34 },
 			{ "lat": 26.5, "lon": 49.16 },
-			{ "lat": 51.41, "lon": 24.27 },
-			{ "lat": 50.09, "lon": 21.79 },
 			{ "lat": 43.9, "lon": 24.88 },
 			{ "lat": 33.65, "lon": 62.36 },
 			{ "lat": 27.13, "lon": 46.8 },
@@ -1200,7 +1201,6 @@
 			{ "lat": 48.73, "lon": 24.99 },
 			{ "lat": 45.81, "lon": 36.67 },
 			{ "lat": 43.87, "lon": 10.5 },
-			{ "lat": 43.67, "lon": 22.12 },
 			{ "lat": 42.45, "lon": 22.85 },
 			{ "lat": 42.31, "lon": 34.4 },
 			{ "lat": 39.42, "lon": 26.1 },
@@ -3989,7 +3989,6 @@
 			{ "lat": 38.91, "lon": 74.58 },
 			{ "lat": 35.82, "lon": 68.85 },
 			{ "lat": 28.39, "lon": 79.46 },
-			{ "lat": 26.52, "lon": 82.29 },
 			{ "lat": 25.45, "lon": 67.92 },
 			{ "lat": 23.44, "lon": 73.88 },
 			{ "lat": 22.79, "lon": 73.63 },

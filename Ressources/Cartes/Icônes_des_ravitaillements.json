@@ -43,6 +43,14 @@
 		"cc:bpry": { "overrideIcon": "PieBPYR.svg" },
 		"cc:bgpy": { "overrideIcon": "PieGBPY.svg" },
 		"cc:ry": { "overrideIcon": "PieYR.svg" },
-		"cc:pry": { "overrideIcon": "PiePYR.svg" }
+		"cc:pry": { "overrideIcon": "PiePYR.svg" },
+		"cc:pr": { "overrideIcon": "PiePR.svg" },
+		"cc:wgbpyr": { "overrideIcon": "PieWGBPYR.svg" },
+		"cc:gbyr": { "overrideIcon": "PieGBYR.svg" },
+		"cc:wgbyr": { "overrideIcon": "PieWGBYR.svg" },
+		"cc:wgbp": { "overrideIcon": "PieWGBP.svg" },
+		"cc:pyr": { "overrideIcon": "PiePYR.svg" },
+		"cc:bp": { "overrideIcon": "PieBP.svg" },
+		"cc:gbp": { "overrideIcon": "PieGBP.svg" }
 	}
 }

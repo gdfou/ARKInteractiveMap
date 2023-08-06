@@ -15,6 +15,7 @@ using static Microsoft.WindowsAPICodePack.Shell.PropertySystem.SystemProperties.
 using System.Windows.Media;
 using System.Text.RegularExpressions;
 using System.Text;
+using System.Diagnostics;
 
 namespace ARKInteractiveMap
 {
@@ -26,20 +27,22 @@ namespace ARKInteractiveMap
         string lastArkImportFolder_;
         int lockInterface_;
         MainConfig cfg_;
-        ObservableCollection<MapDef> mapDefList_;
+        Dictionary<string, MapDef> mapDefDict_;
         ObservableCollection<CollectibleTreeViewItem> collectibleList_;
         ObservableCollection<IngameMarker> ingameMarkerList_;
         ObservableCollection<IngameMarker> userMarkerList_;
+        ObservableCollection<PoiTreeViewItem> poiList_;
         Dictionary<string, string> expNoteList_;
         int ingameMarkerListChanged_;
 
         public MainWindow()
         {
             DataContext = this;
-            mapDefList_ = new ObservableCollection<MapDef>();
+            mapDefDict_ = new Dictionary<string, MapDef>();
             collectibleList_ = new ObservableCollection<CollectibleTreeViewItem>();
             ingameMarkerList_ = new ObservableCollection<IngameMarker>();
             userMarkerList_ = new ObservableCollection<IngameMarker>();
+            poiList_ = new ObservableCollection<PoiTreeViewItem>();
             InitializeComponent();
 
 #if !DEBUG
@@ -69,7 +72,7 @@ namespace ARKInteractiveMap
             {
                 foreach (var map in mapList.maps)
                 {
-                    mapDefList_.Add(new MapDef(map));
+                    mapDefDict_[map.name] = new MapDef(map);
                 }
             }
 
@@ -87,13 +90,21 @@ namespace ARKInteractiveMap
             expNoteList_ = LoadEploratorNotesIconList();
 
             // Load map def config from user config
-            // TODO => ajouter un séparateur => construction manuelle ComboBoxItem/Separator !
-            // TODO => changer l'ordre des cartes
-            comboBoxMap.ItemsSource = mapDefList_;
-            var currentMapDef = mapDefList_.FirstOrDefault(x => x.IsMainMap(cfg_.map));
+            foreach (var map_name in mapList.list)
+            {
+                if (map_name == "-")
+                {
+                    comboBoxMap.Items.Add(new Separator());
+                }
+                else
+                {
+                    comboBoxMap.Items.Add(mapDefDict_[map_name]);
+                }
+            }
+            var currentMapDef = mapDefDict_.FirstOrDefault(x => x.Value.IsMainMap(cfg_.map)).Value;
             if (currentMapDef == null)
             {
-                currentMapDef = mapDefList_[0];
+                currentMapDef = mapDefDict_["The Island"];
             }
             else if (currentMapDef.maps.Count > 0)
             {
@@ -113,6 +124,7 @@ namespace ARKInteractiveMap
             trvCollectible.ItemsSource = collectibleList_;
             listviewIngameMarkers.ItemsSource = ingameMarkerList_;
             listviewUserMarkers.ItemsSource = userMarkerList_;
+            trvPointOfInterest.ItemsSource = poiList_;
 
             lockInterface_--;
         }
@@ -289,6 +301,7 @@ namespace ARKInteractiveMap
             {
                 var ing_marker = new IngameMarker(item, null);
                 var poi = new MapPoiDef("ingame-map-poi", ing_marker);
+                poi.Layer = "ingame-map-poi";
                 poi_dict[poi.Id] = poi;
                 ing_marker.Id = poi.Id;
                 ingameMarkerList_.Add(ing_marker);
@@ -336,6 +349,7 @@ namespace ARKInteractiveMap
             {
                 var ing_marker = new IngameMarker(item, null);
                 var poi = new MapPoiDef("user-map-poi", ing_marker);
+                poi.Layer = "user-map-poi";
                 poi_dict[poi.Id] = poi;
                 ing_marker.Id = poi.Id;
                 userMarkerList_.Add(ing_marker);
@@ -380,7 +394,7 @@ namespace ARKInteractiveMap
                     var mapMarkersDict = arkFile_.ReadMapMarkers();
                     if (mapMarkersDict != null)
                     {
-                        foreach (var map in mapDefList_)
+                        foreach (var map in mapDefDict_.Values)
                         {
                             if (mapMarkersDict.TryGetValue(map._name, out var mapMarkers))
                             {
@@ -409,7 +423,7 @@ namespace ARKInteractiveMap
                     var fogOfWars = arkFile_.ReadFogOfWars();
                     if (fogOfWars != null)
                     {
-                        foreach (var map in mapDefList_)
+                        foreach (var map in mapDefDict_.Values)
                         {
                             if (fogOfWars.TryGetValue(map._name, out var fow))
                             {
@@ -618,8 +632,6 @@ namespace ARKInteractiveMap
 
         private void LoadMapDef(MapDef mapDef, bool subMapLoad=false)
         {
-            // TODO FOW
-            //checkboxFow.IsEnabled = false;
             if (!subMapLoad)
             {
                 if (mapDef.maps.Count > 1)
@@ -649,14 +661,26 @@ namespace ARKInteractiveMap
                 var currentMapDef = mapDef.currentMap;
                 mapViewer.MapBorderWidth = currentMapDef.border.width;
                 mapViewer.MapBorderColor = currentMapDef.border.color;
-                var poi_dict = new Dictionary<string, MapPoiDef>();
+                var markerDict = new Dictionary<string, MapPoiDef>();
                 var contentList = new List<string>();
                 var collectibleList = new List<CollectibleTreeViewItem>();
-                foreach (var res in currentMapDef.resources)
+                // La liste de poi n'est extraite que de la ressource de carte d'exploration
+                var poiList = new List<MapPoiDef>();
+                mapViewer.EnabledLayer("layers-resources", false);
+                mapViewer.EnabledLayer("layers-exploration", false);
+                if (currentMapDef.resource != null)
                 {
-                    ArkWiki.LoadWikiGGJsonRessourceName(currentMapDef, $"ARKInteractiveMap.Ressources.{mapDef.folder}.{res}", poi_dict, contentList, collectibleList, expNoteList_);
+                    ArkWiki.LoadWikiGGJsonRessourceName(currentMapDef, $"ARKInteractiveMap.Ressources.{mapDef.folder}.{currentMapDef.resource}", 
+                        markerDict, contentList, collectibleList, null, expNoteList_, "layers-resources");
+                    mapViewer.EnabledLayer("layers-resources", true);
                 }
-                if (poi_dict != null)
+                if (currentMapDef.exploration != null)
+                {
+                    ArkWiki.LoadWikiGGJsonRessourceName(currentMapDef, $"ARKInteractiveMap.Ressources.{mapDef.folder}.{currentMapDef.exploration}", 
+                        markerDict, contentList, collectibleList, poiList, expNoteList_, "layers-exploration");
+                    mapViewer.EnabledLayer("layers-exploration", true);
+                }
+                if (markerDict != null)
                 {
                     collectibleList_.Clear();
                     foreach (var item in collectibleList)
@@ -665,12 +689,28 @@ namespace ARKInteractiveMap
                         collectibleList_.Add(item);
                     }
 
+                    // Build poi groups
+                    var poi_groups = new Dictionary<string, List<MapPoiDef>>();
+                    foreach (var poi in poiList)
+                    {
+                        var groupName = poi.groupName;
+                        if (poi.groupName.Contains("obelisk-"))
+                        {
+                            groupName = "obelisk";
+                        }
+                        if (poi_groups.ContainsKey(groupName) == false)
+                        {
+                            poi_groups[groupName] = new List<MapPoiDef>();
+                        }
+                        poi_groups[groupName].Add(poi);
+                    }
+
                     var app_res_list = Assembly.GetExecutingAssembly().GetManifestResourceNames();
 
                     mapViewer.MapSize = currentMapDef.mapSize;
                     mapViewer.MapImage = $"ARKInteractiveMap.Ressources.{mapDef.folder}.{currentMapDef.mapPicture}";
 
-                    mapViewer.LoadPoi(poi_dict);
+                    mapViewer.LoadPoi(markerDict);
                     mapViewer.LoadContentList(contentList);
 
                     if (cfg_.map_def == null)
@@ -694,6 +734,23 @@ namespace ARKInteractiveMap
                     if (json_map_def.layers_visible != null)
                     {
                         mapViewer.LoadLayersVisibility(json_map_def.layers_visible);
+                    }
+
+                    // Poi list [group + item]
+                    poiList_.Clear();
+                    // Build poi treeview
+                    foreach (var group in poi_groups)
+                    {
+                        var parent_node = new PoiTreeViewItem(group.Value[0], mapViewer);
+                        if (parent_node.Label.Contains("Obélisque "))
+                        {
+                            parent_node.Label = "Obélisque";
+                        }
+                        poiList_.Add(parent_node);
+                        foreach (var item in group.Value)
+                        {
+                            parent_node.Childrens.Add(new PoiTreeViewItem(item, mapViewer, parent_node));
+                        }
                     }
 
                     // Map items collected list
@@ -740,7 +797,8 @@ namespace ARKInteractiveMap
         {
             if (mapDef == null)
             {
-                mapDef = mapDefList_.FirstOrDefault(x => cfg_.map == x.Name);
+                mapDef = mapDefDict_.FirstOrDefault(x => x.Value.IsMainMap(cfg_.map)).Value;
+                //mapDef = mapDefDict_[cfg_.map];
             }
 
             cfg_.map = mapDef.Name;
@@ -833,7 +891,7 @@ namespace ARKInteractiveMap
         {
             if (lockInterface_ != 0) return;
             lockInterface_++;
-            var mapDef = mapDefList_.FirstOrDefault(x => x.IsMainMap(cfg_.map));
+            var mapDef = mapDefDict_.FirstOrDefault(x => x.Value.IsMainMap(cfg_.map)).Value;
             var map_item = e.RemovedItems[0] as string;
             if (map_item != null)
             {
@@ -857,7 +915,7 @@ namespace ARKInteractiveMap
         }
 
         // Process clic on collectible item text
-        private void TextBlock_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void Collectible_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             if (e.ClickCount == 1 && e.LeftButton == System.Windows.Input.MouseButtonState.Pressed)
             {
@@ -873,20 +931,21 @@ namespace ARKInteractiveMap
             }
         }
 
-        private void ButtonContentAll_Click(object sender, RoutedEventArgs e)
+        // Process clic on poi item text
+        private void PointOfInterest_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            /*foreach (var item in contentList_)
+            if (e.ClickCount == 1 && e.LeftButton == System.Windows.Input.MouseButtonState.Pressed)
             {
-                item.IsVisible = true;
-            }*/
-        }
-
-        private void ButtonContentNone_Click(object sender, RoutedEventArgs e)
-        {
-            /*foreach (var item in contentList_)
-            {
-                item.IsVisible = false;
-            }*/
+                var textBlock = sender as TextBlock;
+                if (textBlock != null)
+                {
+                    var item = textBlock.DataContext as PoiTreeViewItem;
+                    if (item != null && item.Id != null)
+                    {
+                        mapViewer.ZoomTo(item.Id);
+                    }
+                }
+            }
         }
 
         private void ButtonGotTo_Click(object sender, RoutedEventArgs e)
@@ -1113,6 +1172,15 @@ namespace ARKInteractiveMap
             using Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("ARKInteractiveMap.Ressources.Eplorator-notes-icon.json");
             using StreamReader reader = new StreamReader(stream);
             return JsonSerializer.Deserialize<Dictionary<string, string>>(reader.ReadToEnd());
+        }
+
+        private void textboxLon_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == System.Windows.Input.Key.Enter)
+            {
+                e.Handled = true;
+                ButtonGotTo_Click(sender, null);
+            }
         }
     }
 }

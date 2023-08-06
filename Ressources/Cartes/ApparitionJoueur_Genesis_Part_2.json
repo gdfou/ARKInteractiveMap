@@ -1,0 +1,576 @@
+{
+  "$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
+  "$mixin": true,
+  "groups": {
+    "playerSpawns-summerworth": {
+      "fillColor": "#de00bd",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Summerworth"
+    },
+    "playerSpawns-coldwater": {
+      "fillColor": "#ae00de",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Eaufroide"
+    },
+    "playerSpawns-moonshade": {
+      "fillColor": "#5900de",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Reflet de lune"
+    },
+    "playerSpawns-remembrance": {
+      "fillColor": "#0073de",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Souvenir"
+    },
+    "playerSpawns-twintears": {
+      "fillColor": "#00dbd4",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Larmes jumelles"
+    },
+    "playerSpawns-whitewater": {
+      "fillColor": "#00d994",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Eau blanche"
+    },
+    "playerSpawns-foulcreek": {
+      "fillColor": "#00de4a",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Ruisseau nauséabond"
+    },
+    "playerSpawns-fractured": {
+      "fillColor": "#99ff33",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Fracturé"
+    },
+    "playerSpawns-creepingleaf": {
+      "fillColor": "#ffff00",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Feuille affreuse"
+    },
+    "playerSpawns-afflicted": {
+      "fillColor": "#ffd700",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Affligé"
+    },
+    "playerSpawns-barebone": {
+      "fillColor": "#db8f00",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Squelette"
+    },
+    "playerSpawns-uncanny": {
+      "fillColor": "#d90b00",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Étrange"
+    }
+  },
+  "markers": {
+    "playerSpawns-foulcreek": [
+      {
+        "lat": 44.2,
+        "lon": 39.3
+      },
+      {
+        "lat": 41.3,
+        "lon": 36.6
+      },
+      {
+        "lat": 40.9,
+        "lon": 36.1
+      },
+      {
+        "lat": 42.0,
+        "lon": 32.6
+      },
+      {
+        "lat": 42.2,
+        "lon": 37.3
+      },
+      {
+        "lat": 42.9,
+        "lon": 37.9
+      },
+      {
+        "lat": 43.1,
+        "lon": 38.0
+      },
+      {
+        "lat": 43.0,
+        "lon": 32.6
+      },
+      {
+        "lat": 42.5,
+        "lon": 38.5
+      }
+    ],
+    "playerSpawns-fractured": [
+      {
+        "lat": 39.9,
+        "lon": 28.1
+      },
+      {
+        "lat": 40.0,
+        "lon": 28.2
+      },
+      {
+        "lat": 42.6,
+        "lon": 27.7
+      },
+      {
+        "lat": 42.7,
+        "lon": 27.6
+      },
+      {
+        "lat": 42.5,
+        "lon": 26.5
+      },
+      {
+        "lat": 40.9,
+        "lon": 27.1
+      },
+      {
+        "lat": 40.5,
+        "lon": 27.2
+      },
+      {
+        "lat": 39.0,
+        "lon": 29.0
+      }
+    ],
+    "playerSpawns-creepingleaf": [
+      {
+        "lat": 40.0,
+        "lon": 13.4
+      },
+      {
+        "lat": 40.6,
+        "lon": 13.7
+      },
+      {
+        "lat": 41.5,
+        "lon": 13.4
+      },
+      {
+        "lat": 41.1,
+        "lon": 14.7
+      },
+      {
+        "lat": 42.3,
+        "lon": 14.5
+      },
+      {
+        "lat": 42.0,
+        "lon": 14.2
+      },
+      {
+        "lat": 43.8,
+        "lon": 15.4
+      },
+      {
+        "lat": 44.0,
+        "lon": 15.7
+      }
+    ],
+    "playerSpawns-afflicted": [
+      {
+        "lat": 57.6,
+        "lon": 37.8
+      },
+      {
+        "lat": 58.3,
+        "lon": 38.2
+      },
+      {
+        "lat": 58.7,
+        "lon": 37.6
+      },
+      {
+        "lat": 56.7,
+        "lon": 35.2
+      },
+      {
+        "lat": 56.7,
+        "lon": 35.0
+      },
+      {
+        "lat": 57.3,
+        "lon": 33.1
+      },
+      {
+        "lat": 57.4,
+        "lon": 32.7
+      },
+      {
+        "lat": 58.1,
+        "lon": 32.6
+      }
+    ],
+    "playerSpawns-barebone": [
+      {
+        "lat": 57.7,
+        "lon": 27.0
+      },
+      {
+        "lat": 57.8,
+        "lon": 26.8
+      },
+      {
+        "lat": 57.8,
+        "lon": 26.7
+      },
+      {
+        "lat": 58.1,
+        "lon": 26.1
+      },
+      {
+        "lat": 58.0,
+        "lon": 25.4
+      },
+      {
+        "lat": 58.0,
+        "lon": 25.4
+      },
+      {
+        "lat": 58.0,
+        "lon": 24.4
+      },
+      {
+        "lat": 58.0,
+        "lon": 24.2
+      },
+      {
+        "lat": 57.9,
+        "lon": 23.1
+      }
+    ],
+    "playerSpawns-uncanny": [
+      {
+        "lat": 58.5,
+        "lon": 20.1
+      },
+      {
+        "lat": 58.4,
+        "lon": 19.8
+      },
+      {
+        "lat": 57.8,
+        "lon": 18.7
+      },
+      {
+        "lat": 57.7,
+        "lon": 18.7
+      },
+      {
+        "lat": 58.4,
+        "lon": 18.3
+      },
+      {
+        "lat": 58.4,
+        "lon": 15.9
+      },
+      {
+        "lat": 58.4,
+        "lon": 15.7
+      },
+      {
+        "lat": 59.2,
+        "lon": 16.0
+      },
+      {
+        "lat": 59.0,
+        "lon": 16.4
+      },
+      {
+        "lat": 59.6,
+        "lon": 15.9
+      },
+      {
+        "lat": 57.8,
+        "lon": 12.8
+      },
+      {
+        "lat": 58.1,
+        "lon": 13.2
+      },
+      {
+        "lat": 57.6,
+        "lon": 13.5
+      }
+    ],
+    "playerSpawns-twintears": [
+      {
+        "lat": 56.9,
+        "lon": 69.7
+      },
+      {
+        "lat": 58.9,
+        "lon": 69.1
+      },
+      {
+        "lat": 59.8,
+        "lon": 70.0
+      },
+      {
+        "lat": 57.1,
+        "lon": 71.0
+      },
+      {
+        "lat": 56.0,
+        "lon": 70.8
+      },
+      {
+        "lat": 57.3,
+        "lon": 71.8
+      },
+      {
+        "lat": 56.5,
+        "lon": 72.6
+      },
+      {
+        "lat": 54.4,
+        "lon": 72.8
+      },
+      {
+        "lat": 54.0,
+        "lon": 71.8
+      },
+      {
+        "lat": 56.2,
+        "lon": 74.5
+      }
+    ],
+    "playerSpawns-remembrance": [
+      {
+        "lat": 55.1,
+        "lon": 59.7
+      },
+      {
+        "lat": 56.8,
+        "lon": 59.5
+      },
+      {
+        "lat": 57.5,
+        "lon": 60.9
+      },
+      {
+        "lat": 55.5,
+        "lon": 61.5
+      },
+      {
+        "lat": 54.9,
+        "lon": 62.3
+      },
+      {
+        "lat": 56.5,
+        "lon": 63.3
+      },
+      {
+        "lat": 56.6,
+        "lon": 66.3
+      },
+      {
+        "lat": 55.5,
+        "lon": 67.4
+      },
+      {
+        "lat": 54.1,
+        "lon": 67.0
+      },
+      {
+        "lat": 53.1,
+        "lon": 61.4
+      }
+    ],
+    "playerSpawns-summerworth": [
+      {
+        "lat": 39.8,
+        "lon": 65.6
+      },
+      {
+        "lat": 39.0,
+        "lon": 66.4
+      },
+      {
+        "lat": 39.2,
+        "lon": 67.8
+      },
+      {
+        "lat": 36.8,
+        "lon": 69.6
+      },
+      {
+        "lat": 36.1,
+        "lon": 68.4
+      },
+      {
+        "lat": 37.6,
+        "lon": 65.9
+      },
+      {
+        "lat": 37.8,
+        "lon": 67.6
+      },
+      {
+        "lat": 37.9,
+        "lon": 65.5
+      },
+      {
+        "lat": 36.8,
+        "lon": 65.1
+      },
+      {
+        "lat": 36.8,
+        "lon": 65.1
+      }
+    ],
+    "playerSpawns-whitewater": [
+      {
+        "lat": 57.2,
+        "lon": 77.5
+      },
+      {
+        "lat": 53.2,
+        "lon": 79.1
+      },
+      {
+        "lat": 54.4,
+        "lon": 81.6
+      },
+      {
+        "lat": 55.8,
+        "lon": 81.8
+      },
+      {
+        "lat": 58.0,
+        "lon": 81.9
+      },
+      {
+        "lat": 57.0,
+        "lon": 83.8
+      },
+      {
+        "lat": 57.4,
+        "lon": 85.5
+      },
+      {
+        "lat": 56.4,
+        "lon": 82.6
+      },
+      {
+        "lat": 55.7,
+        "lon": 80.4
+      },
+      {
+        "lat": 57.9,
+        "lon": 80.4
+      }
+    ],
+    "playerSpawns-moonshade": [
+      {
+        "lat": 37.3,
+        "lon": 85.4
+      },
+      {
+        "lat": 37.8,
+        "lon": 85.2
+      },
+      {
+        "lat": 38.4,
+        "lon": 84.8
+      },
+      {
+        "lat": 39.5,
+        "lon": 85.1
+      },
+      {
+        "lat": 40.4,
+        "lon": 85.2
+      },
+      {
+        "lat": 41.9,
+        "lon": 84.5
+      },
+      {
+        "lat": 42.1,
+        "lon": 86.6
+      },
+      {
+        "lat": 41.6,
+        "lon": 87.3
+      },
+      {
+        "lat": 40.8,
+        "lon": 87.1
+      },
+      {
+        "lat": 40.5,
+        "lon": 88.1
+      }
+    ],
+    "playerSpawns-coldwater": [
+      {
+        "lat": 38.3,
+        "lon": 76.4
+      },
+      {
+        "lat": 39.5,
+        "lon": 75.8
+      },
+      {
+        "lat": 38.7,
+        "lon": 77.1
+      },
+      {
+        "lat": 38.2,
+        "lon": 78.4
+      },
+      {
+        "lat": 37.0,
+        "lon": 76.8
+      },
+      {
+        "lat": 35.5,
+        "lon": 77.5
+      },
+      {
+        "lat": 37.2,
+        "lon": 77.6
+      },
+      {
+        "lat": 37.7,
+        "lon": 79.1
+      },
+      {
+        "lat": 41.0,
+        "lon": 77.4
+      },
+      {
+        "lat": 38.7,
+        "lon": 79.7
+      }
+    ]
+  }
+}

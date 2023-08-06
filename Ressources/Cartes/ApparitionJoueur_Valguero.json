@@ -1,0 +1,906 @@
+{
+  "$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
+  "$mixin": true,
+  "groups": {
+    "playerSpawns-smallislands": {
+      "fillColor": "#f00",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Petites îles"
+    },
+    "playerSpawns-beachzone1": {
+      "fillColor": "#464646",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Plage Zone 1"
+    },
+    "playerSpawns-beachzone2": {
+      "fillColor": "#ead65e",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Plage Zone 2"
+    },
+    "playerSpawns-beachzone3": {
+      "fillColor": "#c39797",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Plage Zone 3"
+    },
+    "playerSpawns-borealforestzone1": {
+      "fillColor": "#82487a",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Forêt boréale Zone 1"
+    },
+    "playerSpawns-borealforestzone2": {
+      "fillColor": "#f39385",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Forêt boréale Zone 2"
+    },
+    "playerSpawns-borealforestzone3": {
+      "fillColor": "#011efe",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Forêt boréale Zone 3"
+    },
+    "playerSpawns-chalkhillszone1": {
+      "fillColor": "#685146",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Falaises de craies Zone 1"
+    },
+    "playerSpawns-chalkhillszone2": {
+      "fillColor": "#a59274",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Falaises de craies Zone 2"
+    },
+    "playerSpawns-chalkhillszone3": {
+      "fillColor": "#e1c8a2",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Falaises de craies Zone 3"
+    },
+    "playerSpawns-junglezone1": {
+      "fillColor": "#ebbe20",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Jungle Zone 1"
+    },
+    "playerSpawns-junglezone2": {
+      "fillColor": "#d3ab1c",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Jungle Zone 2"
+    },
+    "playerSpawns-junglezone3": {
+      "fillColor": "#f37735",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Jungle Zone 3"
+    },
+    "playerSpawns-redwoodzone1": {
+      "fillColor": "#d2e2e1",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Forêt de séquoias Zone 1"
+    },
+    "playerSpawns-redwoodzone2": {
+      "fillColor": "#fe00f6",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Forêt de séquoias Zone 2"
+    },
+    "playerSpawns-redwoodzone3": {
+      "fillColor": "#0bff01",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Forêt de séquoias Zone 3"
+    },
+    "playerSpawns-Toundrazone1": {
+      "fillColor": "#fdfe02",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Toundra Zone 1"
+    },
+    "playerSpawns-Toundrazone2": {
+      "fillColor": "#486090",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Toundra Zone 2"
+    },
+    "playerSpawns-Toundrazone3": {
+      "fillColor": "#6c7fa6",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Toundra Zone 3"
+    },
+    "playerSpawns-snowzone1": {
+      "fillColor": "#488250",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Neige Zone 1"
+    },
+    "playerSpawns-snowzone2": {
+      "fillColor": "#ab455a",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Neige Zone 2"
+    },
+    "playerSpawns-snowzone3": {
+      "fillColor": "#ac6aa3",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Neige Zone 3"
+    }
+  },
+  "markers": {
+    "playerSpawns-chalkhillszone1": [
+      {
+        "lat": 67.3,
+        "lon": 73.0
+      },
+      {
+        "lat": 68.7,
+        "lon": 66.9
+      },
+      {
+        "lat": 68.7,
+        "lon": 66.4
+      },
+      {
+        "lat": 69.1,
+        "lon": 66.1
+      },
+      {
+        "lat": 69.7,
+        "lon": 66.6
+      },
+      {
+        "lat": 69.5,
+        "lon": 67.7
+      }
+    ],
+    "playerSpawns-chalkhillszone2": [
+      {
+        "lat": 79.1,
+        "lon": 65.6
+      },
+      {
+        "lat": 80.5,
+        "lon": 67.4
+      }
+    ],
+    "playerSpawns-chalkhillszone3": [
+      {
+        "lat": 75.5,
+        "lon": 76.3
+      },
+      {
+        "lat": 74.6,
+        "lon": 86.2
+      }
+    ],
+    "playerSpawns-beachzone3": [
+      {
+        "lat": 63.9,
+        "lon": 71.8
+      },
+      {
+        "lat": 64.3,
+        "lon": 63.8
+      },
+      {
+        "lat": 67.1,
+        "lon": 56.0
+      }
+    ],
+    "playerSpawns-smallislands": [
+      {
+        "lat": 51.1,
+        "lon": 37.1
+      },
+      {
+        "lat": 53.2,
+        "lon": 32.8
+      },
+      {
+        "lat": 54.9,
+        "lon": 37.7
+      },
+      {
+        "lat": 53.1,
+        "lon": 32.4
+      },
+      {
+        "lat": 55.3,
+        "lon": 36.0
+      },
+      {
+        "lat": 56.3,
+        "lon": 36.0
+      },
+      {
+        "lat": 54.7,
+        "lon": 41.3
+      },
+      {
+        "lat": 51.4,
+        "lon": 31.7
+      },
+      {
+        "lat": 53.3,
+        "lon": 32.9
+      }
+    ],
+    "playerSpawns-borealforestzone2": [
+      {
+        "lat": 45.3,
+        "lon": 27.5
+      },
+      {
+        "lat": 44.6,
+        "lon": 26.5
+      },
+      {
+        "lat": 45.7,
+        "lon": 25.6
+      },
+      {
+        "lat": 43.4,
+        "lon": 25.2
+      },
+      {
+        "lat": 42.6,
+        "lon": 23.8
+      },
+      {
+        "lat": 44.1,
+        "lon": 20.9
+      },
+      {
+        "lat": 45.6,
+        "lon": 21.7
+      },
+      {
+        "lat": 45.7,
+        "lon": 22.4
+      },
+      {
+        "lat": 47.8,
+        "lon": 28.9
+      },
+      {
+        "lat": 45.8,
+        "lon": 29.2
+      }
+    ],
+    "playerSpawns-borealforestzone3": [
+      {
+        "lat": 56.3,
+        "lon": 72.3
+      },
+      {
+        "lat": 56.0,
+        "lon": 71.5
+      },
+      {
+        "lat": 54.3,
+        "lon": 72.2
+      },
+      {
+        "lat": 53.8,
+        "lon": 71.3
+      },
+      {
+        "lat": 51.6,
+        "lon": 71.3
+      },
+      {
+        "lat": 51.1,
+        "lon": 72.6
+      },
+      {
+        "lat": 51.8,
+        "lon": 74.6
+      }
+    ],
+    "playerSpawns-Toundrazone3": [
+      {
+        "lat": 36.6,
+        "lon": 24.1
+      },
+      {
+        "lat": 34.4,
+        "lon": 28.1
+      },
+      {
+        "lat": 34.8,
+        "lon": 28.2
+      },
+      {
+        "lat": 34.3,
+        "lon": 27.5
+      },
+      {
+        "lat": 36.2,
+        "lon": 27.5
+      },
+      {
+        "lat": 36.7,
+        "lon": 28.0
+      },
+      {
+        "lat": 37.1,
+        "lon": 27.6
+      },
+      {
+        "lat": 37.5,
+        "lon": 27.1
+      },
+      {
+        "lat": 37.1,
+        "lon": 26.5
+      },
+      {
+        "lat": 37.0,
+        "lon": 25.0
+      },
+      {
+        "lat": 31.4,
+        "lon": 25.6
+      }
+    ],
+    "playerSpawns-junglezone1": [
+      {
+        "lat": 50.6,
+        "lon": 81.9
+      },
+      {
+        "lat": 50.1,
+        "lon": 81.4
+      },
+      {
+        "lat": 49.4,
+        "lon": 81.7
+      },
+      {
+        "lat": 48.1,
+        "lon": 81.5
+      },
+      {
+        "lat": 46.7,
+        "lon": 81.2
+      },
+      {
+        "lat": 45.8,
+        "lon": 80.6
+      },
+      {
+        "lat": 44.7,
+        "lon": 79.7
+      }
+    ],
+    "playerSpawns-junglezone2": [
+      {
+        "lat": 54.1,
+        "lon": 76.1
+      },
+      {
+        "lat": 54.5,
+        "lon": 75.8
+      },
+      {
+        "lat": 55.0,
+        "lon": 75.4
+      },
+      {
+        "lat": 53.7,
+        "lon": 75.6
+      },
+      {
+        "lat": 51.9,
+        "lon": 74.9
+      },
+      {
+        "lat": 55.2,
+        "lon": 85.2
+      }
+    ],
+    "playerSpawns-junglezone3": [
+      {
+        "lat": 37.5,
+        "lon": 84.2
+      },
+      {
+        "lat": 37.5,
+        "lon": 84.4
+      },
+      {
+        "lat": 37.4,
+        "lon": 84.6
+      },
+      {
+        "lat": 37.5,
+        "lon": 84.9
+      },
+      {
+        "lat": 37.6,
+        "lon": 85.2
+      },
+      {
+        "lat": 43.5,
+        "lon": 85.0
+      },
+      {
+        "lat": 43.3,
+        "lon": 84.9
+      },
+      {
+        "lat": 43.1,
+        "lon": 84.9
+      },
+      {
+        "lat": 44.6,
+        "lon": 85.3
+      },
+      {
+        "lat": 44.7,
+        "lon": 85.2
+      },
+      {
+        "lat": 44.9,
+        "lon": 85.1
+      }
+    ],
+    "playerSpawns-redwoodzone1": [
+      {
+        "lat": 62.0,
+        "lon": 35.1
+      },
+      {
+        "lat": 62.5,
+        "lon": 35.4
+      },
+      {
+        "lat": 63.5,
+        "lon": 36.0
+      },
+      {
+        "lat": 64.2,
+        "lon": 35.9
+      },
+      {
+        "lat": 64.7,
+        "lon": 35.2
+      },
+      {
+        "lat": 65.2,
+        "lon": 34.9
+      },
+      {
+        "lat": 65.9,
+        "lon": 35.1
+      },
+      {
+        "lat": 66.7,
+        "lon": 35.1
+      }
+    ],
+    "playerSpawns-snowzone2": [
+      {
+        "lat": 8.3,
+        "lon": 15.6
+      },
+      {
+        "lat": 16.0,
+        "lon": 29.3
+      },
+      {
+        "lat": 17.4,
+        "lon": 29.5
+      },
+      {
+        "lat": 16.3,
+        "lon": 28.9
+      },
+      {
+        "lat": 15.3,
+        "lon": 28.7
+      },
+      {
+        "lat": 16.6,
+        "lon": 28.5
+      },
+      {
+        "lat": 15.8,
+        "lon": 28.3
+      },
+      {
+        "lat": 28.1,
+        "lon": 17.7
+      }
+    ],
+    "playerSpawns-redwoodzone2": [
+      {
+        "lat": 65.6,
+        "lon": 30.3
+      },
+      {
+        "lat": 65.3,
+        "lon": 30.4
+      },
+      {
+        "lat": 64.9,
+        "lon": 30.4
+      },
+      {
+        "lat": 68.3,
+        "lon": 28.6
+      },
+      {
+        "lat": 68.6,
+        "lon": 28.9
+      },
+      {
+        "lat": 69.3,
+        "lon": 29.7
+      },
+      {
+        "lat": 67.7,
+        "lon": 29.3
+      }
+    ],
+    "playerSpawns-beachzone1": [
+      {
+        "lat": 40.2,
+        "lon": 36.5
+      },
+      {
+        "lat": 40.3,
+        "lon": 37.4
+      },
+      {
+        "lat": 41.4,
+        "lon": 38.4
+      },
+      {
+        "lat": 41.1,
+        "lon": 30.5
+      },
+      {
+        "lat": 42.1,
+        "lon": 38.3
+      },
+      {
+        "lat": 39.5,
+        "lon": 35.7
+      },
+      {
+        "lat": 38.4,
+        "lon": 35.4
+      },
+      {
+        "lat": 37.9,
+        "lon": 35.3
+      },
+      {
+        "lat": 40.2,
+        "lon": 31.6
+      },
+      {
+        "lat": 39.7,
+        "lon": 31.7
+      },
+      {
+        "lat": 42.5,
+        "lon": 38.5
+      }
+    ],
+    "playerSpawns-redwoodzone3": [
+      {
+        "lat": 74.2,
+        "lon": 23.2
+      },
+      {
+        "lat": 75.1,
+        "lon": 24.2
+      },
+      {
+        "lat": 74.7,
+        "lon": 23.7
+      },
+      {
+        "lat": 74.7,
+        "lon": 22.3
+      },
+      {
+        "lat": 76.1,
+        "lon": 21.7
+      },
+      {
+        "lat": 77.4,
+        "lon": 20.9
+      },
+      {
+        "lat": 78.0,
+        "lon": 22.8
+      },
+      {
+        "lat": 77.7,
+        "lon": 23.2
+      },
+      {
+        "lat": 68.7,
+        "lon": 42.0
+      },
+      {
+        "lat": 70.8,
+        "lon": 46.8
+      },
+      {
+        "lat": 88.8,
+        "lon": 38.6
+      }
+    ],
+    "playerSpawns-Toundrazone1": [
+      {
+        "lat": 44.1,
+        "lon": 26.7
+      },
+      {
+        "lat": 44.1,
+        "lon": 26.3
+      },
+      {
+        "lat": 43.5,
+        "lon": 25.4
+      }
+    ],
+    "playerSpawns-Toundrazone2": [
+      {
+        "lat": 34.8,
+        "lon": 11.3
+      },
+      {
+        "lat": 35.2,
+        "lon": 11.2
+      },
+      {
+        "lat": 36.8,
+        "lon": 10.8
+      },
+      {
+        "lat": 37.9,
+        "lon": 8.9
+      },
+      {
+        "lat": 39.3,
+        "lon": 10.9
+      },
+      {
+        "lat": 38.8,
+        "lon": 12.2
+      },
+      {
+        "lat": 40.3,
+        "lon": 12.7
+      },
+      {
+        "lat": 40.9,
+        "lon": 13.8
+      }
+    ],
+    "playerSpawns-snowzone1": [
+      {
+        "lat": 12.1,
+        "lon": 50.3
+      },
+      {
+        "lat": 12.2,
+        "lon": 50.0
+      },
+      {
+        "lat": 12.3,
+        "lon": 49.8
+      },
+      {
+        "lat": 10.4,
+        "lon": 49.3
+      },
+      {
+        "lat": 9.3,
+        "lon": 48.0
+      },
+      {
+        "lat": 14.8,
+        "lon": 50.2
+      },
+      {
+        "lat": 15.9,
+        "lon": 55.9
+      }
+    ],
+    "playerSpawns-snowzone3": [
+      {
+        "lat": 15.2,
+        "lon": 87.6
+      },
+      {
+        "lat": 14.8,
+        "lon": 86.7
+      },
+      {
+        "lat": 14.4,
+        "lon": 88.2
+      },
+      {
+        "lat": 15.6,
+        "lon": 85.8
+      },
+      {
+        "lat": 16.0,
+        "lon": 85.7
+      },
+      {
+        "lat": 16.8,
+        "lon": 85.4
+      },
+      {
+        "lat": 17.8,
+        "lon": 85.8
+      },
+      {
+        "lat": 18.1,
+        "lon": 86.7
+      },
+      {
+        "lat": 18.6,
+        "lon": 88.0
+      },
+      {
+        "lat": 11.8,
+        "lon": 80.5
+      }
+    ],
+    "playerSpawns-beachzone2": [
+      {
+        "lat": 61.5,
+        "lon": 74.0
+      },
+      {
+        "lat": 62.3,
+        "lon": 74.6
+      },
+      {
+        "lat": 62.9,
+        "lon": 75.4
+      },
+      {
+        "lat": 63.5,
+        "lon": 76.3
+      },
+      {
+        "lat": 64.0,
+        "lon": 76.9
+      },
+      {
+        "lat": 64.6,
+        "lon": 77.7
+      },
+      {
+        "lat": 64.6,
+        "lon": 78.9
+      },
+      {
+        "lat": 66.1,
+        "lon": 78.9
+      },
+      {
+        "lat": 66.9,
+        "lon": 79.8
+      },
+      {
+        "lat": 68.6,
+        "lon": 80.9
+      },
+      {
+        "lat": 68.7,
+        "lon": 78.7
+      },
+      {
+        "lat": 67.5,
+        "lon": 77.5
+      },
+      {
+        "lat": 65.6,
+        "lon": 76.2
+      },
+      {
+        "lat": 64.7,
+        "lon": 74.4
+      },
+      {
+        "lat": 64.8,
+        "lon": 77.9
+      },
+      {
+        "lat": 68.2,
+        "lon": 80.4
+      }
+    ],
+    "playerSpawns-borealforestzone1": [
+      {
+        "lat": 54.0,
+        "lon": 49.2
+      },
+      {
+        "lat": 52.8,
+        "lon": 49.4
+      },
+      {
+        "lat": 50.9,
+        "lon": 52.4
+      },
+      {
+        "lat": 52.2,
+        "lon": 50.6
+      },
+      {
+        "lat": 52.2,
+        "lon": 51.9
+      },
+      {
+        "lat": 50.8,
+        "lon": 52.6
+      },
+      {
+        "lat": 51.1,
+        "lon": 53.9
+      },
+      {
+        "lat": 50.7,
+        "lon": 54.5
+      },
+      {
+        "lat": 49.6,
+        "lon": 55.6
+      },
+      {
+        "lat": 47.8,
+        "lon": 56.4
+      },
+      {
+        "lat": 45.6,
+        "lon": 56.3
+      },
+      {
+        "lat": 44.6,
+        "lon": 55.8
+      }
+    ]
+  }
+}

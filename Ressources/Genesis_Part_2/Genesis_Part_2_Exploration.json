@@ -1,0 +1,1142 @@
+{
+  "$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
+  "mixins": [
+    "Cartes/Définitions des groupes normés",
+    "Cartes/ApparitionJoueur Genesis Part 2"
+  ],
+  "backgrounds": [
+    {
+      "name": "Croquis",
+      "image": "Genesis Part 2 Map.jpg"
+    }
+  ],
+  "settings": {
+    "enableSearch": true
+  },
+  "markers": {
+    "explorer-note": [
+      {
+        "lat": 16.7,
+        "lon": 89.5,
+        "name": "Notes d'explorateur de Nida 21 <span class=\"datamap-explorer-note-id\">(ID: 898)</span>"
+      },
+      {
+        "lat": 17.6,
+        "lon": 71.2,
+        "name": "Notes d'explorateur de Nida 3 <span class=\"datamap-explorer-note-id\">(ID: 880)</span>"
+      },
+      {
+        "lat": 18.1,
+        "lon": 39.5,
+        "name": "Notes d'explorateur de Santiago 15 <span class=\"datamap-explorer-note-id\">(ID: 952)</span>"
+      },
+      {
+        "lat": 19.0,
+        "lon": 12.1,
+        "name": "Notes d'explorateur de Santiago 20 <span class=\"datamap-explorer-note-id\">(ID: 957)</span>"
+      },
+      {
+        "lat": 20.5,
+        "lon": 31.3,
+        "name": "Notes d'explorateur de Santiago 16 <span class=\"datamap-explorer-note-id\">(ID: 953)</span>"
+      },
+      {
+        "lat": 21.3,
+        "lon": 21.2,
+        "name": "Notes d'explorateur de Gabriel 24 <span class=\"datamap-explorer-note-id\">(ID: 931)</span>"
+      },
+      {
+        "lat": 22.1,
+        "lon": 26.6,
+        "name": "Notes d'explorateur de Santiago 19 <span class=\"datamap-explorer-note-id\">(ID: 956)</span>"
+      },
+      {
+        "lat": 23.5,
+        "lon": 91.3,
+        "name": "Notes d'explorateur de Gabriel 9 <span class=\"datamap-explorer-note-id\">(ID: 916)</span>"
+      },
+      {
+        "lat": 23.6,
+        "lon": 60.3,
+        "name": "Notes d'explorateur de Nida 16 <span class=\"datamap-explorer-note-id\">(ID: 893)</span>"
+      },
+      {
+        "lat": 23.7,
+        "lon": 43.6,
+        "name": "Notes d'explorateur de Gabriel 21 <span class=\"datamap-explorer-note-id\">(ID: 928)</span>"
+      },
+      {
+        "lat": 23.7,
+        "lon": 9.3,
+        "name": "Notes d'explorateur de Gabriel 23 <span class=\"datamap-explorer-note-id\">(ID: 930)</span>"
+      },
+      {
+        "lat": 24.0,
+        "lon": 14.9,
+        "name": "Notes d'explorateur de Santiago 21 <span class=\"datamap-explorer-note-id\">(ID: 958)</span>"
+      },
+      {
+        "lat": 24.0,
+        "lon": 75.5,
+        "name": "Notes d'explorateur de Gabriel 8 <span class=\"datamap-explorer-note-id\">(ID: 915)</span>"
+      },
+      {
+        "lat": 25.0,
+        "lon": 35.0,
+        "name": "Notes d'explorateur de Gabriel 25 <span class=\"datamap-explorer-note-id\">(ID: 932)</span>"
+      },
+      {
+        "lat": 27.6,
+        "lon": 85.3,
+        "name": "Notes d'explorateur de Nida 6 <span class=\"datamap-explorer-note-id\">(ID: 883)</span>"
+      },
+      {
+        "lat": 28.2,
+        "lon": 63.9,
+        "name": "Notes d'explorateur de Nida 29 <span class=\"datamap-explorer-note-id\">(ID: 906)</span>"
+      },
+      {
+        "lat": 28.3,
+        "lon": 32.0,
+        "name": "Notes d'explorateur de Santiago 17 <span class=\"datamap-explorer-note-id\">(ID: 954)</span>"
+      },
+      {
+        "lat": 28.5,
+        "lon": 22.7,
+        "name": "Notes d'explorateur de Santiago 22 <span class=\"datamap-explorer-note-id\">(ID: 959)</span>"
+      },
+      {
+        "lat": 30.1,
+        "lon": 80.0,
+        "name": "Notes d'explorateur de Nida 10 <span class=\"datamap-explorer-note-id\">(ID: 887)</span>"
+      },
+      {
+        "lat": 30.5,
+        "lon": 12.4,
+        "name": "Notes d'explorateur de Santiago 23 <span class=\"datamap-explorer-note-id\">(ID: 960)</span>"
+      },
+      {
+        "lat": 30.5,
+        "lon": 61.4,
+        "name": "Notes d'explorateur de Gabriel 11 <span class=\"datamap-explorer-note-id\">(ID: 918)</span>"
+      },
+      {
+        "lat": 32.2,
+        "lon": 19.7,
+        "name": "Notes d'explorateur de Santiago 18 <span class=\"datamap-explorer-note-id\">(ID: 955)</span>"
+      },
+      {
+        "lat": 32.2,
+        "lon": 93.6,
+        "name": "Notes d'explorateur de Gabriel 7 <span class=\"datamap-explorer-note-id\">(ID: 914)</span>"
+      },
+      {
+        "lat": 33.5,
+        "lon": 79.1,
+        "name": "Notes d'explorateur de Nida 7 <span class=\"datamap-explorer-note-id\">(ID: 884)</span>"
+      },
+      {
+        "lat": 33.6,
+        "lon": 29.1,
+        "name": "Notes d'explorateur de Gabriel 22 <span class=\"datamap-explorer-note-id\">(ID: 929)</span>"
+      },
+      {
+        "lat": 34.5,
+        "lon": 70.1,
+        "name": "Notes d'explorateur de Gabriel 10 <span class=\"datamap-explorer-note-id\">(ID: 917)</span>"
+      },
+      {
+        "lat": 35.0,
+        "lon": 42.3,
+        "name": "Notes d'explorateur de Gabriel 15 <span class=\"datamap-explorer-note-id\">(ID: 922)</span>"
+      },
+      {
+        "lat": 35.9,
+        "lon": 71.9,
+        "name": "Notes d'explorateur de Nida 30 <span class=\"datamap-explorer-note-id\">(ID: 907)</span>"
+      },
+      {
+        "lat": 36.1,
+        "lon": 17.0,
+        "name": "Notes d'explorateur de Santiago 25 <span class=\"datamap-explorer-note-id\">(ID: 962)</span>"
+      },
+      {
+        "lat": 36.8,
+        "lon": 60.3,
+        "name": "Notes d'explorateur de Nida 4 <span class=\"datamap-explorer-note-id\">(ID: 881)</span>"
+      },
+      {
+        "lat": 37.3,
+        "lon": 57.1,
+        "name": "Notes d'explorateur de Nida 15 <span class=\"datamap-explorer-note-id\">(ID: 892)</span>"
+      },
+      {
+        "lat": 37.8,
+        "lon": 85.7,
+        "name": "Notes d'explorateur de Nida 11 <span class=\"datamap-explorer-note-id\">(ID: 888)</span>"
+      },
+      {
+        "lat": 38.0,
+        "lon": 10.5,
+        "name": "Notes d'explorateur de Santiago 24 <span class=\"datamap-explorer-note-id\">(ID: 961)</span>"
+      },
+      {
+        "lat": 38.0,
+        "lon": 66.3,
+        "name": "Notes d'explorateur de Nida 20 <span class=\"datamap-explorer-note-id\">(ID: 897)</span>"
+      },
+      {
+        "lat": 39.3,
+        "lon": 22.0,
+        "name": "Notes d'explorateur de Santiago 26 <span class=\"datamap-explorer-note-id\">(ID: 963)</span>"
+      },
+      {
+        "lat": 39.9,
+        "lon": 30.4,
+        "name": "Notes d'explorateur de Santiago 27 <span class=\"datamap-explorer-note-id\">(ID: 964)</span>"
+      },
+      {
+        "lat": 40.9,
+        "lon": 76.9,
+        "name": "Notes d'explorateur de Gabriel 13 <span class=\"datamap-explorer-note-id\">(ID: 920)</span>"
+      },
+      {
+        "lat": 43.1,
+        "lon": 70.0,
+        "name": "Notes d'explorateur de Nida 22 <span class=\"datamap-explorer-note-id\">(ID: 899)</span>"
+      },
+      {
+        "lat": 44.3,
+        "lon": 10.1,
+        "name": "Notes d'explorateur de Santiago 1 <span class=\"datamap-explorer-note-id\">(ID: 938)</span>"
+      },
+      {
+        "lat": 44.5,
+        "lon": 62.1,
+        "name": "Notes d'explorateur de Nida 26 <span class=\"datamap-explorer-note-id\">(ID: 903)</span>"
+      },
+      {
+        "lat": 44.7,
+        "lon": 42.3,
+        "name": "Notes d'explorateur de Santiago 13 <span class=\"datamap-explorer-note-id\">(ID: 950)</span>"
+      },
+      {
+        "lat": 44.8,
+        "lon": 89.2,
+        "name": "Notes d'explorateur de Gabriel 5 <span class=\"datamap-explorer-note-id\">(ID: 912)</span>"
+      },
+      {
+        "lat": 45.0,
+        "lon": 82.7,
+        "name": "Notes d'explorateur de Gabriel 4 <span class=\"datamap-explorer-note-id\">(ID: 911)</span>"
+      },
+      {
+        "lat": 45.1,
+        "lon": 20.3,
+        "name": "Notes d'explorateur de Santiago 14 <span class=\"datamap-explorer-note-id\">(ID: 951)</span>"
+      },
+      {
+        "lat": 45.1,
+        "lon": 37.0,
+        "name": "Notes d'explorateur de Santiago 12 <span class=\"datamap-explorer-note-id\">(ID: 949)</span>"
+      },
+      {
+        "lat": 46.1,
+        "lon": 59.8,
+        "name": "Notes d'explorateur de Nida 14 <span class=\"datamap-explorer-note-id\">(ID: 891)</span>"
+      },
+      {
+        "lat": 46.3,
+        "lon": 46.5,
+        "name": "Notes d'explorateur de Gabriel 17 <span class=\"datamap-explorer-note-id\">(ID: 924)</span>"
+      },
+      {
+        "lat": 48.0,
+        "lon": 60.4,
+        "name": "Notes d'explorateur de Nida 1 <span class=\"datamap-explorer-note-id\">(ID: 878)</span>"
+      },
+      {
+        "lat": 48.0,
+        "lon": 78.6,
+        "name": "Notes d'explorateur de Gabriel 3 <span class=\"datamap-explorer-note-id\">(ID: 910)</span>"
+      },
+      {
+        "lat": 48.1,
+        "lon": 27.4,
+        "name": "Notes d'explorateur de Gabriel 29 <span class=\"datamap-explorer-note-id\">(ID: 936)</span>"
+      },
+      {
+        "lat": 48.5,
+        "lon": 68.8,
+        "name": "Notes d'explorateur de Gabriel 2 <span class=\"datamap-explorer-note-id\">(ID: 909)</span>"
+      },
+      {
+        "lat": 48.8,
+        "lon": 89.7,
+        "name": "Notes d'explorateur de Gabriel 6 <span class=\"datamap-explorer-note-id\">(ID: 913)</span>"
+      },
+      {
+        "lat": 49.0,
+        "lon": 10.3,
+        "name": "Notes d'explorateur de Santiago 2 <span class=\"datamap-explorer-note-id\">(ID: 939)</span>"
+      },
+      {
+        "lat": 50.2,
+        "lon": 24.0,
+        "name": "Notes d'explorateur de Santiago 28 <span class=\"datamap-explorer-note-id\">(ID: 965)</span>"
+      },
+      {
+        "lat": 51.9,
+        "lon": 17.2,
+        "name": "Notes d'explorateur de Gabriel 26 <span class=\"datamap-explorer-note-id\">(ID: 933)</span>"
+      },
+      {
+        "lat": 52.2,
+        "lon": 61.5,
+        "name": "Notes d'explorateur de Nida 25 <span class=\"datamap-explorer-note-id\">(ID: 902)</span>"
+      },
+      {
+        "lat": 54.5,
+        "lon": 40.6,
+        "name": "Notes d'explorateur de Santiago 11 <span class=\"datamap-explorer-note-id\">(ID: 948)</span>"
+      },
+      {
+        "lat": 55.0,
+        "lon": 41.9,
+        "name": "Notes d'explorateur de Gabriel 16 <span class=\"datamap-explorer-note-id\">(ID: 923)</span>"
+      },
+      {
+        "lat": 55.0,
+        "lon": 80.9,
+        "name": "Notes d'explorateur de Nida 27 <span class=\"datamap-explorer-note-id\">(ID: 904)</span>"
+      },
+      {
+        "lat": 55.1,
+        "lon": 66.4,
+        "name": "Notes d'explorateur de Nida 12 <span class=\"datamap-explorer-note-id\">(ID: 889)</span>"
+      },
+      {
+        "lat": 56.0,
+        "lon": 19.5,
+        "name": "Notes d'explorateur de Santiago 29 <span class=\"datamap-explorer-note-id\">(ID: 966)</span>"
+      },
+      {
+        "lat": 56.8,
+        "lon": 91.0,
+        "name": "Notes d'explorateur de Nida 5 <span class=\"datamap-explorer-note-id\">(ID: 882)</span>"
+      },
+      {
+        "lat": 57.2,
+        "lon": 30.5,
+        "name": "Notes d'explorateur de Santiago 10 <span class=\"datamap-explorer-note-id\">(ID: 947)</span>"
+      },
+      {
+        "lat": 57.5,
+        "lon": 27.9,
+        "name": "Notes d'explorateur de Gabriel 30 <span class=\"datamap-explorer-note-id\">(ID: 937)</span>"
+      },
+      {
+        "lat": 58.4,
+        "lon": 75.8,
+        "name": "Notes d'explorateur de Gabriel 1 <span class=\"datamap-explorer-note-id\">(ID: 908)</span>"
+      },
+      {
+        "lat": 59.3,
+        "lon": 57.1,
+        "name": "Notes d'explorateur de Nida 24 <span class=\"datamap-explorer-note-id\">(ID: 901)</span>"
+      },
+      {
+        "lat": 60.0,
+        "lon": 7.3,
+        "name": "Notes d'explorateur de Santiago 3 <span class=\"datamap-explorer-note-id\">(ID: 940)</span>"
+      },
+      {
+        "lat": 63.4,
+        "lon": 61.0,
+        "name": "Notes d'explorateur de Nida 17 <span class=\"datamap-explorer-note-id\">(ID: 894)</span>"
+      },
+      {
+        "lat": 63.8,
+        "lon": 42.6,
+        "name": "Notes d'explorateur de Nida 23 <span class=\"datamap-explorer-note-id\">(ID: 900)</span>"
+      },
+      {
+        "lat": 63.9,
+        "lon": 20.7,
+        "name": "Notes d'explorateur de Santiago 6 <span class=\"datamap-explorer-note-id\">(ID: 943)</span>"
+      },
+      {
+        "lat": 64.6,
+        "lon": 22.9,
+        "name": "Notes d'explorateur de Gabriel 27 <span class=\"datamap-explorer-note-id\">(ID: 934)</span>"
+      },
+      {
+        "lat": 65.4,
+        "lon": 82.0,
+        "name": "Notes d'explorateur de Nida 18 <span class=\"datamap-explorer-note-id\">(ID: 895)</span>"
+      },
+      {
+        "lat": 65.5,
+        "lon": 76.1,
+        "name": "Notes d'explorateur de Nida 9 <span class=\"datamap-explorer-note-id\">(ID: 886)</span>"
+      },
+      {
+        "lat": 65.9,
+        "lon": 14.7,
+        "name": "Notes d'explorateur de Santiago 30 <span class=\"datamap-explorer-note-id\">(ID: 967)</span>"
+      },
+      {
+        "lat": 66.2,
+        "lon": 25.3,
+        "name": "Notes d'explorateur de Santiago 7 <span class=\"datamap-explorer-note-id\">(ID: 944)</span>"
+      },
+      {
+        "lat": 67.0,
+        "lon": 67.1,
+        "name": "Notes d'explorateur de Gabriel 12 <span class=\"datamap-explorer-note-id\">(ID: 919)</span>"
+      },
+      {
+        "lat": 67.2,
+        "lon": 30.9,
+        "name": "Notes d'explorateur de Gabriel 20 <span class=\"datamap-explorer-note-id\">(ID: 927)</span>"
+      },
+      {
+        "lat": 68.9,
+        "lon": 9.6,
+        "name": "Notes d'explorateur de Santiago 4 <span class=\"datamap-explorer-note-id\">(ID: 941)</span>"
+      },
+      {
+        "lat": 69.4,
+        "lon": 83.1,
+        "name": "Notes d'explorateur de Nida 28 <span class=\"datamap-explorer-note-id\">(ID: 905)</span>"
+      },
+      {
+        "lat": 69.8,
+        "lon": 60.3,
+        "name": "Notes d'explorateur de Nida 8 <span class=\"datamap-explorer-note-id\">(ID: 885)</span>"
+      },
+      {
+        "lat": 72.2,
+        "lon": 65.4,
+        "name": "Notes d'explorateur de Gabriel 14 <span class=\"datamap-explorer-note-id\">(ID: 921)</span>"
+      },
+      {
+        "lat": 72.3,
+        "lon": 40.3,
+        "name": "Notes d'explorateur de Gabriel 18 <span class=\"datamap-explorer-note-id\">(ID: 925)</span>"
+      },
+      {
+        "lat": 73.2,
+        "lon": 14.1,
+        "name": "Notes d'explorateur de Gabriel 28 <span class=\"datamap-explorer-note-id\">(ID: 935)</span>"
+      },
+      {
+        "lat": 73.5,
+        "lon": 58.1,
+        "name": "Notes d'explorateur de Nida 13 <span class=\"datamap-explorer-note-id\">(ID: 890)</span>"
+      },
+      {
+        "lat": 74.4,
+        "lon": 35.9,
+        "name": "Notes d'explorateur de Gabriel 19 <span class=\"datamap-explorer-note-id\">(ID: 926)</span>"
+      },
+      {
+        "lat": 77.0,
+        "lon": 6.3,
+        "name": "Notes d'explorateur de Santiago 5 <span class=\"datamap-explorer-note-id\">(ID: 942)</span>"
+      },
+      {
+        "lat": 77.3,
+        "lon": 64.5,
+        "name": "Notes d'explorateur de Nida 19 <span class=\"datamap-explorer-note-id\">(ID: 896)</span>"
+      },
+      {
+        "lat": 78.9,
+        "lon": 20.2,
+        "name": "Notes d'explorateur de Santiago 8 <span class=\"datamap-explorer-note-id\">(ID: 945)</span>"
+      },
+      {
+        "lat": 79.8,
+        "lon": 91.7,
+        "name": "Notes d'explorateur de Nida 2 <span class=\"datamap-explorer-note-id\">(ID: 879)</span>"
+      },
+      {
+        "lat": 80.8,
+        "lon": 31.2,
+        "name": "Notes d'explorateur de Santiago 9 <span class=\"datamap-explorer-note-id\">(ID: 946)</span>"
+      }
+    ],
+    "glitch": [
+      {
+        "lat": 23.8,
+        "lon": 53.1,
+        "name": "Notes d'explorateur d'HLN-A 11 <span class=\"datamap-explorer-note-id\">(ID: 978)</span>"
+      },
+      {
+        "lat": 28.2,
+        "lon": 42.8,
+        "name": "Notes d'explorateur d'HLN-A 30 <span class=\"datamap-explorer-note-id\">(ID: 997)</span>"
+      },
+      {
+        "lat": 28.9,
+        "lon": 80.3,
+        "name": "Notes d'explorateur d'HLN-A 7 <span class=\"datamap-explorer-note-id\">(ID: 974)</span>"
+      },
+      {
+        "lat": 32.4,
+        "lon": 80.3,
+        "name": "Notes d'explorateur d'HLN-A 7 <span class=\"datamap-explorer-note-id\">(ID: 974)</span>"
+      },
+      {
+        "lat": 32.4,
+        "lon": 88.7,
+        "name": "Notes d'explorateur d'HLN-A 10 <span class=\"datamap-explorer-note-id\">(ID: 977)</span>"
+      },
+      {
+        "lat": 33.6,
+        "lon": 87.3,
+        "name": "Notes d'explorateur d'HLN-A 10 <span class=\"datamap-explorer-note-id\">(ID: 977)</span>"
+      },
+      {
+        "lat": 33.7,
+        "lon": 87.3,
+        "name": "Notes d'explorateur d'HLN-A 10 <span class=\"datamap-explorer-note-id\">(ID: 977)</span>"
+      },
+      {
+        "lat": 34.3,
+        "lon": 87.3,
+        "name": "Notes d'explorateur d'HLN-A 10 <span class=\"datamap-explorer-note-id\">(ID: 977)</span>"
+      },
+      {
+        "lat": 34.8,
+        "lon": 42.8,
+        "name": "Notes d'explorateur d'HLN-A 30 <span class=\"datamap-explorer-note-id\">(ID: 997)</span>"
+      },
+      {
+        "lat": 36.8,
+        "lon": 42.8,
+        "name": "Notes d'explorateur d'HLN-A 30 <span class=\"datamap-explorer-note-id\">(ID: 997)</span>"
+      },
+      {
+        "lat": 40.1,
+        "lon": 11.1,
+        "name": "Notes d'explorateur d'HLN-A 16 <span class=\"datamap-explorer-note-id\">(ID: 983)</span>"
+      },
+      {
+        "lat": 40.7,
+        "lon": 70.2,
+        "name": "Notes d'explorateur d'HLN-A 2 <span class=\"datamap-explorer-note-id\">(ID: 969)</span>"
+      },
+      {
+        "lat": 41.1,
+        "lon": 15.9,
+        "name": "Notes d'explorateur d'HLN-A 13 <span class=\"datamap-explorer-note-id\">(ID: 980)</span>"
+      },
+      {
+        "lat": 41.4,
+        "lon": 8.1,
+        "name": "Notes d'explorateur d'HLN-A 16 <span class=\"datamap-explorer-note-id\">(ID: 983)</span>"
+      },
+      {
+        "lat": 41.8,
+        "lon": 62.9,
+        "name": "Notes d'explorateur d'HLN-A 2 <span class=\"datamap-explorer-note-id\">(ID: 969)</span>"
+      },
+      {
+        "lat": 41.8,
+        "lon": 77.3,
+        "name": "Notes d'explorateur d'HLN-A 2 <span class=\"datamap-explorer-note-id\">(ID: 969)</span>"
+      },
+      {
+        "lat": 43.4,
+        "lon": 42.8,
+        "name": "Notes d'explorateur d'HLN-A 30 <span class=\"datamap-explorer-note-id\">(ID: 997)</span>"
+      },
+      {
+        "lat": 45.7,
+        "lon": 75.8,
+        "name": "Notes d'explorateur d'HLN-A 3 <span class=\"datamap-explorer-note-id\">(ID: 970)</span>"
+      },
+      {
+        "lat": 45.7,
+        "lon": 76.2,
+        "name": "Notes d'explorateur d'HLN-A 3 <span class=\"datamap-explorer-note-id\">(ID: 970)</span>"
+      },
+      {
+        "lat": 46.0,
+        "lon": 75.1,
+        "name": "Notes d'explorateur d'HLN-A 3 <span class=\"datamap-explorer-note-id\">(ID: 970)</span>"
+      },
+      {
+        "lat": 46.5,
+        "lon": 53.1,
+        "name": "Notes d'explorateur d'HLN-A 11 <span class=\"datamap-explorer-note-id\">(ID: 978)</span>"
+      },
+      {
+        "lat": 46.5,
+        "lon": 65.8,
+        "name": "Notes d'explorateur d'HLN-A 29 <span class=\"datamap-explorer-note-id\">(ID: 996)</span>"
+      },
+      {
+        "lat": 46.5,
+        "lon": 76.2,
+        "name": "Notes d'explorateur d'HLN-A 29 <span class=\"datamap-explorer-note-id\">(ID: 970)</span>"
+      },
+      {
+        "lat": 46.5,
+        "lon": 79.9,
+        "name": "Notes d'explorateur d'HLN-A 29 <span class=\"datamap-explorer-note-id\">(ID: 996)</span>"
+      },
+      {
+        "lat": 46.5,
+        "lon": 90.5,
+        "name": "Notes d'explorateur d'HLN-A 29 <span class=\"datamap-explorer-note-id\">(ID: 996)</span>"
+      },
+      {
+        "lat": 46.6,
+        "lon": 27.5,
+        "name": "Notes d'explorateur d'HLN-A 22 <span class=\"datamap-explorer-note-id\">(ID: 989)</span>"
+      },
+      {
+        "lat": 46.6,
+        "lon": 62.1,
+        "name": "Notes d'explorateur d'HLN-A 29 <span class=\"datamap-explorer-note-id\">(ID: 996)</span>"
+      },
+      {
+        "lat": 46.6,
+        "lon": 86.7,
+        "name": "Notes d'explorateur d'HLN-A 29 <span class=\"datamap-explorer-note-id\">(ID: 996)</span>"
+      },
+      {
+        "lat": 46.9,
+        "lon": 42.0,
+        "name": "Notes d'explorateur d'HLN-A 12 <span class=\"datamap-explorer-note-id\">(ID: 979)</span>"
+      },
+      {
+        "lat": 47.5,
+        "lon": 27.7,
+        "name": "Notes d'explorateur d'HLN-A 22 <span class=\"datamap-explorer-note-id\">(ID: 989)</span>"
+      },
+      {
+        "lat": 49.0,
+        "lon": 62.1,
+        "name": "Notes d'explorateur d'HLN-A 4 <span class=\"datamap-explorer-note-id\">(ID: 971)</span>"
+      },
+      {
+        "lat": 49.0,
+        "lon": 76.2,
+        "name": "Notes d'explorateur d'HLN-A 4 <span class=\"datamap-explorer-note-id\">(ID: 971)</span>"
+      },
+      {
+        "lat": 49.0,
+        "lon": 86.7,
+        "name": "Notes d'explorateur d'HLN-A 4 <span class=\"datamap-explorer-note-id\">(ID: 971)</span>"
+      },
+      {
+        "lat": 49.1,
+        "lon": 62.1,
+        "name": "Notes d'explorateur d'HLN-A 8 <span class=\"datamap-explorer-note-id\">(ID: 971)</span>"
+      },
+      {
+        "lat": 49.1,
+        "lon": 76.2,
+        "name": "Notes d'explorateur d'HLN-A 8 <span class=\"datamap-explorer-note-id\">(ID: 971)</span>"
+      },
+      {
+        "lat": 49.1,
+        "lon": 86.7,
+        "name": "Notes d'explorateur d'HLN-A 8 <span class=\"datamap-explorer-note-id\">(ID: 971)</span>"
+      },
+      {
+        "lat": 49.4,
+        "lon": 61.1,
+        "name": "Notes d'explorateur d'HLN-A 4 <span class=\"datamap-explorer-note-id\">(ID: 971)</span>"
+      },
+      {
+        "lat": 49.4,
+        "lon": 63.0,
+        "name": "Notes d'explorateur d'HLN-A 4 <span class=\"datamap-explorer-note-id\">(ID: 971)</span>"
+      },
+      {
+        "lat": 49.4,
+        "lon": 75.2,
+        "name": "Notes d'explorateur d'HLN-A 4 <span class=\"datamap-explorer-note-id\">(ID: 971)</span>"
+      },
+      {
+        "lat": 49.4,
+        "lon": 77.1,
+        "name": "Notes d'explorateur d'HLN-A 4 <span class=\"datamap-explorer-note-id\">(ID: 971)</span>"
+      },
+      {
+        "lat": 49.4,
+        "lon": 85.7,
+        "name": "Notes d'explorateur d'HLN-A 4 <span class=\"datamap-explorer-note-id\">(ID: 971)</span>"
+      },
+      {
+        "lat": 49.4,
+        "lon": 87.7,
+        "name": "Notes d'explorateur d'HLN-A 4 <span class=\"datamap-explorer-note-id\">(ID: 971)</span>"
+      },
+      {
+        "lat": 49.5,
+        "lon": 26.7,
+        "name": "Notes d'explorateur d'HLN-A 22 <span class=\"datamap-explorer-note-id\">(ID: 989)</span>"
+      },
+      {
+        "lat": 50.5,
+        "lon": 61.1,
+        "name": "Notes d'explorateur d'HLN-A 4 <span class=\"datamap-explorer-note-id\">(ID: 971)</span>"
+      },
+      {
+        "lat": 50.5,
+        "lon": 63.1,
+        "name": "Notes d'explorateur d'HLN-A 4 <span class=\"datamap-explorer-note-id\">(ID: 971)</span>"
+      },
+      {
+        "lat": 50.5,
+        "lon": 75.1,
+        "name": "Notes d'explorateur d'HLN-A 4 <span class=\"datamap-explorer-note-id\">(ID: 971)</span>"
+      },
+      {
+        "lat": 50.5,
+        "lon": 77.2,
+        "name": "Notes d'explorateur d'HLN-A 4 <span class=\"datamap-explorer-note-id\">(ID: 971)</span>"
+      },
+      {
+        "lat": 50.5,
+        "lon": 85.7,
+        "name": "Notes d'explorateur d'HLN-A 4 <span class=\"datamap-explorer-note-id\">(ID: 971)</span>"
+      },
+      {
+        "lat": 50.5,
+        "lon": 87.8,
+        "name": "Notes d'explorateur d'HLN-A 4 <span class=\"datamap-explorer-note-id\">(ID: 971)</span>"
+      },
+      {
+        "lat": 50.6,
+        "lon": 41.9,
+        "name": "Notes d'explorateur d'HLN-A 12 <span class=\"datamap-explorer-note-id\">(ID: 979)</span>"
+      },
+      {
+        "lat": 50.6,
+        "lon": 53.1,
+        "name": "Notes d'explorateur d'HLN-A 11 <span class=\"datamap-explorer-note-id\">(ID: 978)</span>"
+      },
+      {
+        "lat": 51.5,
+        "lon": 37.9,
+        "name": "Notes d'explorateur d'HLN-A 15 <span class=\"datamap-explorer-note-id\">(ID: 982)</span>"
+      },
+      {
+        "lat": 52.8,
+        "lon": 37.5,
+        "name": "Notes d'explorateur d'HLN-A 15 <span class=\"datamap-explorer-note-id\">(ID: 982)</span>"
+      },
+      {
+        "lat": 54.1,
+        "lon": 42.8,
+        "name": "Notes d'explorateur d'HLN-A 30 <span class=\"datamap-explorer-note-id\">(ID: 997)</span>"
+      },
+      {
+        "lat": 55.7,
+        "lon": 26.9,
+        "name": "Notes d'explorateur d'HLN-A 17 <span class=\"datamap-explorer-note-id\">(ID: 984)</span>"
+      },
+      {
+        "lat": 55.7,
+        "lon": 27.9,
+        "name": "Notes d'explorateur d'HLN-A 17 <span class=\"datamap-explorer-note-id\">(ID: 984)</span>"
+      },
+      {
+        "lat": 55.7,
+        "lon": 28.8,
+        "name": "Notes d'explorateur d'HLN-A 17 <span class=\"datamap-explorer-note-id\">(ID: 984)</span>"
+      },
+      {
+        "lat": 56.2,
+        "lon": 13.8,
+        "name": "Notes d'explorateur d'HLN-A 16 <span class=\"datamap-explorer-note-id\">(ID: 983)</span>"
+      },
+      {
+        "lat": 56.3,
+        "lon": 27.9,
+        "name": "Notes d'explorateur d'HLN-A 23 <span class=\"datamap-explorer-note-id\">(ID: 984)</span>"
+      },
+      {
+        "lat": 56.9,
+        "lon": 27.7,
+        "name": "Notes d'explorateur d'HLN-A 23 <span class=\"datamap-explorer-note-id\">(ID: 990)</span>"
+      },
+      {
+        "lat": 56.9,
+        "lon": 28.1,
+        "name": "Notes d'explorateur d'HLN-A 23 <span class=\"datamap-explorer-note-id\">(ID: 990)</span>"
+      },
+      {
+        "lat": 57.6,
+        "lon": 27.9,
+        "name": "Notes d'explorateur d'HLN-A 23 <span class=\"datamap-explorer-note-id\">(ID: 937)</span>"
+      },
+      {
+        "lat": 57.9,
+        "lon": 36.0,
+        "name": "Notes d'explorateur d'HLN-A 14 <span class=\"datamap-explorer-note-id\">(ID: 981)</span>"
+      },
+      {
+        "lat": 58.3,
+        "lon": 27.2,
+        "name": "Notes d'explorateur d'HLN-A 18 <span class=\"datamap-explorer-note-id\">(ID: 985)</span>"
+      },
+      {
+        "lat": 58.3,
+        "lon": 28.6,
+        "name": "Notes d'explorateur d'HLN-A 18 <span class=\"datamap-explorer-note-id\">(ID: 985)</span>"
+      },
+      {
+        "lat": 58.4,
+        "lon": 27.9,
+        "name": "Notes d'explorateur d'HLN-A 18 <span class=\"datamap-explorer-note-id\">(ID: 937)</span>"
+      },
+      {
+        "lat": 59.1,
+        "lon": 36.2,
+        "name": "Notes d'explorateur d'HLN-A 14 <span class=\"datamap-explorer-note-id\">(ID: 981)</span>"
+      },
+      {
+        "lat": 59.5,
+        "lon": 79.2,
+        "name": "Notes d'explorateur d'HLN-A 6 <span class=\"datamap-explorer-note-id\">(ID: 973)</span>"
+      },
+      {
+        "lat": 59.6,
+        "lon": 29.1,
+        "name": "Notes d'explorateur d'HLN-A 24 <span class=\"datamap-explorer-note-id\">(ID: 983)</span>"
+      },
+      {
+        "lat": 59.6,
+        "lon": 30.0,
+        "name": "Notes d'explorateur d'HLN-A 16 <span class=\"datamap-explorer-note-id\">(ID: 983)</span>"
+      },
+      {
+        "lat": 59.6,
+        "lon": 79.3,
+        "name": "Notes d'explorateur d'HLN-A 6 <span class=\"datamap-explorer-note-id\">(ID: 973)</span>"
+      },
+      {
+        "lat": 59.8,
+        "lon": 82.9,
+        "name": "Notes d'explorateur d'HLN-A 9 <span class=\"datamap-explorer-note-id\">(ID: 976)</span>"
+      },
+      {
+        "lat": 60.0,
+        "lon": 11.1,
+        "name": "Notes d'explorateur d'HLN-A 16 <span class=\"datamap-explorer-note-id\">(ID: 983)</span>"
+      },
+      {
+        "lat": 60.1,
+        "lon": 80.1,
+        "name": "Notes d'explorateur d'HLN-A 6 <span class=\"datamap-explorer-note-id\">(ID: 973)</span>"
+      },
+      {
+        "lat": 60.1,
+        "lon": 80.2,
+        "name": "Notes d'explorateur d'HLN-A 6 <span class=\"datamap-explorer-note-id\">(ID: 973)</span>"
+      },
+      {
+        "lat": 60.2,
+        "lon": 81.9,
+        "name": "Notes d'explorateur d'HLN-A 9 <span class=\"datamap-explorer-note-id\">(ID: 976)</span>"
+      },
+      {
+        "lat": 60.3,
+        "lon": 28.5,
+        "name": "Notes d'explorateur d'HLN-A 24 <span class=\"datamap-explorer-note-id\">(ID: 991)</span>"
+      },
+      {
+        "lat": 60.4,
+        "lon": 27.4,
+        "name": "Notes d'explorateur d'HLN-A 24 <span class=\"datamap-explorer-note-id\">(ID: 991)</span>"
+      },
+      {
+        "lat": 60.8,
+        "lon": 28.0,
+        "name": "Notes d'explorateur d'HLN-A 19 <span class=\"datamap-explorer-note-id\">(ID: 986)</span>"
+      },
+      {
+        "lat": 60.8,
+        "lon": 42.8,
+        "name": "Notes d'explorateur d'HLN-A 30 <span class=\"datamap-explorer-note-id\">(ID: 997)</span>"
+      },
+      {
+        "lat": 60.8,
+        "lon": 83.6,
+        "name": "Notes d'explorateur d'HLN-A 9 <span class=\"datamap-explorer-note-id\">(ID: 976)</span>"
+      },
+      {
+        "lat": 61.0,
+        "lon": 25.8,
+        "name": "Notes d'explorateur d'HLN-A 21 <span class=\"datamap-explorer-note-id\">(ID: 988)</span>"
+      },
+      {
+        "lat": 61.0,
+        "lon": 27.0,
+        "name": "Notes d'explorateur d'HLN-A 21 <span class=\"datamap-explorer-note-id\">(ID: 988)</span>"
+      },
+      {
+        "lat": 61.1,
+        "lon": 78.3,
+        "name": "Notes d'explorateur d'HLN-A 6 <span class=\"datamap-explorer-note-id\">(ID: 973)</span>"
+      },
+      {
+        "lat": 61.2,
+        "lon": 26.1,
+        "name": "Notes d'explorateur d'HLN-A 25 <span class=\"datamap-explorer-note-id\">(ID: 986)</span>"
+      },
+      {
+        "lat": 61.2,
+        "lon": 26.8,
+        "name": "Notes d'explorateur d'HLN-A 19 <span class=\"datamap-explorer-note-id\">(ID: 986)</span>"
+      },
+      {
+        "lat": 61.2,
+        "lon": 78.2,
+        "name": "Notes d'explorateur d'HLN-A 6 <span class=\"datamap-explorer-note-id\">(ID: 973)</span>"
+      },
+      {
+        "lat": 61.4,
+        "lon": 24.9,
+        "name": "Notes d'explorateur d'HLN-A 21 <span class=\"datamap-explorer-note-id\">(ID: 988)</span>"
+      },
+      {
+        "lat": 61.9,
+        "lon": 28.0,
+        "name": "Notes d'explorateur d'HLN-A 25 <span class=\"datamap-explorer-note-id\">(ID: 992)</span>"
+      },
+      {
+        "lat": 62.0,
+        "lon": 29.0,
+        "name": "Notes d'explorateur d'HLN-A 26 <span class=\"datamap-explorer-note-id\">(ID: 993)</span>"
+      },
+      {
+        "lat": 62.1,
+        "lon": 26.5,
+        "name": "Notes d'explorateur d'HLN-A 27 <span class=\"datamap-explorer-note-id\">(ID: 994)</span>"
+      },
+      {
+        "lat": 62.1,
+        "lon": 41.1,
+        "name": "Notes d'explorateur d'HLN-A 16 <span class=\"datamap-explorer-note-id\">(ID: 983)</span>"
+      },
+      {
+        "lat": 62.3,
+        "lon": 9.2,
+        "name": "Notes d'explorateur d'HLN-A 16 <span class=\"datamap-explorer-note-id\">(ID: 983)</span>"
+      },
+      {
+        "lat": 62.4,
+        "lon": 10.2,
+        "name": "Notes d'explorateur d'HLN-A 16 <span class=\"datamap-explorer-note-id\">(ID: 983)</span>"
+      },
+      {
+        "lat": 62.4,
+        "lon": 10.7,
+        "name": "Notes d'explorateur d'HLN-A 16 <span class=\"datamap-explorer-note-id\">(ID: 983)</span>"
+      },
+      {
+        "lat": 62.7,
+        "lon": 11.4,
+        "name": "Notes d'explorateur d'HLN-A 16 <span class=\"datamap-explorer-note-id\">(ID: 983)</span>"
+      },
+      {
+        "lat": 62.8,
+        "lon": 42.8,
+        "name": "Notes d'explorateur d'HLN-A 30 <span class=\"datamap-explorer-note-id\">(ID: 997)</span>"
+      },
+      {
+        "lat": 62.9,
+        "lon": 25.6,
+        "name": "Notes d'explorateur d'HLN-A 20 <span class=\"datamap-explorer-note-id\">(ID: 987)</span>"
+      },
+      {
+        "lat": 63.0,
+        "lon": 27.6,
+        "name": "Notes d'explorateur d'HLN-A 27 <span class=\"datamap-explorer-note-id\">(ID: 994)</span>"
+      },
+      {
+        "lat": 64.2,
+        "lon": 25.6,
+        "name": "Notes d'explorateur d'HLN-A 28 <span class=\"datamap-explorer-note-id\">(ID: 995)</span>"
+      },
+      {
+        "lat": 64.5,
+        "lon": 28.9,
+        "name": "Notes d'explorateur d'HLN-A 26 <span class=\"datamap-explorer-note-id\">(ID: 993)</span>"
+      },
+      {
+        "lat": 69.4,
+        "lon": 42.8,
+        "name": "Notes d'explorateur d'HLN-A 30 <span class=\"datamap-explorer-note-id\">(ID: 997)</span>"
+      },
+      {
+        "lat": 73.2,
+        "lon": 53.1,
+        "name": "Notes d'explorateur d'HLN-A 11 <span class=\"datamap-explorer-note-id\">(ID: 978)</span>"
+      },
+      {
+        "lat": 74.1,
+        "lon": 72.7,
+        "name": "Notes d'explorateur d'HLN-A 5 <span class=\"datamap-explorer-note-id\">(ID: 972)</span>"
+      },
+      {
+        "lat": 74.9,
+        "lon": 72.3,
+        "name": "Notes d'explorateur d'HLN-A 5 <span class=\"datamap-explorer-note-id\">(ID: 972)</span>"
+      },
+      {
+        "lat": 75.6,
+        "lon": 76.7,
+        "name": "Notes d'explorateur d'HLN-A 5 <span class=\"datamap-explorer-note-id\">(ID: 972)</span>"
+      },
+      {
+        "lat": 77.1,
+        "lon": 70.9,
+        "name": "Notes d'explorateur d'HLN-A 5 <span class=\"datamap-explorer-note-id\">(ID: 972)</span>"
+      },
+      {
+        "lat": 78.4,
+        "lon": 70.6,
+        "name": "Notes d'explorateur d'HLN-A 5 <span class=\"datamap-explorer-note-id\">(ID: 972)</span>"
+      },
+      {
+        "lat": 78.9,
+        "lon": 75.6,
+        "name": "Notes d'explorateur d'HLN-A 5 <span class=\"datamap-explorer-note-id\">(ID: 972)</span>"
+      },
+      {
+        "lat": 79.9,
+        "lon": 74.4,
+        "name": "Notes d'explorateur d'HLN-A 5 <span class=\"datamap-explorer-note-id\">(ID: 972)</span>"
+      }
+    ],
+    "mission-terminal": [
+      {
+        "lat": 38.2,
+        "lon": 66.2
+      },
+      {
+        "lat": 42.4,
+        "lon": 37.1
+      },
+      {
+        "lat": 40.1,
+        "lon": 30.2
+      },
+      {
+        "lat": 38.4,
+        "lon": 83.8
+      },
+      {
+        "lat": 40.5,
+        "lon": 9.8
+      },
+      {
+        "lat": 42.1,
+        "lon": 24.7
+      },
+      {
+        "lat": 23.8,
+        "lon": 61.6
+      },
+      {
+        "lat": 26.4,
+        "lon": 9.3
+      },
+      {
+        "lat": 19.3,
+        "lon": 31.9
+      },
+      {
+        "lat": 24.4,
+        "lon": 27.6
+      },
+      {
+        "lat": 18.8,
+        "lon": 89.5
+      },
+      {
+        "lat": 32.9,
+        "lon": 90.7
+      },
+      {
+        "lat": 69.9,
+        "lon": 60.1
+      },
+      {
+        "lat": 57.5,
+        "lon": 69.3
+      },
+      {
+        "lat": 55.4,
+        "lon": 76.7
+      },
+      {
+        "lat": 56.8,
+        "lon": 90.8
+      },
+      {
+        "lat": 79.5,
+        "lon": 90.2
+      },
+      {
+        "lat": 63.0,
+        "lon": 63.8
+      },
+      {
+        "lat": 41.1,
+        "lon": 60.5
+      },
+      {
+        "lat": 40.8,
+        "lon": 76.8
+      },
+      {
+        "lat": 56.5,
+        "lon": 24.4
+      },
+      {
+        "lat": 41.8,
+        "lon": 80.9
+      },
+      {
+        "lat": 56.4,
+        "lon": 36.6
+      },
+      {
+        "lat": 80.7,
+        "lon": 7.5
+      },
+      {
+        "lat": 56.2,
+        "lon": 15.4
+      },
+      {
+        "lat": 74.3,
+        "lon": 32.4
+      },
+      {
+        "lat": 72.9,
+        "lon": 22.6
+      },
+      {
+        "lat": 33.7,
+        "lon": 79.1
+      }
+    ],
+    "rockwell-prime-terminal": [
+      {
+        "lat": 62.9,
+        "lon": 25.5
+      }
+    ]
+  }
+}

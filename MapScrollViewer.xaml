@@ -44,6 +44,8 @@
                                         <MenuItem x:Name="menuItemCave" Header="Grottes" IsCheckable="True" Tag="UpdateVisible:layers-cave" Click="MenuCommand_Click"/>
                                         <MenuItem x:Name="menuItemUser" Header="Répères" IsCheckable="True" Tag="UpdateVisible:layers-user" Click="MenuCommand_Click"/>
                                         <MenuItem x:Name="menuItemFogOfWar" Header="Brouillard de guerre" IsCheckable="True" Tag="UpdateVisible:layers-fow" Click="MenuCommand_Click"/>
+                                        <MenuItem x:Name="menuItemRessources" Header="Ressources" IsCheckable="True" Tag="UpdateVisible:layers-resources" Click="MenuCommand_Click"/>
+                                        <MenuItem x:Name="menuItemExploration" Header="Exploration" IsCheckable="True" Tag="UpdateVisible:layers-exploration" Click="MenuCommand_Click"/>
                                     </MenuItem>
                                     <MenuItem Header="Contenus" Style="{StaticResource MenuItemWoIcon}">
                                         <MenuItem Header="Tout montrer" Tag="UpdateVisible:all" Click="MenuCommand_Click"/>
@@ -67,6 +69,7 @@
                                 </ContextMenu>
                             </Grid.ContextMenu>
                         </Grid>
+                        <Canvas x:Name="canvasCommon"/>
                         <Canvas x:Name="canvasPoiCave"/>
                         <Canvas x:Name="canvasPoi"/>
                         <Canvas x:Name="canvasUser"/>

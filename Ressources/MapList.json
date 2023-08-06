@@ -1,14 +1,27 @@
 ﻿{
+  "list": [
+    "The Island",
+    "Scorched Earth",
+    "Aberration",
+    "Extinction",
+    "Genesis: Part 1",
+    "Genesis: Part 2",
+    "-",
+    "The Center",
+    "Ragnarok",
+    "Valguero",
+    "Crystal Isles",
+    "Lost Island",
+    "Fjordur"
+  ],
   "maps": [
     {
       "name": "The Island",
       "folder": "The_Island",
       "maps": [
         {
-          "resources": [
-            "The_Island_Ressources.json",
-            "The_Island_Exploration.json"
-          ],
+          "resource": "The_Island_Ressources.json",
+          "exploration": "The_Island_Exploration.json",
           "map_border": {
             "width": 30,
             "color": "#246be1"
@@ -21,9 +34,8 @@
       "folder": "The_Center",
       "maps": [
         {
-          "resources": [
-            "The_Center_Ressources.json"
-          ]
+          "resource": "The_Center_Ressources.json",
+          "exploration": "The_Center_Exploration.json"
         }
       ]
     },
@@ -32,10 +44,8 @@
       "folder": "Scorched_Earth",
       "maps": [
         {
-          "resources": [
-            "Scorched_Earth_Ressources.json",
-            "Scorched_Earth_Exploration.json"
-          ]
+          "resource": "Scorched_Earth_Ressources.json",
+          "exploration": "Scorched_Earth_Exploration.json"
         }
       ]
     },
@@ -44,9 +54,8 @@
       "folder": "Ragnarok",
       "maps": [
         {
-          "resources": [
-            "Ragnarok_Ressources.json"
-          ]
+          "resource": "Ragnarok_Ressources.json",
+          "exploration": "Ragnarok_Exploration.json"
         }
       ]
     },
@@ -55,10 +64,8 @@
       "folder": "Aberration",
       "maps": [
         {
-          "resources": [
-            "Aberration_Exploration.json",
-            "Aberration_Ressources.json"
-          ],
+          "resource": "Aberration_Ressources.json",
+          "exploration": "Aberration_Exploration.json",
           "map_border": {
             "width": 30,
             "color": "#808080"
@@ -71,9 +78,8 @@
       "folder": "Extinction",
       "maps": [
         {
-          "resources": [
-            "Extinction_Ressources.json"
-          ],
+          "resource": "Extinction_Ressources.json",
+          "exploration": "Extinction_Exploration.json",
           "map_border": {
             "width": 200,
             "color": "#776e65"
@@ -86,9 +92,8 @@
       "folder": "Valguero",
       "maps": [
         {
-          "resources": [
-            "Valguero_Ressources.json"
-          ]
+          "resource": "Valguero_Ressources.json",
+          "exploration": "Valguero_Exploration.json"
         }
       ]
     },
@@ -97,9 +102,8 @@
       "folder": "Genesis_Part_1",
       "maps": [
         {
-          "resources": [
-            "Genesis_Part_1_Ressources.json"
-          ],
+          "resource": "Genesis_Part_1_Ressources.json",
+          "exploration": "Genesis_Part_1_Exploration.json",
           "map_border": {
             "width": 50,
             "color": "#909090"
@@ -112,9 +116,8 @@
       "folder": "Genesis_Part_2",
       "maps": [
         {
-          "resources": [
-            "Genesis_Part_2_Ressources.json"
-          ]
+          "resource": "Genesis_Part_2_Ressources.json",
+          "exploration": "Genesis_Part_2_Exploration.json"
         }
       ]
     },
@@ -123,9 +126,8 @@
       "folder": "Crystal_Isles",
       "maps": [
         {
-          "resources": [
-            "Crystal_Isles_Ressources.json"
-          ],
+          "resource": "Crystal_Isles_Ressources.json",
+          "exploration": "Crystal_Isles_Exploration.json",
           "map_border": {
             "width": 100,
             "color": "#0c7edf"
@@ -138,9 +140,8 @@
       "folder": "Lost_Island",
       "maps": [
         {
-          "resources": [
-            "Lost_Island_Ressources.json"
-          ]
+          "resource": "Lost_Island_Ressources.json",
+          "exploration": "Lost_Island_Exploration.json"
         }
       ]
     },
@@ -150,10 +151,8 @@
       "maps": [
         {
           "name": "Midgard",
-          "resources": [
-            "Fjordur_Midgard_Ressources.json",
-            "Fjordur_Midgard_Exploration.json"
-          ],
+          "resource": "Fjordur_Midgard_Ressources.json",
+          "exploration": "Fjordur_Midgard_Exploration.json",
           "map_border": {
             "width": 100,
             "color": "#2955dc"
@@ -161,24 +160,18 @@
         },
         {
           "name": "Asgard",
-          "resources": [
-            "Fjordur_Asgard_Ressources.json",
-            "Fjordur_Asgard_Exploration.json"
-          ]
+          "resource": "Fjordur_Asgard_Ressources.json",
+          "exploration": "Fjordur_Asgard_Exploration.json"
         },
         {
           "name": "Jotunheim",
-          "resources": [
-            "Fjordur_Jotunheim_Ressources.json",
-            "Fjordur_Jotunheim_Exploration.json"
-          ]
+          "resource": "Fjordur_Jotunheim_Ressources.json",
+          "exploration": "Fjordur_Jotunheim_Exploration.json"
         },
         {
           "name": "Vanaheim",
-          "resources": [
-            "Fjordur_Vanaheim_Ressources.json",
-            "Fjordur_Vanaheim_Exploration.json"
-          ]
+          "resource": "Fjordur_Vanaheim_Ressources.json",
+          "exploration": "Fjordur_Vanaheim_Exploration.json"
         }
       ]
     }

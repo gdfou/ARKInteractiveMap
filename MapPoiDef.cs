@@ -46,6 +46,7 @@ namespace ARKInteractiveMap
     {
         protected string label_;
         protected string uuid_;  // unique id (needed by editable poi)
+        protected string layer_;
         public string groupName;
         public string fullGroupName;
         public int item_id;
@@ -101,6 +102,12 @@ namespace ARKInteractiveMap
         public string CollectibleLabel
         {
             get => collectibleName;
+        }
+
+        public string Layer
+        {
+            get => layer_;
+            set => layer_ = value;
         }
 
         // Extraction groupe
@@ -213,7 +220,7 @@ namespace ARKInteractiveMap
                 item_id = marker.id;
                 Label = (marker.name != null) ? marker.name : group.name;
             }
-            isCollectible = group.isCollectible;
+            isCollectible = (group.isCollectible == true);
             // process size, color, ...
             borderColor = group.borderColor;
             fillColor = group.fillColor;
@@ -266,6 +273,7 @@ namespace ARKInteractiveMap
                         break;
                     }
                 case "surface-crate":
+                case "osd-crate":
                     {
                         // "surface-crate cg:27 cc:bgw" => surface-crate + type [cg:inde cc:bgw] => bgw: code couleur [blue-green-white]
                         shape = "pie";

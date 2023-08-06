@@ -2,7 +2,8 @@
 	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
 	"mixins": [
 		"Cartes/Définitions des groupes normés",
-		"Cartes/Obélisques Scorched Earth"
+		"Cartes/Obélisques Scorched Earth",
+		"Cartes/Grottes Scorched Earth"
 	],
 	"backgrounds": [
 		{ "name": "Croquis", "image": "Scorched Earth Map.jpg" },

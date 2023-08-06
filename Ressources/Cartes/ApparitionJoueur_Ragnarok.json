@@ -1,0 +1,288 @@
+{
+  "$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
+  "$mixin": true,
+  "groups": {
+    "playerSpawns-jungle1": {
+      "fillColor": "#de00bd",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Jungle 1 (Recommandé)"
+    },
+    "playerSpawns-jungle2": {
+      "fillColor": "#ae00de",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Jungle 2 (Recommandé)"
+    },
+    "playerSpawns-jungle3": {
+      "fillColor": "#5900de",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Jungle 3 (Recommandé)"
+    },
+    "playerSpawns-vikingbay1": {
+      "fillColor": "#0073de",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Baie viking 1 (Recommandé)"
+    },
+    "playerSpawns-vikingbay2": {
+      "fillColor": "#00dbd4",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Baie viking 2 (Recommandé)"
+    },
+    "playerSpawns-vikingbay3": {
+      "fillColor": "#00d994",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Baie viking 3 (Recommandé)"
+    },
+    "playerSpawns-Hauts-plateauxn": {
+      "fillColor": "#00de4a",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Hauts plateaux N"
+    },
+    "playerSpawns-Hauts-plateauxne": {
+      "fillColor": "#99ff33",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Hauts plateaux NE"
+    },
+    "playerSpawns-Hauts-plateauxe": {
+      "fillColor": "#ffff00",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: Hauts plateaux E"
+    },
+    "playerSpawns-sw1": {
+      "fillColor": "#ffd700",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: SO 1"
+    },
+    "playerSpawns-sw2": {
+      "fillColor": "#db8f00",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: SO 2"
+    },
+    "playerSpawns-sw3": {
+      "fillColor": "#d90b00",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png",
+      "name": "Lieux d'apparition: SO 3"
+    }
+  },
+  "markers": {
+    "playerSpawns-sw1": [
+      {
+        "lat": 76.4,
+        "lon": 28.2
+      },
+      {
+        "lat": 76.2,
+        "lon": 28.9
+      },
+      {
+        "lat": 77.3,
+        "lon": 28.9
+      },
+      {
+        "lat": 76.3,
+        "lon": 27.4
+      },
+      {
+        "lat": 80.3,
+        "lon": 28.4
+      },
+      {
+        "lat": 78.4,
+        "lon": 28.8
+      },
+      {
+        "lat": 79.2,
+        "lon": 28.5
+      }
+    ],
+    "playerSpawns-sw3": [
+      {
+        "lat": 58.4,
+        "lon": 28.3
+      },
+      {
+        "lat": 58.5,
+        "lon": 26.9
+      },
+      {
+        "lat": 58.5,
+        "lon": 27.7
+      },
+      {
+        "lat": 58.7,
+        "lon": 27.7
+      },
+      {
+        "lat": 57.9,
+        "lon": 28.5
+      }
+    ],
+    "playerSpawns-jungle2": [
+      {
+        "lat": 18.9,
+        "lon": 18.9
+      },
+      {
+        "lat": 18.9,
+        "lon": 18.3
+      }
+    ],
+    "playerSpawns-jungle1": [
+      {
+        "lat": 17.3,
+        "lon": 22.6
+      },
+      {
+        "lat": 17.6,
+        "lon": 22.3
+      },
+      {
+        "lat": 17.8,
+        "lon": 22.1
+      },
+      {
+        "lat": 17.3,
+        "lon": 23.1
+      },
+      {
+        "lat": 15.9,
+        "lon": 23.4
+      },
+      {
+        "lat": 16.6,
+        "lon": 21.9
+      },
+      {
+        "lat": 16.4,
+        "lon": 22.4
+      },
+      {
+        "lat": 16.6,
+        "lon": 23.6
+      },
+      {
+        "lat": 17.2,
+        "lon": 22.1
+      }
+    ],
+    "playerSpawns-jungle3": [
+      {
+        "lat": 25.8,
+        "lon": 16.7
+      },
+      {
+        "lat": 22.8,
+        "lon": 16.2
+      }
+    ],
+    "playerSpawns-Hauts-plateauxn": [
+      {
+        "lat": 16.2,
+        "lon": 68.3
+      },
+      {
+        "lat": 16.1,
+        "lon": 67.9
+      }
+    ],
+    "playerSpawns-Hauts-plateauxne": [
+      {
+        "lat": 16.2,
+        "lon": 82.4
+      },
+      {
+        "lat": 15.3,
+        "lon": 82.1
+      }
+    ],
+    "playerSpawns-Hauts-plateauxe": [
+      {
+        "lat": 25.4,
+        "lon": 83.4
+      },
+      {
+        "lat": 25.3,
+        "lon": 81.9
+      }
+    ],
+    "playerSpawns-vikingbay1": [
+      {
+        "lat": 18.9,
+        "lon": 31.6
+      },
+      {
+        "lat": 18.5,
+        "lon": 31.6
+      }
+    ],
+    "playerSpawns-vikingbay2": [
+      {
+        "lat": 20.9,
+        "lon": 31.1
+      },
+      {
+        "lat": 21.4,
+        "lon": 31.7
+      }
+    ],
+    "playerSpawns-vikingbay3": [
+      {
+        "lat": 21.8,
+        "lon": 34.9
+      },
+      {
+        "lat": 20.6,
+        "lon": 34.7
+      }
+    ],
+    "playerSpawns-sw2": [
+      {
+        "lat": 64.4,
+        "lon": 23.3
+      },
+      {
+        "lat": 62.8,
+        "lon": 26.9
+      },
+      {
+        "lat": 64.9,
+        "lon": 24.8
+      },
+      {
+        "lat": 64.8,
+        "lon": 26.1
+      },
+      {
+        "lat": 63.8,
+        "lon": 25.3
+      },
+      {
+        "lat": 63.1,
+        "lon": 25.9
+      }
+    ]
+  }
+}

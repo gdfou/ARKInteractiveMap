@@ -32,11 +32,11 @@ namespace ARKInteractiveMap
             return 0.534 + 0.106 * scale_;
         }
 
-        protected (double, Point) ComputeIconPosAndWidth()
+        protected (Point, double) ComputeIconPosAndWidth()
         {
             var size = (collected_ && poiDef.sizeCollected != null ? poiDef.sizeCollected.width : poiDef.size.width) * computeIconRatio();
             var npos = new Point(pos.X * scale_ - size / 2, pos.Y * scale_ - size / 2);
-            return (size, npos);
+            return (npos, size);
         }
 
         override public FrameworkElement BuildForContents(int size)
@@ -91,7 +91,7 @@ namespace ARKInteractiveMap
                 imagePoi_.Opacity = collected_ ? 0.4 : 0.85;
             else
                 imagePoi_.Opacity = collected_ ? 1 : 0.85;
-            (var width, var pos) = ComputeIconPosAndWidth();
+            (var pos, var width) = ComputeIconPosAndWidth();
             imagePoi_.Width = width;
             imagePoi_.Height = width;
             Canvas.SetLeft(imagePoi_, pos.X);
@@ -115,24 +115,25 @@ namespace ARKInteractiveMap
 
         override public void RescalePopup()
         {
-            (var width, var pos) = ComputeIconPosAndWidth();
+            (var pos, var width) = ComputeIconPosAndWidth();
             map.ViewPopup(this, pos.X + width / 2, pos.Y, Label, $"lat:{poiDef.pos.lat}, lon:{poiDef.pos.lon}");
         }
 
         override public void Rescale(double scale)
         {
             scale_ = scale;
-            (var width, var pos) = ComputeIconPosAndWidth();
+            (var pos, var width) = ComputeIconPosAndWidth();
             Canvas.SetLeft(imagePoi_, pos.X);
             Canvas.SetTop(imagePoi_, pos.Y);
             imagePoi_.Width = width;
             imagePoi_.Height = width;
         }
 
-        override public bool GetVisible()
+        override public (Point, double) GetCurrentPosAndSize()
         {
-            return imagePoi_.IsVisible;
+            return ComputeIconPosAndWidth();
         }
+
         override public void SetVisible(bool value)
         {
             imagePoi_.Visibility = value ? Visibility.Visible : Visibility.Collapsed;
@@ -143,18 +144,6 @@ namespace ARKInteractiveMap
         {
             collected_ = value;
             setImage();
-        }
-
-        override public void Ping()
-        {
-            (var width, var pos) = ComputeIconPosAndWidth();
-            map.Ping(width, pos, this);
-        }
-
-        override public void RescalePing()
-        {
-            (var width, var pos) = ComputeIconPosAndWidth();
-            map.RescalePing(width, pos);
         }
     }
 }

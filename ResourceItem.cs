@@ -63,7 +63,7 @@ namespace ARKInteractiveMap
             }
             else if (poi.poiDef.group != null)
             {
-                Console.WriteLine($"Ne trouve pas l'icon '{poi.poiDef.group.icon}'");
+                Console.WriteLine($"Ne trouve pas l'icon '{poi.poiDef.group.icon}' pour le groupe '{poi.poiDef.group.groupName}'");
             }
             // Icon sur la map
             IconMap = MapPoiDef.BuildForContents(poi, size);

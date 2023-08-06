@@ -1,0 +1,1088 @@
+{
+  "$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
+  "mixins": [
+    "Cartes/Définitions des groupes normés",
+    "Cartes/Grottes Genesis Part 1",
+    "Cartes/ApparitionJoueur Genesis Part 1"
+  ],
+  "backgrounds": [
+    {
+      "name": "Croquis",
+      "image": "Genesis Part 1 Map.jpg"
+    },
+    {
+      "name": "Topographique",
+      "image": "Genesis Part 1 Topographic Map.jpg",
+      "at": [
+        [
+          11.5,
+          11.5
+        ],
+        [
+          88.5,
+          88.5
+        ]
+      ]
+    }
+  ],
+  "settings": {
+    "enableSearch": true
+  },
+  "groups": {
+    "oxy-vents": {
+      "name": "oxy-vents",
+      "icon": "Blank.png",
+      "size": 7,
+      "fillColor": "#fc7f03", 
+      "borderColor": "#fff"
+    }
+  },
+  "markers": {
+    "glitch": [
+      {
+        "lat": 78.6,
+        "lon": 16.4,
+        "name": "Découverte du Biome Neige #9 <span class=\"datamap-explorer-note-id\">(ID: 825)</span>"
+      },
+      {
+        "lat": 74.5,
+        "lon": 76.5,
+        "name": "Découverte du Biome Tourbière #3 <span class=\"datamap-explorer-note-id\">(ID: 799)</span>"
+      },
+      {
+        "lat": 18.9,
+        "lon": 47.4,
+        "name": "Découverte du Biome Océan #1 <span class=\"datamap-explorer-note-id\">(ID: 811)</span>"
+      },
+      {
+        "lat": 60.2,
+        "lon": 59.5,
+        "name": "Découverte du Biome Tourbière #5 <span class=\"datamap-explorer-note-id\">(ID: 801)</span>"
+      },
+      {
+        "lat": 67.5,
+        "lon": 25.8,
+        "name": "Découverte du Biome Neige #5 <span class=\"datamap-explorer-note-id\">(ID: 821)</span>"
+      },
+      {
+        "lat": 62.7,
+        "lon": 30.7,
+        "name": "Découverte du Biome Neige #6 <span class=\"datamap-explorer-note-id\">(ID: 822)</span>"
+      },
+      {
+        "lat": 70.8,
+        "lon": 28.7,
+        "name": "Découverte du Biome Neige #7 <span class=\"datamap-explorer-note-id\">(ID: 823)</span>"
+      },
+      {
+        "lat": 73.7,
+        "lon": 25.2,
+        "name": "Découverte du Biome Neige #8 <span class=\"datamap-explorer-note-id\">(ID: 824)</span>"
+      },
+      {
+        "lat": 82.2,
+        "lon": 18.8,
+        "name": "Découverte du Glitch d'archive #59 <span class=\"datamap-explorer-note-id\">(ID: 837)</span>"
+      },
+      {
+        "lat": 57.7,
+        "lon": 61.8,
+        "name": "Découverte du Glitch d'archive #38 <span class=\"datamap-explorer-note-id\">(ID: 776)</span>"
+      },
+      {
+        "lat": 86.2,
+        "lon": 15.3,
+        "name": "Découverte du Glitch d'archive #60 <span class=\"datamap-explorer-note-id\">(ID: 838)</span>"
+      },
+      {
+        "lat": 70.1,
+        "lon": 31.1,
+        "name": "Découverte du Glitch d'archive #10 <span class=\"datamap-explorer-note-id\">(ID: 748)</span>"
+      },
+      {
+        "lat": 42.8,
+        "lon": 73.6,
+        "name": "Découverte du Glitch d'archive #39 <span class=\"datamap-explorer-note-id\">(ID: 777)</span>"
+      },
+      {
+        "lat": 20.7,
+        "lon": 55.0,
+        "name": "Découverte du Biome Océan #2 <span class=\"datamap-explorer-note-id\">(ID: 812)</span>"
+      },
+      {
+        "lat": 33.1,
+        "lon": 66.9,
+        "name": "Découverte du Glitch d'archive #40 <span class=\"datamap-explorer-note-id\">(ID: 778)</span>"
+      },
+      {
+        "lat": 35.1,
+        "lon": 86.6,
+        "name": "Découverte du Glitch d'archive #41 <span class=\"datamap-explorer-note-id\">(ID: 779)</span>"
+      },
+      {
+        "lat": 19.8,
+        "lon": 72.8,
+        "name": "Découverte du Glitch d'archive #42 <span class=\"datamap-explorer-note-id\">(ID: 780)</span>"
+      },
+      {
+        "lat": 21.2,
+        "lon": 85.4,
+        "name": "Découverte du Glitch d'archive #43 <span class=\"datamap-explorer-note-id\">(ID: 781)</span>"
+      },
+      {
+        "lat": 40.8,
+        "lon": 73.7,
+        "name": "Découverte du Glitch d'archive #44 <span class=\"datamap-explorer-note-id\">(ID: 782)</span>"
+      },
+      {
+        "lat": 42.3,
+        "lon": 67.8,
+        "name": "Découverte du Glitch d'archive #45 <span class=\"datamap-explorer-note-id\">(ID: 783)</span>"
+      },
+      {
+        "lat": 30.9,
+        "lon": 81.9,
+        "name": "Découverte du Glitch d'archive #46 <span class=\"datamap-explorer-note-id\">(ID: 784)</span>"
+      },
+      {
+        "lat": 30.7,
+        "lon": 56.2,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 733)</span>"
+      },
+      {
+        "lat": 13.7,
+        "lon": 87.1,
+        "name": "Découverte du Glitch d'archive #47 <span class=\"datamap-explorer-note-id\">(ID: 785)</span>"
+      },
+      {
+        "lat": 35.1,
+        "lon": 54.0,
+        "name": "Découverte du Glitch d'archive #56 <span class=\"datamap-explorer-note-id\">(ID: 794)</span>"
+      },
+      {
+        "lat": 18.4,
+        "lon": 56.4,
+        "name": "Découverte du Biome Océan #3 <span class=\"datamap-explorer-note-id\">(ID: 813)</span>"
+      },
+      {
+        "lat": 73.3,
+        "lon": 27.3,
+        "name": "Découverte du Glitch d'archive #11 <span class=\"datamap-explorer-note-id\">(ID: 749)</span>"
+      },
+      {
+        "lat": 66.2,
+        "lon": 21.3,
+        "name": "Découverte du Glitch d'archive #12 <span class=\"datamap-explorer-note-id\">(ID: 750)</span>"
+      },
+      {
+        "lat": 22.2,
+        "lon": 69.6,
+        "name": "Découverte du Glitch d'archive #57 <span class=\"datamap-explorer-note-id\">(ID: 795)</span>"
+      },
+      {
+        "lat": 70.6,
+        "lon": 33.4,
+        "name": "Découverte du Glitch d'archive #71 <span class=\"datamap-explorer-note-id\">(ID: 849)</span>"
+      },
+      {
+        "lat": 85.0,
+        "lon": 37.1,
+        "name": "Découverte du Glitch d'archive #72 <span class=\"datamap-explorer-note-id\">(ID: 850)</span>"
+      },
+      {
+        "lat": 68.1,
+        "lon": 59.8,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 717)</span>"
+      },
+      {
+        "lat": 73.5,
+        "lon": 76.9,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 711)</span>"
+      },
+      {
+        "lat": 40.8,
+        "lon": 38.2,
+        "name": "Découverte du Glitch d'archive #14 <span class=\"datamap-explorer-note-id\">(ID: 752)</span>"
+      },
+      {
+        "lat": 72.5,
+        "lon": 43.4,
+        "name": "Découverte du Glitch d'archive #73 <span class=\"datamap-explorer-note-id\">(ID: 851)</span>"
+      },
+      {
+        "lat": 48.4,
+        "lon": 73.6,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 719)</span>"
+      },
+      {
+        "lat": 25.9,
+        "lon": 58.0,
+        "name": "Découverte du Biome Océan #4 <span class=\"datamap-explorer-note-id\">(ID: 814)</span>"
+      },
+      {
+        "lat": 41.6,
+        "lon": 75.9,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 720)</span>"
+      },
+      {
+        "lat": 37.3,
+        "lon": 86.2,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 721)</span>"
+      },
+      {
+        "lat": 17.1,
+        "lon": 71.3,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 722)</span>"
+      },
+      {
+        "lat": 28.5,
+        "lon": 80.6,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 723)</span>"
+      },
+      {
+        "lat": 28.3,
+        "lon": 74.0,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 718)</span>"
+      },
+      {
+        "lat": 24.3,
+        "lon": 13.7,
+        "name": "Découverte du Glitch d'archive #13 <span class=\"datamap-explorer-note-id\">(ID: 751)</span>"
+      },
+      {
+        "lat": 12.4,
+        "lon": 38.8,
+        "name": "Découverte du Glitch d'archive #16 <span class=\"datamap-explorer-note-id\">(ID: 754)</span>"
+      },
+      {
+        "lat": 40.9,
+        "lon": 12.7,
+        "name": "Découverte du Glitch d'archive #68 <span class=\"datamap-explorer-note-id\">(ID: 846)</span>"
+      },
+      {
+        "lat": 68.0,
+        "lon": 21.9,
+        "name": "Découverte du Glitch d'archive #69 <span class=\"datamap-explorer-note-id\">(ID: 847)</span>"
+      },
+      {
+        "lat": 43.3,
+        "lon": 80.7,
+        "name": "Découverte du Glitch d'archive #17 <span class=\"datamap-explorer-note-id\">(ID: 755)</span>"
+      },
+      {
+        "lat": 31.4,
+        "lon": 56.7,
+        "name": "Découverte du Biome Océan #5 <span class=\"datamap-explorer-note-id\">(ID: 815)</span>"
+      },
+      {
+        "lat": 48.8,
+        "lon": 18.0,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 836)</span>"
+      },
+      {
+        "lat": 71.9,
+        "lon": 69.4,
+        "name": "Découverte du Glitch d'archive #64 <span class=\"datamap-explorer-note-id\">(ID: 842)</span>"
+      },
+      {
+        "lat": 43.6,
+        "lon": 76.1,
+        "name": "Découverte du Glitch d'archive #18 <span class=\"datamap-explorer-note-id\">(ID: 756)</span>"
+      },
+      {
+        "lat": 75.3,
+        "lon": 75.8,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 712)</span>"
+      },
+      {
+        "lat": 21.8,
+        "lon": 69.2,
+        "name": "Découverte du Glitch d'archive #19 <span class=\"datamap-explorer-note-id\">(ID: 757)</span>"
+      },
+      {
+        "lat": 79.4,
+        "lon": 72.6,
+        "name": "Découverte du Glitch d'archive #65 <span class=\"datamap-explorer-note-id\">(ID: 843)</span>"
+      },
+      {
+        "lat": 34.5,
+        "lon": 51.0,
+        "name": "Découverte du Glitch d'archive #66 <span class=\"datamap-explorer-note-id\">(ID: 844)</span>"
+      },
+      {
+        "lat": 44.6,
+        "lon": 85.5,
+        "name": "Découverte du Biome Volcan #1 <span class=\"datamap-explorer-note-id\">(ID: 826)</span>"
+      },
+      {
+        "lat": 26.9,
+        "lon": 77.2,
+        "name": "Découverte du Biome Volcan #2 <span class=\"datamap-explorer-note-id\">(ID: 827)</span>"
+      },
+      {
+        "lat": 47.5,
+        "lon": 66.8,
+        "name": "Découverte du Biome Volcan #3 <span class=\"datamap-explorer-note-id\">(ID: 828)</span>"
+      },
+      {
+        "lat": 35.9,
+        "lon": 45.7,
+        "name": "Découverte du Biome Océan #6 <span class=\"datamap-explorer-note-id\">(ID: 816)</span>"
+      },
+      {
+        "lat": 43.4,
+        "lon": 35.2,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 735)</span>"
+      },
+      {
+        "lat": 18.4,
+        "lon": 37.4,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 736)</span>"
+      },
+      {
+        "lat": 21.4,
+        "lon": 14.5,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 737)</span>"
+      },
+      {
+        "lat": 50.9,
+        "lon": 13.9,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 738)</span>"
+      },
+      {
+        "lat": 84.2,
+        "lon": 74.8,
+        "name": "Découverte du Biome Tourbière #6 <span class=\"datamap-explorer-note-id\">(ID: 802)</span>"
+      },
+      {
+        "lat": 49.7,
+        "lon": 29.2,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 833)</span>"
+      },
+      {
+        "lat": 34.3,
+        "lon": 32.1,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 834)</span>"
+      },
+      {
+        "lat": 37.3,
+        "lon": 24.5,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 835)</span>"
+      },
+      {
+        "lat": 70.9,
+        "lon": 75.1,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 713)</span>"
+      },
+      {
+        "lat": 73.7,
+        "lon": 83.7,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 714)</span>"
+      },
+      {
+        "lat": 66.5,
+        "lon": 85.0,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 715)</span>"
+      },
+      {
+        "lat": 71.1,
+        "lon": 76.8,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 716)</span>"
+      },
+      {
+        "lat": 39.1,
+        "lon": 47.1,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 726)</span>"
+      },
+      {
+        "lat": 40.2,
+        "lon": 56.3,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 727)</span>"
+      },
+      {
+        "lat": 36.4,
+        "lon": 49.3,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 728)</span>"
+      },
+      {
+        "lat": 47.1,
+        "lon": 14.1,
+        "name": "Découverte du Biome Lune #1 <span class=\"datamap-explorer-note-id\">(ID: 803)</span>"
+      },
+      {
+        "lat": 31.8,
+        "lon": 57.3,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 729)</span>"
+      },
+      {
+        "lat": 18.9,
+        "lon": 51.8,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 730)</span>"
+      },
+      {
+        "lat": 23.1,
+        "lon": 51.3,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 731)</span>"
+      },
+      {
+        "lat": 32.2,
+        "lon": 46.2,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 732)</span>"
+      },
+      {
+        "lat": 80.6,
+        "lon": 26.7,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 703)</span>"
+      },
+      {
+        "lat": 71.2,
+        "lon": 19.5,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 704)</span>"
+      },
+      {
+        "lat": 76.4,
+        "lon": 28.1,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 705)</span>"
+      },
+      {
+        "lat": 61.3,
+        "lon": 37.5,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 706)</span>"
+      },
+      {
+        "lat": 82.6,
+        "lon": 42.0,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 707)</span>"
+      },
+      {
+        "lat": 75.7,
+        "lon": 53.1,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 708)</span>"
+      },
+      {
+        "lat": 22.3,
+        "lon": 31.3,
+        "name": "Découverte du Biome Lune #2 <span class=\"datamap-explorer-note-id\">(ID: 804)</span>"
+      },
+      {
+        "lat": 61.4,
+        "lon": 33.0,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 710)</span>"
+      },
+      {
+        "lat": 32.2,
+        "lon": 48.5,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 734)</span>"
+      },
+      {
+        "lat": 17.3,
+        "lon": 87.9,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 724)</span>"
+      },
+      {
+        "lat": 36.7,
+        "lon": 72.4,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 725)</span>"
+      },
+      {
+        "lat": 83.5,
+        "lon": 60.6,
+        "name": "Découverte du Glitch d'archive #1 <span class=\"datamap-explorer-note-id\">(ID: 739)</span>"
+      },
+      {
+        "lat": 72.6,
+        "lon": 70.0,
+        "name": "Découverte du Glitch d'archive #2 <span class=\"datamap-explorer-note-id\">(ID: 740)</span>"
+      },
+      {
+        "lat": 67.2,
+        "lon": 78.2,
+        "name": "Découverte du Glitch d'archive #3 <span class=\"datamap-explorer-note-id\">(ID: 741)</span>"
+      },
+      {
+        "lat": 66.2,
+        "lon": 67.5,
+        "name": "Découverte du Glitch d'archive #4 <span class=\"datamap-explorer-note-id\">(ID: 742)</span>"
+      },
+      {
+        "lat": 32.7,
+        "lon": 59.0,
+        "name": "Découverte du Glitch d'archive #5 <span class=\"datamap-explorer-note-id\">(ID: 743)</span>"
+      },
+      {
+        "lat": 33.1,
+        "lon": 51.9,
+        "name": "Découverte du Glitch d'archive #6 <span class=\"datamap-explorer-note-id\">(ID: 744)</span>"
+      },
+      {
+        "lat": 21.6,
+        "lon": 26.0,
+        "name": "Découverte du Biome Lune #3 <span class=\"datamap-explorer-note-id\">(ID: 805)</span>"
+      },
+      {
+        "lat": 28.8,
+        "lon": 60.6,
+        "name": "Découverte du Glitch d'archive #7 <span class=\"datamap-explorer-note-id\">(ID: 745)</span>"
+      },
+      {
+        "lat": 33.3,
+        "lon": 51.4,
+        "name": "Découverte du Glitch d'archive #8 <span class=\"datamap-explorer-note-id\">(ID: 746)</span>"
+      },
+      {
+        "lat": 75.5,
+        "lon": 46.2,
+        "name": "Découverte du Glitch d'archive #9 <span class=\"datamap-explorer-note-id\">(ID: 747)</span>"
+      },
+      {
+        "lat": 32.8,
+        "lon": 32.9,
+        "name": "Découverte du Glitch d'archive #15 <span class=\"datamap-explorer-note-id\">(ID: 753)</span>"
+      },
+      {
+        "lat": 28.2,
+        "lon": 80.3,
+        "name": "Découverte du Glitch d'archive #20 <span class=\"datamap-explorer-note-id\">(ID: 758)</span>"
+      },
+      {
+        "lat": 38.5,
+        "lon": 24.6,
+        "name": "Découverte du Glitch d'archive #21 <span class=\"datamap-explorer-note-id\">(ID: 759)</span>"
+      },
+      {
+        "lat": 50.5,
+        "lon": 27.8,
+        "name": "Découverte du Glitch d'archive #22 <span class=\"datamap-explorer-note-id\">(ID: 760)</span>"
+      },
+      {
+        "lat": 23.6,
+        "lon": 25.7,
+        "name": "Découverte du Glitch d'archive #23 <span class=\"datamap-explorer-note-id\">(ID: 761)</span>"
+      },
+      {
+        "lat": 26.4,
+        "lon": 32.7,
+        "name": "Découverte du Glitch d'archive #24 <span class=\"datamap-explorer-note-id\">(ID: 762)</span>"
+      },
+      {
+        "lat": 27.0,
+        "lon": 27.6,
+        "name": "Découverte du Glitch d'archive #25 <span class=\"datamap-explorer-note-id\">(ID: 763)</span>"
+      },
+      {
+        "lat": 30.2,
+        "lon": 35.4,
+        "name": "Découverte du Biome Lune #4 <span class=\"datamap-explorer-note-id\">(ID: 806)</span>"
+      },
+      {
+        "lat": 31.9,
+        "lon": 14.8,
+        "name": "Découverte du Glitch d'archive #26 <span class=\"datamap-explorer-note-id\">(ID: 764)</span>"
+      },
+      {
+        "lat": 33.9,
+        "lon": 19.3,
+        "name": "Découverte du Glitch d'archive #27 <span class=\"datamap-explorer-note-id\">(ID: 765)</span>"
+      },
+      {
+        "lat": 47.4,
+        "lon": 23.7,
+        "name": "Découverte du Glitch d'archive #28 <span class=\"datamap-explorer-note-id\">(ID: 766)</span>"
+      },
+      {
+        "lat": 29.2,
+        "lon": 48.1,
+        "name": "Découverte du Glitch d'archive #48 <span class=\"datamap-explorer-note-id\">(ID: 786)</span>"
+      },
+      {
+        "lat": 34.3,
+        "lon": 45.3,
+        "name": "Découverte du Glitch d'archive #49 <span class=\"datamap-explorer-note-id\">(ID: 787)</span>"
+      },
+      {
+        "lat": 26.7,
+        "lon": 51.1,
+        "name": "Découverte du Glitch d'archive #50 <span class=\"datamap-explorer-note-id\">(ID: 788)</span>"
+      },
+      {
+        "lat": 23.8,
+        "lon": 48.8,
+        "name": "Découverte du Glitch d'archive #51 <span class=\"datamap-explorer-note-id\">(ID: 789)</span>"
+      },
+      {
+        "lat": 21.8,
+        "lon": 50.3,
+        "name": "Découverte du Glitch d'archive #52 <span class=\"datamap-explorer-note-id\">(ID: 790)</span>"
+      },
+      {
+        "lat": 21.0,
+        "lon": 51.0,
+        "name": "Découverte du Glitch d'archive #53 <span class=\"datamap-explorer-note-id\">(ID: 791)</span>"
+      },
+      {
+        "lat": 20.2,
+        "lon": 50.1,
+        "name": "Découverte du Glitch d'archive #54 <span class=\"datamap-explorer-note-id\">(ID: 792)</span>"
+      },
+      {
+        "lat": 32.3,
+        "lon": 37.7,
+        "name": "Découverte du Biome Lune #5 <span class=\"datamap-explorer-note-id\">(ID: 807)</span>"
+      },
+      {
+        "lat": 15.9,
+        "lon": 47.5,
+        "name": "Découverte du Glitch d'archive #55 <span class=\"datamap-explorer-note-id\">(ID: 793)</span>"
+      },
+      {
+        "lat": 15.4,
+        "lon": 74.5,
+        "name": "Découverte du Glitch d'archive #58 <span class=\"datamap-explorer-note-id\">(ID: 796)</span>"
+      },
+      {
+        "lat": 85.5,
+        "lon": 30.8,
+        "name": "Découverte du Glitch d'archive #61 <span class=\"datamap-explorer-note-id\">(ID: 839)</span>"
+      },
+      {
+        "lat": 57.2,
+        "lon": 69.2,
+        "name": "Découverte du Glitch d'archive #62 <span class=\"datamap-explorer-note-id\">(ID: 840)</span>"
+      },
+      {
+        "lat": 61.5,
+        "lon": 74.8,
+        "name": "Découverte du Glitch d'archive #63 <span class=\"datamap-explorer-note-id\">(ID: 841)</span>"
+      },
+      {
+        "lat": 28.8,
+        "lon": 47.8,
+        "name": "Découverte du Glitch d'archive #67 <span class=\"datamap-explorer-note-id\">(ID: 845)</span>"
+      },
+      {
+        "lat": 73.1,
+        "lon": 30.9,
+        "name": "Découverte du Glitch d'archive #70 <span class=\"datamap-explorer-note-id\">(ID: 848)</span>"
+      },
+      {
+        "lat": 67.2,
+        "lon": 32.8,
+        "name": "Découverte du Glitch d'archive #74 <span class=\"datamap-explorer-note-id\">(ID: 852)</span>"
+      },
+      {
+        "lat": 12.4,
+        "lon": 76.3,
+        "name": "Découverte du Biome Volcan #7 <span class=\"datamap-explorer-note-id\">(ID: 832)</span>"
+      },
+      {
+        "lat": 82.3,
+        "lon": 21.4,
+        "name": "Aléatoire <span class=\"datamap-explorer-note-id\">(ID: 709)</span>"
+      },
+      {
+        "lat": 26.5,
+        "lon": 19.3,
+        "name": "Découverte du Biome Lune #6 <span class=\"datamap-explorer-note-id\">(ID: 808)</span>"
+      },
+      {
+        "lat": 35.7,
+        "lon": 77.5,
+        "name": "Découverte du Biome Volcan #4 <span class=\"datamap-explorer-note-id\">(ID: 829)</span>"
+      },
+      {
+        "lat": 27.9,
+        "lon": 66.7,
+        "name": "Découverte du Biome Volcan #5 <span class=\"datamap-explorer-note-id\">(ID: 830)</span>"
+      },
+      {
+        "lat": 25.3,
+        "lon": 77.3,
+        "name": "Découverte du Biome Volcan #6 <span class=\"datamap-explorer-note-id\">(ID: 831)</span>"
+      },
+      {
+        "lat": 50.8,
+        "lon": 31.1,
+        "name": "Découverte du Glitch d'archive #29 <span class=\"datamap-explorer-note-id\">(ID: 767)</span>"
+      },
+      {
+        "lat": 69.9,
+        "lon": 77.0,
+        "name": "Découverte du Biome Tourbière #1 <span class=\"datamap-explorer-note-id\">(ID: 797)</span>"
+      },
+      {
+        "lat": 67.8,
+        "lon": 72.9,
+        "name": "Découverte du Glitch d'archive #30 <span class=\"datamap-explorer-note-id\">(ID: 768)</span>"
+      },
+      {
+        "lat": 66.4,
+        "lon": 75.3,
+        "name": "Découverte du Glitch d'archive #31 <span class=\"datamap-explorer-note-id\">(ID: 769)</span>"
+      },
+      {
+        "lat": 64.2,
+        "lon": 74.7,
+        "name": "Découverte du Glitch d'archive #32 <span class=\"datamap-explorer-note-id\">(ID: 770)</span>"
+      },
+      {
+        "lat": 71.6,
+        "lon": 75.4,
+        "name": "Découverte du Glitch d'archive #33 <span class=\"datamap-explorer-note-id\">(ID: 771)</span>"
+      },
+      {
+        "lat": 72.5,
+        "lon": 76.6,
+        "name": "Découverte du Glitch d'archive #34 <span class=\"datamap-explorer-note-id\">(ID: 772)</span>"
+      },
+      {
+        "lat": 34.2,
+        "lon": 26.8,
+        "name": "Découverte du Biome Lune #7 <span class=\"datamap-explorer-note-id\">(ID: 809)</span>"
+      },
+      {
+        "lat": 64.1,
+        "lon": 37.5,
+        "name": "Découverte du Biome Neige #1 <span class=\"datamap-explorer-note-id\">(ID: 817)</span>"
+      },
+      {
+        "lat": 59.8,
+        "lon": 61.1,
+        "name": "Découverte du Glitch d'archive #35 <span class=\"datamap-explorer-note-id\">(ID: 773)</span>"
+      },
+      {
+        "lat": 73.1,
+        "lon": 84.9,
+        "name": "Découverte du Glitch d'archive #36 <span class=\"datamap-explorer-note-id\">(ID: 774)</span>"
+      },
+      {
+        "lat": 63.8,
+        "lon": 76.5,
+        "name": "Découverte du Glitch d'archive #37 <span class=\"datamap-explorer-note-id\">(ID: 775)</span>"
+      },
+      {
+        "lat": 79.9,
+        "lon": 34.9,
+        "name": "Découverte du Biome Neige #2 <span class=\"datamap-explorer-note-id\">(ID: 818)</span>"
+      },
+      {
+        "lat": 46.4,
+        "lon": 21.5,
+        "name": "Découverte du Biome Lune #8 <span class=\"datamap-explorer-note-id\">(ID: 810)</span>"
+      },
+      {
+        "lat": 57.4,
+        "lon": 84.8,
+        "name": "Découverte du Biome Tourbière #2 <span class=\"datamap-explorer-note-id\">(ID: 798)</span>"
+      },
+      {
+        "lat": 74.7,
+        "lon": 30.5,
+        "name": "Découverte du Biome Neige #3 <span class=\"datamap-explorer-note-id\">(ID: 819)</span>"
+      },
+      {
+        "lat": 70.2,
+        "lon": 76.6,
+        "name": "Découverte du Biome Tourbière #4 <span class=\"datamap-explorer-note-id\">(ID: 800)</span>"
+      },
+      {
+        "lat": 77.0,
+        "lon": 21.7,
+        "name": "Découverte du Biome Neige #4 <span class=\"datamap-explorer-note-id\">(ID: 820)</span>"
+      }
+    ],
+    "magmasaur-nest": [
+      {
+        "lat": 29.3,
+        "lon": 80.8
+      },
+      {
+        "lat": 29.6,
+        "lon": 81.5
+      },
+      {
+        "lat": 29.0,
+        "lon": 80.7
+      },
+      {
+        "lat": 28.6,
+        "lon": 81.3
+      },
+      {
+        "lat": 28.8,
+        "lon": 81.7
+      },
+      {
+        "lat": 28.7,
+        "lon": 81.0
+      },
+      {
+        "lat": 28.4,
+        "lon": 81.0
+      },
+      {
+        "lat": 27.7,
+        "lon": 78.4
+      },
+      {
+        "lat": 25.2,
+        "lon": 77.7
+      },
+      {
+        "lat": 25.6,
+        "lon": 78.7
+      },
+      {
+        "lat": 24.8,
+        "lon": 78.3
+      },
+      {
+        "lat": 24.2,
+        "lon": 77.9
+      },
+      {
+        "lat": 24.3,
+        "lon": 78.4
+      },
+      {
+        "lat": 25.1,
+        "lon": 78.9
+      },
+      {
+        "lat": 24.5,
+        "lon": 78.9
+      }
+    ],
+    "mission-terminal": [
+      {
+        "lat": 61.1,
+        "lon": 33.1,
+        "name": "Course"
+      },
+      {
+        "lat": 62.0,
+        "lon": 26.8,
+        "name": "Escorte"
+      },
+      {
+        "lat": 69.0,
+        "lon": 21.3,
+        "name": "Pêche"
+      },
+      {
+        "lat": 70.7,
+        "lon": 26.2,
+        "name": "Récolte"
+      },
+      {
+        "lat": 63.5,
+        "lon": 49.8,
+        "name": "Gantelet"
+      },
+      {
+        "lat": 76.0,
+        "lon": 45.1,
+        "name": "Chasse"
+      },
+      {
+        "lat": 63.9,
+        "lon": 41.3,
+        "name": "Chasse"
+      },
+      {
+        "lat": 70.6,
+        "lon": 33.1,
+        "name": "Course"
+      },
+      {
+        "lat": 61.7,
+        "lon": 34.7,
+        "name": "Récupération"
+      },
+      {
+        "lat": 54.2,
+        "lon": 84.7,
+        "name": "Basketball"
+      },
+      {
+        "lat": 86.8,
+        "lon": 73.5,
+        "name": "Escorte"
+      },
+      {
+        "lat": 85.3,
+        "lon": 71.6,
+        "name": "Pêche"
+      },
+      {
+        "lat": 68.3,
+        "lon": 86.3,
+        "name": "Récolte"
+      },
+      {
+        "lat": 84.9,
+        "lon": 61.1,
+        "name": "Gantelet"
+      },
+      {
+        "lat": 62.7,
+        "lon": 87.4,
+        "name": "Chasse"
+      },
+      {
+        "lat": 84.8,
+        "lon": 57.4,
+        "name": "Chasse"
+      },
+      {
+        "lat": 84.1,
+        "lon": 69.9,
+        "name": "Course"
+      },
+      {
+        "lat": 60.1,
+        "lon": 84.1,
+        "name": "Course"
+      },
+      {
+        "lat": 75.0,
+        "lon": 68.0,
+        "name": "Récupération"
+      },
+      {
+        "lat": 21.1,
+        "lon": 27.9,
+        "name": "Escorte"
+      },
+      {
+        "lat": 35.0,
+        "lon": 28.2,
+        "name": "Récolte"
+      },
+      {
+        "lat": 14.2,
+        "lon": 29.7,
+        "name": "Gantelet"
+      },
+      {
+        "lat": 43.9,
+        "lon": 25.4,
+        "name": "Chasse"
+      },
+      {
+        "lat": 49.3,
+        "lon": 30.6,
+        "name": "Chasse"
+      },
+      {
+        "lat": 50.3,
+        "lon": 28.1,
+        "name": "Basketball"
+      },
+      {
+        "lat": 27.8,
+        "lon": 16.9,
+        "name": "Récupération"
+      },
+      {
+        "lat": 48.4,
+        "lon": 27.7,
+        "name": "Course"
+      },
+      {
+        "lat": 30.4,
+        "lon": 49.7,
+        "name": "Course"
+      },
+      {
+        "lat": 31.6,
+        "lon": 57.5,
+        "name": "Escorte"
+      },
+      {
+        "lat": 39.5,
+        "lon": 52.1,
+        "name": "Boss"
+      },
+      {
+        "lat": 20.2,
+        "lon": 61.6,
+        "name": "Escorte"
+      },
+      {
+        "lat": 30.9,
+        "lon": 55.9,
+        "name": "Récolte"
+      },
+      {
+        "lat": 30.2,
+        "lon": 55.8,
+        "name": "Chasse"
+      },
+      {
+        "lat": 26.5,
+        "lon": 51.8,
+        "name": "Chasse"
+      },
+      {
+        "lat": 34.3,
+        "lon": 51.6,
+        "name": "Course"
+      },
+      {
+        "lat": 28.7,
+        "lon": 52.5,
+        "name": "Récupération"
+      },
+      {
+        "lat": 53.3,
+        "lon": 49.9,
+        "name": "Boss"
+      },
+      {
+        "lat": 41.3,
+        "lon": 86.7,
+        "name": "Chasse"
+      },
+      {
+        "lat": 32.8,
+        "lon": 88.1,
+        "name": "Escorte"
+      },
+      {
+        "lat": 15.1,
+        "lon": 70.6,
+        "name": "Récolte"
+      },
+      {
+        "lat": 33.3,
+        "lon": 85.9,
+        "name": "Chasse"
+      },
+      {
+        "lat": 33.7,
+        "lon": 85.2,
+        "name": "Course"
+      },
+      {
+        "lat": 41.8,
+        "lon": 82.2,
+        "name": "Course"
+      },
+      {
+        "lat": 32.5,
+        "lon": 86.0,
+        "name": "Récupération"
+      },
+      {
+        "lat": 40.7,
+        "lon": 81.8,
+        "name": "Récupération"
+      },
+      {
+        "lat": 45.1,
+        "lon": 80.8,
+        "name": "Gantelet"
+      }
+    ]
+  }
+}

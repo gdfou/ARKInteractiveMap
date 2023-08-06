@@ -1,0 +1,64 @@
+{
+	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
+	"$mixin": true,
+	"markers": {
+		"cave-entrance": [
+            {
+                "lat": 25.4,
+                "lon": 45.05,
+                "name": "Souterrains de Shoola",
+                "description": "Contient:\n* {{ItemLink|Artéfact de la Sagesse}}",
+                "image": "Shoola Hollow (Lost Island).png"
+              },
+              {
+                "lat": 26.77,
+                "lon": 54.49,
+                "name": "Grotte des chutes de Shoola",
+                "description": "Contient:\n* {{ItemLink|Artéfact de Puissance}}",
+                "image": "Shoola Falls Cave (Lost Island).png"
+              },
+              {
+                "lat": 26.8,
+                "lon": 69.97,
+                "name": "Profondeurs de Zaunaloa",
+                "description": "Contient:\n* {{ItemLink|Artéfact de l'Immunité}}",
+                "image": "Zaunaloa Depths (Lost Island).png"
+              },
+              {
+                "lat": 36.21,
+                "lon": 15.37,
+                "name": "Caverne de Tumash",
+                "description": "Contient:\n* {{ItemLink|Artéfact du Chasseur}}",
+                "image": "Tumash Cave (Lost Island).png"
+              },
+              {
+                "lat": 36.55,
+                "lon": 39.07,
+                "name": "Les vignes entortillées",
+                "description": "Contient:\n* {{ItemLink|Artéfact de la Meute}}",
+                "image": "The Twisted Vine (Lost Island).png"
+              },
+              {
+                "lat": 88.9,
+                "lon": 82.5,
+                "name": "Caverne du coucher de soleil",
+                "description": "Contient:\n* {{ItemLink|Artéfact de la Bête}}",
+                "image": "Sunset Cave (Lost Island).png"
+              },
+              {
+                "lat": 58.9,
+                "lon": 72.3,
+                "name": "Grotte de l'Arche perdue",
+                "description": "Contient:\n* {{ItemLink|Artéfact de la Ruse}}",
+                "image": "Lost Ark Grotto (Lost Island).png"
+              },
+              {
+                "lat": 58.48,
+                "lon": 57.04,
+                "name": "Caverne de Boskar",
+                "description": "Contient:\n* {{ItemLink|Artéfact du Seigneur du Ciel}}",
+                "image": "Boskar Cave (Lost Island).png"
+              }                
+        ]
+	}
+}
