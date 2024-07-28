@@ -4,7 +4,6 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
-using System.Text.RegularExpressions;
 using System.Windows.Media.Imaging;
 
 namespace ARKInteractiveMap
@@ -19,6 +18,7 @@ namespace ARKInteractiveMap
         protected MapPoiDef poiDef_;
 
         public string Name { get; set; }
+        public string SortedLabel { get; set; }
         public string Label { get; set; }
         public BitmapImage IconRes { get; set; }
 
@@ -126,6 +126,7 @@ namespace ARKInteractiveMap
             if (poi == null)
             {
                 IsHitTestVisible = false;
+                SortedLabel = group.name;
                 Label = group.name;
                 var assembly = Assembly.GetExecutingAssembly();
                 var app_res_list = assembly.GetManifestResourceNames();
@@ -144,6 +145,7 @@ namespace ARKInteractiveMap
             else
             {
                 IsHitTestVisible = true;
+                SortedLabel = poi.Label;
                 Label = poi.CollectibleLabel;
             }
         }

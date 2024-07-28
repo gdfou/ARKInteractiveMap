@@ -3,7 +3,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows;
 using Path = System.Windows.Shapes.Path;
-using System.Windows.Shapes;
 using System.Windows.Controls;
 
 namespace ARKInteractiveMap

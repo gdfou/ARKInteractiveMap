@@ -1,5 +1,6 @@
 ﻿{
   "list": [
+    "ASA: The Island",
     "The Island",
     "Scorched Earth",
     "Aberration",
@@ -15,6 +16,26 @@
     "Fjordur"
   ],
   "maps": [
+    {
+      "name": "ASA: The Island",
+      "folder": "The_Island_ASA",
+      "maps": [
+        {
+          "resource": "The_Island_Ressources.json",
+          "exploration": "The_Island_Exploration.json",
+          "map_coord": {
+            "offset": {
+              "lat": 50,
+              "lon": 50
+            },
+            "mult": {
+              "lat": 8000,
+              "lon": 8000
+            }
+          }
+        }
+      ]
+    },
     {
       "name": "The Island",
       "folder": "The_Island",

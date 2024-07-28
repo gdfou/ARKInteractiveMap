@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Collections.Concurrent;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
@@ -9,13 +10,8 @@ using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
 using System.Text.Json;
-using ArkFileDecode;
 using System.Globalization;
-using static Microsoft.WindowsAPICodePack.Shell.PropertySystem.SystemProperties.System;
-using System.Windows.Media;
-using System.Text.RegularExpressions;
-using System.Text;
-using System.Diagnostics;
+using ArkFileDecode;
 
 namespace ARKInteractiveMap
 {
@@ -33,6 +29,9 @@ namespace ARKInteractiveMap
         ObservableCollection<IngameMarker> userMarkerList_;
         ObservableCollection<PoiTreeViewItem> poiList_;
         Dictionary<string, string> expNoteList_;
+        FileSystemWatcher watcher_;
+        ConcurrentQueue<string> watcherQueue_;
+        System.Timers.Timer watcherTimer_;
         int ingameMarkerListChanged_;
 
         public MainWindow()
@@ -44,6 +43,8 @@ namespace ARKInteractiveMap
             userMarkerList_ = new ObservableCollection<IngameMarker>();
             poiList_ = new ObservableCollection<PoiTreeViewItem>();
             InitializeComponent();
+            textboxCoord.Text = string.Empty;
+            textboxCoord.Visibility = Visibility.Collapsed;
 
 #if !DEBUG
             mainMenu.Visibility = Visibility.Collapsed;
@@ -82,7 +83,23 @@ namespace ARKInteractiveMap
                 if (CheckArkSaveFolder())
                 {
                     lastArkImportFolder_ = cfg_.ark_save_folder + @"\LocalProfiles";
-                    ImportPlayerLocalDataFile(lastArkImportFolder_ + @"\PlayerLocalData.arkprofile");
+                    var lastArkImportFile = System.IO.Path.Combine(lastArkImportFolder_, @"PlayerLocalData.arkprofile");
+                    ImportPlayerLocalDataFile(lastArkImportFile);
+
+                    if (cfg_.realtime_auto_import_local_data)
+                    {
+                        watcherTimer_ = new System.Timers.Timer();
+                        watcherTimer_.Interval = 1000;
+                        watcherTimer_.Elapsed += WatcherTimer_Elapsed;
+
+                        watcherQueue_ = new ConcurrentQueue<string>();
+
+                        watcher_ = new FileSystemWatcher(lastArkImportFolder_);
+                        watcher_.NotifyFilter = NotifyFilters.LastWrite;
+                        watcher_.Changed += OnWatcherChanged;
+                        watcher_.Filter = "*.*";
+                        watcher_.EnableRaisingEvents = true;
+                    }
                 }
             }
 
@@ -116,7 +133,7 @@ namespace ARKInteractiveMap
             mapViewer.SaveEvent += MapViewer_SaveEvent;
             mapViewer.CommandEvent += MapViewer_CommandEvent;
 
-            mapViewer.ZoomInFull();
+            mapViewer.ZoomInFull(false);
             mapViewer.MaxScale = 8;
 
             LoadMapDef(currentMapDef);
@@ -235,6 +252,41 @@ namespace ARKInteractiveMap
                     }
                 }
             }
+        }
+
+        private void WatcherTimer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            watcherTimer_.Stop();
+            mapViewer.Dispatcher.BeginInvoke(new Action(() => 
+            {
+                var lastArkImportFile = System.IO.Path.Combine(lastArkImportFolder_, @"PlayerLocalData.arkprofile");
+                ImportPlayerLocalDataFile(lastArkImportFile);
+                var json_map_def = cfg_.map_def.FirstOrDefault(x => cfg_.map == x.Key).Value;
+                if (json_map_def != null)
+                {
+                    if (json_map_def != null && json_map_def.ingame_map_poi != null)
+                    {
+                        LoadIngameMapPoi(json_map_def.ingame_map_poi);
+                    }
+                    if (json_map_def.fog_of_wars != null)
+                    {
+                        LoadIngameMapFow(json_map_def.fog_of_wars);
+                    }
+                }
+            }));
+        }
+        private void OnWatcherChanged(object sender, FileSystemEventArgs e)
+        {
+            if (e.ChangeType != WatcherChangeTypes.Changed)
+            {
+                return;
+            }
+            // check if already present
+            if (watcherQueue_.IsEmpty)
+            {
+                watcherQueue_.Enqueue(e.FullPath);
+            }
+            watcherTimer_.Start();
         }
 
         private void MapViewer_SaveEvent(object sender, EventArgs e)
@@ -540,7 +592,7 @@ namespace ARKInteractiveMap
             }
             if (openFileDialog.ShowDialog() == true)
             {
-                lastArkImportFolder_ = Path.GetDirectoryName(openFileDialog.FileName);
+                lastArkImportFolder_ = System.IO.Path.GetDirectoryName(openFileDialog.FileName);
                 ImportPlayerLocalDataFile(openFileDialog.FileName);
                 var json_map_def = cfg_.map_def.FirstOrDefault(x => cfg_.map == x.Key).Value;
                 if (json_map_def != null && json_map_def.ingame_map_poi != null)
@@ -593,7 +645,7 @@ namespace ARKInteractiveMap
             try
             {
                 // Read config
-                string cfg_filename = Path.ChangeExtension(Assembly.GetExecutingAssembly().Location, ".json");
+                string cfg_filename = System.IO.Path.ChangeExtension(Assembly.GetExecutingAssembly().Location, ".json");
                 string cfg_lines = File.ReadAllText(cfg_filename);
                 cfg_ = JsonSerializer.Deserialize<MainConfig>(cfg_lines);
                 WindowStartupLocation = WindowStartupLocation.Manual;
@@ -616,7 +668,7 @@ namespace ARKInteractiveMap
 
         private void SaveMainConfig()
         {
-            string cfg_filename = Path.ChangeExtension(Assembly.GetExecutingAssembly().Location, ".json");
+            string cfg_filename = System.IO.Path.ChangeExtension(Assembly.GetExecutingAssembly().Location, ".json");
             // Update config
             cfg_.window.left = Convert.ToInt32(Left);
             cfg_.window.top = Convert.ToInt32(Top);
@@ -682,6 +734,7 @@ namespace ARKInteractiveMap
                 }
                 if (markerDict != null)
                 {
+                    // Add local 'collectibleList' to 'collectibleList_
                     collectibleList_.Clear();
                     foreach (var item in collectibleList)
                     {
@@ -953,6 +1006,15 @@ namespace ARKInteractiveMap
             float lat = Convert.ToSingle(textboxLat.Text, CultureInfo.InvariantCulture.NumberFormat);
             float lon = Convert.ToSingle(textboxLon.Text, CultureInfo.InvariantCulture.NumberFormat);
             mapViewer.ZoomToMapPos(lat, lon);
+            var mapDef = mapDefDict_.FirstOrDefault(x => x.Value.IsMainMap(cfg_.map)).Value;
+            if (mapDef != null && mapDef.currentMap.mapCoord != null)
+            {
+                var offset = mapDef.currentMap.mapCoord.offset;
+                var mult = mapDef.currentMap.mapCoord.mult;
+                var y = (lat - offset.lat) * mult.lat;
+                var x = (lon - offset.lon) * mult.lon;
+                //textboxCoord.Text = $"spi {x} {y} (z)";
+            }
         }
 
         private void textbox_GotFocus(object sender, RoutedEventArgs e)
@@ -1153,6 +1215,7 @@ namespace ARKInteractiveMap
             {
                 Owner = this,
                 AutoImportLocalData = cfg_.auto_import_local_data,
+                RealtimeAutoImportLocalData = cfg_.realtime_auto_import_local_data,
                 ArkSaveFolder = cfg_.ark_save_folder
             };
             if (dialog.ShowDialog() == true)
@@ -1162,6 +1225,7 @@ namespace ARKInteractiveMap
                     ImportPlayerLocalDataFile(dialog.ArkSaveFolder + @"\LocalProfiles\PlayerLocalData.arkprofile");
                 }
                 cfg_.auto_import_local_data = dialog.AutoImportLocalData;
+                cfg_.realtime_auto_import_local_data = dialog.RealtimeAutoImportLocalData;
                 cfg_.ark_save_folder = dialog.ArkSaveFolder;
                 SaveMainConfig();
             }

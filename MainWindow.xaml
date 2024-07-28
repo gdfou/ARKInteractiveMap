@@ -51,10 +51,13 @@
                 <ComboBox x:Name="comboBoxMap" SelectionChanged="comboBoxMap_SelectionChanged" Margin="4"/>
                 <ComboBox x:Name="comboBoxSubMap" SelectionChanged="comboBoxSubMap_SelectionChanged" Margin="0,4,4,4" Visibility="Collapsed"/>
                 <Label Content="lat:" Margin="10,0,0,0"/>
-                <TextBox x:Name="textboxLat" Width="40" Margin="0,4,0,4" GotFocus="textbox_GotFocus"/>
+                <TextBox x:Name="textboxLat" Width="50" Margin="0,4,0,4" GotFocus="textbox_GotFocus"/>
                 <Label Content="lon:"/>
-                <TextBox x:Name="textboxLon" Width="40" Margin="0,4,0,4" GotFocus="textbox_GotFocus" PreviewKeyDown="textboxLon_PreviewKeyDown" />
+                <TextBox x:Name="textboxLon" Width="50" Margin="0,4,0,4" GotFocus="textbox_GotFocus" PreviewKeyDown="textboxLon_PreviewKeyDown" />
                 <Button Content="Aller à" Click="ButtonGotTo_Click" Margin="4,4,10,4" Width="45"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBox x:Name="textboxCoord" Width="200" IsReadOnly="True" Text="spi -96253 -254356 -10241" FontFamily="Courier new"/>
             </StackPanel>
             <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" FlowDirection="RightToLeft" Margin="4">
                 <Button Width="45" Height="30" Click="ButtonConfig_Click" Content="Config">

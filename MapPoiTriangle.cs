@@ -1,19 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
-using System.Windows;
-using System.Windows.Interop;
-using static Microsoft.WindowsAPICodePack.Shell.PropertySystem.SystemProperties.System;
-using static System.Net.Mime.MediaTypeNames;
-using System.Threading;
-using System.Windows.Navigation;
-using System.Reflection.Emit;
 
 namespace ARKInteractiveMap
 {

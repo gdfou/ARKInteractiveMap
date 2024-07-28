@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ARKInteractiveMap</RootNamespace>
     <AssemblyName>ARKInteractiveMap</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -57,7 +57,7 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
-    <Reference Include="System.Text.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
+    <Reference Include="System.Text.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -173,11 +173,14 @@
     <EmbeddedResource Include="Ressources\Cartes\ApparitionJoueur_Aberration.json" />
     <EmbeddedResource Include="Ressources\Cartes\ApparitionJoueur_Crystal_Isles.json" />
     <EmbeddedResource Include="Ressources\Cartes\ApparitionJoueur_Extinction.json" />
+    <EmbeddedResource Include="Ressources\Cartes\ApparitionJoueur_Fjordur.json" />
     <EmbeddedResource Include="Ressources\Cartes\ApparitionJoueur_Genesis_Part_1.json" />
     <EmbeddedResource Include="Ressources\Cartes\ApparitionJoueur_Genesis_Part_2.json" />
+    <EmbeddedResource Include="Ressources\Cartes\ApparitionJoueur_Lost_Island.json" />
     <EmbeddedResource Include="Ressources\Cartes\ApparitionJoueur_Ragnarok.json" />
     <EmbeddedResource Include="Ressources\Cartes\ApparitionJoueur_Scorched_Earth.json" />
     <EmbeddedResource Include="Ressources\Cartes\ApparitionJoueur_The_Center.json" />
+    <EmbeddedResource Include="Ressources\Cartes\ApparitionJoueur_The_Island.json" />
     <EmbeddedResource Include="Ressources\Cartes\ApparitionJoueur_Valguero.json" />
     <EmbeddedResource Include="Ressources\Cartes\Définitions_des_groupes_normés_Patch.json" />
     <EmbeddedResource Include="Ressources\Cartes\Définitions_des_groupes_normés.json" />
@@ -191,6 +194,7 @@
     <EmbeddedResource Include="Ressources\Cartes\Grottes_Scorched_Earth.json" />
     <EmbeddedResource Include="Ressources\Cartes\Grottes_The_Center.json" />
     <EmbeddedResource Include="Ressources\Cartes\Grottes_The_Island.json" />
+    <EmbeddedResource Include="Ressources\Cartes\Grottes_The_Island\ASA.json" />
     <EmbeddedResource Include="Ressources\Cartes\Grottes_Valguero.json" />
     <EmbeddedResource Include="Ressources\Cartes\Icônes_des_ravitaillements.json" />
     <EmbeddedResource Include="Ressources\Cartes\Obélisques_Aberration.json" />
@@ -201,6 +205,7 @@
     <EmbeddedResource Include="Ressources\Cartes\Obélisques_Ragnarok.json" />
     <EmbeddedResource Include="Ressources\Cartes\Obélisques_Scorched_Earth.json" />
     <EmbeddedResource Include="Ressources\Cartes\Obélisques_The_Island.json" />
+    <EmbeddedResource Include="Ressources\Cartes\Obélisques_The_Island\ASA.json" />
     <EmbeddedResource Include="Ressources\Cartes\Obélisques_The_Center.json" />
     <EmbeddedResource Include="Ressources\Cartes\Obélisques_Valguero.json" />
   </ItemGroup>
@@ -248,11 +253,17 @@
     <EmbeddedResource Include="Ressources\The_Center\The_Center_Ressources.json" />
     <EmbeddedResource Include="Ressources\The_Center\The_Center_Exploration.json" />
     <EmbeddedResource Include="Ressources\The_Center\The_Center_Topographic_Map.jpg" />
+    <EmbeddedResource Include="Ressources\The_Center\The_Center_Map.jpg" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Ressources\The_Island\The_Island_Ressources.json" />
     <EmbeddedResource Include="Ressources\The_Island\The_Island_Exploration.json" />
     <EmbeddedResource Include="Ressources\The_Island\The_Island_Topographic_Map.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Ressources\The_Island_ASA\The_Island_map_ASA.jpg" />
+    <EmbeddedResource Include="Ressources\The_Island_ASA\The_Island_Exploration.json" />
+    <EmbeddedResource Include="Ressources\The_Island_ASA\The_Island_Ressources.json" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Ressources\Valguero\Valguero_Ressources.json" />

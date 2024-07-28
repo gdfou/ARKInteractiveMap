@@ -5,11 +5,8 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Windows.Media.Imaging;
 using System.Windows;
-using System.Collections.Generic;
 using System.IO;
 using System.Windows.Media;
-using System.Windows.Controls;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace ARKInteractiveMap
 {

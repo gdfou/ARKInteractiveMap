@@ -241,6 +241,12 @@
 			"fillColor": "#4e4854",
 			"borderColor": "#fff"
 		},
+		"oil": {
+			"name": "Pétrole",
+			"size": 5.5, "icon": "Oil.png",
+			"fillColor": "#4e4854",
+			"borderColor": "#fff"
+		},
 		"oil-vein": {
 			"name": "Gisement de Pétrole",
 			"size": [ 28, 28 ],

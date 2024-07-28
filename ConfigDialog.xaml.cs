@@ -16,6 +16,7 @@ namespace ARKInteractiveMap
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
         }
         protected bool autoImportLocalData_;
+        protected bool realtimeAutoImportLocalData_;
         protected string arkSaveFolder_;
 
         public bool AutoImportLocalData
@@ -27,6 +28,19 @@ namespace ARKInteractiveMap
                 {
                     autoImportLocalData_ = value;
                     NotifyPropertyChanged("AutoImportLocalData");
+                }
+            }
+        }
+
+        public bool RealtimeAutoImportLocalData
+        {
+            get => realtimeAutoImportLocalData_;
+            set
+            {
+                if (value != realtimeAutoImportLocalData_)
+                {
+                    realtimeAutoImportLocalData_ = value;
+                    NotifyPropertyChanged("RealtimeAutoImportLocalData");
                 }
             }
         }

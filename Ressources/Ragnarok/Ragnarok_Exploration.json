@@ -8,7 +8,20 @@
     "Cartes/ApparitionJoueur Ragnarok"
   ],
   "backgrounds": [
-		{ "name": "Topographique", "image": "Ragnarok Ocean Topographic Map.jpg" },
+    {
+      "name": "Topographique",
+      "image": "Ragnarok Ocean Topographic Map.jpg",
+      "at": [
+        [
+          -2.6,
+          -2.6
+        ],
+        [
+          102.4,
+          102.4
+        ]
+      ]
+    },
 		{ "name": "Croquis", "image": "Ragnarok Map.jpg" }
   ],
   "settings": {

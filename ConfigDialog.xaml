@@ -10,6 +10,7 @@
     <DockPanel>
         <StackPanel DockPanel.Dock="Top" Orientation="Vertical" Margin="10">
             <CheckBox Content="Importer automatiquement le fichier 'PlayerLocalData.arkprofile' au démarrage de l'application" IsChecked="{Binding AutoImportLocalData}"/>
+            <CheckBox Content="Importer automatiquement le fichier 'PlayerLocalData.arkprofile' pendant l'exécution du jeu" IsChecked="{Binding RealtimeAutoImportLocalData}"/>
             <Label Content="Dossier de sauvegarde du jeu ARK : Survival Evolved:"/>
             <Grid DockPanel.Dock="Top">
                 <Grid.ColumnDefinitions>

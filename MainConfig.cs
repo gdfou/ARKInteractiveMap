@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace ARKInteractiveMap
 {
@@ -46,6 +45,7 @@ namespace ARKInteractiveMap
     {
         public JsonRect window { get; set; }
         public bool auto_import_local_data { get; set; }
+        public bool realtime_auto_import_local_data { get; set; }
         public string ark_save_folder { get; set; }
         public string splitter_pos { get; set; }
         public string map { get; set; }

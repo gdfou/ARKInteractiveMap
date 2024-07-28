@@ -5,6 +5,12 @@ using System.Text.Json;
 
 namespace ARKInteractiveMap
 {
+    public class MapCoord
+    {
+        public MapPos offset { get; set; }
+        public MapPos mult { get; set; }
+    }
+
     public class MapListJsonMapBorder
     {
         public int width { get; set; }
@@ -17,6 +23,7 @@ namespace ARKInteractiveMap
         public string resource { get; set; }
         public string exploration { get; set; }
         public MapListJsonMapBorder map_border { get; set; }
+        public MapCoord map_coord { get; set; }
     }
 
     public class MapListJsonItem

@@ -6,9 +6,6 @@ using System.Reflection;
 using System.Linq;
 using System.IO;
 using System.Windows;
-using System.Diagnostics;
-using System.Text;
-using ARKInteractiveMap.Properties;
 using System.Globalization;
 
 namespace ARKInteractiveMap
@@ -62,9 +59,11 @@ namespace ARKInteractiveMap
     public class ArkWikiJsonMarker
     {
         public float lat { get; set; }
+        public float y { get; set; }
         public float lon { get; set; }
+        public float x { get; set; }
         public string name { get; set; }
-        public int id { get; set; }
+        public int uid { get; set; }
         public string description { get; set; }
         public string icon { get; set; }
         public bool isWikitext { get; set; }
@@ -141,6 +140,7 @@ namespace ARKInteractiveMap
         public Dictionary<string, ArkWikiJsonGroup> layers { get; set; }
         public Dictionary<string, List<ArkWikiJsonMarker>> markers { get; set; }
         public List<ArkWikiJsonBackground> backgrounds { get; set; }
+        public ArkWikiJsonBackground background { get; set; }
 
         public void Merge(ArkWikiJson src, bool force=false)
         {
@@ -270,6 +270,7 @@ namespace ARKInteractiveMap
                 // mixins      -> Cartes/Définitions des groupes normés -> couleurs, tailles, icons et noms en français
                 // mixins      -> Cartes/Obélisques Scorched Earth      -> position obélisques
                 // backgrounds -> cartes dispo
+                // background  -> carte
                 // markers     -> liste des éléments dispo
                 ArkWikiJson mainJson = JsonSerializer.Deserialize<ArkWikiJson>(reader.ReadToEnd());
                 if (mainJson != null)
@@ -305,11 +306,18 @@ namespace ARKInteractiveMap
                         }
                     }
                     // backgrounds
-                    var background = mainJson.backgrounds.ToList().FindLast(x => x.name == "Topographique");
+                    var background = mainJson.backgrounds?.ToList().FindLast(x => x.name == "Topographique");
                     if (background == null)
                     {
-                        background = mainJson.backgrounds[0];
-                        mapDef.mapPicture = background.image.Replace(' ', '_');
+                        background = mainJson.backgrounds?[0];
+                        if (background == null)
+                        {
+                            background = mainJson.background;
+                        }
+                        else
+                        {
+                            mapDef.mapPicture = background.image.Replace(' ', '_');
+                        }
                     }
                     var background_map_name = background.image.Replace(' ', '_');
                     if (mapDef.mapPicture == null)
@@ -393,6 +401,7 @@ namespace ARKInteractiveMap
                                     collectibleList.Add(collectible);
                                 }
                             }
+                            var list = new List<CollectibleTreeViewItem>();
                             foreach (var marker in markers.Value)
                             {
                                 try
@@ -428,13 +437,44 @@ namespace ARKInteractiveMap
                                     // Collectible
                                     if (collectible != null)
                                     {
-                                        // Need to call FinalizeInit after !
-                                        collectible.Childrens.Add(new CollectibleTreeViewItem(groupName, group, poi, collectible));
+                                        list.Add(new CollectibleTreeViewItem(groupName, group, poi, collectible));
                                     }
                                 }
                                 catch (Exception ex)
                                 {
                                     MessageBox.Show($"Error accessing resources ! ({ex.Message})");
+                                }
+                            }
+                            if (list.Count > 0)
+                            {
+                                List<CollectibleTreeViewItem> sortedEntries = null;
+                                if (groupName == "explorer-note")
+                                {
+                                    sortedEntries = list.Select(entry => new
+                                    {
+                                        Original = entry,
+                                        Parts = entry.SortedLabel.Split(new[] { " #" }, StringSplitOptions.None)
+                                    })
+                                    .OrderBy(x => x.Parts[0])
+                                    .ThenBy(x => int.Parse(x.Parts[1]))
+                                    .Select(x => x.Original)
+                                    .ToList();
+                                }
+                                else
+                                {
+                                    sortedEntries = list.Select(entry => new
+                                    {
+                                        Original = entry,
+                                        Parts = entry.SortedLabel
+                                    })
+                                    .OrderBy(x => x.Parts)
+                                    .Select(x => x.Original)
+                                    .ToList();
+                                }
+                                // Need to call FinalizeInit after !
+                                foreach (var item in sortedEntries)
+                                {
+                                    collectible.Childrens.Add(item);
                                 }
                             }
                         }

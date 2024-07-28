@@ -8,11 +8,9 @@ using System.Reflection;
 using System.Linq;
 using System.Windows.Shapes;
 using System.Windows.Media;
-using System.IO;
 using System.ComponentModel;
+using System.Threading;
 using System.Windows.Media.Effects;
-using System.Windows.Controls.Primitives;
-using static Microsoft.WindowsAPICodePack.Shell.PropertySystem.SystemProperties.System;
 
 namespace ARKInteractiveMap
 {
@@ -36,6 +34,7 @@ namespace ARKInteractiveMap
         Brush mapBorderColor_;
         MapPopup mapPopup_;
         Point contextMenuMousePos_;
+        Timer timer_;
 
         public MapPopup mapPopup => mapPopup_;
 
@@ -283,27 +282,68 @@ namespace ARKInteractiveMap
             canvasFow.EndInit();
         }
 
+        class RectFog
+        {
+            public Rectangle shape;
+            public Rect rect;
+            public bool fog;
+        }
+
         public void LoadFogOfWars(List<int> fow)
         {
             // Fow
             canvasFow.BeginInit();
             canvasFow.Children.Clear();
-            for (int y=0; y<8; y++)
+            var blurEffect = new BlurEffect
+            {
+                Radius = 10
+            };
+            var rlist = new List<RectFog>();
+            for (int y = 0; y < 8; y++)
             {
                 for (int x = 0; x < 8; x++)
                 {
-                    var rect = new Rectangle()
+                    bool fog = (fow[y * 8 + x] == 0);
+                    var frect = new Rectangle()
                     {
                         Width = 128,
                         Height = 128,
                         Fill = new SolidColorBrush(Colors.Gray),
-                        Opacity = (fow[x*8+y] == 1) ? 0 : 0.5,
+                        Opacity = fog ? 0.6 : 0,
+                        Effect = blurEffect
                     };
-                    Canvas.SetLeft(rect, x * 128);
-                    Canvas.SetTop(rect, y * 128);
-                    canvasFow.Children.Add(rect);
+                    int px = x * 128;
+                    int py = y * 128;
+                    rlist.Add(new RectFog 
+                    { 
+                        fog = fog,
+                        shape = frect,
+                        rect = new Rect(px, py, frect.Width, frect.Height)
+                    });
+                    Canvas.SetLeft(frect, px);
+                    Canvas.SetTop(frect, py);
+                    canvasFow.Children.Add(frect);
                 }
             }
+            /*foreach (var src in rlist)
+            {
+                foreach (var dst in rlist)
+                {
+                    if (src != dst && src.rect.IntersectsWith(dst.rect) && src.fog && dst.fog)
+                    {
+                        var ir = Rect.Intersect(src.rect, dst.rect);
+                        var line = new Line()
+                        {
+                            X1 = ir.Left,
+                            Y1 = ir.Top,
+                            X2 = ir.Right,
+                            Y2 = ir.Bottom,
+                            Stroke = new SolidColorBrush(Colors.Red)
+                        };
+                        canvasFow.Children.Add(line);
+                    }
+                }
+            }*/
             canvasFow.EndInit();
         }
 
@@ -584,10 +624,22 @@ namespace ARKInteractiveMap
 
         public MapPoi this[string id] => poiDict_[id];
 
-        // Fit
-        public void ZoomInFull()
+        // Fit => use a timer and a dispatcher because gridMap is not initialised when the this fonction is called
+        void TimerCallback(Object state)
         {
-            ViewArea = new Rect(0, 0, gridMap.ActualWidth, gridMap.ActualHeight);
+            timer_ = null;
+            gridMap.Dispatcher.BeginInvoke(new Action(() => { ViewArea = new Rect(0, 0, gridMap.ActualWidth, gridMap.ActualHeight); }));
+        }
+        public void ZoomInFull(bool timer=false)
+        {
+            if (timer)
+            {
+                timer_ = new Timer(TimerCallback, null, 50, 0);
+            }
+            else
+            {
+                ViewArea = new Rect(0, 0, gridMap.ActualWidth, gridMap.ActualHeight);
+            }
         }
 
         public void ZoomTo(double left, double top)

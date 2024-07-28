@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace ARKInteractiveMap
@@ -23,12 +18,16 @@ namespace ARKInteractiveMap
 
     public class MapPos
     {
-        public float lat;
-        public float lon;
+        public float lat { get; set; }
+        public float lon { get; set; }
+
+        public MapPos()
+        {
+        }
         public MapPos(ArkWikiJsonMarker marker)
         {
-            lat = marker.lat;
-            lon = marker.lon;
+            lat = (marker.lat == 0) ? marker.y : marker.lat;
+            lon = (marker.lon == 0) ? marker.x : marker.lon;
         }
         public MapPos(float lat, float lon)
         {
@@ -127,10 +126,12 @@ namespace ARKInteractiveMap
         }
 
         // "Dossier: Ver des sables <span class=\"datamap-explorer-note-id\">(ID: 1)</span>"
+        // "Dossier Ver des sables <span class=\"datamap-explorer-note-id\">(ID: 1)</span>"
         // "Note: Note de Dahkeya #1 <span class=\"datamap-explorer-note-id\">(ID: 100)</span>"
+        // "Note de Dahkeya #1 <span class=\"datamap-explorer-note-id\">(ID: 100)</span>"
         // "Chroniques de Genesis 2 #10 <span class=\"datamap-explorer-note-id\">(ID: 310)</span>"
         // "Découverte d'HLN-A #4 <span class=\"datamap-explorer-note-id\">(ID: 304)</span>"
-        public static (string, int) ExtractLabelFromWikiExplorerPoiName(string value)
+        public static (string, int) ExtractLabelFromWikiExplorerPoiName(string value, bool dossier=false)
         {
             int poi_id = 0;
             string poi_label = null;
@@ -150,15 +151,24 @@ namespace ARKInteractiveMap
                 idx = value.IndexOf("<");
                 if (idx >= 0)
                 {
+                    int sub_idx = 0;
+                    int sub_len = idx;
                     int idx_start = value.IndexOf(":", 0, idx);
                     if (idx_start > 0)
                     {
-                        poi_label = value.Substring(idx_start + 1, idx - idx_start - 1).Trim();
+                        sub_idx = idx_start + 1;
+                        sub_len = idx - idx_start - 1;
                     }
-                    else
+                    else if (dossier)
                     {
-                        poi_label = value.Substring(0, idx).Trim();
+                        idx_start = value.IndexOf("Dossier ");
+                        if (idx_start >= 0)
+                        {
+                            sub_idx = 8;
+                            sub_len = idx - 8;
+                        }
                     }
+                    poi_label = value.Substring(sub_idx, sub_len).Trim();
                 }
             }
             catch { }
@@ -217,7 +227,7 @@ namespace ARKInteractiveMap
             if (marker != null)
             {
                 pos = new MapPos(marker);
-                item_id = marker.id;
+                item_id = marker.uid;
                 Label = (marker.name != null) ? marker.name : group.name;
             }
             isCollectible = (group.isCollectible == true);
@@ -293,7 +303,7 @@ namespace ARKInteractiveMap
                 case "dossier":
                     {
                         // label = 'Dossier: Insecte jarre <span class=\"datamap-explorer-note-id\">(ID: 93)</span>' => 'Insecte jarre (ID: 93)'
-                        (var poi_label, var poi_id) = ExtractLabelFromWikiExplorerPoiName(Label);
+                        (var poi_label, var poi_id) = ExtractLabelFromWikiExplorerPoiName(Label, true);
                         if (poi_label != null)
                         {
                             Label = poi_label;

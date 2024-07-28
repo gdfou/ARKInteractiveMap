@@ -1,7 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Controls;
-using System.Windows.Documents.DocumentStructures;
 using System.Windows.Media;
 
 namespace ARKInteractiveMap
@@ -21,6 +18,7 @@ namespace ARKInteractiveMap
         public MapDefBorder border;
         public string mapPicture;    // 'Scorched_Earth_Topographic_Map.jpg'
         public MapSize mapSize; // [ 7.2, 7.2 ],[ 92.8, 92.8 ], 1024 x 1024
+        public MapCoord mapCoord;
 
         override public string ToString()
         {
@@ -79,6 +77,10 @@ namespace ARKInteractiveMap
                         width = 0,
                         color = new SolidColorBrush(Colors.Black)
                     };
+                }
+                if (map_def_item.map_coord != null)
+                {
+                    maps_item.mapCoord = map_def_item.map_coord;
                 }
                 maps.Add(maps_item);
             }
