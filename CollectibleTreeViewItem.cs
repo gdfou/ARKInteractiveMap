@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Windows.Media.Imaging;
@@ -84,7 +85,7 @@ namespace ARKInteractiveMap
                 {
                     isExpanded_ = value;
                     NotifyPropertyChanged("IsExpanded");
-                    map_.Save();
+                    //map_.Save();
                 }
             }
         }
@@ -128,15 +129,12 @@ namespace ARKInteractiveMap
                 IsHitTestVisible = false;
                 SortedLabel = group.name;
                 Label = group.name;
-                var assembly = Assembly.GetExecutingAssembly();
-                var app_res_list = assembly.GetManifestResourceNames();
-                var iconRes = MapPoiDef.getIconResname(group.icon);
-                var check = app_res_list.Contains(iconRes);
+                var check = ResFiles.Contains(group.icon);
                 if (check)
                 {
                     BitmapImage src = new BitmapImage();
                     src.BeginInit();
-                    src.StreamSource = assembly.GetManifestResourceStream(iconRes);
+                    src.StreamSource = new FileStream(ResFiles.Get(group.icon), FileMode.Open, FileAccess.Read, FileShare.Read);
                     src.EndInit();
                     IconRes = src;
                 }

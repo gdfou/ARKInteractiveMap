@@ -48,7 +48,8 @@ namespace ARKInteractiveMap
         public bool realtime_auto_import_local_data { get; set; }
         public string ark_save_folder { get; set; }
         public string splitter_pos { get; set; }
-        public string map { get; set; }
+        public string current_map { get; set; }
+        public List<string> current_maps { get; set; }
         public Dictionary<string, JsonMapDef> map_def { get; set; }
     }
 }

@@ -47,6 +47,8 @@
         </Menu>
         <DockPanel DockPanel.Dock="Top">
             <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" Margin="0,4,0,4" VerticalAlignment="Center">
+                <Label Content="Jeu:"/>
+                <ComboBox x:Name="comboBoxGame" SelectionChanged="comboBoxGame_SelectionChanged" Margin="4"/>
                 <Label Content="Carte:"/>
                 <ComboBox x:Name="comboBoxMap" SelectionChanged="comboBoxMap_SelectionChanged" Margin="4"/>
                 <ComboBox x:Name="comboBoxSubMap" SelectionChanged="comboBoxSubMap_SelectionChanged" Margin="0,4,4,4" Visibility="Collapsed"/>

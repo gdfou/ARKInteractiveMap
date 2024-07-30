@@ -122,7 +122,7 @@ namespace ARKInteractiveMap
 
         public static string getIconResname(string icon)
         {
-            return (icon != null) ? "ARKInteractiveMap.Ressources.Icons." + icon.Replace(' ', '_') : null;
+            return icon;
         }
 
         // "Dossier: Ver des sables <span class=\"datamap-explorer-note-id\">(ID: 1)</span>"
@@ -232,7 +232,7 @@ namespace ARKInteractiveMap
             }
             isCollectible = (group.isCollectible == true);
             // process size, color, ...
-            borderColor = group.borderColor;
+            borderColor = (group.borderColor != null) ? group.borderColor : group.strokeColor;
             fillColor = group.fillColor;
             size = group.size;
             icon = getIconResname(group.icon);
@@ -356,18 +356,17 @@ namespace ARKInteractiveMap
             }
             if (String.IsNullOrEmpty(shape) && icon != null)
             {
-                var app_res_list = Assembly.GetExecutingAssembly().GetManifestResourceNames();
-                if (app_res_list.Contains(icon))
+                if (ResFiles.Contains(icon))
                 {
-                    if (iconCollected != null && !app_res_list.Contains(iconCollected))
+                    if (iconCollected != null && !ResFiles.Contains(iconCollected))
                     {
-                        Console.WriteLine($"il manque l'icon {iconCollected}");
+                        Console.WriteLine($"il manque l'icon '{iconCollected}'");
                     }
                     shape = "icon";
                 }
                 else
                 {
-                    Console.WriteLine($"il manque l'icon {icon}");
+                    Console.WriteLine($"il manque l'icon '{icon}'");
                 }
             }
         }

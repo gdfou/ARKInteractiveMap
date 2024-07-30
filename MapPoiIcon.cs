@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.IO;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -42,7 +43,7 @@ namespace ARKInteractiveMap
                 imagePoi_ = new Image();
                 BitmapImage bitmapPoi = new BitmapImage();
                 bitmapPoi.BeginInit();
-                bitmapPoi.StreamSource = Assembly.GetExecutingAssembly().GetManifestResourceStream(poiDef.iconCollected);
+                bitmapPoi.StreamSource = new FileStream(ResFiles.Get(poiDef.iconCollected), FileMode.Open, FileAccess.Read, FileShare.Read);
                 bitmapPoi.EndInit();
                 imagePoi_.Source = bitmapPoi;
                 imagePoi_.Width = size;
@@ -74,11 +75,11 @@ namespace ARKInteractiveMap
             bitmapPoi.BeginInit();
             if (collected_ && poiDef.iconCollected != null)
             {
-                bitmapPoi.StreamSource = Assembly.GetExecutingAssembly().GetManifestResourceStream(poiDef.iconCollected);
+                bitmapPoi.StreamSource = new FileStream(ResFiles.Get(poiDef.iconCollected), FileMode.Open, FileAccess.Read, FileShare.Read);
             }
             else
             {
-                bitmapPoi.StreamSource = Assembly.GetExecutingAssembly().GetManifestResourceStream(poiDef.icon);
+                bitmapPoi.StreamSource = new FileStream(ResFiles.Get(poiDef.icon), FileMode.Open, FileAccess.Read, FileShare.Read);
             }
             bitmapPoi.EndInit();
             imagePoi_.Source = bitmapPoi;

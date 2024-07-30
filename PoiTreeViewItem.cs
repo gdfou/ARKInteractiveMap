@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Windows.Media.Imaging;
@@ -66,15 +67,13 @@ namespace ARKInteractiveMap
             if (parent == null)
             {
                 Label = poi.group.name;
-                var assembly = Assembly.GetExecutingAssembly();
-                var app_res_list = assembly.GetManifestResourceNames();
-                var iconRes = MapPoiDef.getIconResname(poi.group.icon);
-                var check = app_res_list.Contains(iconRes);
+                var icon = poi.group.icon;
+                var check = ResFiles.Contains(icon);
                 if (check)
                 {
                     BitmapImage src = new BitmapImage();
                     src.BeginInit();
-                    src.StreamSource = assembly.GetManifestResourceStream(iconRes);
+                    src.StreamSource = new FileStream(ResFiles.Get(icon), FileMode.Open, FileAccess.Read, FileShare.Read);
                     src.EndInit();
                     IconRes = src;
                 }

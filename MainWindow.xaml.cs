@@ -59,6 +59,22 @@ namespace ARKInteractiveMap
             }
         }
 
+        private void LoadComboBoxMap(MapListJsonGames game)
+        {
+            comboBoxMap.Items.Clear();
+            foreach (var item in game.list)
+            {
+                if (item == "-")
+                {
+                    comboBoxMap.Items.Add(new Separator());
+                }
+                else
+                {
+                    comboBoxMap.Items.Add(mapDefDict_[$"{game.shortcut}:{item}"]);
+                }
+            }
+        }
+
         /// <summary>
         ///     Event raised when the Window has loaded.
         /// </summary>
@@ -68,12 +84,16 @@ namespace ARKInteractiveMap
             mainMenu.Visibility = Visibility.Collapsed;
 
             // Load map list
-            MapListJson mapList = MapListJson.LoadFromResource("ARKInteractiveMap.Ressources.MapList.json");
+            var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            MapListJson mapList = MapListJson.LoadFromFile(Path.Combine(path, "MapList.json"));
             if (mapList != null && mapList.maps != null)
             {
-                foreach (var map in mapList.maps)
+                foreach (var mapGames in mapList.maps)
                 {
-                    mapDefDict_[map.name] = new MapDef(map);
+                    foreach (var map in mapGames.maps)
+                    {
+                        mapDefDict_[$"{mapGames.game}:{map.name}"] = new MapDef(map, mapGames.game);
+                    }
                 }
             }
 
@@ -106,27 +126,23 @@ namespace ARKInteractiveMap
             // Load explorator notes icon list
             expNoteList_ = LoadEploratorNotesIconList();
 
-            // Load map def config from user config
-            foreach (var map_name in mapList.list)
+            // Build game list and map list
+            foreach (var game in mapList.games)
             {
-                if (map_name == "-")
-                {
-                    comboBoxMap.Items.Add(new Separator());
-                }
-                else
-                {
-                    comboBoxMap.Items.Add(mapDefDict_[map_name]);
-                }
+                comboBoxGame.Items.Add(game);
             }
-            var currentMapDef = mapDefDict_.FirstOrDefault(x => x.Value.IsMainMap(cfg_.map)).Value;
+            // Load map def config from user config
+            var currentMapDef = mapDefDict_.FirstOrDefault(x => x.Value.IsMainMap(cfg_.current_map)).Value;
             if (currentMapDef == null)
             {
-                currentMapDef = mapDefDict_["The Island"];
+                currentMapDef = mapDefDict_["ASA:The Island"];
             }
             else if (currentMapDef.maps.Count > 0)
             {
-                currentMapDef.SelectSubMap(cfg_.map);
+                currentMapDef.SelectSubMap(cfg_.current_map);
             }
+            comboBoxGame.SelectedItem = mapList.games.FirstOrDefault(x => x.shortcut == currentMapDef.game);
+            LoadComboBoxMap(comboBoxGame.SelectedItem as MapListJsonGames);
             comboBoxMap.SelectedItem = currentMapDef;
 
             mapViewer.UpdateCollectedEvent += MapViewer_UpdateCollectedEvent;
@@ -261,7 +277,7 @@ namespace ARKInteractiveMap
             {
                 var lastArkImportFile = System.IO.Path.Combine(lastArkImportFolder_, @"PlayerLocalData.arkprofile");
                 ImportPlayerLocalDataFile(lastArkImportFile);
-                var json_map_def = cfg_.map_def.FirstOrDefault(x => cfg_.map == x.Key).Value;
+                var json_map_def = cfg_.map_def.FirstOrDefault(x => cfg_.current_map == x.Key).Value;
                 if (json_map_def != null)
                 {
                     if (json_map_def != null && json_map_def.ingame_map_poi != null)
@@ -594,7 +610,7 @@ namespace ARKInteractiveMap
             {
                 lastArkImportFolder_ = System.IO.Path.GetDirectoryName(openFileDialog.FileName);
                 ImportPlayerLocalDataFile(openFileDialog.FileName);
-                var json_map_def = cfg_.map_def.FirstOrDefault(x => cfg_.map == x.Key).Value;
+                var json_map_def = cfg_.map_def.FirstOrDefault(x => cfg_.current_map == x.Key).Value;
                 if (json_map_def != null && json_map_def.ingame_map_poi != null)
                 {
                     LoadIngameMapPoi(json_map_def.ingame_map_poi);
@@ -682,6 +698,12 @@ namespace ARKInteractiveMap
             File.WriteAllText(cfg_filename, json);
         }
 
+        private bool FindGame(string save, string game)
+        {
+            var ga = ExtractGameShortcut(save);
+            return ga == game;
+        }
+
         private void LoadMapDef(MapDef mapDef, bool subMapLoad=false)
         {
             if (!subMapLoad)
@@ -707,7 +729,7 @@ namespace ARKInteractiveMap
             mapViewer.LockSave++;
             mapViewer.ClearPoi();
             mapViewer.ClearFogOfWars();
-            cfg_.map = mapDef.Name;
+            cfg_.current_map = $"{mapDef.game}:{mapDef.Name}";
             try
             {
                 var currentMapDef = mapDef.currentMap;
@@ -722,13 +744,13 @@ namespace ARKInteractiveMap
                 mapViewer.EnabledLayer("layers-exploration", false);
                 if (currentMapDef.resource != null)
                 {
-                    ArkWiki.LoadWikiGGJsonRessourceName(currentMapDef, $"ARKInteractiveMap.Ressources.{mapDef.folder}.{currentMapDef.resource}", 
+                    ArkWiki.LoadWikiGGJsonRessourceName(currentMapDef, currentMapDef.resource,
                         markerDict, contentList, collectibleList, null, expNoteList_, "layers-resources");
                     mapViewer.EnabledLayer("layers-resources", true);
                 }
                 if (currentMapDef.exploration != null)
                 {
-                    ArkWiki.LoadWikiGGJsonRessourceName(currentMapDef, $"ARKInteractiveMap.Ressources.{mapDef.folder}.{currentMapDef.exploration}", 
+                    ArkWiki.LoadWikiGGJsonRessourceName(currentMapDef, currentMapDef.exploration,
                         markerDict, contentList, collectibleList, poiList, expNoteList_, "layers-exploration");
                     mapViewer.EnabledLayer("layers-exploration", true);
                 }
@@ -758,10 +780,8 @@ namespace ARKInteractiveMap
                         poi_groups[groupName].Add(poi);
                     }
 
-                    var app_res_list = Assembly.GetExecutingAssembly().GetManifestResourceNames();
-
                     mapViewer.MapSize = currentMapDef.mapSize;
-                    mapViewer.MapImage = $"ARKInteractiveMap.Ressources.{mapDef.folder}.{currentMapDef.mapPicture}";
+                    mapViewer.MapImage = currentMapDef.mapPicture;
 
                     mapViewer.LoadPoi(markerDict);
                     mapViewer.LoadContentList(contentList);
@@ -771,7 +791,7 @@ namespace ARKInteractiveMap
                         cfg_.map_def = new Dictionary<string, JsonMapDef>();
                     }
 
-                    var json_map_def = cfg_.map_def.FirstOrDefault(x => cfg_.map == x.Key).Value;
+                    var json_map_def = cfg_.map_def.FirstOrDefault(x => cfg_.current_map == x.Key).Value;
                     if (json_map_def == null)
                     {
                         json_map_def = new JsonMapDef();
@@ -846,21 +866,52 @@ namespace ARKInteractiveMap
             mapViewer.LockSave--;
         }
 
+        private string ExtractGameShortcut(string name)
+        {
+            int idx = name.IndexOf(':');
+            if (idx >= 0)
+            {
+                return name.Substring(0, idx);
+            }
+            return null;
+        }
+
+        private bool CheckGameIsSame(string a, string b)
+        {
+            var ga = ExtractGameShortcut(a);
+            var gb = ExtractGameShortcut(b);
+            return ga == gb;
+        }
+
         private void SaveMapDef(MapDef mapDef)
         {
             if (mapDef == null)
             {
-                mapDef = mapDefDict_.FirstOrDefault(x => x.Value.IsMainMap(cfg_.map)).Value;
-                //mapDef = mapDefDict_[cfg_.map];
+                mapDef = mapDefDict_.FirstOrDefault(x => x.Value.IsMainMap(cfg_.current_map)).Value;
+            }
+            cfg_.current_map = $"{mapDef.game}:{mapDef.Name}";
+
+            // build current_maps (only one current map per game)
+            if (cfg_.current_maps == null)
+            {
+                cfg_.current_maps = new List<string>();
+            }
+            var found = cfg_.current_maps.FirstOrDefault(x => CheckGameIsSame(x,cfg_.current_map));
+            if (found == null)
+            {
+                cfg_.current_maps.Add(cfg_.current_map);
+            }
+            else
+            {
+                int idx = cfg_.current_maps.IndexOf(found);
+                cfg_.current_maps[idx] = cfg_.current_map;
             }
 
-            cfg_.map = mapDef.Name;
-
-            var json_map_def = cfg_.map_def.FirstOrDefault(x => cfg_.map == x.Key).Value;
+            var json_map_def = cfg_.map_def.FirstOrDefault(x => cfg_.current_map == x.Key).Value;
             if (json_map_def == null)
             {
                 json_map_def = new JsonMapDef();
-                cfg_.map_def[cfg_.map] = json_map_def;
+                cfg_.map_def[cfg_.current_map] = json_map_def;
             }
 
             json_map_def.origin.x = Convert.ToInt32(mapViewer.Origin.X);
@@ -923,16 +974,54 @@ namespace ARKInteractiveMap
             return mapViewer.GetContentDict();
         }
 
+        private void comboBoxGame_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (lockInterface_ != 0) return;
+            lockInterface_++;
+            if (e.RemovedItems.Count > 0)
+            {
+                // get last map and save
+                var last_map = comboBoxMap.SelectedItem as MapDef;
+                if (last_map != null)
+                {
+                    SaveMapDef(last_map);
+                }
+            }
+            var game = e.AddedItems[0] as MapListJsonGames;
+            LoadComboBoxMap(game);
+            lockInterface_--;
+
+            // find last current map for game
+            bool selectFirstMap = true;
+            if (cfg_.current_maps != null)
+            {
+                var found = cfg_.current_maps.FirstOrDefault(x => FindGame(x, game.shortcut));
+                if (found != null)
+                {
+                    selectFirstMap = false;
+                    comboBoxMap.SelectedItem = mapDefDict_.FirstOrDefault(x => x.Key == found).Value;
+                }
+            }
+            if (selectFirstMap)
+            {
+                // Select First map
+                comboBoxMap.SelectedItem = mapDefDict_.FirstOrDefault(x => x.Value.game == game.shortcut).Value;
+            }
+        }
+
         private void comboBoxMap_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (lockInterface_ != 0) return;
             lockInterface_++;
-            var map_item = e.RemovedItems[0] as MapDef;
-            if (map_item != null)
+            if (e.RemovedItems.Count > 0)
             {
-                SaveMapDef(map_item);
+                var last_map = e.RemovedItems[0] as MapDef;
+                if (last_map != null)
+                {
+                    SaveMapDef(last_map);
+                }
             }
-            map_item = e.AddedItems[0] as MapDef;
+            var map_item = e.AddedItems[0] as MapDef;
             if (map_item != null)
             {
                 LoadMapDef(map_item);
@@ -944,7 +1033,7 @@ namespace ARKInteractiveMap
         {
             if (lockInterface_ != 0) return;
             lockInterface_++;
-            var mapDef = mapDefDict_.FirstOrDefault(x => x.Value.IsMainMap(cfg_.map)).Value;
+            var mapDef = mapDefDict_.FirstOrDefault(x => x.Value.IsMainMap(cfg_.current_map)).Value;
             var map_item = e.RemovedItems[0] as string;
             if (map_item != null)
             {
@@ -1006,7 +1095,7 @@ namespace ARKInteractiveMap
             float lat = Convert.ToSingle(textboxLat.Text, CultureInfo.InvariantCulture.NumberFormat);
             float lon = Convert.ToSingle(textboxLon.Text, CultureInfo.InvariantCulture.NumberFormat);
             mapViewer.ZoomToMapPos(lat, lon);
-            var mapDef = mapDefDict_.FirstOrDefault(x => x.Value.IsMainMap(cfg_.map)).Value;
+            var mapDef = mapDefDict_.FirstOrDefault(x => x.Value.IsMainMap(cfg_.current_map)).Value;
             if (mapDef != null && mapDef.currentMap.mapCoord != null)
             {
                 var offset = mapDef.currentMap.mapCoord.offset;
@@ -1233,7 +1322,7 @@ namespace ARKInteractiveMap
 
         private Dictionary<string, string> LoadEploratorNotesIconList()
         {
-            using Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("ARKInteractiveMap.Ressources.Eplorator-notes-icon.json");
+            using Stream stream = new FileStream(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Cartes", "Eplorator-notes-icon.json"), FileMode.Open, FileAccess.Read, FileShare.Read);
             using StreamReader reader = new StreamReader(stream);
             return JsonSerializer.Deserialize<Dictionary<string, string>>(reader.ReadToEnd());
         }
@@ -1244,6 +1333,57 @@ namespace ARKInteractiveMap
             {
                 e.Handled = true;
                 ButtonGotTo_Click(sender, null);
+            }
+        }
+    }
+
+    public static class ResFiles
+    {
+        static Dictionary<string, string> list_;
+
+        static ResFiles()
+        {
+            var path_list = Directory.GetFiles(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "File"));
+            list_ = new Dictionary<string, string>();
+            foreach (var file in path_list)
+            {
+                // 'Treasure_Chest.png' => 'Treasure Chest.png'
+                var filename = Path.GetFileName(file);
+                list_[filename] = file;
+                if (CheckFilename(filename))
+                {
+                    list_[ChangeFilename(filename)] = file;
+                }
+            }
+        }
+
+        static bool CheckFilename(string name)
+        {
+            // si '_'
+            return name.IndexOf('_') >= 0;
+        }
+
+        static string ChangeFilename(string name)
+        {
+            // si '_' alors ' '
+            return name.Replace("_", " ");
+        }
+
+        public static bool Contains(string filename)
+        {
+            return list_.ContainsKey(filename);
+        }
+
+        public static string Get(string filename)
+        {
+            if (Contains(filename))
+            {
+                return list_[filename];
+            }
+            else
+            {
+                Console.WriteLine($"il manque l'image '{filename}'");
+                return null;
             }
         }
     }

@@ -38,7 +38,8 @@ namespace ARKInteractiveMap
             // 20   => 30
             //  7   => 15
             //  5.5 => 13
-            return 6.55172413793 + 1.1724137931 * poiDef.size.width;
+            // nouvelle adapatation y=0.4x
+            return 6.55172413793 + 1.1724137931 * (0.4 * poiDef.size.width);
         }
 
         protected double ComputeCircleRadius()

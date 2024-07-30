@@ -7,9 +7,26 @@ using System.Linq;
 using System.IO;
 using System.Windows;
 using System.Globalization;
+using static System.Net.Mime.MediaTypeNames;
+using System.Text.RegularExpressions;
 
 namespace ARKInteractiveMap
 {
+    public class ArkWikiFile()
+    {
+        public static bool CheckFilename(string name)
+        {
+            // si ' '
+            return name.IndexOf(' ') >= 0;
+        }
+
+        public static string ChangeFilename(string name)
+        {
+            // si ' ' alors '_'
+            return name.Replace(" ", "_");
+        }
+    }
+
     public class JsonSizeConverter : JsonConverter<ArkWikiJsonSize>
     {
         public override void Write(Utf8JsonWriter writer, ArkWikiJsonSize value, JsonSerializerOptions options)
@@ -91,6 +108,7 @@ namespace ARKInteractiveMap
         public string name { get; set; }
         public string borderColor { get; set; }
         public string fillColor { get; set; }
+        public string strokeColor { get; set; }
         public string icon { get; set; }
         public string iconCollected { get; set; }
         public string subtleText { get; set; }
@@ -135,9 +153,13 @@ namespace ARKInteractiveMap
         //public string schema { get; set; }
         [JsonPropertyName("$mixin")]
         public bool mixin { get; set; }
+        [JsonPropertyName("$fragment")]
+        public bool fragment { get; set; }
         public List<string> mixins { get; set; }
+        public List<string> include { get; set; }
         public Dictionary<string, ArkWikiJsonGroup> groups { get; set; }
         public Dictionary<string, ArkWikiJsonGroup> layers { get; set; }
+        public Dictionary<string, ArkWikiJsonGroup> categories { get; set; }
         public Dictionary<string, List<ArkWikiJsonMarker>> markers { get; set; }
         public List<ArkWikiJsonBackground> backgrounds { get; set; }
         public ArkWikiJsonBackground background { get; set; }
@@ -227,20 +249,23 @@ namespace ARKInteractiveMap
             ArkWikiJson values = null;
             try
             {
-                using Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(ressourceName);
-                if (stream == null)
+                if (!File.Exists(ressourceName) && ArkWikiFile.CheckFilename(ressourceName))
                 {
-                    if (!disabledWarning)
-                    {
-                        Console.WriteLine($"Ressource {ressourceName} non trouvé !");
-                    }
-                    return null;
+                    ressourceName = ArkWikiFile.ChangeFilename(ressourceName);
                 }
-                using StreamReader reader = new StreamReader(stream);
-                var json = reader.ReadToEnd();
-                // Cartes/Définitions des groupes normés => groups {name, fillColor, size, icon, borderColor}
-                // Cartes/Obélisques Scorched Earth      => markers
-                values = JsonSerializer.Deserialize<ArkWikiJson>(json);
+                if (File.Exists(ressourceName))
+                {
+                    using Stream stream = new FileStream(ressourceName, FileMode.Open, FileAccess.Read, FileShare.Read);
+                    using StreamReader reader = new StreamReader(stream);
+                    var json = reader.ReadToEnd();
+                    // Cartes/Définitions des groupes normés => groups {name, fillColor, size, icon, borderColor}
+                    // Cartes/Obélisques Scorched Earth      => markers
+                    values = JsonSerializer.Deserialize<ArkWikiJson>(json);
+                }
+                else if (!disabledWarning)
+                {
+                    Console.WriteLine($"Ressource {ressourceName} non trouvé !");
+                }
             }
             catch (Exception ex)
             {
@@ -260,7 +285,7 @@ namespace ARKInteractiveMap
         {
             try
             {
-                using Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(jsonResName);
+                using Stream stream = new FileStream(Path.Combine(mapDef.folder, jsonResName), FileMode.Open, FileAccess.Read, FileShare.Read);
                 if (stream == null)
                 {
                     Console.WriteLine($"Ressource {jsonResName} non trouvé !");
@@ -276,16 +301,26 @@ namespace ARKInteractiveMap
                 if (mainJson != null)
                 {
                     // mixins -> merge
+                    if (mainJson.include != null)
+                    {
+                        mainJson.mixins = mainJson.include;
+                    }
                     if (mainJson.mixins != null)
                     {
-                        foreach (var mixin in mainJson.mixins)
+                        foreach (var item_mixin in mainJson.mixins)
                         {
-                            var jsonMixin = LoadWikiGGJsonMixins("ARKInteractiveMap.Ressources." + mixin.Replace('/', '.').Replace(' ', '_') + ".json");
-                            if (jsonMixin != null && jsonMixin.mixin)
+                            // 'Donnée:Cartes/Définitions des groupes normés' => 'Donnée:Cartes/Définitions des groupes normés'
+                            var mixin = item_mixin;
+                            if (mixin.Contains(":"))
+                            {
+                                mixin = mixin.Substring(mixin.IndexOf(":")+1);
+                            }
+                            var jsonMixin = LoadWikiGGJsonMixins(Path.Combine(mapDef.folder, mixin + ".json"));
+                            if (jsonMixin != null && (jsonMixin.mixin || jsonMixin.fragment))
                             {
                                 // Patch ?
-                                string newResName = mixin + "_Patch";
-                                var jsonMixinPatch = LoadWikiGGJsonMixins("ARKInteractiveMap.Ressources." + newResName.Replace('/', '.').Replace(' ', '_') + ".json", true);
+                                string newResName = mixin + ".patch";
+                                var jsonMixinPatch = LoadWikiGGJsonMixins(Path.Combine(mapDef.folder, newResName + ".json"), true);
                                 if (jsonMixinPatch != null)
                                 {
                                     jsonMixin.Merge(jsonMixinPatch, true);
@@ -316,10 +351,10 @@ namespace ARKInteractiveMap
                         }
                         else
                         {
-                            mapDef.mapPicture = background.image.Replace(' ', '_');
+                            mapDef.mapPicture = background.image;
                         }
                     }
-                    var background_map_name = background.image.Replace(' ', '_');
+                    var background_map_name = background.image;
                     if (mapDef.mapPicture == null)
                     {
                         mapDef.mapPicture = background_map_name;
@@ -367,9 +402,14 @@ namespace ARKInteractiveMap
                         }
                     }
                     // layers
+                    Dictionary<string, ArkWikiJsonGroup> layers = mainJson.layers;
+                    if (mainJson.categories != null)
+                    {
+                        layers = mainJson.categories;
+                    }
                     if (mainJson.layers != null)
                     {
-                        foreach (var layer in mainJson.layers)
+                        foreach (var layer in layers)
                         {
                             layer.Value.groupName = layer.Key;
                             groups.Add(layer.Key, layer.Value);
@@ -383,7 +423,7 @@ namespace ARKInteractiveMap
                             var groupName = MapPoiDef.extractGroupName(markers.Key);
                             if (!groups.ContainsKey(groupName))
                             {
-                                Console.WriteLine($"Il manque la définition de {groupName}");
+                                Console.WriteLine($"Il manque la définition de '{groupName}'");
                             }
                             var group = groups[groupName];
                             if (contentList.FirstOrDefault(x => x == groupName) == null)
@@ -450,13 +490,14 @@ namespace ARKInteractiveMap
                                 List<CollectibleTreeViewItem> sortedEntries = null;
                                 if (groupName == "explorer-note")
                                 {
+                                    // Attention : GenPart2 => 'Notes d'explorateur d'HLN-A 11' ou lieu de 'Notes d'explorateur d'HLN-A #11'
                                     sortedEntries = list.Select(entry => new
                                     {
                                         Original = entry,
-                                        Parts = entry.SortedLabel.Split(new[] { " #" }, StringSplitOptions.None)
+                                        match = Regex.Match(entry.SortedLabel, @"(.+?)[\s#]*(\d+)")
                                     })
-                                    .OrderBy(x => x.Parts[0])
-                                    .ThenBy(x => int.Parse(x.Parts[1]))
+                                    .OrderBy(x => x.match.Groups[1].Value)
+                                    .ThenBy(x => int.Parse(x.match.Groups[2].Value))
                                     .Select(x => x.Original)
                                     .ToList();
                                 }

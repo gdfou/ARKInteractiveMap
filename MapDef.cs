@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System.IO;
+using System.Collections.Generic;
+using System.Reflection;
 using System.Windows.Media;
 
 namespace ARKInteractiveMap
@@ -28,6 +30,7 @@ namespace ARKInteractiveMap
 
     public class MapDef
     {
+        public string game;
         public string _name;   // 'Scorched Earth'
         public string folder; // 'Scorched_Earth'
         public List<MapDefItem> maps;
@@ -48,17 +51,18 @@ namespace ARKInteractiveMap
             }
         }
 
-        public MapDef(MapListJsonItem mapDef)
+        public MapDef(MapListJsonMaps mapDef, string gameShortcut)
         {
+            this.game = gameShortcut;
             this._name = mapDef.name;
-            this.folder = mapDef.folder;
+            this.folder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             this.maps = new List<MapDefItem>();
             foreach (var map_def_item in mapDef.maps)
             {
                 var maps_item = new MapDefItem()
                 {
                     name = map_def_item.name ?? mapDef.name,
-                    folder = mapDef.folder,
+                    folder = this.folder,
                     resource = map_def_item.resource,
                     exploration = map_def_item.exploration
                 };
@@ -89,14 +93,15 @@ namespace ARKInteractiveMap
 
         public bool IsMainMap(string name)
         {
+            string fullName = $"{this.game}:{this._name}";
             if (name == null) 
                 return false;
             if (name.Contains(".")) // with a sub-map ?
             {
                 var main_map = name.Split('.')[0];
-                return main_map == this._name;
+                return main_map == fullName;
             }
-            else if (this._name == name)
+            else if (fullName == name)
             {
                 return true;
             }

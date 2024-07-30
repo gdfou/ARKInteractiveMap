@@ -1,0 +1,641 @@
+{
+  "$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v0.16.json",
+  "$mixin": true,
+  "groups": {
+    "playerSpawns-0": {
+      "name": "Lieux d'apparition: Baie de Tumash (Facile)",
+      "fillColor": "#ffff00",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png"
+    },
+    "playerSpawns-1": {
+      "name": "Lieux d'apparition: Crique des trancheurs (Facile)",
+      "fillColor": "#b4ff00",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png"
+    },
+    "playerSpawns-2": {
+      "name": "Lieux d'apparition: Crique de Kesler (Facile)",
+      "fillColor": "#68ff00",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png"
+    },
+    "playerSpawns-3": {
+      "name": "Lieux d'apparition: Plage de Kesler (Facile)",
+      "fillColor": "#1eff00",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png"
+    },
+    "playerSpawns-4": {
+      "name": "Lieux d'apparition: Rive morose (Intermédiaire)",
+      "fillColor": "#00ff2c",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png"
+    },
+    "playerSpawns-5": {
+      "name": "Lieux d'apparition: Rive morose Sud (Intermédiaire)",
+      "fillColor": "#00ff78",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png"
+    },
+    "playerSpawns-6": {
+      "name": "Lieux d'apparition: Côte du cap morose (Intermédiaire)",
+      "fillColor": "#00ffc3",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png"
+    },
+    "playerSpawns-13": {
+      "name": "Lieux d'apparition: Plage du coucher de soleil Est (Intermédiaire)",
+      "fillColor": "#00f0ff",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png"
+    },
+    "playerSpawns-14": {
+      "name": "Lieux d'apparition: Plage du coucher de soleil (Intermédiaire)",
+      "fillColor": "#00a4ff",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png"
+    },
+    "playerSpawns-7": {
+      "name": "Lieux d'apparition: Plage de Boskar (Difficile)",
+      "fillColor": "#005aff",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png"
+    },
+    "playerSpawns-8": {
+      "name": "Lieux d'apparition: Rivage de Boskar (Difficile)",
+      "fillColor": "#000eff",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png"
+    },
+    "playerSpawns-9": {
+      "name": "Lieux d'apparition: Côte de Kortez (Difficile)",
+      "fillColor": "#3b00ff",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png"
+    },
+    "playerSpawns-10": {
+      "name": "Lieux d'apparition: Les Sables des Quatre Bouches (Difficile)",
+      "fillColor": "#8600ff",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png"
+    },
+    "playerSpawns-11": {
+      "name": "Lieux d'apparition: Côte de Zaunaloa (Difficile)",
+      "fillColor": "#d100ff",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png"
+    },
+    "playerSpawns-12": {
+      "name": "Lieux d'apparition: Côte Est de Zaunaloa (Difficile)",
+      "fillColor": "#ff00e1",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png"
+    },
+    "playerSpawns-15": {
+      "name": "Lieux d'apparition: Plage du lion vif Ouest (Difficle)",
+      "fillColor": "#ff0096",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png"
+    },
+    "playerSpawns-16": {
+      "name": "Lieux d'apparition: Plage du lion vif (Difficle)",
+      "fillColor": "#ff004b",
+      "borderColor": "#000",
+      "size": 5.5,
+      "icon": "Simple Bed.png"
+    }
+  },
+  "markers": {
+    "playerSpawns-0": [
+      {
+        "lat": 26.6,
+        "lon": 23.1
+      },
+      {
+        "lat": 25.1,
+        "lon": 25.3
+      },
+      {
+        "lat": 26.5,
+        "lon": 22.9
+      },
+      {
+        "lat": 24.3,
+        "lon": 22.6
+      },
+      {
+        "lat": 23.1,
+        "lon": 24.9
+      },
+      {
+        "lat": 23.1,
+        "lon": 26.8
+      },
+      {
+        "lat": 21.2,
+        "lon": 26.0
+      },
+      {
+        "lat": 26.5,
+        "lon": 22.7
+      },
+      {
+        "lat": 24.7,
+        "lon": 25.6
+      }
+    ],
+    "playerSpawns-1": [
+      {
+        "lat": 31.7,
+        "lon": 12.2
+      },
+      {
+        "lat": 32.0,
+        "lon": 12.6
+      },
+      {
+        "lat": 32.6,
+        "lon": 12.6
+      },
+      {
+        "lat": 34.1,
+        "lon": 12.2
+      },
+      {
+        "lat": 32.0,
+        "lon": 9.4
+      },
+      {
+        "lat": 33.8,
+        "lon": 8.9
+      }
+    ],
+    "playerSpawns-2": [
+      {
+        "lat": 34.2,
+        "lon": 23.5
+      },
+      {
+        "lat": 34.6,
+        "lon": 22.4
+      },
+      {
+        "lat": 35.4,
+        "lon": 21.7
+      },
+      {
+        "lat": 35.9,
+        "lon": 20.8
+      },
+      {
+        "lat": 33.8,
+        "lon": 22.4
+      },
+      {
+        "lat": 33.3,
+        "lon": 19.9
+      },
+      {
+        "lat": 34.1,
+        "lon": 18.5
+      },
+      {
+        "lat": 35.9,
+        "lon": 17.0
+      }
+    ],
+    "playerSpawns-3": [
+      {
+        "lat": 43.9,
+        "lon": 27.7
+      },
+      {
+        "lat": 43.9,
+        "lon": 28.0
+      },
+      {
+        "lat": 43.7,
+        "lon": 28.4
+      },
+      {
+        "lat": 45.0,
+        "lon": 29.9
+      },
+      {
+        "lat": 45.2,
+        "lon": 30.2
+      },
+      {
+        "lat": 45.4,
+        "lon": 30.3
+      },
+      {
+        "lat": 46.2,
+        "lon": 31.4
+      },
+      {
+        "lat": 46.7,
+        "lon": 32.8
+      }
+    ],
+    "playerSpawns-4": [
+      {
+        "lat": 56.0,
+        "lon": 39.1
+      },
+      {
+        "lat": 56.6,
+        "lon": 40.0
+      },
+      {
+        "lat": 55.3,
+        "lon": 39.1
+      },
+      {
+        "lat": 56.5,
+        "lon": 41.1
+      },
+      {
+        "lat": 56.3,
+        "lon": 38.0
+      },
+      {
+        "lat": 57.1,
+        "lon": 38.7
+      },
+      {
+        "lat": 58.0,
+        "lon": 39.5
+      },
+      {
+        "lat": 59.3,
+        "lon": 38.8
+      }
+    ],
+    "playerSpawns-5": [
+      {
+        "lat": 77.0,
+        "lon": 39.3
+      },
+      {
+        "lat": 76.8,
+        "lon": 39.8
+      },
+      {
+        "lat": 76.7,
+        "lon": 40.6
+      },
+      {
+        "lat": 77.0,
+        "lon": 37.0
+      },
+      {
+        "lat": 75.4,
+        "lon": 42.2
+      },
+      {
+        "lat": 73.4,
+        "lon": 41.6
+      },
+      {
+        "lat": 73.7,
+        "lon": 41.6
+      }
+    ],
+    "playerSpawns-6": [
+      {
+        "lat": 64.5,
+        "lon": 63.8
+      },
+      {
+        "lat": 64.5,
+        "lon": 65.0
+      },
+      {
+        "lat": 63.1,
+        "lon": 66.1
+      },
+      {
+        "lat": 62.6,
+        "lon": 64.1
+      },
+      {
+        "lat": 65.1,
+        "lon": 64.7
+      },
+      {
+        "lat": 64.5,
+        "lon": 67.7
+      }
+    ],
+    "playerSpawns-13": [
+      {
+        "lat": 79.7,
+        "lon": 89.9
+      },
+      {
+        "lat": 79.7,
+        "lon": 88.9
+      },
+      {
+        "lat": 80.1,
+        "lon": 88.4
+      },
+      {
+        "lat": 80.7,
+        "lon": 90.5
+      },
+      {
+        "lat": 82.6,
+        "lon": 90.7
+      },
+      {
+        "lat": 83.2,
+        "lon": 89.8
+      }
+    ],
+    "playerSpawns-14": [
+      {
+        "lat": 81.5,
+        "lon": 71.5
+      },
+      {
+        "lat": 81.8,
+        "lon": 71.7
+      },
+      {
+        "lat": 82.3,
+        "lon": 74.1
+      },
+      {
+        "lat": 80.2,
+        "lon": 69.6
+      },
+      {
+        "lat": 81.2,
+        "lon": 66.9
+      },
+      {
+        "lat": 82.5,
+        "lon": 75.6
+      }
+    ],
+    "playerSpawns-7": [
+      {
+        "lat": 64.7,
+        "lon": 74.2
+      },
+      {
+        "lat": 63.9,
+        "lon": 74.7
+      },
+      {
+        "lat": 62.9,
+        "lon": 74.7
+      },
+      {
+        "lat": 62.0,
+        "lon": 75.3
+      },
+      {
+        "lat": 61.1,
+        "lon": 75.6
+      },
+      {
+        "lat": 61.6,
+        "lon": 77.5
+      },
+      {
+        "lat": 62.1,
+        "lon": 78.0
+      },
+      {
+        "lat": 61.7,
+        "lon": 78.8
+      }
+    ],
+    "playerSpawns-8": [
+      {
+        "lat": 47.7,
+        "lon": 83.5
+      },
+      {
+        "lat": 44.0,
+        "lon": 79.0
+      },
+      {
+        "lat": 46.2,
+        "lon": 82.5
+      },
+      {
+        "lat": 48.7,
+        "lon": 83.8
+      },
+      {
+        "lat": 45.1,
+        "lon": 80.1
+      },
+      {
+        "lat": 50.6,
+        "lon": 84.0
+      }
+    ],
+    "playerSpawns-9": [
+      {
+        "lat": 37.2,
+        "lon": 83.0
+      },
+      {
+        "lat": 36.4,
+        "lon": 83.2
+      },
+      {
+        "lat": 38.3,
+        "lon": 83.0
+      },
+      {
+        "lat": 34.9,
+        "lon": 83.3
+      },
+      {
+        "lat": 40.1,
+        "lon": 83.0
+      },
+      {
+        "lat": 31.8,
+        "lon": 84.3
+      }
+    ],
+    "playerSpawns-10": [
+      {
+        "lat": 17.6,
+        "lon": 37.3
+      },
+      {
+        "lat": 17.6,
+        "lon": 37.1
+      },
+      {
+        "lat": 17.2,
+        "lon": 38.0
+      },
+      {
+        "lat": 17.4,
+        "lon": 38.3
+      },
+      {
+        "lat": 18.0,
+        "lon": 36.5
+      },
+      {
+        "lat": 18.2,
+        "lon": 35.8
+      },
+      {
+        "lat": 17.2,
+        "lon": 39.2
+      },
+      {
+        "lat": 17.7,
+        "lon": 40.3
+      }
+    ],
+    "playerSpawns-11": [
+      {
+        "lat": 22.6,
+        "lon": 61.4
+      },
+      {
+        "lat": 22.6,
+        "lon": 61.7
+      },
+      {
+        "lat": 22.6,
+        "lon": 61.4
+      },
+      {
+        "lat": 22.6,
+        "lon": 61.7
+      },
+      {
+        "lat": 22.8,
+        "lon": 60.1
+      },
+      {
+        "lat": 21.8,
+        "lon": 59.0
+      },
+      {
+        "lat": 21.8,
+        "lon": 57.7
+      },
+      {
+        "lat": 22.0,
+        "lon": 56.5
+      }
+    ],
+    "playerSpawns-12": [
+      {
+        "lat": 21.3,
+        "lon": 72.7
+      },
+      {
+        "lat": 21.5,
+        "lon": 74.3
+      },
+      {
+        "lat": 20.3,
+        "lon": 76.0
+      },
+      {
+        "lat": 19.8,
+        "lon": 76.6
+      },
+      {
+        "lat": 19.9,
+        "lon": 72.2
+      },
+      {
+        "lat": 19.0,
+        "lon": 71.4
+      },
+      {
+        "lat": 18.3,
+        "lon": 70.0
+      },
+      {
+        "lat": 18.1,
+        "lon": 68.8
+      }
+    ],
+    "playerSpawns-15": [
+      {
+        "lat": 91.9,
+        "lon": 23.9
+      },
+      {
+        "lat": 92.0,
+        "lon": 24.6
+      },
+      {
+        "lat": 92.0,
+        "lon": 24.8
+      },
+      {
+        "lat": 92.2,
+        "lon": 25.0
+      },
+      {
+        "lat": 92.1,
+        "lon": 25.5
+      },
+      {
+        "lat": 91.8,
+        "lon": 26.1
+      }
+    ],
+    "playerSpawns-16": [
+      {
+        "lat": 81.7,
+        "lon": 48.0
+      },
+      {
+        "lat": 80.8,
+        "lon": 47.5
+      },
+      {
+        "lat": 80.3,
+        "lon": 46.7
+      },
+      {
+        "lat": 82.1,
+        "lon": 48.9
+      },
+      {
+        "lat": 81.9,
+        "lon": 49.8
+      },
+      {
+        "lat": 81.1,
+        "lon": 50.9
+      }
+    ]
+  }
+}

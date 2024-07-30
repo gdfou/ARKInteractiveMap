@@ -1,0 +1,219 @@
+﻿{
+  "games":[
+    {
+      "game": "ARK: Survival Ascended",
+      "shortcut": "ASA",
+  "list": [
+        "The Island",
+        "Scorched Earth"
+      ]
+    },
+    {
+      "game": "ARK: Survival Evolved",
+      "shortcut": "ASE",
+      "list": [
+        "The Island",
+        "Scorched Earth",
+        "Aberration",
+        "Extinction",
+        "Genesis: Part 1",
+        "Genesis: Part 2",
+        "-",
+        "The Center",
+        "Ragnarok",
+        "Valguero",
+        "Crystal Isles",
+        "Lost Island",
+        "Fjordur"
+      ]
+    }
+  ],
+  "maps": [
+    {
+      "game": "ASA",
+      "maps": [
+        {
+          "name": "The Island",
+      "maps": [
+        {
+          "resource": "Cartes/Ressources/The Island/ASA.json",
+          "exploration": "Cartes/Exploration/The Island/ASA.json",
+          "map_coord": {
+            "offset": {
+              "lat": 50,
+              "lon": 50
+            },
+            "mult": {
+              "lat": 8000,
+              "lon": 8000
+            }
+          }
+        }
+      ]
+        },
+        {
+          "name": "Scorched Earth",
+          "maps": [
+            {
+              "resource": "Cartes/Ressources/Scorched Earth/ASA.json",
+              "exploration": "Cartes/Exploration/Scorched Earth/ASA.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "game": "ASE",
+      "maps": [
+        {
+      "name": "The Island",
+      "maps": [
+        {
+              "resource": "Cartes/Ressources/The Island.json",
+              "exploration": "Cartes/Exploration/The Island/ASE.json",
+          "map_border": {
+            "width": 30,
+            "color": "#246be1"
+          }
+            }
+          ]
+        },
+        {
+          "name": "The Center",
+          "maps": [
+            {
+              "resource": "Cartes/Ressources/The Center.json",
+              "exploration": "Cartes/Exploration/The Center.json"
+            }
+          ]
+        },
+        {
+          "name": "Scorched Earth",
+          "maps": [
+            {
+              "resource": "Cartes/Ressources/Scorched Earth.json",
+              "exploration": "Cartes/Exploration/Scorched Earth.json"
+            }
+          ]
+        },
+        {
+          "name": "Ragnarok",
+          "maps": [
+            {
+              "resource": "Cartes/Ressources/Ragnarok.json",
+              "exploration": "Cartes/Exploration/Ragnarok.json"
+            }
+          ]
+        },
+        {
+          "name": "Aberration",
+          "maps": [
+            {
+              "resource": "Cartes/Ressources/Aberration.json",
+              "exploration": "Cartes/Exploration/Aberration.json",
+              "map_border": {
+                "width": 30,
+                "color": "#808080"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Extinction",
+          "maps": [
+            {
+              "resource": "Cartes/Ressources/Extinction.json",
+              "exploration": "Cartes/Exploration/Extinction.json",
+              "map_border": {
+                "width": 200,
+                "color": "#776e65"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Valguero",
+          "maps": [
+            {
+              "resource": "Cartes/Ressources/Valguero.json",
+              "exploration": "Cartes/Exploration/Valguero.json"
+            }
+          ]
+        },
+        {
+          "name": "Genesis: Part 1",
+          "maps": [
+            {
+              "resource": "Cartes/Ressources/Genesis_Part_1.json",
+              "exploration": "Cartes/Exploration/Genesis_Part_1.json",
+              "map_border": {
+                "width": 50,
+                "color": "#909090"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Genesis: Part 2",
+          "maps": [
+            {
+              "resource": "Cartes/Ressources/Genesis_Part_2.json",
+              "exploration": "Cartes/Exploration/Genesis_Part_2.json"
+            }
+          ]
+        },
+        {
+          "name": "Crystal Isles",
+          "maps": [
+            {
+              "resource": "Cartes/Ressources/Crystal_Isles.json",
+              "exploration": "Cartes/Exploration/Crystal_Isles.json",
+              "map_border": {
+                "width": 100,
+                "color": "#0c7edf"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Lost Island",
+          "maps": [
+            {
+              "resource": "Cartes/Ressources/Lost_Island.json",
+              "exploration": "Cartes/Exploration/Lost_Island.json"
+            }
+          ]
+        },
+        {
+          "name": "Fjordur",
+          "maps": [
+            {
+              "name": "Midgard",
+              "resource": "Cartes/Ressources/Fjordur.json",
+              "exploration": "Cartes/Exploration/Fjordur.json",
+              "map_border": {
+                "width": 100,
+                "color": "#2955dc"
+              }
+            },
+            {
+              "name": "Asgard",
+              "resource": "Cartes/Ressources/Fjordur (Asgard).json",
+              "exploration": "Cartes/Exploration/Fjordur (Asgard).json"
+            },
+            {
+              "name": "Jotunheim",
+              "resource": "Cartes/Ressources/Fjordur (Jotunheim).json",
+              "exploration": "Cartes/Exploration/Fjordur (Jotunheim).json"
+            },
+            {
+              "name": "Vanaheim",
+              "resource": "Cartes/Ressources/Fjordur (Vanaheim).json",
+              "exploration": "Cartes/Exploration/Fjordur (Vanaheim).json"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

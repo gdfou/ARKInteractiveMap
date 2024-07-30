@@ -46,15 +46,13 @@ namespace ARKInteractiveMap
         {
             map_ = map;
             Label = poi.poiDef.group.name;
-            // icon de ressource
-            var assembly = Assembly.GetExecutingAssembly();
-            var app_res_list = assembly.GetManifestResourceNames();
-            var iconRes = MapPoiDef.getIconResname(poi.poiDef.group?.icon);
-            if (iconRes != null && app_res_list.Contains(iconRes))
+            // icon
+            var icon = poi.poiDef.group?.icon;
+            if (icon != null && ResFiles.Contains(icon))
             {
                 BitmapImage src = new BitmapImage();
                 src.BeginInit();
-                src.StreamSource = assembly.GetManifestResourceStream(iconRes);
+                src.StreamSource = new FileStream(ResFiles.Get(icon), FileMode.Open, FileAccess.Read, FileShare.Read);
                 src.EndInit();
                 IconRes = src;
             }

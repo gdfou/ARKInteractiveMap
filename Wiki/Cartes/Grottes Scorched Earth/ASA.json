@@ -1,0 +1,36 @@
+{
+	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v17.json",
+	"$fragment": true,
+	"markers": {
+		"cave-entrance": [
+			{
+				"lat": 28.223, "lon": 29.057,
+				"name": "Cimetière des Tirants",
+				"description": "Holds:\n* {{ItemLink|Artéfact des Profondeurs (Scorched Earth)}}",
+				"image": "ASA_ScorchedEarth_CaveEntrance_Grave_of_the_Tyrants.jpg"
+			},
+			{
+				"lat": 78.899, "lon": 76.091,
+				"name": "Ruines de Nosti",
+				"description": "Holds:\n* {{ItemLink|Artéfact du Destructeur}}",
+				"image": "ASA_ScorchedEarth_CaveEntrance_Ruins of Nosti.jpg"
+			},
+			{
+				"lat": 58.775, "lon": 47.741,
+				"name": "Les tunnels anciens",
+				"description": "Holds:\n* {{ItemLink|Artéfact du Gardien des Portes}}",
+				"image": "ASA_ScorchedEarth_CaveEntrance_The Old Tunnels.jpg"
+			},
+			{
+				"lat": 73.629, "lon": 40.154,
+				"name": "Grotte de l'Oasis",
+				"image": "ASA_ScorchedEarth_CaveEntrance_Oasis Cave.jpg"
+			},
+			{
+				"lat": 59.104, "lon": 16.21,
+				"name": "Grotte de pétrole",
+				"image": "ASA_ScorchedEarth_CaveEntrance_Trench Cave.jpg"
+			}
+		]
+	}
+}

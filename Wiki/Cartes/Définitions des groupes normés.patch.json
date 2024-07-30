@@ -1,0 +1,53 @@
+{
+	"groups": {
+		"oil-vein": {
+			"iconCollected": "Oil Pump.png",
+			"sizeCollected": [ 38, 38 ],
+			"isCollectible": true
+		},
+		"salt": { "icon": "Raw Salt.png" },
+		"water-vein": {
+			"iconCollected": "Water Well.png",
+			"sizeCollected": 44,
+			"isCollectible": true
+		},
+		"marker-c456070": {
+			"name": "Ravitaillement c456070", "icon": "PiePR.svg", "size": [ 30, 30 ]
+		},
+		"marker-c031525354560": {
+			"name": "Ravitaillement c031525354560", "icon": "PieWGBPYR.svg", "size": [ 30, 30 ]
+		},
+		"marker-c03152535456070": {
+			"name": "Ravitaillement c03152535456070", "icon": "PieWGBPYR.svg", "size": [ 30, 30 ]
+		},
+		"poi": {
+			"name": "Point d'intérêt", "size": 10, "fillColor": "#dda0dd", "icon": "Blank.png",
+			"borderColor": "#fff"
+		},
+		"poison-tree": {
+			"name": "Arbre à toxine", "size": 7, "fillColor": "#c9eb34", "icon": "Blank.png",
+			"borderColor": "#fff"
+		},
+		"mission-terminal": {
+			"name": "Répartiteur de quêtes", "size": 7, "fillColor": "#B477FF", "icon": "Blank.png", 
+			"borderColor": "#266dbf"
+		},
+		"city-terminal": {
+			"name": "Terminal urbain", "size": 7, "fillColor": "#c0c0c0", "icon": "City_Terminal.png",
+			"borderColor": "#fff"
+		},
+		"rockwell-prime-terminal": {
+			"name": "Terminal de Prime Rockwell", "size": 20, "fillColor": "#bd2fb3", "icon": "Blank.png",
+			"borderColor": "#fff"
+		},
+		"plant-z": {
+			"name": "Plante Z",
+			"size": 5.5, "icon": "Plant Species Z.png",
+			"fillColor": "#7d5fda",
+			"borderColor": "#fff"
+		}
+	},
+	"layers": {
+		"cave": { "name": "Grottes", "subtleText": "cave" }
+	}
+}

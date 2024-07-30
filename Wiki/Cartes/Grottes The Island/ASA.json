@@ -1,0 +1,122 @@
+{
+	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v17.json",
+	"$fragment": true,
+	"markers": {
+		"cave-entrance": [
+			{
+				"lat": 40.162, "lon": 46.574,
+				"name": "Caverne Centrale",
+				"description": "Contient:\n* {{ItemLink|Artéfact de la Sagesse}}",
+				"image": "ASA_TheIsland_CaveEntrance_Central_Cave.jpg"
+			},
+			{
+				"lat": 14.122, "lon": 13.914,
+				"name": "Caverne du Nord-Ouest",
+				"description": "Contient:\n* {{ItemLink|Artéfact du Seigneur du Ciel}}",
+				"image": "ASA_TheIsland_CaveEntrance_North West Cave.jpg"
+			},
+			{
+				"lat": 85.285, "lon": 54.171,
+				"name": "Caverne du Sud inférieure",
+				"description": "Contient:\n* {{ItemLink|Artéfact du Chasseur}}",
+				"image": "ASA_TheIsland_CaveEntrance_Lower South Cave.jpg"
+			},
+			{
+				"lat": 8.952, "lon": 91.317,
+				"name": "Caverne du Nord-Est",
+				"description": "Contient:\n* {{ItemLink|Artéfact du Dévoreur}}",
+				"image": "ASA_TheIsland_CaveEntrance_North East Cave.jpg"
+			},
+			{
+				"lat": 71.323, "lon": 57.222,
+				"name": "Caverne du Sud supérieure",
+				"description": "Contient:\n* {{ItemLink|Artéfact de la Meute}}",
+				"image": "ASA_TheIsland_CaveEntrance_Upper South Cave.jpg"
+			},
+			{
+				"lat": 74.069, "lon": 92.166,
+				"name": "Grotte Volcanique",
+				"description": "Contient:\n* {{ItemLink|Artéfact du Colosse}}",
+				"image": "ASA_TheIsland_CaveEntrance_South East Cave.jpg"
+			},
+			{
+				"lat": 64.823, "lon": 35.177,
+				"name": "Caverne du Marais",
+				"description": "Contient:\n* {{ItemLink|Artéfact de l'Immunité}}",
+				"image": "ASA_TheIsland_CaveEntrance_Swamp_Cave.jpg"
+			},
+			{
+				"lat": 25.991, "lon": 29.008,
+				"name": "Caverne de Neige",
+				"description": "Contient:\n* {{ItemLink|Artéfact de Puissance}}",
+				"image": "ASA_TheIsland_CaveEntrance_Snow Cave.jpg"
+			},
+			{
+				"lat": 54.122, "lon": 3.816,
+				"name": "Les cavernes de la foi perdue",
+				"description": "Contient:\n* {{ItemLink|Artéfact de la Bête}}",
+				"image": "ASA_TheIsland_CaveEntrance_The Caverns of Lost Faith.jpg"
+			},
+			{
+				"lat": 45.178, "lon": 95.481,
+				"name": "Les cavernes de l'espoir perdu",
+				"description": "Contient:\n* {{ItemLink|Artéfact de la Ruse}}",
+				"image": "ASA_TheIsland_CaveEntrance_The Caverns of Lost Hope.jpg"
+			},
+			{
+				"lat": 42.041, "lon": 37.301,
+				"name": "Caverne Tek",
+				"description": "Le combat contre l'Overseer est à la fin de cette grotte",
+				"image": "ASA_TheIsland_CaveEntrance_Tek Cave.jpg"
+			},
+			{
+				"lat": 1.256, "lon": 97.164,
+				"name": "Grotte sous-marine non nommée"
+			},
+			{
+				"lat": 33.866, "lon": 98.587,
+				"name": "Grotte sous-marine non nommée"
+			},
+			{
+				"lat": 93.683, "lon": 97.4,
+				"name": "Grotte sous-marine non nommée"
+			},
+			{
+				"lat": 98.211, "lon": 75.052,
+				"name": "Grotte sous-marine non nommée"
+			},
+			{
+				"lat": 97.321, "lon": 34.066,
+				"name": "Grotte sous-marine non nommée"
+			},
+			{
+				"lat": 97.644, "lon": 7.017,
+				"name": "Grotte sous-marine non nommée"
+			},
+			{
+				"lat": 89.328, "lon": 3.803,
+				"name": "Grotte sous-marine non nommée"
+			},
+			{
+				"lat": 10.394, "lon": 4.503,
+				"name": "Grotte sous-marine non nommée"
+			},
+			{
+				"lat": 4.178, "lon": 17.192,
+				"name": "Grotte sous-marine non nommée"
+			},
+			{
+				"lat": 3.938, "lon": 38.888,
+				"name": "Grotte sous-marine non nommée"
+			},
+			{
+				"lat": 53.381, "lon": 99.415,
+				"name": "Grotte sous-marine non nommée"
+			},
+			{
+				"lat": 49.589, "lon": 4.496,
+				"name": "Grotte sous-marine non nommée"
+			}
+		]
+	}
+}

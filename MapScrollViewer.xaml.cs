@@ -62,7 +62,7 @@ namespace ARKInteractiveMap
             {
                 try
                 {
-                    mapImage.Source = BitmapFrame.Create(Assembly.GetExecutingAssembly().GetManifestResourceStream(value));
+                    mapImage.Source = BitmapFrame.Create(new Uri(ResFiles.Get(value)));
                 }
                 catch
                 {
@@ -522,7 +522,7 @@ namespace ARKInteractiveMap
         public double MaxScale
         {
             get; set;
-        }
+        } = 10;
 
         public double Scale
         {

@@ -1,0 +1,68 @@
+{
+	"$schema": "https://ark.wiki.gg/extensions/DataMaps/schemas/v17.json",
+	"$fragment": true,
+	"groups": {
+		"cave-crate": {
+			"name": "Relique dans une grotte",
+			"icon": "Treasure Chest.png", "size": 26
+		},
+		"beaver-crate": {
+			"name": "Barrage de Castor",
+			"icon": "Giant Beaver Dam.png", "size": 26
+		},
+		"surface-crate": {
+			"name": "Ravitaillement",
+			"icon": "White Beacon.png", "size": 26
+		},
+		"sea-crate": {
+			"name": "Relique des profondeurs",
+			"icon": "Deep Sea Loot Crate.png", "size": 26
+		}
+	},
+	"categories": {
+		"cc:destroyer": { "overrideIcon": "Artifact of the Destroyer.png" },
+		"cc:devious": { "overrideIcon": "Artifact of the Devious.png" },
+		"cc:skylord": { "overrideIcon": "Artifact of the Skylord.png" },
+		"cc:strong": { "overrideIcon": "Artifact of the Strong.png" },
+		"cc:clever": { "overrideIcon": "Artifact of the Clever.png" },
+		"cc:massive": { "overrideIcon": "Artifact of the Massive.png" },
+		"cc:cunning": { "overrideIcon": "Artifact of the Cunning.png" },
+		"cc:pack": { "overrideIcon": "Artifact of the Pack.png" },
+		"cc:brute": { "overrideIcon": "Artifact of the Brute.png" },
+		"cc:immune": { "overrideIcon": "Artifact of the Immune.png" },
+		"cc:hunter": { "overrideIcon": "Artifact of the Hunter.png" },
+		"cc:devourer": { "overrideIcon": "Artifact of the Devourer.png" },
+		"cc:gatekeeper": { "overrideIcon": "Artifact of the Gatekeeper.png" },
+		"cc:crag": { "overrideIcon": "Artifact of the Crag.png" },
+		"cc:shadows": { "overrideIcon": "Artifact of the Shadows.png" },
+		"cc:stalker": { "overrideIcon": "Artifact of the Stalker.png" },
+		"cc:lost": { "overrideIcon": "Artifact of the Lost.png" },
+		"cc:depths": { "overrideIcon": "Artifact of the Depths.png" },
+		"cc:chaos": { "overrideIcon": "Artifact of Chaos.png" },
+		"cc:growth": { "overrideIcon": "Artifact of Growth.png" },
+		"cc:void": { "overrideIcon": "Artifact of the Void.png" },
+		"cc:w": { "overrideIcon": "PieW.svg" },
+		"cc:b": { "overrideIcon": "PieB.svg" },
+		"cc:y": { "overrideIcon": "PieY.svg" },
+		"cc:r": { "overrideIcon": "PieR.svg" },
+		"cc:g": { "overrideIcon": "PieG.svg" },
+		"cc:p": { "overrideIcon": "PieP.svg" },
+		"cc:bpy": { "overrideIcon": "PieBPY.svg" },
+		"cc:bgw": { "overrideIcon": "PieWGB.svg" },
+		"cc:bgpry": { "overrideIcon": "PieGBPYR.svg" },
+		"cc:bgpw": { "overrideIcon": "PieWGBP.svg" },
+		"cc:bgpwy": { "overrideIcon": "PieWGBPY.svg" },
+		"cc:bpry": { "overrideIcon": "PieBPYR.svg" },
+		"cc:bgpy": { "overrideIcon": "PieGBPY.svg" },
+		"cc:ry": { "overrideIcon": "PieYR.svg" },
+		"cc:pry": { "overrideIcon": "PiePYR.svg" },
+		"cc:pr": { "overrideIcon": "PiePR.svg" },
+		"cc:wgbpyr": { "overrideIcon": "PieWGBPYR.svg" },
+		"cc:gbyr": { "overrideIcon": "PieGBYR.svg" },
+		"cc:wgbyr": { "overrideIcon": "PieWGBPYR.svg" },
+		"cc:wgbp": { "overrideIcon": "PieWGBP.svg" },
+		"cc:pyr": { "overrideIcon": "PiePYR.svg" },
+		"cc:bp": { "overrideIcon": "PieBP.svg" },
+		"cc:gbp": { "overrideIcon": "PieGBP.svg" }
+	}
+}

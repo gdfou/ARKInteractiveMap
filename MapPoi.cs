@@ -117,7 +117,7 @@ namespace ARKInteractiveMap
         {
             poiDef = new MapPoiDef();
             poiDef.size = group.size;
-            poiDef.borderColor = group.borderColor;
+            poiDef.borderColor = (group.borderColor != null) ? group.borderColor : group.strokeColor;
             poiDef.fillColor = group.fillColor;
             poiDef.icon = MapPoiDef.getIconResname(group.icon);
             poiDef.iconCollected = MapPoiDef.getIconResname(group.iconCollected);
